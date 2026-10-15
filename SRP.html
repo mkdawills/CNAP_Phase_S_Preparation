@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>SRP Core — CNAP Phase S Proposal Hub</title>
+<link rel="stylesheet" href="site.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&amp;family=Archivo:wght@500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F7F6FA}
+a{color:#512888}a:hover{color:#3B1C66}
+.q{display:flex;gap:10px;align-items:flex-start;padding:8px 0;border-bottom:1px solid #E4E0EC;font-size:15px}
+.q:last-child{border-bottom:none}
+.tbl th + th,.tbl td + td{border-left:1px solid #D3CDE0}
+.two.rc-stack{grid-template-columns:minmax(0,1fr) !important;display:grid;gap:16px}
+.kv.kt{gap:0}
+.kv.kt dt,.kv.kt dd{padding:12px 14px;border-bottom:1px solid #D3CDE0}
+.kv.kt dt{padding-left:0}
+.kv.kt dd{border-left:1px solid #D3CDE0}
+.kv.kt .kh{font-size:13px;font-weight:800;letter-spacing:0.06em;text-transform:uppercase;color:#512888;border-bottom:2px solid #512888;padding-top:0;padding-bottom:10px}
+.kv.kt dt:nth-last-child(2),.kv.kt dd:last-child{border-bottom:none}
+@media (max-width:640px){.kv.kt dd{border-left:none;padding-left:0}.kv.kt dd.kh{display:none}}
+.band-w,.band-g{position:relative;border-top:2px solid #D3CDE0;box-shadow:0 0 0 100vmax var(--bandc);clip-path:inset(0 -100vmax);background:var(--bandc)}
+.band-w{--bandc:#FFFFFF}
+.pagehead + .band-w{border-top:none}
+.band-g{--bandc:#F7F6FA}
+section.sec.band-w,section.sec.band-g{padding-top:40px !important;padding-bottom:40px;margin-top:0;margin-bottom:0}
+.si-ol{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:8px}
+.si-stack .blk li{line-height:1.5}
+.si-stack{display:flex;flex-direction:column;border-top:1px solid #D3CDE0}
+.si-stack > .blk{padding:16px 0}
+.si-stack > .blk + .blk{border-top:1px solid #D3CDE0;padding-bottom:0}
+.q .bx{width:16px;height:16px;border:1.5px solid #512888;border-radius:4px;flex:none;margin-top:4px}
+</style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<div class="hub" style="font-family: 'Source Sans 3', 'Segoe UI', system-ui, sans-serif; color: #1F1B2B; background: #F7F6FA; min-height: 100vh;">
+
+  <header class="topbar">
+    <div class="wrap">
+      <a class="brand" href="index.html" title="Back to the Dashboard"><svg class="home-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5L12 3l9 7.5"></path><path d="M5 9.5V21h5v-6h4v6h5V9.5"></path></svg><span>CNAP Phase S Proposal Hub</span></a>
+      <nav class="nav" aria-label="Site">
+        <a class="navlink" href="index.html">Dashboard</a>
+        <details class="nm"><summary><a href="Timeline.html">Team Timeline</a><span class="car"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+          <div class="pop">
+            <a class="hd" href="Timeline.html">Team Timeline</a>
+            <a href="Timeline.html#kickoff">Kickoff to submission (by date)</a>
+            <a href="Timeline.html#bycomponent">The same schedule, by component</a>
+          </div>
+        </details>
+        <details class="nm"><summary><a href="Workflow.html">Workflow &amp; Files</a><span class="car"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+          <div class="pop">
+            <a class="hd" href="Workflow.html">Workflow &amp; File Management</a>
+            <a href="Workflow.html#summary">Please read first</a>
+            <a href="Workflow.html#smartsheet">Smartsheet</a>
+            <a href="Workflow.html#statuses">Statuses &amp; reviews</a>
+            <a href="Workflow.html#folders">Dropbox folders</a>
+            <a href="Workflow.html#reference">Reference materials</a>
+          </div>
+        </details>
+        <details class="nm"><summary><a href="Guidance.html">Contributor Guidance</a><span class="car"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+          <div class="pop">
+            <a class="hd" href="Guidance.html">Find your guidance</a>
+            <a href="HeatherBailey.html">Heather Bailey · Center Director (PD/PI), CN Core</a>
+            <a href="Chip.html">Chip · BN Core Director</a>
+            <a href="Doina.html">Doina · NI Core Director</a>
+            <a href="CarlAde.html">Carl Ade · Associate Director</a>
+            <a href="Roxana.html">Roxana · Budget Review</a>
+            <a href="Tim.html">Tim · Central Office Budget Review</a>
+            <a href="Kim.html">Kim · Central Office Biosketch Review</a>
+          </div>
+        </details>
+        <details class="nm"><summary><a href="PhaseS.html">Phase S Overview</a><span class="car"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+          <div class="pop">
+            <a class="hd" href="PhaseS.html">Phase S / NOFO Overview</a>
+            <a href="PhaseS.html#glance">Application components at a glance</a>
+            <a href="PhaseS.html#evs">COBRE-E vs. COBRE-S</a>
+            <a href="PhaseS.html#changes">Differences from previous NOFOs</a>
+            <a href="PhaseS.html#pi">Eligibility: Center Director</a>
+          </div>
+        </details>
+        <details class="nm on"><summary><a href="SRP.html">SRP Core</a><span class="car"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+          <div class="pop">
+            <a class="hd" href="SRP.html">SRP Core &amp; SRP Investigators</a>
+            <a href="SRP.html#srpdir">The SRP Core Director</a>
+            <a href="SRP.html#srp1">How SIs are chosen</a>
+            <a href="SRP.html#srp2">Requirements every SI must meet</a>
+            <a href="SRP.html#srp3">Eligible career stages</a>
+            <a href="SRP.html#srp4">While an SI is supported</a>
+            <a href="SRP.html#srp5">When an SI leaves the program</a>
+            <a href="SRP.html#srp6">Adding a new SI after the award</a>
+          </div>
+        </details>
+        <details class="nm"><summary><a href="Conventions.html">Formatting Conventions</a><span class="car"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+          <div class="pop">
+            <a class="hd" href="Conventions.html">Formatting Conventions</a>
+            <a href="Conventions.html#names">Names and terms</a>
+            <a href="Conventions.html#format">NIH format (required)</a>
+            <a href="Conventions.html#tables">Tables and figures</a>
+            <a href="Conventions.html#refs">References</a>
+          </div>
+        </details>
+        <details class="nm"><summary><a href="Review.html">Review Criteria</a><span class="car"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+          <div class="pop">
+            <a class="hd" href="Review.html">Review Criteria</a>
+            <a href="Review.html#rc1">Administrative Core</a>
+            <a href="Review.html#rc2">Research Cores</a>
+            <a href="Review.html#rc3">Scientific Research Program</a>
+            <a href="Review.html#rc4">General criterion: Significance</a>
+            <a href="Review.html#rc5">General criterion: Investigators</a>
+            <a href="Review.html#rc6">General criterion: Innovation</a>
+            <a href="Review.html#rc7">General criterion: Approach</a>
+            <a href="Review.html#rc8">General criterion: Environment</a>
+            <a href="Review.html#rc9">After peer review: funding considerations</a>
+          </div>
+        </details>
+        <details class="nm"><summary><a href="Definitions.html">Definitions</a><span class="car"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+          <div class="pop">
+            <a class="hd" href="Definitions.html">Definitions (key terms)</a>
+            <a href="Definitions.html#kt1">Program and phases</a>
+            <a href="Definitions.html#kt2">Capacity and infrastructure</a>
+            <a href="Definitions.html#kt3">Center components</a>
+            <a href="Definitions.html#kt4">People</a>
+            <a href="Definitions.html#kt5">Plans and funding rules</a>
+            <a href="Definitions.html#kt6">Review</a>
+          </div>
+        </details>
+      </nav>
+      <div class="quick">
+        <a class="btn sm primary" href="https://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21">Open Smartsheet</a>
+        <a class="btn sm" href="https://files.simpler.grants.gov/opportunities/77942f5d-0b5f-4656-bfd7-a6148b1624a4/attachments/55f55944-4b0c-4a90-9e33-75b064598558/PAR-27-055-Full-Announcement.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6M8 13h8M8 17h6"></path></svg>Full NOFO</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="wrap pagehead">
+      <p class="eyebrow">Universal resource · NOFO Briefing</p>
+      <h1 class="h1">Scientific Research Program (SRP) Core</h1>
+      <p class="lede">SRP Investigators (SIs) are the faculty whose research projects the Scientific Research Program (SRP) Core supports.<br>Everything below is drawn from PAR-27-055; section names in parentheses point to where the NOFO says it.</p>
+      <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px;">
+        <a class="btn primary" href="https://files.simpler.grants.gov/opportunities/77942f5d-0b5f-4656-bfd7-a6148b1624a4/attachments/55f55944-4b0c-4a90-9e33-75b064598558/PAR-27-055-Full-Announcement.html">Read the full NOFO (PAR-27-055)</a>
+        <a class="btn" href="PhaseS.html">Phase S / NOFO Overview</a>
+      </div>
+    </section>
+    <section class="wrap sec band-w" id="srpdir">
+      <h2 class="h2">The SRP Core Needs a Director</h2>
+      <div class="rules-stack" style="margin-top: 12px;">
+        <p style="margin: 0;">The SRP Core has its own Core Director, listed as key personnel.</p>
+        <p style="margin: 4px 0 0;">SIs are not listed as key personnel.</p>
+        <p style="margin: 4px 0 0;">In the SRP's Senior/Key Person Profile, the director is listed with Project Role &lsquo;Other&rsquo; and Category &lsquo;Program Leader&rsquo;. (Section IV.2, Scientific Research Program)</p>
+        <p style="margin: 4px 0 0;"><b>SRP Core Director:</b> not yet named.</p>
+      </div>
+      <div class="card" style="margin-top: 14px; border-left: 3px solid #512888;">
+        <p class="eyebrow" style="margin: 0 0 6px;">NOFO text (PAR-27-055)</p>
+        <p style="margin: 0;">&ldquo;The SRP Core Director should be listed as key personnel. Do not list SIs as key personnel.&rdquo;</p>
+      </div>
+    </section>
+    <section class="wrap sec band-w" id="si">
+      <div class="xall-bar"><button type="button" class="xall" aria-pressed="false">Expand all</button></div>
+      <h2 class="h2">SRP Investigators (SIs)</h2>
+      <p class="muted" style="margin: 0 0 14px;">Click a heading to open it.</p>
+      <details class="acc" id="srp1">
+        <summary style="grid-template-columns: minmax(0,1fr) auto;"><span class="ttl">How SIs are chosen</span><span class="meta"><svg class="car" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+        <div class="body">
+          <div class="scroll">
+            <table class="tbl">
+              <thead><tr><th style="width:230px;">Topic</th><th>Detail</th></tr></thead>
+              <tbody>
+            <tr><td><b>At submission: the Existing SRP Investigator Pool</b></td><td>The application names a pool of investigators already appointed at K-State who <i>could</i> become SIs. For each one, include a <b>Biographical Sketch Common Form</b> and an <b>NIH Biographical Supplement</b>. The Personal Statement should be tailored to the COBRE and <b>must not include Specific Aims or preliminary data</b>. (Section IV, Other Attachments, Overall component)</td></tr>
+            <tr><td><b>Potential faculty hires round out the pool</b></td><td>The application should describe the characteristics sought in prospective hires. The Administrative Core budget may fund recruitment of faculty at any career stage who expand the breadth of the program. (Sections I and IV)</td></tr>
+            <tr><td><b>Before the Notice of Award: selection and NIGMS prior approval</b></td><td>The PD/PI selects SIs from the pool and submits the selections to NIGMS for prior approval. <b>SIs must not begin work until NIGMS approves them.</b> (Section VI, Post-Award Requirements)</td></tr>
+            <tr><td><b>K-State vouches for qualifications</b></td><td>The institution is responsible for establishing each prospective SI's qualifications. (Section III)</td></tr>
+            <tr><td><b>No set number of SIs</b></td><td>There is no required minimum, and the size of the SRP may change over the award to fit the Center's scientific needs. (Section VI)</td></tr>
+          </tbody>
+            </table>
+          </div>
+        </div>
+      </details>
+      <details class="acc" id="srp2">
+        <summary style="grid-template-columns: minmax(0,1fr) auto;"><span class="ttl">Requirements every SI must meet</span><span class="meta"><svg class="car" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+        <div class="body">
+          <div class="scroll">
+            <table class="tbl">
+              <thead><tr><th style="width:230px;">Topic</th><th>Detail</th></tr></thead>
+              <tbody>
+            <tr><td><b>Career stage</b></td><td>Must fall into one of the four categories below.</td></tr>
+            <tr><td><b>Appointment</b></td><td>Independent, multi-year faculty appointment (or equivalent at research institutes) at the applicant organization.</td></tr>
+            <tr><td><b>Research program</b></td><td>Leads their own research program within the broad scientific area of the Center.</td></tr>
+            <tr><td><b>No other IDeA research support</b></td><td>An SI cannot receive research support from any other IDeA award at the same time (for example, INBRE, CTR, or another COBRE). An SI may still serve as project lead on a supplement to an IDeA award.</td></tr>
+          </tbody>
+            </table>
+          </div>
+        </div>
+      </details>
+      <details class="acc" id="srp3">
+        <summary style="grid-template-columns: minmax(0,1fr) auto;"><span class="ttl">Eligible career stages</span><span class="meta"><svg class="car" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+        <div class="body">
+          <div class="scroll">
+            <table class="tbl">
+              <thead><tr><th style="width:230px;">Topic</th><th>Detail</th></tr></thead>
+              <tbody>
+            <tr><td><b>Early Stage Investigator (ESI)</b></td><td>A PD/PI who has completed their terminal research degree or end of post-graduate clinical training, whichever date is later, within the past 10 years and who has not previously competed successfully as PD/PI for a substantial NIH independent research award. See <a href="https://grants.nih.gov/policy-and-compliance/policy-topics/early-stage-investigators">NIH's list of grants a PD/PI can hold and still be considered an ESI</a>.</td></tr>
+            <tr><td><b>New Investigator (NI)</b></td><td>Has not previously competed successfully for substantial research grants from NIH.</td></tr>
+            <tr><td><b>Mid-career investigator</b></td><td>Has already won a first independent research project grant (RPG), such as an R01, and is working toward its first renewal. Should complement the Center's scientific breadth.</td></tr>
+            <tr><td><b>“At-risk” investigator</b></td><td>Will have no substantial research grant funding in the upcoming fiscal year.</td></tr>
+          </tbody>
+            </table>
+          </div>
+        </div>
+      </details>
+      <details class="acc" id="srp4">
+        <summary style="grid-template-columns: minmax(0,1fr) auto;"><span class="ttl">While an SI is supported</span><span class="meta"><svg class="car" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+        <div class="body">
+          <div class="scroll">
+            <table class="tbl">
+              <thead><tr><th style="width:230px;">Topic</th><th>Detail</th></tr></thead>
+              <tbody>
+            <tr><td><b>Mentor</b></td><td>Each SI should be assigned a mentor, an established investigator who can give scientific and career guidance. Mentors may come from non-IDeA states, and the Administrative Core budget may pay a mentor for up to <b>1 person-month</b>. Advisory Committee members may not serve as SI mentors.</td></tr>
+            <tr><td><b>Career development</b></td><td>The SRP Core implements a required <b>Career Development Plan</b>.</td></tr>
+            <tr><td><b>Effort</b></td><td>SIs must keep at least <b>6.0 person-months</b> of effort for the whole time they're supported. Going below 6.0 needs NIGMS prior approval and will not be approved except in extraordinary circumstances.</td></tr>
+            <tr><td><b>Budget</b></td><td>The SRP needs a detailed budget for the full 5-year period. Salary support for postdocs and graduate or undergraduate research assistants may be requested, with justification of the SI's needs.</td></tr>
+            <tr><td><b>Time limit</b></td><td>SIs are expected to be supported for <b>up to 3 years</b>. Support beyond 3 years needs Advisory Committee approval and NIGMS prior approval.</td></tr>
+            <tr><td><b>Grant milestone</b></td><td>Each SI must submit an independent RPG application (New or Renewal, depending on career stage) by the <b>end of their second year</b> of COBRE support.</td></tr>
+            <tr><td><b>Progress</b></td><td>An SI may be removed if Advisory Committee review shows they aren't making adequate progress.</td></tr>
+          </tbody>
+            </table>
+          </div>
+        </div>
+      </details>
+      <details class="acc" id="srp5">
+        <summary style="grid-template-columns: minmax(0,1fr) auto;"><span class="ttl">When an SI leaves the program</span><span class="meta"><svg class="car" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+        <div class="body">
+          <div class="scroll">
+            <table class="tbl">
+              <thead><tr><th style="width:230px;">Topic</th><th>Detail</th></tr></thead>
+              <tbody>
+            <tr><td><b>Graduating</b></td><td>An SI is no longer eligible for COBRE support once they receive independent research funding. If that funding doesn't overlap with the COBRE project, up to <b>6 months</b> may be allowed to close out the SI project.</td></tr>
+            <tr><td><b>Departures</b></td><td>No prior approval is needed when an SI leaves; report it in the next RPPR.</td></tr>
+            <tr><td><b>Replacements</b></td><td>The Advisory Committee recommends replacement SIs when appropriate.</td></tr>
+          </tbody>
+            </table>
+          </div>
+        </div>
+      </details>
+      <details class="acc" id="srp6">
+        <summary style="grid-template-columns: minmax(0,1fr) auto;"><span class="ttl">Adding a new SI after the award</span><span class="meta"><svg class="car" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+        <div class="body">
+          <div class="scroll">
+            <table class="tbl">
+              <thead><tr><th style="width:230px;">Topic</th><th>Detail</th></tr></thead>
+              <tbody>
+            <tr><td><b>Research without human subjects or vertebrate animals</b></td><td>Official notification to NIGMS, with documentation including Advisory Committee approval, at least <b>14 days</b> before COBRE-supported research begins. No prior approval needed.</td></tr>
+            <tr><td><b>Research with human subjects or vertebrate animals</b></td><td>NIGMS prior approval, requested through the <b>eRA Prior Approval module</b> (NOT-OD-26-026) at least <b>30 days</b> before COBRE-supported research begins.</td></tr>
+            <tr><td><b>What the request includes</b></td><td>A face page signed by the signing official; project summary; research strategy (no Specific Aims); updated Current and Pending Support; a biographical sketch addressing COBRE impact; Advisory Committee approval; a letter from a senior institutional official; a Resource Sharing Plan; and authentication of key resources.</td></tr>
+            <tr><td><b>Human subjects research adds</b></td><td>The PHS Human Subjects form, IRB approval, and Human Subjects Education Certification. Study data must be entered in the Human Subjects System (HSS) before requesting approval.</td></tr>
+            <tr><td><b>Vertebrate animal research adds</b></td><td>IACUC approval and a Vertebrate Animal Section.</td></tr>
+            <tr><td><b>Advisory Committee Chair's communication</b></td><td>Evaluates the proposed SI's research program, assesses how the SI will integrate with the Center, and affirms the research aligns with agency priorities and proposes no dangerous gain-of-function studies.</td></tr>
+            <tr><td><b>Institutional letter</b></td><td>From a senior official, showing a clear commitment to support a multi-year faculty appointment for the proposed SI.</td></tr>
+          </tbody>
+            </table>
+          </div>
+        </div>
+      </details>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap">
+      <img class="logo" src="assets/cnap-logo.jpg" alt="CNAP Center — Cognitive &amp; Neurobiological Approaches to Plasticity">
+      <span>CNAP Center · Phase S (COBRE-S) Application · PAR-27-055</span>
+      <span>Source: COBRE-S Staff Briefing, October 2026 · Questions: Morgan, <a href="mailto:mkwills@ksu.edu">mkwills@ksu.edu</a></span>
+    </div>
+  </footer>
+</div>
+
+<script>
+(function(){ window.DCLogic = class { forceUpdate(){ if (window.__dcRender) window.__dcRender(); } }; })();
+
+class Component extends DCLogic {
+  componentDidMount() {
+    if (typeof window !== 'undefined') {
+      setTimeout(() => {
+        const h = (window.location.hash || '').slice(1);
+        if (!h || !window.__nmJump) return;
+        const t = document.querySelector('[id="' + h + '"]');
+        if (t) window.__nmJump(t);
+      }, 350);
+    }
+    if (typeof window !== 'undefined') setTimeout(() => { if (window.__xallSync) window.__xallSync(); }, 400);
+    if (typeof window !== 'undefined' && !window.__nmAutoClose13) {
+      window.__nmAutoClose13 = true;
+      const rootOf = (e) => { const t = e.composedPath ? e.composedPath()[0] : e.target; return (t && t.getRootNode) ? t.getRootNode() : document; };
+      document.addEventListener('mousemove', (e) => {
+        const root = rootOf(e); if (!root.querySelectorAll) return;
+        root.querySelectorAll('details.nm[open]').forEach((d) => {
+          if (d.matches(':hover')) { clearTimeout(d.__t); d.__t = null; }
+          else if (!d.__t) { d.__t = setTimeout(() => { d.__t = null; if (!d.matches(':hover')) d.removeAttribute('open'); }, 450); }
+        });
+      }, { passive: true });
+      document.addEventListener('click', (e) => {
+        const root = rootOf(e); if (!root.querySelectorAll) return;
+        const path = e.composedPath ? e.composedPath() : [e.target];
+        root.querySelectorAll('details.nm[open]').forEach((d) => { if (!path.includes(d)) d.removeAttribute('open'); });
+        const a = path.find((n) => n && n.tagName === 'A' && n.getAttribute && (n.getAttribute('href') || '').includes('#'));
+        if (!a) return;
+        const id = (a.getAttribute('href') || '').split('#')[1];
+        if (!id) return;
+        let el = a.parentElement, target = null;
+        while (el && !target) { target = el.querySelector ? el.querySelector('[id="' + id + '"]') : null; el = el.parentElement; }
+        if (!target) return;
+        e.preventDefault();
+        const d = a.closest('details.nm'); if (d) d.removeAttribute('open');
+        window.__nmJump(target);
+      });
+      const xallScope = (n) => (n && n.closest && (n.closest('.xscope') || n.closest('main'))) || document;
+      window.__xallItems = (scope) => Array.from(scope.querySelectorAll('details.sx, details.acc, details.stg'));
+      window.__xallSync = (root) => {
+        (root && root.querySelectorAll ? root : document).querySelectorAll('button.xall').forEach((b) => {
+          const list = window.__xallItems(xallScope(b));
+          const anyClosed = list.some((d) => !d.open);
+          const sc = b.closest('.xscope'); b.textContent = anyClosed ? (sc ? 'Expand all stages' : 'Expand all') : (sc ? 'Collapse all stages' : 'Collapse all');
+          b.setAttribute('aria-pressed', anyClosed ? 'false' : 'true');
+        });
+      };
+      document.addEventListener('click', (e) => {
+        const path = e.composedPath ? e.composedPath() : [e.target];
+        const btn = path.find((n) => n && n.classList && n.classList.contains('xall'));
+        if (btn) {
+          e.preventDefault();
+          const scope = xallScope(btn);
+          const list = window.__xallItems(scope);
+          const anyClosed = list.some((d) => !d.open);
+          list.forEach((d) => { if (anyClosed) d.setAttribute('open', ''); else d.removeAttribute('open'); });
+          if (scope.dataset) scope.dataset.xall = anyClosed ? '1' : '';
+          window.__xallSync(btn.getRootNode ? btn.getRootNode() : document);
+          return;
+        }
+      }, true);
+      document.addEventListener('toggle', (e) => { const t = e.composedPath ? e.composedPath()[0] : e.target; window.__xallSync(t && t.getRootNode ? t.getRootNode() : document); }, true);
+      window.__nmJump = (target) => {
+        if (target.tagName === 'DETAILS') target.setAttribute('open', '');
+        const sx = target.querySelector ? target.querySelector(':scope > details.sx') : null; if (sx) sx.setAttribute('open', '');
+        let host = target.parentElement, bar = null;
+        while (host && !bar) { bar = host.querySelector ? host.querySelector('.topbar') : null; host = host.parentElement; }
+        const offset = (bar ? (bar.querySelector('.nav') || bar).getBoundingClientRect().height : 0) + 20;
+        let sc = target.parentElement;
+        while (sc && sc !== document.body && sc !== document.documentElement) {
+          const oy = getComputedStyle(sc).overflowY;
+          if ((oy === 'auto' || oy === 'scroll') && sc.scrollHeight > sc.clientHeight) break;
+          sc = sc.parentElement;
+        }
+        const useWin = !sc || sc === document.body || sc === document.documentElement;
+        const top = target.getBoundingClientRect().top - (useWin ? 0 : sc.getBoundingClientRect().top) - offset;
+        (useWin ? window : sc).scrollBy({ top: top, behavior: 'smooth' });
+      };
+    }
+  }
+  renderVals() { return {}; }
+}
+
+(function(){
+  const start = () => { const c = new Component(); window.__dcComp = c; if (c.componentDidMount) c.componentDidMount(); };
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start); else start();
+})();
+</script>
+</body>
+</html>

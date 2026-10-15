@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Proposal Writing Conventions — CNAP Phase S Proposal Hub</title>
+<link rel="stylesheet" href="site.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&amp;family=Archivo:wght@500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F7F6FA}
+a{color:#512888}a:hover{color:#3B1C66}
+.rule-list{gap:0}
+.lede-list{list-style:none;padding:0;margin-left:0;display:flex;flex-direction:column;gap:2px}
+.lede-list li{position:relative;padding-left:0}
+.lede-list li::before{content:none}
+.rule .ex{font-family:Arial,Helvetica,sans-serif;font-style:normal;color:#000;font-size:11pt;line-height:1.35}
+.rule .ex.none{color:#A9A3B6}
+.rule.rule-head{padding:0 0 10px !important;border-bottom:2px solid #512888;font-size:13px;font-weight:800;letter-spacing:0.06em;text-transform:uppercase;color:#512888}
+.rule.rule-head + .rule{padding-top:14px !important}
+@media (max-width:760px){.rule.rule-head{display:none}}
+.stk{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:5px}
+.stk li{padding-left:2px}
+.stk li::marker{color:#512888}
+.rule{padding:16px 0 !important;border-bottom:1px solid #D3CDE0}
+.rule:first-child{padding-top:2px !important}
+.rule:last-child{padding-bottom:2px !important;border-bottom:none}
+.rule > div + div{border-left:1px solid #D3CDE0;padding-left:18px;align-self:stretch}
+@media (max-width:760px){.rule > div + div{border-left:none;padding-left:0}}
+.band-w,.band-g{position:relative;border-top:2px solid #D3CDE0;box-shadow:0 0 0 100vmax var(--bandc);clip-path:inset(0 -100vmax);background:var(--bandc)}
+.band-w{--bandc:#FFFFFF}
+.pagehead + .band-w{border-top:none}
+.band-g{--bandc:#F7F6FA}
+section.sec.band-w,section.sec.band-g{padding-top:40px !important;padding-bottom:40px;margin-top:0;margin-bottom:0}
+/* compact, all-white section list */
+.band-g{--bandc:#FFFFFF}
+section.sec.band-w,section.sec.band-g{padding-top:18px !important;padding-bottom:18px}
+.band-w,.band-g{border-top:1px solid #E4E0EC}
+details.sx > summary .h2{background-image:linear-gradient(#512888,#512888) !important;background-size:40px 3px !important;background-position:0 100%;background-repeat:no-repeat;padding-bottom:8px;font-size:19px}
+details.sx:not([open]) > summary .h2{background-image:none !important;padding-bottom:0}
+details.sx > summary .sx-car{width:32px;height:32px;margin-bottom:0}
+details.sx[open] > summary{margin-bottom:14px}
+</style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<div class="hub" style="font-family: 'Source Sans 3', 'Segoe UI', system-ui, sans-serif; color: #1F1B2B; background: #F7F6FA; min-height: 100vh;">
+
+  <header class="topbar">
+    <div class="wrap">
+      <a class="brand" href="index.html" title="Back to the Dashboard"><svg class="home-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5L12 3l9 7.5"></path><path d="M5 9.5V21h5v-6h4v6h5V9.5"></path></svg><span>CNAP Phase S Proposal Hub</span></a>
+      <nav class="nav" aria-label="Site">
+        <a class="navlink" href="index.html">Dashboard</a>
+        <details class="nm"><summary><a href="Timeline.html">Team Timeline</a><span class="car"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+          <div class="pop">
+            <a class="hd" href="Timeline.html">Team Timeline</a>
+            <a href="Timeline.html#kickoff">Kickoff to submission (by date)</a>
+            <a href="Timeline.html#bycomponent">The same schedule, by component</a>
+          </div>
+        </details>
+        <details class="nm"><summary><a href="Workflow.html">Workflow &amp; Files</a><span class="car"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+          <div class="pop">
+            <a class="hd" href="Workflow.html">Workflow &amp; File Management</a>
+            <a href="Workflow.html#summary">Please read first</a>
+            <a href="Workflow.html#smartsheet">Smartsheet</a>
+            <a href="Workflow.html#statuses">Statuses &amp; reviews</a>
+            <a href="Workflow.html#folders">Dropbox folders</a>
+            <a href="Workflow.html#reference">Reference materials</a>
+          </div>
+        </details>
+        <details class="nm"><summary><a href="Guidance.html">Contributor Guidance</a><span class="car"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+          <div class="pop">
+            <a class="hd" href="Guidance.html">Find your guidance</a>
+            <a href="HeatherBailey.html">Heather Bailey · Center Director (PD/PI), CN Core</a>
+            <a href="Chip.html">Chip · BN Core Director</a>
+            <a href="Doina.html">Doina · NI Core Director</a>
+            <a href="CarlAde.html">Carl Ade · Associate Director</a>
+            <a href="Roxana.html">Roxana · Budget Review</a>
+            <a href="Tim.html">Tim · Central Office Budget Review</a>
+            <a href="Kim.html">Kim · Central Office Biosketch Review</a>
+          </div>
+        </details>
+        <details class="nm"><summary><a href="PhaseS.html">Phase S Overview</a><span class="car"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+          <div class="pop">
+            <a class="hd" href="PhaseS.html">Phase S / NOFO Overview</a>
+            <a href="PhaseS.html#glance">Application components at a glance</a>
+            <a href="PhaseS.html#evs">COBRE-E vs. COBRE-S</a>
+            <a href="PhaseS.html#changes">Differences from previous NOFOs</a>
+            <a href="PhaseS.html#pi">Eligibility: Center Director</a>
+          </div>
+        </details>
+        <details class="nm"><summary><a href="SRP.html">SRP Core</a><span class="car"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+          <div class="pop">
+            <a class="hd" href="SRP.html">SRP Core &amp; SRP Investigators</a>
+            <a href="SRP.html#srpdir">The SRP Core Director</a>
+            <a href="SRP.html#srp1">How SIs are chosen</a>
+            <a href="SRP.html#srp2">Requirements every SI must meet</a>
+            <a href="SRP.html#srp3">Eligible career stages</a>
+            <a href="SRP.html#srp4">While an SI is supported</a>
+            <a href="SRP.html#srp5">When an SI leaves the program</a>
+            <a href="SRP.html#srp6">Adding a new SI after the award</a>
+          </div>
+        </details>
+        <details class="nm on"><summary><a href="Conventions.html">Formatting Conventions</a><span class="car"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+          <div class="pop">
+            <a class="hd" href="Conventions.html">Formatting Conventions</a>
+            <a href="Conventions.html#names">Names and terms</a>
+            <a href="Conventions.html#format">NIH format (required)</a>
+            <a href="Conventions.html#tables">Tables and figures</a>
+            <a href="Conventions.html#refs">References</a>
+          </div>
+        </details>
+        <details class="nm"><summary><a href="Review.html">Review Criteria</a><span class="car"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+          <div class="pop">
+            <a class="hd" href="Review.html">Review Criteria</a>
+            <a href="Review.html#rc1">Administrative Core</a>
+            <a href="Review.html#rc2">Research Cores</a>
+            <a href="Review.html#rc3">Scientific Research Program</a>
+            <a href="Review.html#rc4">General criterion: Significance</a>
+            <a href="Review.html#rc5">General criterion: Investigators</a>
+            <a href="Review.html#rc6">General criterion: Innovation</a>
+            <a href="Review.html#rc7">General criterion: Approach</a>
+            <a href="Review.html#rc8">General criterion: Environment</a>
+            <a href="Review.html#rc9">After peer review: funding considerations</a>
+          </div>
+        </details>
+        <details class="nm"><summary><a href="Definitions.html">Definitions</a><span class="car"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+          <div class="pop">
+            <a class="hd" href="Definitions.html">Definitions (key terms)</a>
+            <a href="Definitions.html#kt1">Program and phases</a>
+            <a href="Definitions.html#kt2">Capacity and infrastructure</a>
+            <a href="Definitions.html#kt3">Center components</a>
+            <a href="Definitions.html#kt4">People</a>
+            <a href="Definitions.html#kt5">Plans and funding rules</a>
+            <a href="Definitions.html#kt6">Review</a>
+          </div>
+        </details>
+      </nav>
+      <div class="quick">
+        <a class="btn sm primary" href="https://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21">Open Smartsheet</a>
+        <a class="btn sm" href="https://files.simpler.grants.gov/opportunities/77942f5d-0b5f-4656-bfd7-a6148b1624a4/attachments/55f55944-4b0c-4a90-9e33-75b064598558/PAR-27-055-Full-Announcement.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6M8 13h8M8 17h6"></path></svg>Full NOFO</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="wrap pagehead">
+      <p class="eyebrow">Universal resource · For every component writer</p>
+      <h1 class="h1">Proposal Writing Conventions</h1>
+      <ul class="lede lede-list"><li>Names and terms, NIH format, tables and figures, and references.</li><li>Consider referencing this while you write.</li><li>Items marked <span class="badge gold">New</span> or <span class="badge gold">Updated</span> are worth a closer look, even if you've written for CNAP before.</li></ul>
+    </section>
+
+    <section class="wrap sec band-w" id="names">
+      <div class="xall-bar"><button type="button" class="xall" aria-pressed="false">Expand all</button></div>
+      <details class="sx">
+      <summary><h2 class="h2">Names and terms</h2><span class="sx-car" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+      <div class="card">
+        <div class="rule-list"><div class="rule rule-head"><div>Convention</div><div>What to do</div><div>Example</div></div>
+          <div class="rule" style="padding-top: 0;">
+            <div class="k"><span>1. Phases and this application</span><span class="badge gold">Updated</span></div>
+            <div>Capital P, then the number or letter: “Phase 1,” “Phase 2,” “Phase S.” This application is <b>Phase S</b>, the Sustainability phase (the NOFO's “COBRE-S”). Don't call it “Phase 3.”</div>
+            <div class="ex">“…established in Phase 1 and expanded in Phase 2, Phase S support will sustain…”</div>
+          </div>
+          <div class="rule">
+            <div class="k"><span>2. CNAP</span></div>
+            <div>Four letters, no dash.</div>
+            <div class="ex">CNAP (not C-NAP)</div>
+          </div>
+          <div class="rule">
+            <div class="k"><span>3. K-State</span></div>
+            <div>Use “K-State,” never “KSU.” Spell out “Kansas State University (K-State)” at first mention in each component.</div>
+            <div class="ex">“the K-State campus data management plan”</div>
+          </div>
+          <div class="rule">
+            <div class="k"><span>4. Core</span></div>
+            <div>Capitalize when naming one of the three research cores; lowercase otherwise.</div>
+            <div class="ex">“NI Core users rated core services…”</div>
+          </div>
+          <div class="rule">
+            <div class="k"><span>5. Names for the parts</span><span class="badge gold">New</span></div>
+            <div><ul class="stk"><li><b>Center</b>: CNAP as a whole</li><li><b>Overall component</b>: the application part only</li><li><b>Center Director (PD/PI)</b>: Heather Bailey's role. Write it this way, not "PD/PI" or "PI" alone.</li><li>Administrative Core</li><li>Research Core</li><li>Scientific Research Program (SRP) Core</li><li>SRP Investigators (SIs)</li><li>Advisory Committee (AC)</li><li>Organization and Management (O&amp;M) Plan</li></ul></div>
+            <div class="ex">“The Center's three Research Cores…”</div>
+          </div>
+          <div class="rule" style="padding-bottom: 0;">
+            <div class="k"><span>6. Abbreviations</span><span class="badge gold">New</span></div>
+            <div>Spell out at first use in every component, in both the Specific Aims and the Research Strategy. Reviewers may read only one component.</div>
+            <div class="ex">“the Neuroinformatics (NI) Core”</div>
+          </div>
+        </div>
+      </div>
+      </details>
+    </section>
+
+    <section class="wrap sec band-g" id="format">
+      <details class="sx">
+      <summary><h2 class="h2">NIH format (required)</h2><span class="sx-car" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+      <div class="card">
+        <div class="rule-list"><div class="rule rule-head"><div>Convention</div><div>What to do</div><div>Example</div></div>
+          <div class="rule" style="padding-top: 0;">
+            <div class="k"><span>7. Font</span><span class="badge gold">New</span></div>
+            <div>Arial, 11 pt or larger for all text. Text inside figures, graphs, and charts may be smaller if legible at 100%.</div>
+            <div class="ex none">—</div>
+          </div>
+          <div class="rule">
+            <div class="k"><span>8. Margins</span><span class="badge gold">New</span></div>
+            <div>At least 0.5 inch on all sides; nothing in the margins.</div>
+            <div class="ex none">—</div>
+          </div>
+          <div class="rule">
+            <div class="k"><span>9. Headers and footers</span><span class="badge gold">New</span></div>
+            <div>None. NIH adds them. Headings within the text are fine.</div>
+            <div class="ex none">—</div>
+          </div>
+          <div class="rule" style="padding-bottom: 0;">
+            <div class="k"><span>10. Hyperlinks and URLs</span><span class="badge gold">New</span></div>
+            <div>None, unless the NOFO or form asks for them. Never put information reviewers need behind a link.</div>
+            <div class="ex none">—</div>
+          </div>
+        </div>
+      </div>
+      </details>
+    </section>
+
+    <section class="wrap sec band-w" id="tables">
+      <details class="sx">
+      <summary><h2 class="h2">Tables and figures</h2><span class="sx-car" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+      <div class="card">
+        <div class="rule-list"><div class="rule rule-head"><div>Convention</div><div>What to do</div><div>Example</div></div>
+          <div class="rule" style="padding-top: 0;">
+            <div class="k"><span>11. Tables</span><span class="badge gold">Updated</span></div>
+            <div><ul class="stk"><li>Arial 11 pt for table text and captions.</li><li>Black cell borders.</li><li>Caption below the table, left-aligned.</li><li>If a table won't fit at 11 pt, make it a figure.</li></ul></div>
+            <div class="ex cap"><b>Table 1.</b> NI Core User Survey Responses — Quality of Services</div>
+          </div>
+          <div class="rule">
+            <div class="k"><span>12. Figure captions</span><span class="badge gold">Updated</span></div>
+            <div>Arial 11 pt, below the figure, left-aligned.</div>
+            <div class="ex cap"><b>Figure 1.</b> Annual CNAP Beocat users, 2017–2026.</div>
+          </div>
+          <div class="rule">
+            <div class="k"><span>13. Bold labels</span></div>
+            <div>Bold the label (“Table 1.” / “Figure 1.”), not the text after it.</div>
+            <div class="ex cap"><b>Table 2.</b> Core usage by year</div>
+          </div>
+          <div class="rule">
+            <div class="k"><span>14. Numbering</span><span class="badge gold">New</span></div>
+            <div>Restart at Table 1 and Figure 1 in each component.</div>
+            <div class="ex none">—</div>
+          </div>
+          <div class="rule">
+            <div class="k"><span>15. Inserting images</span><span class="badge gold">Updated</span></div>
+            <div>Insert figures as 300-dpi PNG or PDF-based images, not Enhanced Metafile (EMF can blur or shift fonts in the final PDF).</div>
+            <div class="ex none">—</div>
+          </div>
+          <div class="rule">
+            <div class="k"><span>16. Placement</span></div>
+            <div><ul class="stk"><li><b>Half the page width or less</b>: right-align, tight text wrap.</li><li><b>Wider</b>: center, no wrap.</li><li>Check the final PDF; wrapping can shift.</li></ul></div>
+            <div class="ex none">—</div>
+          </div>
+          <div class="rule" style="padding-bottom: 0;">
+            <div class="k"><span>17. In-text callouts</span></div>
+            <div>Bold the reference. “Fig.” for figures; “Table” in full.</div>
+            <div class="ex">“As shown in <b>Fig. 1</b>…” · “<b>Table 1</b> summarizes…”</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top: 16px;">
+        <h3 class="h3">Example of the table rule</h3>
+        <div class="scroll">
+          <table style="border-collapse: collapse; font-family: Arial, Helvetica, sans-serif; font-size: 14.5px; min-width: 520px;">
+            <thead>
+              <tr>
+                <th style="border: 1px solid #1F1B2B; padding: 6px 10px; text-align: left; font-weight: 700;">Metric</th>
+                <th style="border: 1px solid #1F1B2B; padding: 6px 10px; text-align: center; font-weight: 700;">Year 2</th>
+                <th style="border: 1px solid #1F1B2B; padding: 6px 10px; text-align: center; font-weight: 700;">Year 3</th>
+                <th style="border: 1px solid #1F1B2B; padding: 6px 10px; text-align: center; font-weight: 700;">Year 4</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td style="border: 1px solid #1F1B2B; padding: 6px 10px;">Enhancement of research productivity</td><td style="border: 1px solid #1F1B2B; padding: 6px 10px; text-align: center;">3.85</td><td style="border: 1px solid #1F1B2B; padding: 6px 10px; text-align: center;">4.08</td><td style="border: 1px solid #1F1B2B; padding: 6px 10px; text-align: center;">4.46</td></tr>
+              <tr><td style="border: 1px solid #1F1B2B; padding: 6px 10px;">Collaborative environment</td><td style="border: 1px solid #1F1B2B; padding: 6px 10px; text-align: center;">3.98</td><td style="border: 1px solid #1F1B2B; padding: 6px 10px; text-align: center;">4.31</td><td style="border: 1px solid #1F1B2B; padding: 6px 10px; text-align: center;">4.07</td></tr>
+              <tr><td style="border: 1px solid #1F1B2B; padding: 6px 10px;">Overall Quality Rating</td><td style="border: 1px solid #1F1B2B; padding: 6px 10px; text-align: center;">3.91</td><td style="border: 1px solid #1F1B2B; padding: 6px 10px; text-align: center;">4.02</td><td style="border: 1px solid #1F1B2B; padding: 6px 10px; text-align: center;">4.19</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="margin: 8px 0 0; font-family: Arial, Helvetica, sans-serif; font-size: 14.5px;"><b>Table 1.</b> NI Core User Survey Responses — Quality of Services</p>
+      </div>
+      </details>
+    </section>
+
+    <section class="wrap sec band-g" id="refs">
+      <details class="sx">
+      <summary><h2 class="h2">References</h2><span class="sx-car" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+      <div class="card">
+        <div class="rule-list"><div class="rule rule-head"><div>Convention</div><div>What to do</div><div>Example</div></div>
+          <div class="rule" style="padding-top: 0;">
+            <div class="k"><span>18. Software</span></div>
+            <div>EndNote or similar reference software.</div>
+            <div class="ex none">—</div>
+          </div>
+          <div class="rule">
+            <div class="k"><span>19. In-text citations</span><span class="badge gold">Updated</span></div>
+            <div>Numbered superscripts, numbered in order of first appearance in your component.</div>
+            <div class="ex">“…growth in core use.<sup>1,2</sup>”</div>
+          </div>
+          <div class="rule">
+            <div class="k"><span>20. Reference list style</span><span class="badge gold">Updated</span></div>
+            <div>A numbered style such as NLM (Vancouver). Not APA 7, which is author–date and alphabetical.</div>
+            <div class="ex">1. Author AA, Author BB. Title. Journal. 2024;12(3):45-67. PMCID: PMC1234567.</div>
+          </div>
+          <div class="rule">
+            <div class="k"><span>21. PMCID</span><span class="badge gold">New</span></div>
+            <div>Include the PMCID for any cited paper covered by the NIH Public Access Policy.</div>
+            <div class="ex">PMCID: PMC1234567</div>
+          </div>
+          <div class="rule" style="padding-bottom: 0;">
+            <div class="k"><span>22. One list per component</span></div>
+            <div>If your Aims have citations, temporarily combine the Aims and Research Strategy files so one list is numbered across both. The Bibliography is a separate attachment and doesn't count toward page limits.</div>
+            <div class="ex none">—</div>
+          </div>
+        </div>
+      </div>
+      </details>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap">
+      <img class="logo" src="assets/cnap-logo.jpg" alt="CNAP Center — Cognitive &amp; Neurobiological Approaches to Plasticity">
+      <span>CNAP Center · Phase S (COBRE-S) Application · PAR-27-055</span>
+      <span>Source: Proposal Writing Conventions, prepared Oct 12, 2026 · Questions: Morgan, <a href="mailto:mkwills@ksu.edu">mkwills@ksu.edu</a></span>
+    </div>
+  </footer>
+</div>
+
+<script>
+(function(){ window.DCLogic = class { forceUpdate(){ if (window.__dcRender) window.__dcRender(); } }; })();
+
+class Component extends DCLogic {
+  componentDidMount() {
+    if (typeof window !== 'undefined') {
+      setTimeout(() => {
+        const h = (window.location.hash || '').slice(1);
+        if (!h || !window.__nmJump) return;
+        const t = document.querySelector('[id="' + h + '"]');
+        if (t) window.__nmJump(t);
+      }, 350);
+    }
+    if (typeof window !== 'undefined') setTimeout(() => { if (window.__xallSync) window.__xallSync(); }, 400);
+    if (typeof window !== 'undefined' && !window.__nmAutoClose13) {
+      window.__nmAutoClose13 = true;
+      const rootOf = (e) => { const t = e.composedPath ? e.composedPath()[0] : e.target; return (t && t.getRootNode) ? t.getRootNode() : document; };
+      document.addEventListener('mousemove', (e) => {
+        const root = rootOf(e); if (!root.querySelectorAll) return;
+        root.querySelectorAll('details.nm[open]').forEach((d) => {
+          if (d.matches(':hover')) { clearTimeout(d.__t); d.__t = null; }
+          else if (!d.__t) { d.__t = setTimeout(() => { d.__t = null; if (!d.matches(':hover')) d.removeAttribute('open'); }, 450); }
+        });
+      }, { passive: true });
+      document.addEventListener('click', (e) => {
+        const root = rootOf(e); if (!root.querySelectorAll) return;
+        const path = e.composedPath ? e.composedPath() : [e.target];
+        root.querySelectorAll('details.nm[open]').forEach((d) => { if (!path.includes(d)) d.removeAttribute('open'); });
+        const a = path.find((n) => n && n.tagName === 'A' && n.getAttribute && (n.getAttribute('href') || '').includes('#'));
+        if (!a) return;
+        const id = (a.getAttribute('href') || '').split('#')[1];
+        if (!id) return;
+        let el = a.parentElement, target = null;
+        while (el && !target) { target = el.querySelector ? el.querySelector('[id="' + id + '"]') : null; el = el.parentElement; }
+        if (!target) return;
+        e.preventDefault();
+        const d = a.closest('details.nm'); if (d) d.removeAttribute('open');
+        window.__nmJump(target);
+      });
+      const xallScope = (n) => (n && n.closest && (n.closest('.xscope') || n.closest('main'))) || document;
+      window.__xallItems = (scope) => Array.from(scope.querySelectorAll('details.sx, details.acc, details.stg'));
+      window.__xallSync = (root) => {
+        (root && root.querySelectorAll ? root : document).querySelectorAll('button.xall').forEach((b) => {
+          const list = window.__xallItems(xallScope(b));
+          const anyClosed = list.some((d) => !d.open);
+          const sc = b.closest('.xscope'); b.textContent = anyClosed ? (sc ? 'Expand all stages' : 'Expand all') : (sc ? 'Collapse all stages' : 'Collapse all');
+          b.setAttribute('aria-pressed', anyClosed ? 'false' : 'true');
+        });
+      };
+      document.addEventListener('click', (e) => {
+        const path = e.composedPath ? e.composedPath() : [e.target];
+        const btn = path.find((n) => n && n.classList && n.classList.contains('xall'));
+        if (btn) {
+          e.preventDefault();
+          const scope = xallScope(btn);
+          const list = window.__xallItems(scope);
+          const anyClosed = list.some((d) => !d.open);
+          list.forEach((d) => { if (anyClosed) d.setAttribute('open', ''); else d.removeAttribute('open'); });
+          if (scope.dataset) scope.dataset.xall = anyClosed ? '1' : '';
+          window.__xallSync(btn.getRootNode ? btn.getRootNode() : document);
+          return;
+        }
+      }, true);
+      document.addEventListener('toggle', (e) => { const t = e.composedPath ? e.composedPath()[0] : e.target; window.__xallSync(t && t.getRootNode ? t.getRootNode() : document); }, true);
+      window.__nmJump = (target) => {
+        if (target.tagName === 'DETAILS') target.setAttribute('open', '');
+        const sx = target.querySelector ? target.querySelector(':scope > details.sx') : null; if (sx) sx.setAttribute('open', '');
+        let host = target.parentElement, bar = null;
+        while (host && !bar) { bar = host.querySelector ? host.querySelector('.topbar') : null; host = host.parentElement; }
+        const offset = (bar ? (bar.querySelector('.nav') || bar).getBoundingClientRect().height : 0) + 20;
+        let sc = target.parentElement;
+        while (sc && sc !== document.body && sc !== document.documentElement) {
+          const oy = getComputedStyle(sc).overflowY;
+          if ((oy === 'auto' || oy === 'scroll') && sc.scrollHeight > sc.clientHeight) break;
+          sc = sc.parentElement;
+        }
+        const useWin = !sc || sc === document.body || sc === document.documentElement;
+        const top = target.getBoundingClientRect().top - (useWin ? 0 : sc.getBoundingClientRect().top) - offset;
+        (useWin ? window : sc).scrollBy({ top: top, behavior: 'smooth' });
+      };
+    }
+  }
+  renderVals() { return {}; }
+}
+
+(function(){
+  const start = () => { const c = new Component(); window.__dcComp = c; if (c.componentDidMount) c.componentDidMount(); };
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start); else start();
+})();
+</script>
+</body>
+</html>

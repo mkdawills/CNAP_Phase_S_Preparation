@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Workflow &amp; File Management — CNAP Phase S Proposal Hub</title>
+<link rel="stylesheet" href="site.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&amp;family=Archivo:wght@500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F7F6FA}
+a{color:#512888}a:hover{color:#3B1C66}
+.flow{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;align-items:stretch}
+@media (max-width:980px){.flow{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:640px){.flow{grid-template-columns:minmax(0,1fr)}}
+.step{background:#fff;border:1px solid #E4E0EC;border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:8px}
+.step .s{font-size:12px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#512888}
+.step .t{font-family:'Archivo','Segoe UI',Helvetica,Arial,sans-serif;font-weight:600;font-size:18px;line-height:1.2}
+.step .w{font-size:14.5px;color:#4A4458;line-height:1.45}
+.step .f{font-size:13px;color:#6B6579;margin-top:auto;padding-top:8px;border-top:1px dashed #E4E0EC}
+.folder-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+@media (max-width:760px){.folder-grid{grid-template-columns:minmax(0,1fr)}}
+.flist{display:flex;flex-direction:column;gap:6px}
+.flist a{display:flex;align-items:center;gap:10px;padding:10px 12px;border:1px solid #E4E0EC;border-radius:9px;color:#1F1B2B;font-weight:500;min-height:44px;background:#fff}
+.flist a:hover{border-color:#512888;color:#512888;text-decoration:none;background:#F6F3FB}
+.flist svg{width:18px;height:18px;color:#512888;flex:none}
+.band-w,.band-g{position:relative;border-top:2px solid #D3CDE0;box-shadow:0 0 0 100vmax var(--bandc);clip-path:inset(0 -100vmax);background:var(--bandc)}
+.band-w{--bandc:#FFFFFF}
+.pagehead + .band-w{border-top:none}
+.band-g{--bandc:#F7F6FA}
+section.sec.band-w,section.sec.band-g{padding-top:40px !important;padding-bottom:40px;margin-top:0;margin-bottom:0}
+.flow,.folder-grid{grid-template-columns:minmax(0,1fr) !important}
+.step{flex-direction:row;flex-wrap:wrap;align-items:baseline;column-gap:14px}
+.step .s{min-width:110px}
+.step .w{flex-basis:100%}
+.acc .body .flist{margin-top:4px}
+.step .loc{flex-basis:100%;font-size:13.5px;color:#4A4458;background:#F6F3FB;border-left:3px solid #512888;padding:6px 10px;border-radius:6px}
+.step .loc b{color:#512888;letter-spacing:0.02em}
+.step .loc-final{background:#512888;color:#fff}
+.step .loc-final b{color:#fff}
+.step .f{flex-basis:100%}
+.wf-item .h3{margin:0 0 10px;padding-bottom:8px;border-bottom:1px solid #E4E0EC}
+.rules-stack .wf-item + .wf-item{margin-top:0}
+/* compact, all-white section list */
+.band-g{--bandc:#FFFFFF}
+section.sec.band-w,section.sec.band-g{padding-top:18px !important;padding-bottom:18px}
+.band-w,.band-g{border-top:1px solid #E4E0EC}
+details.sx > summary .h2{background-image:linear-gradient(#512888,#512888) !important;background-size:40px 3px !important;background-position:0 100%;background-repeat:no-repeat;padding-bottom:8px;font-size:19px}
+details.sx:not([open]) > summary .h2{background-image:none !important;padding-bottom:0}
+details.sx > summary .sx-car{width:32px;height:32px;margin-bottom:0}
+details.sx[open] > summary{margin-bottom:14px}
+#summary .xall-bar{margin:0 0 10px}
+</style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<div class="hub" style="font-family: 'Source Sans 3', 'Segoe UI', system-ui, sans-serif; color: #1F1B2B; background: #F7F6FA; min-height: 100vh;">
+
+  <header class="topbar">
+    <div class="wrap">
+      <a class="brand" href="index.html" title="Back to the Dashboard"><svg class="home-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5L12 3l9 7.5"></path><path d="M5 9.5V21h5v-6h4v6h5V9.5"></path></svg><span>CNAP Phase S Proposal Hub</span></a>
+      <nav class="nav" aria-label="Site">
+        <a class="navlink" href="index.html">Dashboard</a>
+        <details class="nm"><summary><a href="Timeline.html">Team Timeline</a><span class="car"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+          <div class="pop">
+            <a class="hd" href="Timeline.html">Team Timeline</a>
+            <a href="Timeline.html#kickoff">Kickoff to submission (by date)</a>
+            <a href="Timeline.html#bycomponent">The same schedule, by component</a>
+          </div>
+        </details>
+        <details class="nm on"><summary><a href="Workflow.html">Workflow &amp; Files</a><span class="car"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+          <div class="pop">
+            <a class="hd" href="Workflow.html">Workflow &amp; File Management</a>
+            <a href="Workflow.html#summary">Please read first</a>
+            <a href="Workflow.html#smartsheet">Smartsheet</a>
+            <a href="Workflow.html#statuses">Statuses &amp; reviews</a>
+            <a href="Workflow.html#folders">Dropbox folders</a>
+            <a href="Workflow.html#reference">Reference materials</a>
+          </div>
+        </details>
+        <details class="nm"><summary><a href="Guidance.html">Contributor Guidance</a><span class="car"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+          <div class="pop">
+            <a class="hd" href="Guidance.html">Find your guidance</a>
+            <a href="HeatherBailey.html">Heather Bailey · Center Director (PD/PI), CN Core</a>
+            <a href="Chip.html">Chip · BN Core Director</a>
+            <a href="Doina.html">Doina · NI Core Director</a>
+            <a href="CarlAde.html">Carl Ade · Associate Director</a>
+            <a href="Roxana.html">Roxana · Budget Review</a>
+            <a href="Tim.html">Tim · Central Office Budget Review</a>
+            <a href="Kim.html">Kim · Central Office Biosketch Review</a>
+          </div>
+        </details>
+        <details class="nm"><summary><a href="PhaseS.html">Phase S Overview</a><span class="car"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+          <div class="pop">
+            <a class="hd" href="PhaseS.html">Phase S / NOFO Overview</a>
+            <a href="PhaseS.html#glance">Application components at a glance</a>
+            <a href="PhaseS.html#evs">COBRE-E vs. COBRE-S</a>
+            <a href="PhaseS.html#changes">Differences from previous NOFOs</a>
+            <a href="PhaseS.html#pi">Eligibility: Center Director</a>
+          </div>
+        </details>
+        <details class="nm"><summary><a href="SRP.html">SRP Core</a><span class="car"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+          <div class="pop">
+            <a class="hd" href="SRP.html">SRP Core &amp; SRP Investigators</a>
+            <a href="SRP.html#srpdir">The SRP Core Director</a>
+            <a href="SRP.html#srp1">How SIs are chosen</a>
+            <a href="SRP.html#srp2">Requirements every SI must meet</a>
+            <a href="SRP.html#srp3">Eligible career stages</a>
+            <a href="SRP.html#srp4">While an SI is supported</a>
+            <a href="SRP.html#srp5">When an SI leaves the program</a>
+            <a href="SRP.html#srp6">Adding a new SI after the award</a>
+          </div>
+        </details>
+        <details class="nm"><summary><a href="Conventions.html">Formatting Conventions</a><span class="car"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+          <div class="pop">
+            <a class="hd" href="Conventions.html">Formatting Conventions</a>
+            <a href="Conventions.html#names">Names and terms</a>
+            <a href="Conventions.html#format">NIH format (required)</a>
+            <a href="Conventions.html#tables">Tables and figures</a>
+            <a href="Conventions.html#refs">References</a>
+          </div>
+        </details>
+        <details class="nm"><summary><a href="Review.html">Review Criteria</a><span class="car"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+          <div class="pop">
+            <a class="hd" href="Review.html">Review Criteria</a>
+            <a href="Review.html#rc1">Administrative Core</a>
+            <a href="Review.html#rc2">Research Cores</a>
+            <a href="Review.html#rc3">Scientific Research Program</a>
+            <a href="Review.html#rc4">General criterion: Significance</a>
+            <a href="Review.html#rc5">General criterion: Investigators</a>
+            <a href="Review.html#rc6">General criterion: Innovation</a>
+            <a href="Review.html#rc7">General criterion: Approach</a>
+            <a href="Review.html#rc8">General criterion: Environment</a>
+            <a href="Review.html#rc9">After peer review: funding considerations</a>
+          </div>
+        </details>
+        <details class="nm"><summary><a href="Definitions.html">Definitions</a><span class="car"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+          <div class="pop">
+            <a class="hd" href="Definitions.html">Definitions (key terms)</a>
+            <a href="Definitions.html#kt1">Program and phases</a>
+            <a href="Definitions.html#kt2">Capacity and infrastructure</a>
+            <a href="Definitions.html#kt3">Center components</a>
+            <a href="Definitions.html#kt4">People</a>
+            <a href="Definitions.html#kt5">Plans and funding rules</a>
+            <a href="Definitions.html#kt6">Review</a>
+          </div>
+        </details>
+      </nav>
+      <div class="quick">
+        <a class="btn sm primary" href="https://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21">Open Smartsheet</a>
+        <a class="btn sm" href="https://files.simpler.grants.gov/opportunities/77942f5d-0b5f-4656-bfd7-a6148b1624a4/attachments/55f55944-4b0c-4a90-9e33-75b064598558/PAR-27-055-Full-Announcement.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6M8 13h8M8 17h6"></path></svg>Full NOFO</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="wrap pagehead">
+      <p class="eyebrow">Universal resource · Submission Workflow and File Management</p>
+      <h1 class="h1">Workflow &amp; File Management</h1>
+      <p class="lede">How <a href="https://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21">Smartsheet</a>, the Dropbox <a href="#folders">WORKING DRAFTS folders</a>, and the <a href="#folders">FINAL VERSIONS folders</a> fit together, what each <a href="#statuses">Smartsheet status</a> means, and <a href="#moves">how a document gets finalized</a>.</p>
+      <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px;">
+        <a class="btn primary" href="https://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21">Open Smartsheet</a>
+        <a class="btn" href="Timeline.html">View full team timeline</a>
+      </div>
+    </section>
+
+    <section class="wrap sec band-w" id="summary">
+      <div class="xall-bar"><button type="button" class="xall" aria-pressed="false">Expand all</button></div>
+      <details class="sx">
+      <summary><h2 class="h2">Please read first</h2><span class="sx-car" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+      <div class="xscope">
+      <div class="rules-stack" style="gap:10px;display:flex;flex-direction:column;">
+        <div class="card wf-item"><h3 class="h3">Executive summary: please read first</h3><div class="blk"><ul>
+            <li>Smartsheet is our central project-management hub.</li>
+            <li>All drafts should be saved in the Dropbox WORKING DRAFTS folder.</li>
+            <li>The FINAL VERSIONS folder is reserved for approved, submission-ready documents.</li>
+            <li>Coordinate with other contributors when your component overlaps with their work.</li>
+            <li>Communicate questions, anticipated delays, and potential changes early. Our window for writing is fairly snug.</li>
+          </ul></div></div>
+        <div class="card wf-item"><h3 class="h3">Message from the Admin Core</h3><p style="margin: 0 0 10px; color: #4A4458;">We appreciate the time, expertise, and care each of you brings to this process. Our goal is to make the writing and submission process as organized and straightforward as possible.</p>
+          <p style="margin: 0; color: #4A4458;">Please contact the Admin Core if you have questions about component requirements, file organization, deadlines, or submission procedures. Thoughtful organization, clear communication, and collaboration will help us develop a strong COBRE Phase S proposal that reflects our center's scientific vision, shared resources, and plans for continued success.</p>
+          <p style="margin: 10px 0 0; color: #6B6579; font-size: 14.5px;">Warm regards, Admin team</p></div>
+      </div>
+      </div>
+      </details>
+    </section>
+
+    <section class="wrap sec band-g" id="moves">
+      <details class="sx">
+      <summary><h2 class="h2">How a document moves</h2><span class="sx-car" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+      <p class="muted" style="margin: 0 0 14px;">The same path for every deliverable: write in WORKING DRAFTS, mark it Ready for Review, apply feedback, and let Morgan Wills and Heather Bailey finalize it.</p>
+      <div class="flow">
+        <div class="step"><span class="s">1 · Start</span><span class="t">Create the document</span><span class="w">Start with the applicable NIH-provided form or document, if required. Otherwise, create a Word document using the applicable component instructions and formatting guidance.</span><span class="f">Status: Not Started → In Progress</span><span class="loc">File lives in: <b>WORKING DRAFTS</b> (once you save it)</span></div>
+        <div class="step"><span class="s">2 · Write</span><span class="t">Save in WORKING DRAFTS</span><span class="w">All writing and revisions take place in your component's WORKING DRAFTS folder. Save your working draft there by the internal due date.</span><span class="f">Status: In Progress</span><span class="loc">File lives in: <b>WORKING DRAFTS</b></span></div>
+        <div class="step"><span class="s">3 · Review</span><span class="t">Set Ready for Review</span><span class="w">Setting Ready for Review in Smartsheet tells your reviewer the draft is waiting: internal (Roxana, Tim, or Kim) or the identified external scientific reviewer.</span><span class="f">Status: Ready for Review</span><span class="loc">File lives in: <b>WORKING DRAFTS</b></span></div>
+        <div class="step"><span class="s">4 · Revise</span><span class="t">Apply feedback</span><span class="w">Incorporate the reviewers' edits in WORKING DRAFTS.</span><span class="f">Status: Applying Reviewer Feedback</span><span class="loc">File lives in: <b>WORKING DRAFTS</b></span></div>
+        <div class="step"><span class="s">5 · Finalize</span><span class="t">Tell Morgan and Heather</span><span class="w">They give it a final review, move it to the FINAL VERSIONS folder for you, and change its status to Finalized. You don't need to move the file or update the status yourself.</span><span class="f">Status: Finalized</span><span class="loc loc-final">File lives in: <b>FINAL VERSIONS</b> (moved by Morgan and Heather)</span></div>
+      </div>
+      <div class="callout" style="margin-top: 16px;">
+        <b>Important:</b> Completing a draft does not automatically mean that a component is approved for submission. Only documents that have completed the required review and approval process should be placed in the FINAL VERSIONS folder.
+      </div>
+      </details>
+    </section>
+
+    <section class="wrap sec band-w" id="smartsheet">
+      <details class="sx">
+      <summary><h2 class="h2">Smartsheet</h2><span class="sx-car" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+      <div class="xscope">
+      <div class="rules-stack" style="gap:10px;display:flex;flex-direction:column;">
+        <div class="card wf-item"><h3 class="h3">Why Smartsheet</h3><p style="margin: 0 0 12px;">Smartsheet is the live version of every packet. Dates, links, and assignments are updated there first, so if Smartsheet and a packet (or this site) ever differ, <b>Smartsheet wins</b>.</p>
+          <a class="btn primary" href="https://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21">Open Smartsheet</a></div>
+        <div class="card wf-item"><h3 class="h3">How to use it</h3><div class="blk"><ul>
+            <li><b>Find your rows:</b> filter by your name in the Assigned To column.</li>
+            <li><b>Open what you need from your row:</b> your directions (your packet), your WORKING DRAFTS folder, your FINAL VERSIONS folder, and reference materials such as prior COBRE proposals.</li>
+            <li><b>Update your status</b> from the Status drop-down as you work. Setting Ready for Review tells your reviewer the draft is waiting.</li>
+            <li><b>Due date definition:</b> save your working draft in your WORKING DRAFTS folder by the internal due date.</li>
+            <li><b>Add the deadlines to your calendar:</b> subscribe to the Smartsheet calendar in Outlook or Google Calendar, and date changes update automatically.</li>
+            <li><b>Getting in:</b> accept the invitation email and sign in with your K-State account. The mobile app works too.</li>
+          </ul></div></div>
+      </div>
+      </div>
+      </details>
+    </section>
+
+    <section class="wrap sec band-g" id="statuses">
+      <details class="sx">
+      <summary><h2 class="h2">Smartsheet statuses and the review process</h2><span class="sx-car" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+      <p class="muted" style="margin: 0 0 14px;">Please keep your assigned Smartsheet status up to date so the Admin Core can monitor progress, coordinate reviews, and identify potential delays.</p>
+      <div class="card scroll" style="padding: 8px 12px;">
+        <table class="tbl">
+          <thead><tr><th style="width:190px;">Status</th><th>What it means</th><th style="width:240px;">Where it lives in Dropbox</th></tr></thead>
+          <tbody>
+            <tr><td><span class="badge gray">Not Started</span></td><td>Work has not yet begun.</td><td>Nothing to save yet.</td></tr>
+            <tr><td><span class="badge">In Progress</span></td><td>You're actively writing the document.</td><td>Your WORKING DRAFTS folder</td></tr>
+            <tr><td><span class="badge">Ready for Review</span></td><td>Your working draft is ready for review, either internal (Roxana, Tim, or Kim) or by the identified external scientific reviewer.</td><td>Your WORKING DRAFTS folder</td></tr>
+            <tr><td><span class="badge">Applying Reviewer Feedback</span></td><td>You're incorporating the reviewers' edits.</td><td>Your WORKING DRAFTS folder</td></tr>
+            <tr><td><span class="badge" style="background:#512888;color:#fff;">Finalized</span></td><td>Morgan Wills and Heather Bailey have given the document a final review, moved it to the FINAL VERSIONS folder, and set this status.</td><td>Your FINAL VERSIONS folder</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="xscope">
+      <div class="rules-stack" style="gap:10px;display:flex;flex-direction:column;margin-top:16px;">
+        <div class="card wf-item"><h3 class="h3">Reviewers</h3><p style="margin: 0;">The CNAP Admin Core will identify the designated reviewer(s) for each document and let you know who they are. Please feel free to suggest reviewers to the Admin Core.</p></div>
+        <div class="card wf-item"><h3 class="h3">When your document is final</h3><p style="margin: 0;">Let Morgan Wills and Heather Bailey know. They will give it a final review, move it to the FINAL VERSIONS folder for you, and change its status in Smartsheet to Finalized. You don't need to move the file or update the status yourself.</p></div>
+      </div>
+      </div>
+      </details>
+    </section>
+
+    <section class="wrap sec band-w" id="folders">
+      <details class="sx">
+      <summary><h2 class="h2">Where files live (Dropbox)</h2><span class="sx-car" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+      <p class="muted" style="margin: 0 0 14px;">One WORKING DRAFTS folder and one FINAL VERSIONS folder per component.<br>Your own page lists only the folders for your component.</p>
+      <div class="xscope">
+      <div class="rules-stack" style="gap:10px;display:flex;flex-direction:column;">
+        <div class="card wf-item"><h3 class="h3">WORKING DRAFTS</h3><p class="small muted" style="margin: 0 0 12px;">Where you save your drafts. All writing and revisions are saved here.</p>
+          <div class="flist">
+            <a href="https://www.dropbox.com/scl/fo/qju9wh2rlvj2lpnw3cs33/AJ-L6UNFe6CtRs0QkR6wyt0?rlkey=oxshp9g686dvjig6n4jb9s358&amp;st=hnuinhmv&amp;dl=0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>WORKING DRAFTS › Center</a>
+            <a href="https://www.dropbox.com/scl/fo/xq6r8le84xmx63rq3sq6e/AEidS1yGE9E1UbcrVGc6tZo?rlkey=4mg2rhwg2ivv8kvz168595szc&amp;st=wugxhc1c&amp;dl=0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>WORKING DRAFTS › Admin Core</a>
+            <a href="https://www.dropbox.com/scl/fo/zpmt88ochlovpwp3c0951/AAJqOO_OzLjNeXdBJA5GTbY?rlkey=of1g4dw3btkem995y2i4b1jvh&amp;st=4x6gep0q&amp;dl=0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>WORKING DRAFTS › BN Core</a>
+            <a href="https://www.dropbox.com/scl/fo/pous7ow51nzwt6sxxidi2/AJGSAf5rCishWvX4F0SMBqA?rlkey=6y3f3n46aqkl12xivk674i6yu&amp;st=635vxrrf&amp;dl=0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>WORKING DRAFTS › NI Core</a>
+            <a href="https://www.dropbox.com/scl/fo/9hr9fqyummo503u7cs65z/ALLyiGRXdgQqQNfGZK8cEnM?rlkey=vwi0dpe93b0qkwh1bih8z3pug&amp;st=qneplw7v&amp;dl=0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>WORKING DRAFTS › CN Core</a>
+            <a href="https://www.dropbox.com/scl/fo/q0z7z8mst7nundea8vrw2/AHIWF8JG3PP6xGgcSVuCZR4?rlkey=ivap04502uznsidk7dsdq46ci&amp;st=dr6di1dc&amp;dl=0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>WORKING DRAFTS › SRP Core</a>
+          </div></div>
+        <div class="card wf-item"><h3 class="h3">FINAL VERSIONS</h3><p class="small muted" style="margin: 0 0 12px;">Where Morgan and Heather place your approved, submission-ready documents. Confirm the document is correctly formatted. The Admin Core will coordinate final-document tracking and proposal assembly.</p>
+          <div class="flist">
+            <a href="https://www.dropbox.com/scl/fo/fpohj0efsvmb8gbmfvoqs/AKcFWiEEjHhHZisLLI33jco?rlkey=xgfgfe512tfbxet6p361san1i&amp;st=ml45ntia&amp;dl=0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"></path></svg>FINAL VERSIONS › Center</a>
+            <a href="https://www.dropbox.com/scl/fo/qxgx2e7jukieka7ttrb1y/ADFzgEe35zUkLSQ9buNZeQA?rlkey=0ki8z4elan99epdlddmjmysov&amp;st=dn2buzey&amp;dl=0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"></path></svg>FINAL VERSIONS › Admin Core</a>
+            <a href="https://www.dropbox.com/scl/fo/zlenqnxmkfzo1j9fwnlck/ABIcw_hARWFrw2uasL3QrqE?rlkey=fow89o6rf8f7hkp9acb8csgge&amp;st=2dtcwgn0&amp;dl=0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"></path></svg>FINAL VERSIONS › BN Core</a>
+            <a href="https://www.dropbox.com/scl/fo/kanp193ti0r8eolga1l4x/AP5WKL1oXCR8C6LDu-sNVhc?rlkey=qpcgnfpgxze2xvzlt7gd534rg&amp;st=w1zai1a7&amp;dl=0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"></path></svg>FINAL VERSIONS › NI Core</a>
+            <a href="https://www.dropbox.com/scl/fo/gm2zob8wvfhfr1f1219ae/ANhp8T7ksE7QtwfJKynIp_0?rlkey=gbfxkzjna2hq5yr4nnl1f78j3&amp;st=w0fh8crm&amp;dl=0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"></path></svg>FINAL VERSIONS › CN Core</a>
+            <a href="https://www.dropbox.com/scl/fo/13pm59iuzreewh3wgj12d/AJ2aX4leTE-q1x5qqMqEKLE?rlkey=gq3iooda8ybei9qt5llsgg82z&amp;st=463b0her&amp;dl=0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"></path></svg>FINAL VERSIONS › SRP Core</a>
+          </div></div>
+      </div>
+      <div class="card wf-item"><h3 class="h3">Working drafts: when creating a document</h3><ol style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 6px;">
+          <li>Start with the applicable NIH-provided form or document, if required.</li>
+          <li>Otherwise, create a Word document using the applicable component instructions and formatting guidance.</li>
+          <li>Save the document in the designated WORKING DRAFTS folder.</li>
+        </ol>
+        <p style="margin: 12px 0 0; color: #4A4458;">When developing your component, consider how it supports the broader COBRE Phase S proposal. Where appropriate, coordinate with relevant contributors to ensure that the scientific narrative, core activities, milestones, evaluation measures, and resource requests align across the application.</p></div>
+      </div>
+      </details>
+    </section>
+
+    <section class="wrap sec band-g" id="reference">
+      <details class="sx">
+      <summary><h2 class="h2">Reference materials</h2><span class="sx-car" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+      <div class="xscope">
+      <div class="rules-stack" style="gap:10px;display:flex;flex-direction:column;">
+        <div class="card wf-item"><h3 class="h3">2021, Phase 2 Proposal Materials</h3><p class="small muted" style="margin: 0 0 12px;">Linked/made available in case it is helpful to reflect on what was said or done previously.</p>
+          <a class="btn" href="https://www.dropbox.com/scl/fo/6e7p5xvasg17tu30tbuap/ALAsqq_6xoUEM23Qavsmc8A?rlkey=bvluagyz2a3fnk0stzh3rqb65&amp;st=rc344g48&amp;dl=0">Open in Dropbox</a></div>
+        <div class="card wf-item"><h3 class="h3">2025 Phase 3 Materials</h3><p class="small muted" style="margin: 0 0 12px;">Linked/made available in case it is helpful to reflect on what you wrote last year, toward the outdated Notice of Funding Opportunity.</p>
+          <a class="btn" href="https://www.dropbox.com/scl/fo/fo68jlm4h36wmwbqtopx0/AFeDo-1BwnMgspxdrlweV_Q?rlkey=z76y4x9udqbriiayw6f9e7q2e&amp;st=g83ytov9&amp;dl=0">Open in Dropbox</a></div>
+      </div>
+      <div class="note" style="margin-top: 16px;">
+        Prior COBRE Phase 2 proposal materials and last year's Phase 3 draft documents are available in the Dropbox. <b>COBRE Phase S requirements may differ</b> from those of previous funding opportunities. Please verify current requirements before relying on prior proposal materials.
+      </div>
+      </div>
+      </details>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap">
+      <img class="logo" src="assets/cnap-logo.jpg" alt="CNAP Center — Cognitive &amp; Neurobiological Approaches to Plasticity">
+      <span>CNAP Center · Phase S (COBRE-S) Application · PAR-27-055</span>
+      <span>Source: Submission Workflow and File Management · Questions: the Admin Core — Morgan, <a href="mailto:mkwills@ksu.edu">mkwills@ksu.edu</a></span>
+    </div>
+  </footer>
+</div>
+
+<script>
+(function(){ window.DCLogic = class { forceUpdate(){ if (window.__dcRender) window.__dcRender(); } }; })();
+
+class Component extends DCLogic {
+  componentDidMount() {
+    if (typeof window !== 'undefined') {
+      setTimeout(() => {
+        const h = (window.location.hash || '').slice(1);
+        if (!h || !window.__nmJump) return;
+        const t = document.querySelector('[id="' + h + '"]');
+        if (t) window.__nmJump(t);
+      }, 350);
+    }
+    if (typeof window !== 'undefined') setTimeout(() => { if (window.__xallSync) window.__xallSync(); }, 400);
+    if (typeof window !== 'undefined' && !window.__nmAutoClose13) {
+      window.__nmAutoClose13 = true;
+      const rootOf = (e) => { const t = e.composedPath ? e.composedPath()[0] : e.target; return (t && t.getRootNode) ? t.getRootNode() : document; };
+      document.addEventListener('mousemove', (e) => {
+        const root = rootOf(e); if (!root.querySelectorAll) return;
+        root.querySelectorAll('details.nm[open]').forEach((d) => {
+          if (d.matches(':hover')) { clearTimeout(d.__t); d.__t = null; }
+          else if (!d.__t) { d.__t = setTimeout(() => { d.__t = null; if (!d.matches(':hover')) d.removeAttribute('open'); }, 450); }
+        });
+      }, { passive: true });
+      document.addEventListener('click', (e) => {
+        const root = rootOf(e); if (!root.querySelectorAll) return;
+        const path = e.composedPath ? e.composedPath() : [e.target];
+        root.querySelectorAll('details.nm[open]').forEach((d) => { if (!path.includes(d)) d.removeAttribute('open'); });
+        const a = path.find((n) => n && n.tagName === 'A' && n.getAttribute && (n.getAttribute('href') || '').includes('#'));
+        if (!a) return;
+        const id = (a.getAttribute('href') || '').split('#')[1];
+        if (!id) return;
+        let el = a.parentElement, target = null;
+        while (el && !target) { target = el.querySelector ? el.querySelector('[id="' + id + '"]') : null; el = el.parentElement; }
+        if (!target) return;
+        e.preventDefault();
+        const d = a.closest('details.nm'); if (d) d.removeAttribute('open');
+        window.__nmJump(target);
+      });
+      const xallScope = (n) => (n && n.closest && (n.closest('.xscope') || n.closest('main'))) || document;
+      window.__xallItems = (scope) => Array.from(scope.querySelectorAll('details.sx, details.acc, details.stg'));
+      window.__xallSync = (root) => {
+        (root && root.querySelectorAll ? root : document).querySelectorAll('button.xall').forEach((b) => {
+          const list = window.__xallItems(xallScope(b));
+          const anyClosed = list.some((d) => !d.open);
+          const sc = b.closest('.xscope'); b.textContent = anyClosed ? (sc ? 'Expand all stages' : 'Expand all') : (sc ? 'Collapse all stages' : 'Collapse all');
+          b.setAttribute('aria-pressed', anyClosed ? 'false' : 'true');
+        });
+      };
+      document.addEventListener('click', (e) => {
+        const path = e.composedPath ? e.composedPath() : [e.target];
+        const btn = path.find((n) => n && n.classList && n.classList.contains('xall'));
+        if (btn) {
+          e.preventDefault();
+          const scope = xallScope(btn);
+          const list = window.__xallItems(scope);
+          const anyClosed = list.some((d) => !d.open);
+          list.forEach((d) => { if (anyClosed) d.setAttribute('open', ''); else d.removeAttribute('open'); });
+          if (scope.dataset) scope.dataset.xall = anyClosed ? '1' : '';
+          window.__xallSync(btn.getRootNode ? btn.getRootNode() : document);
+          return;
+        }
+      }, true);
+      document.addEventListener('toggle', (e) => { const t = e.composedPath ? e.composedPath()[0] : e.target; window.__xallSync(t && t.getRootNode ? t.getRootNode() : document); }, true);
+      window.__nmJump = (target) => {
+        if (target.tagName === 'DETAILS') target.setAttribute('open', '');
+        const sx = target.querySelector ? target.querySelector(':scope > details.sx') : null; if (sx) sx.setAttribute('open', '');
+        let host = target.parentElement, bar = null;
+        while (host && !bar) { bar = host.querySelector ? host.querySelector('.topbar') : null; host = host.parentElement; }
+        const offset = (bar ? (bar.querySelector('.nav') || bar).getBoundingClientRect().height : 0) + 20;
+        let sc = target.parentElement;
+        while (sc && sc !== document.body && sc !== document.documentElement) {
+          const oy = getComputedStyle(sc).overflowY;
+          if ((oy === 'auto' || oy === 'scroll') && sc.scrollHeight > sc.clientHeight) break;
+          sc = sc.parentElement;
+        }
+        const useWin = !sc || sc === document.body || sc === document.documentElement;
+        const top = target.getBoundingClientRect().top - (useWin ? 0 : sc.getBoundingClientRect().top) - offset;
+        (useWin ? window : sc).scrollBy({ top: top, behavior: 'smooth' });
+      };
+    }
+  }
+  renderVals() { return {}; }
+}
+
+(function(){
+  const start = () => { const c = new Component(); window.__dcComp = c; if (c.componentDidMount) c.componentDidMount(); };
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start); else start();
+})();
+</script>
+</body>
+</html>

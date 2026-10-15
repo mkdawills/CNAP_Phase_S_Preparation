@@ -1,0 +1,699 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Doina — NI Core Director — CNAP Phase S Proposal Hub</title>
+<link rel="stylesheet" href="site.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&amp;family=Archivo:wght@500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F7F6FA}
+a{color:#512888}a:hover{color:#3B1C66}
+.two,.grid.c2{grid-template-columns:minmax(0,1fr) !important}
+.band-w,.band-g{position:relative;border-top:2px solid #D3CDE0;box-shadow:0 0 0 100vmax var(--bandc);clip-path:inset(0 -100vmax);background:var(--bandc)}
+.band-w{--bandc:#FFFFFF}
+.pagehead + .band-w{border-top:none}
+.band-g{--bandc:#F7F6FA}
+section.sec.band-w,section.sec.band-g{padding-top:40px !important;padding-bottom:40px;margin-top:0;margin-bottom:0}
+/* compact, all-white section list */
+.band-g{--bandc:#FFFFFF}
+section.sec.band-w,section.sec.band-g{padding-top:18px !important;padding-bottom:18px}
+.band-w,.band-g{border-top:1px solid #E4E0EC}
+details.sx > summary .h2{background-image:linear-gradient(#512888,#512888) !important;background-size:40px 3px !important;background-position:0 100%;background-repeat:no-repeat;padding-bottom:8px;font-size:19px}
+details.sx:not([open]) > summary .h2{background-image:none !important;padding-bottom:0}
+details.sx > summary .sx-car{width:32px;height:32px;margin-bottom:0}
+details.sx[open] > summary{margin-bottom:14px}
+</style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<div class="hub" style="font-family: 'Source Sans 3', 'Segoe UI', system-ui, sans-serif; color: #1F1B2B; background: #F7F6FA; min-height: 100vh;">
+
+  <header class="topbar">
+    <div class="wrap">
+      <a class="brand" href="index.html" title="Back to the Dashboard"><svg class="home-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5L12 3l9 7.5"></path><path d="M5 9.5V21h5v-6h4v6h5V9.5"></path></svg><span>CNAP Phase S Proposal Hub</span></a>
+      <nav class="nav" aria-label="Site">
+        <a class="navlink" href="index.html">Dashboard</a>
+        <details class="nm"><summary><a href="Timeline.html">Team Timeline</a><span class="car"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+          <div class="pop">
+            <a class="hd" href="Timeline.html">Team Timeline</a>
+            <a href="Timeline.html#kickoff">Kickoff to submission (by date)</a>
+            <a href="Timeline.html#bycomponent">The same schedule, by component</a>
+          </div>
+        </details>
+        <details class="nm"><summary><a href="Workflow.html">Workflow &amp; Files</a><span class="car"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+          <div class="pop">
+            <a class="hd" href="Workflow.html">Workflow &amp; File Management</a>
+            <a href="Workflow.html#summary">Please read first</a>
+            <a href="Workflow.html#smartsheet">Smartsheet</a>
+            <a href="Workflow.html#statuses">Statuses &amp; reviews</a>
+            <a href="Workflow.html#folders">Dropbox folders</a>
+            <a href="Workflow.html#reference">Reference materials</a>
+          </div>
+        </details>
+        <details class="nm on"><summary><a href="Guidance.html">Contributor Guidance</a><span class="car"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+          <div class="pop">
+            <a class="hd" href="Guidance.html">Find your guidance</a>
+            <a href="HeatherBailey.html">Heather Bailey · Center Director (PD/PI), CN Core</a>
+            <a href="Chip.html">Chip · BN Core Director</a>
+            <a href="Doina.html">Doina · NI Core Director</a>
+            <a href="CarlAde.html">Carl Ade · Associate Director</a>
+            <a href="Roxana.html">Roxana · Budget Review</a>
+            <a href="Tim.html">Tim · Central Office Budget Review</a>
+            <a href="Kim.html">Kim · Central Office Biosketch Review</a>
+          </div>
+        </details>
+        <details class="nm"><summary><a href="PhaseS.html">Phase S Overview</a><span class="car"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+          <div class="pop">
+            <a class="hd" href="PhaseS.html">Phase S / NOFO Overview</a>
+            <a href="PhaseS.html#glance">Application components at a glance</a>
+            <a href="PhaseS.html#evs">COBRE-E vs. COBRE-S</a>
+            <a href="PhaseS.html#changes">Differences from previous NOFOs</a>
+            <a href="PhaseS.html#pi">Eligibility: Center Director</a>
+          </div>
+        </details>
+        <details class="nm"><summary><a href="SRP.html">SRP Core</a><span class="car"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+          <div class="pop">
+            <a class="hd" href="SRP.html">SRP Core &amp; SRP Investigators</a>
+            <a href="SRP.html#srpdir">The SRP Core Director</a>
+            <a href="SRP.html#srp1">How SIs are chosen</a>
+            <a href="SRP.html#srp2">Requirements every SI must meet</a>
+            <a href="SRP.html#srp3">Eligible career stages</a>
+            <a href="SRP.html#srp4">While an SI is supported</a>
+            <a href="SRP.html#srp5">When an SI leaves the program</a>
+            <a href="SRP.html#srp6">Adding a new SI after the award</a>
+          </div>
+        </details>
+        <details class="nm"><summary><a href="Conventions.html">Formatting Conventions</a><span class="car"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+          <div class="pop">
+            <a class="hd" href="Conventions.html">Formatting Conventions</a>
+            <a href="Conventions.html#names">Names and terms</a>
+            <a href="Conventions.html#format">NIH format (required)</a>
+            <a href="Conventions.html#tables">Tables and figures</a>
+            <a href="Conventions.html#refs">References</a>
+          </div>
+        </details>
+        <details class="nm"><summary><a href="Review.html">Review Criteria</a><span class="car"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+          <div class="pop">
+            <a class="hd" href="Review.html">Review Criteria</a>
+            <a href="Review.html#rc1">Administrative Core</a>
+            <a href="Review.html#rc2">Research Cores</a>
+            <a href="Review.html#rc3">Scientific Research Program</a>
+            <a href="Review.html#rc4">General criterion: Significance</a>
+            <a href="Review.html#rc5">General criterion: Investigators</a>
+            <a href="Review.html#rc6">General criterion: Innovation</a>
+            <a href="Review.html#rc7">General criterion: Approach</a>
+            <a href="Review.html#rc8">General criterion: Environment</a>
+            <a href="Review.html#rc9">After peer review: funding considerations</a>
+          </div>
+        </details>
+        <details class="nm"><summary><a href="Definitions.html">Definitions</a><span class="car"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+          <div class="pop">
+            <a class="hd" href="Definitions.html">Definitions (key terms)</a>
+            <a href="Definitions.html#kt1">Program and phases</a>
+            <a href="Definitions.html#kt2">Capacity and infrastructure</a>
+            <a href="Definitions.html#kt3">Center components</a>
+            <a href="Definitions.html#kt4">People</a>
+            <a href="Definitions.html#kt5">Plans and funding rules</a>
+            <a href="Definitions.html#kt6">Review</a>
+          </div>
+        </details>
+      </nav>
+      <div class="quick">
+        <a class="btn sm primary" href="https://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21">Open Smartsheet</a>
+        <a class="btn sm" href="https://files.simpler.grants.gov/opportunities/77942f5d-0b5f-4656-bfd7-a6148b1624a4/attachments/55f55944-4b0c-4a90-9e33-75b064598558/PAR-27-055-Full-Announcement.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6M8 13h8M8 17h6"></path></svg>Full NOFO</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="wrap pagehead" style="padding-bottom: 20px;">
+      <p class="eyebrow"><a href="index.html#guidance">Contributor guidance</a> · NI Core</p>
+      <h1 class="h1">Doina</h1>
+      <p class="lede">NI Core · Core Director</p>
+      <div class="grid c4" style="margin-top: 22px;">
+        <div class="stat"><span class="k">Work starts</span><span class="v">Thu, Oct 29</span><span class="s">2026 · kickoff</span></div>
+        <div class="stat"><span class="k">Your first deadline</span><span class="v">Fri, Nov 13</span><span class="s">NI Core Specific Aims</span></div>
+        <div class="stat"><span class="k">Your last deadline</span><span class="v">Fri, Jan 15</span><span class="s">Revised (final) Budget + Justification</span></div>
+        <div class="stat" style="border-color: #512888;"><span class="k">NIH due date</span><span class="v">Mon, Jan 25</span><span class="s">2027, 5:00 PM local time · application fully complete Fri, Jan 15 (K-State closed Mon, Jan 18)</span></div>
+      </div>
+    </section>
+
+    <section class="wrap" style="padding: 0 24px 8px;">
+      <div class="card" style="display: flex; flex-wrap: wrap; gap: 10px; align-items: center;">
+        <span class="small" style="flex-basis: 100%; margin: 0 0 -2px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; font-size: 12px; color: #6B6579;">Your links:</span>
+        <a class="btn sm primary" href="https://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21">Open Smartsheet</a>
+        <a class="btn sm" href="https://www.dropbox.com/scl/fo/pous7ow51nzwt6sxxidi2/AJGSAf5rCishWvX4F0SMBqA?rlkey=6y3f3n46aqkl12xivk674i6yu&amp;st=635vxrrf&amp;dl=0">WORKING DRAFTS › NI Core</a>
+        <a class="btn sm" href="https://www.dropbox.com/scl/fo/kanp193ti0r8eolga1l4x/AP5WKL1oXCR8C6LDu-sNVhc?rlkey=qpcgnfpgxze2xvzlt7gd534rg&amp;st=w1zai1a7&amp;dl=0">FINAL VERSIONS › NI Core</a>
+        <a class="btn sm" href="https://www.dropbox.com/scl/fo/6e7p5xvasg17tu30tbuap/ALAsqq_6xoUEM23Qavsmc8A?rlkey=bvluagyz2a3fnk0stzh3rqb65&amp;st=rc344g48&amp;dl=0">2021 Phase 2 materials</a>
+        <a class="btn sm" href="https://www.dropbox.com/scl/fo/fo68jlm4h36wmwbqtopx0/AFeDo-1BwnMgspxdrlweV_Q?rlkey=z76y4x9udqbriiayw6f9e7q2e&amp;st=g83ytov9&amp;dl=0">2025 Phase 3 materials</a>
+      </div>
+      <p class="small muted" style="margin: 10px 0 0;">Smartsheet: your assignments, directions, deadlines, and status. WORKING DRAFTS: where you save your drafts. FINAL VERSIONS: where Morgan and Heather place your approved, submission-ready documents. Prior materials are linked in case it is helpful to reflect on what was said or done previously; Phase S requirements may differ.</p>
+    </section>
+
+    <section class="wrap sec band-w">
+      <details class="sx">
+      <summary><h2 class="h2">Helpful notes</h2><span class="sx-car" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+      <div class="xscope">
+      <div class="rules-stack">
+        <details class="acc" id="rulestok1">
+          <summary style="grid-template-columns: minmax(0,1fr) auto;"><span class="ttl">Page limits</span><span class="meta"><svg class="car" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+          <div class="body"><div class="blk"><ul>
+            <li>Specific Aims: 1 page.</li>
+            <li>Research Strategy: 6 pages.</li>
+            <li>Project Summary/Abstract: 30 lines of text.</li>
+            <li>O&amp;M Plan input: becomes part of the Center Research Strategy, which has 12 pages for Sections A–E combined.</li>
+          </ul></div></div>
+        </details>
+        <details class="acc" id="rulestok2">
+          <summary style="grid-template-columns: minmax(0,1fr) auto;"><span class="ttl">The order of the work</span><span class="meta"><svg class="car" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+          <div class="body"><div class="blk"><ul>
+            <li><b>Aims first.</b> Your Specific Aims (due Fri, Nov 13) should follow the frame of the Center's Specific Aims, which Heather shares with all Core Directors Fri, Nov 6.</li>
+            <li><b>Strategy due before budget.</b> The Research Strategy is due Mon, Nov 30, and the Budget and Budget Justification are ready for Roxana's review Fri, Dec 4. The budget costs out what the strategy describes.</li>
+          </ul></div></div>
+        </details>
+        <details class="acc" id="rulestok3">
+          <summary style="grid-template-columns: minmax(0,1fr) auto;"><span class="ttl">Reviews before submission</span><span class="meta"><svg class="car" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+          <div class="body"><div class="blk"><ul>
+            <li><b>Budget review:</b> Roxana (CNAP's budget reviewer) first, then Tim in Central Office. Your revised (final) budget is ready for her review the morning of Fri, Jan 15.</li>
+            <li><b>Outside scientific review:</b> your Specific Aims and Research Strategy go to an external reviewer Mon, Dec 7. Revisions are due Mon, Jan 11.</li>
+            <li><b>Biosketch review:</b> Kim in Central Office reviews your draft (ready for her review Thu, Dec 17). Your final is due Wed, Jan 13.</li>
+          </ul></div></div>
+        </details>
+        <details class="acc" id="rulestok4">
+          <summary style="grid-template-columns: minmax(0,1fr) auto;"><span class="ttl">Phase S rules for your core (NOFO)</span><span class="meta"><svg class="car" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+          <div class="body"><div class="blk"><ul>
+            <li>Phase S sustains, modernizes, and consolidates the cores CNAP already has.</li>
+            <li><b>No duplicate services, and open your services to others.</b> The core can't duplicate services already at K-State, and it must be available to other K-State investigators and to other IDeA-state institutions.</li>
+            <li><b>Serve the Scientific Research Program (SRP) Core.</b> The core supports the projects led by SRP Investigators (SIs). Reviewers look for how it meets the SRP Core's needs.</li>
+            <li><b>Budget:</b> five years; no Alterations &amp; Renovations allowed in a Research Core.</li>
+          </ul></div></div>
+        </details>
+        <details class="acc" id="rulestok5">
+          <summary style="grid-template-columns: minmax(0,1fr) auto;"><span class="ttl">What doesn't go in your core (NOFO)</span><span class="meta"><svg class="car" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+          <div class="body"><div class="blk"><ul>
+            <li><b>Letters of support.</b> All support goes in the single Institutional Letter in the Center (Overall).</li>
+            <li><b>Data Management and Sharing Plan.</b> It goes in the Center (Overall) only.</li>
+            <li><b>Project Narrative.</b> Center (Overall) only.</li>
+            <li><b>Appendix:</b> optional and limited to specific item types; most applications include none. If your core needs one, tell Morgan by Fri, Dec 11 (CNAP).</li>
+          </ul></div></div>
+        </details>
+      </div>
+      </div>
+      </details>
+    </section>
+
+    <section class="wrap sec band-g">
+      <details class="sx">
+      <summary><h2 class="h2">13 Tasks</h2><span class="sx-car" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+      <div class="sec-head">
+        <div>
+          <p>In date order.<br>Open a task for the plain-language guidance, review criteria, and the NOFO's exact words.<br>Save every draft to <a href="https://www.dropbox.com/scl/fo/pous7ow51nzwt6sxxidi2/AJGSAf5rCishWvX4F0SMBqA?rlkey=6y3f3n46aqkl12xivk674i6yu&amp;st=635vxrrf&amp;dl=0">WORKING DRAFTS › NI Core</a>; once approved it moves to <a href="https://www.dropbox.com/scl/fo/kanp193ti0r8eolga1l4x/AP5WKL1oXCR8C6LDu-sNVhc?rlkey=qpcgnfpgxze2xvzlt7gd534rg&amp;st=w1zai1a7&amp;dl=0">FINAL VERSIONS › NI Core</a>.<br>For everyone's dates in one view, see the <a href="Timeline.html">Team Timeline</a>.</p>
+        </div>
+        <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+          <a class="btn sm" href="Conventions.html">Writing Conventions</a>
+          <a class="btn sm" href="Workflow.html">Workflow &amp; Files</a>
+        </div>
+      </div>
+
+      <!-- 1 Specific Aims -->
+      <div class="xscope">
+      <details class="acc">
+        <summary>
+          <span class="due"><span class="dow">Fri</span><span class="md">Nov 13</span></span>
+          <span class="ttl">1. NI Core Specific Aims<span class="sub">One page stating what the NI Core will do over the five years.</span></span>
+          <span class="meta"><span class="badge gray">1 page</span><svg class="car" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span>
+        </summary>
+        <div class="body">
+          <div class="two">
+            <div class="blk"><h4>Requirements</h4><ul>
+              <li><b>1 page.</b> Follow NIH's standard Specific Aims instructions; the NOFO adds nothing specific for core Aims.</li>
+              <li><b>Existing core only.</b> No new cores may be established in Phase S. Your aims describe sustaining, modernizing, or consolidating the core CNAP already has.</li>
+            </ul></div>
+            <div class="blk"><h4 class="cnap">CNAP guidance (not NOFO rules)</h4><ul>
+              <li><b>Write toward the Center's Aims.</b> Heather shares the draft Center Specific Aims Fri, Nov 6. Frame your core's aims to support them.</li>
+              <li><b>Set up the Research Strategy.</b> Each of the core's specific aims should map to its part of the strategy (due Mon, Nov 30).</li>
+            </ul></div>
+          </div>
+          <div class="blk"><h4>How reviewers will score it</h4><p style="margin-bottom: 6px;">Reviewers score your core with five questions:</p><ul>
+            <li>Is the request to support the core well justified?</li>
+            <li>Does the core give suitable scientific support to the Center's research area?</li>
+            <li>Does the business plan account for future growth in the core's user base and for the core's sustainability (the Phase S question)?</li>
+            <li>Does the Core Director have the expertise to oversee maintaining and growing the core's resources and facilities?</li>
+            <li>Are there enough institutional commitments to keep the resources and facilities the core needs available?</li>
+          </ul></div>
+          <details class="sub-acc"><summary>For reference: the NOFO's exact words</summary><div class="in">
+            <div class="quote"><span class="src">Review criteria · NOFO, Sec. V.1, Review Criteria for Cores › Research Cores</span><p>Is the request to support the Research Core well justified? Does the Core provide suitable scientific support to the proposed scientific area of the COBRE? Does the business plan account for future growth in the Core's user base ensuring an expansion of its reach (COBRE-E) and its sustainability (COBRE-S), as applicable? Does the Core Director have the expertise to provide the necessary oversight to administer the maintenance and growth of existing core resources and laboratory facilities to carry out the scientific objectives outlined in the application? Are there sufficient institutional commitments to ensure that the resources and facilities required to sustain and enhance the Core will be available?</p></div>
+          </div></details>
+        </div>
+      </details>
+
+      <!-- 2 O&M input -->
+      <details class="acc">
+        <summary>
+          <span class="due"><span class="dow">Wed</span><span class="md">Nov 18</span></span>
+          <span class="ttl">2. NI Core input to the Center's O&amp;M Plan<span class="sub">A short write-up of how your core fits with K-State's existing resources. Heather and Morgan fold it into the final Organization and Management (O&amp;M) Plan, Section B of the Center Research Strategy (final due Mon, Nov 30).</span></span>
+          <span class="meta"><span class="badge gray">12 pages for Sections A–E combined</span><span class="badge">Heather and Morgan (combine into final plan)</span><svg class="car" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span>
+        </summary>
+        <div class="body">
+          <div class="two">
+            <div class="blk"><h4>Requirements (for the O&amp;M Plan as a whole)</h4><ul>
+              <li><b>Each component's contribution.</b> The plan must explain how each part of the Center contributes to the Center's goals and works with the other parts.</li>
+              <li><b>No duplication.</b> The plan must show how each Research Core fits with resources K-State already has, without duplicating them. That includes equipment, instrumentation, and cores supported by current or prior IDeA awards (COBRE, INBRE, or CTR).</li>
+            </ul></div>
+            <div class="blk"><h4>What to send Heather and Morgan</h4><ul>
+              <li><b>Explain what your core offers that isn't available elsewhere at K-State.</b> Reviewers check that cores don't duplicate existing services.</li>
+              <li><b>Name what it works alongside.</b> List the existing equipment, instruments, and IDeA-supported cores (COBRE, INBRE, or CTR) your core complements, and say how they fit together.</li>
+              <li><b>Describe how it connects.</b> Explain how your core serves the SRP Core and how it works with the other cores.</li>
+            </ul></div>
+          </div>
+          <div class="two">
+            <div class="blk"><h4 class="cnap">CNAP guidance (not NOFO rules)</h4><ul>
+              <li><b>Page limit.</b> The Center Research Strategy has 12 pages for Sections A–E combined, so keep your input brief; Heather and Morgan will trim it to fit.</li>
+            </ul></div>
+            <div class="blk"><h4>How reviewers will score it</h4><ul>
+              <li>Does the O&amp;M Plan give confidence that the Center's overall goals will be achieved?</li>
+            </ul></div>
+          </div>
+          <details class="sub-acc"><summary>For reference: the NOFO's exact words</summary><div class="in">
+            <div class="quote"><span class="src">NOFO, Sec. IV.2, Overall Component › PHS 398 Research Plan › Research Strategy › B. Organization and Management Plan</span><p>The Organization and Management Plan for the Center should clearly convey a strategy that demonstrates an effective use of the available funding, the proposed configuration of the Center and its cores, and the approaches to expand (COBRE-E) or sustain (COBRE-S) biomedical research capacity. Describe:</p><ol><li>How each of the Center's components will contribute to the Center's goals and synergize with each other, and</li><li>How the proposed Research Cores (if applicable) fit with existing resources at the organization without being duplicative; include equipment, instrumentation, and cores supported by current or prior IDeA (COBRE, INBRE, or CTR) awards.</li></ol></div>
+            <div class="quote"><span class="src">Review criteria · NOFO, Sec. V.1, Scored Review Criteria - Overall › Approach</span><p>Does the Organization and Management Plan provide confidence that the overall goals of the Center will be achieved?</p></div>
+          </div></details>
+        </div>
+      </details>
+
+      <!-- 3 Research Strategy -->
+      <details class="acc">
+        <summary>
+          <span class="due"><span class="dow">Mon</span><span class="md">Nov 30</span></span>
+          <span class="ttl">3. NI Core Research Strategy<span class="sub">The main description of the NI Core: what it provides, who uses it, and how it will be sustained.</span></span>
+          <span class="meta"><span class="badge gray">6 pages</span><svg class="car" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span>
+        </summary>
+        <div class="body">
+          <div class="blk"><h4>What to write (NOFO requirements, in plain language)</h4><ul>
+            <li><b>Explain how the core supports the Center's science.</b> Describe which areas of the Center's research the core serves and how investigators use it. Then name related research resources already at K-State (for example, other cores or shared instruments) and explain how your core fits with them.</li>
+            <li><b>Spell out what the core provides.</b> List the specific technologies, instruments, and services an investigator can get from the core.</li>
+            <li><b>Justify any equipment or facility changes.</b> For each new instrument, upgrade, or change to the core's facilities, explain why it's needed. Show that you've accounted for the infrastructure and services K-State already has that relate to the request.</li>
+            <li><b>Show the core's value to the Center.</b> Explain how the core expands research, how its services meet the needs of the SRP Core (the projects led by SRP Investigators), and how the core will be sustained.</li>
+            <li><b>Describe who uses the core.</b> Say who uses it now (for example, which labs, departments, or institutions) and how you plan to grow that user base.</li>
+            <li><b>Lay out the business plan.</b> Explain how you decide which service requests come first, what users are charged (the fee structure), and what it costs to maintain the core.</li>
+          </ul></div>
+          <div class="two">
+            <div class="blk"><h4>Restrictions</h4><ul>
+              <li>6 pages.</li>
+              <li><b>No new cores in Phase S.</b> Describe the existing core being sustained, modernized, or consolidated.</li>
+              <li><b>No duplicate services.</b> A core that duplicates services already available at K-State isn't allowed.</li>
+              <li><b>Open to others.</b> The core must be available to other K-State investigators and to investigators at other IDeA-state institutions.</li>
+            </ul></div>
+            <div class="blk"><h4>Encouraged by the NOFO</h4><ul>
+              <li><b>Building on what exists:</b> using, modifying, or expanding existing core resources supported by institutional funds or other IDeA programs.</li>
+              <li><b>Consolidation and sharing:</b> consolidating existing cores (for technology advancement or administrative efficiency) and sharing facilities supported by other IDeA programs (INBRE, CTR, and other COBREs).</li>
+            </ul></div>
+          </div>
+          <div class="two">
+            <div class="blk"><h4 class="cnap">CNAP guidance (not NOFO rules)</h4><ul>
+              <li><b>Write the strategy before the budget.</b> The budget (due Fri, Dec 4) costs out what the strategy describes. A budget line with no matching activity here will be flagged.</li>
+              <li><b>Frame growth around sustainability.</b> Growing the user base or services isn't prohibited; tie it to keeping the core running after COBRE support ends.</li>
+              <li><b>Answer the five review questions directly,</b> especially the business plan and institutional commitments.</li>
+            </ul></div>
+            <div class="blk"><h4>How reviewers will score it</h4><ul>
+              <li>Is the request to support the core well justified?</li>
+              <li>Does the core give suitable scientific support to the Center's research area?</li>
+              <li>Does the business plan account for future growth in the core's user base and for the core's sustainability (the Phase S question)?</li>
+              <li>Does the Core Director have the expertise to oversee maintaining and growing the core's resources and facilities?</li>
+              <li>Are there enough institutional commitments to keep the resources and facilities the core needs available?</li>
+            </ul></div>
+          </div>
+          <details class="sub-acc"><summary>For reference: the NOFO's exact words</summary><div class="in">
+            <div class="quote"><span class="src">NOFO, Sec. IV.2, Research Core › PHS 398 Research Plan › Research Strategy</span><p>Research Strategy: Describe and justify:</p><ol><li>How the Core's resources will be used to support the scientific breadth of the Center. Applicants should also describe other related research resources already available at the applicant organization,</li><li>The technology, instrumentation, and/or services the Core will provide,</li><li>Instruments, equipment or modification of existing core facilities. Account for the organization's current infrastructure and offered services pertinent to the request,</li><li>The contribution of the Core as it expands research, the service it would provide to meet the needs of the SRP, and its sustainability,</li><li>The Core's user base and any plans for its expansion, and</li><li>The business plan for operation of the Core, including prioritization of service requests, user fee structure, and maintenance costs.</li></ol></div>
+            <div class="quote"><span class="src">NOFO, Sec. IV.2, Research Core (component preamble)</span><p>Research Cores should be made available to other investigators at the institution as well as those from other IDeA state institutions. Cores that duplicate services already available at the applicant institution are not allowed. Utilization, modification, or expansion of existing Core resources supported by institutional funds or other IDeA programs to accomplish the goals of proposed COBRE research is strongly encouraged.</p></div>
+            <div class="quote"><span class="src">NOFO, Sec. I (Research Core(s), optional)</span><p>No new cores may be established in the COBRE-S phase. The consolidation of existing Cores for technology advancement and/or administrative efficiency and the sharing of research facilities supported by other IDeA programs (e.g., INBRE, CTR, and other COBREs) is strongly encouraged.</p></div>
+            <p class="small muted" style="margin: 0;">Review criteria: the review questions for this document are quoted in full under Specific Aims.</p>
+          </div></details>
+        </div>
+      </details>
+
+      <!-- 4 Budget -->
+      <details class="acc">
+        <summary>
+          <span class="due"><span class="dow">Fri</span><span class="md">Dec 4</span></span>
+          <span class="ttl">4. NI Core Budget + Budget Justification<span class="sub">The NI Core's five-year budget (entered as forms) and the written justification for each cost.</span></span>
+          <span class="meta"><span class="badge gray">Form entries + justification</span><span class="badge">Roxana (reviews)</span><svg class="car" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span>
+        </summary>
+        <div class="body">
+          <div class="two">
+            <div class="blk"><h4>Requirements</h4><ul>
+              <li><b>Five years.</b> A detailed budget for the entire project period.</li>
+              <li><b>Justification.</b> The NOFO adds no special justification instructions, so NIH's standard (SF424 R&amp;R) instructions apply.</li>
+            </ul></div>
+            <div class="blk"><h4>What a Research Core can pay for</h4><ul>
+              <li>Personnel and supplies.</li>
+              <li>New equipment and modernizing instruments.</li>
+              <li>Using, modifying, or expanding existing resources needed for the Center's scientific goals.</li>
+            </ul></div>
+          </div>
+          <div class="two">
+            <div class="blk"><h4>Restrictions</h4><ul>
+              <li><b>No Alterations &amp; Renovations (A&amp;R)</b> in a Research Core.</li>
+              <li><b>No new cores.</b> The NOFO's budget text is shared with Phase E; its wording about establishing Research Core facilities applies only to Phase E.</li>
+              <li><b>Total cap.</b> All of the Center's budgets together must not exceed $1.5 million in direct costs per year (consortium F&amp;A excluded). Roxana tracks the total.</li>
+            </ul></div>
+            <div class="blk"><h4 class="cnap">CNAP guidance (not NOFO rules)</h4><ul>
+              <li><b>Every cost traces to the Research Strategy.</b> Each budget line should match an activity the strategy describes.</li>
+              <li><b>Frame costs for Phase S:</b> sustaining, modernizing, or consolidating the existing core.</li>
+              <li><b>Justify each year:</b> personnel, supplies, equipment purchases or modernization, and core operations.</li>
+            </ul></div>
+          </div>
+          <div class="blk"><h4 class="cnap">Review timeline (CNAP)</h4><ul>
+            <li><b>Fri, Dec 4:</b> Budget and Budget Justification in WORKING DRAFTS, status Ready for Review. Roxana reviews them Dec 7–11 and sends any fixes back to you.</li>
+            <li><b>Mon, Dec 14:</b> Roxana sends every budget to Tim in Central Office. Tim reviews for at least two working weeks and may flag issues as he finds them; fix each one as it reaches you.</li>
+            <li><b>Fri, Jan 8:</b> All of Tim's comments are back.</li>
+            <li><b>Fri, Jan 15 (morning):</b> Your revised (final) budget and justification in WORKING DRAFTS, status Ready for Review. Roxana checks them and sends the final budgets to Tim that day. After this, critical edits only.</li>
+            <li><b>Tue, Jan 19:</b> Morgan uploads the final budgets to Cayuse (K-State is closed Mon, Jan 18).</li>
+          </ul></div>
+          <div class="blk"><h4>How reviewers will score it</h4><ul><li>Reviewers consider whether the budget and the requested period of support are fully justified and reasonable for the proposed research.</li></ul></div>
+          <details class="sub-acc"><summary>For reference: the NOFO's exact words</summary><div class="in">
+            <div class="quote"><span class="src">NOFO, Sec. IV.2, Research Core › Budget (Research Core)</span><p>Funds may be requested to establish Research Core facilities and/or to use, modify, or expand existing resources that are necessary for accomplishing the scientific goals of the Center. In addition to personnel and supply costs, the acquisition of new equipment and modernization of instrumentation may be proposed. Alteration and Renovation (A&amp;R) of core facilities cannot be proposed under this component.</p><p>Core facilities should have a detailed budget for the entire proposed project period (five years).</p></div>
+            <div class="quote"><span class="src">Review criteria · NOFO, Sec. V.1, Additional Review Considerations - Overall › Budget and Period of Support</span><p>Reviewers will consider whether the budget and the requested period of support are fully justified and reasonable in relation to the proposed research.</p></div>
+          </div></details>
+        </div>
+      </details>
+
+      <!-- 5 Equipment -->
+      <details class="acc">
+        <summary>
+          <span class="due"><span class="dow">Mon</span><span class="md">Dec 14</span></span>
+          <span class="ttl">5. NI Core Equipment<span class="sub">A list of the major equipment already available for this work.</span></span>
+          <span class="meta"><span class="badge gray">No limit</span><svg class="car" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span>
+        </summary>
+        <div class="body">
+          <div class="two">
+            <div class="blk"><h4>Requirements</h4><ul><li><b>Standard NIH instructions apply.</b> The NOFO adds nothing specific for this attachment.</li></ul>
+              <h4 style="margin-top: 12px;">What to include (NIH's instructions, paraphrased)</h4><ul>
+              <li>List the major equipment already available for this work.</li>
+              <li>Say where each item is and what it can do, when that helps a reviewer see why it matters.</li>
+            </ul></div>
+            <div class="blk"><h4 class="cnap">CNAP guidance (not NOFO rules)</h4><ul>
+              <li><b>Existing equipment only.</b> Equipment you plan to buy belongs in the budget, not here.</li>
+              <li><b>Match the Research Strategy.</b> Name the same instruments the strategy relies on, using the same names.</li>
+            </ul></div>
+          </div>
+          <div class="blk"><h4>How reviewers will score it</h4><p style="margin-bottom: 6px;">This attachment supports the Center's Environment score:</p><ul>
+            <li>Will the scientific environment contribute to the Center's success?</li>
+            <li>Does the application show K-State's commitment to strengthening research capacity in the Center's area?</li>
+            <li>Are the existing physical resources adequate for the Center's goals?</li>
+            <li>Is the existing pool of potential SRP Investigators (SIs) broad and well integrated?</li>
+            <li>How well do the plans show the need for support to sustain existing resources and future growth (the Phase S question)?</li>
+          </ul></div>
+          <details class="sub-acc"><summary>For reference: the NOFO's exact words</summary><div class="in">
+            <div class="quote"><span class="src">Review criteria · NOFO, Sec. V.1, Scored Review Criteria - Overall › Environment</span><p>Will the scientific environment in which the work will be done contribute to the probability of success? Does the application demonstrate appropriate institutional commitment to support the goal of strengthening the biomedical research capacity in the scientific area of the Center? Are the existing physical resources available to the investigators adequate to meet the goals of the Center? Is the existing pool of potential SIs, as a whole, scientifically broad and well-integrated to spur research capacity growth in the proposed area of investigation? How effectively do the overall plans convey the need to request support to expand (COBRE-E) or sustain (COBRE-S) existing resources and future growth in the proposed broad area of research, as applicable?</p></div>
+          </div></details>
+        </div>
+      </details>
+
+      <!-- 6 Facilities -->
+      <details class="acc">
+        <summary>
+          <span class="due"><span class="dow">Wed</span><span class="md">Dec 16</span></span>
+          <span class="ttl">6. NI Core Facilities &amp; Other Resources<span class="sub">A description of the space, resources, and institutional support behind this work.</span></span>
+          <span class="meta"><span class="badge gray">No limit</span><svg class="car" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span>
+        </summary>
+        <div class="body">
+          <div class="two">
+            <div class="blk"><h4>Requirements</h4><ul><li><b>Standard NIH instructions apply.</b> The NOFO adds nothing specific for this attachment.</li></ul>
+              <h4 style="margin-top: 12px;">What to include (NIH's instructions, paraphrased)</h4><ul>
+              <li>Explain how the scientific environment will contribute to the work's success.</li>
+              <li>Point out anything unique about the environment.</li>
+              <li>Describe K-State's investment in the work's success.</li>
+            </ul></div>
+            <div class="blk"><h4 class="cnap">CNAP guidance (not NOFO rules)</h4><ul>
+              <li><b>Back up the Institutional Letter.</b> Concrete K-State commitments named here (space, staff, institutional funds) strengthen the Environment score.</li>
+            </ul>
+            <h4 style="margin-top: 12px;">How reviewers will score it</h4><ul><li>This attachment supports the Center's Environment score (questions listed under Equipment).</li></ul></div>
+          </div>
+          <details class="sub-acc"><summary>For reference: the NOFO's exact words</summary><div class="in">
+            <div class="quote"><span class="src">Review criteria · NOFO, Sec. V.1, Scored Review Criteria - Overall › Environment</span><p>Will the scientific environment in which the work will be done contribute to the probability of success? Does the application demonstrate appropriate institutional commitment to support the goal of strengthening the biomedical research capacity in the scientific area of the Center? Are the existing physical resources available to the investigators adequate to meet the goals of the Center? Is the existing pool of potential SIs, as a whole, scientifically broad and well-integrated to spur research capacity growth in the proposed area of investigation? How effectively do the overall plans convey the need to request support to expand (COBRE-E) or sustain (COBRE-S) existing resources and future growth in the proposed broad area of research, as applicable?</p></div>
+          </div></details>
+        </div>
+      </details>
+
+      <!-- 7 Resource Sharing -->
+      <details class="acc">
+        <summary>
+          <span class="due"><span class="dow">Thu</span><span class="md">Dec 17</span></span>
+          <span class="ttl">7. NI Core Resource Sharing Plan<span class="sub">A short plan for sharing research resources produced by the NI Core, or the reason for not sharing them.</span></span>
+          <span class="meta"><span class="badge gray">No limit</span><svg class="car" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span>
+        </summary>
+        <div class="body">
+          <div class="two">
+            <div class="blk"><h4>Requirements</h4><ul><li><b>Follow NIH's instructions.</b> The NOFO points to the Resource Sharing Plan instructions in NIH's application guide (SF424 R&amp;R) and adds nothing of its own.</li></ul>
+              <h4 style="margin-top: 12px;">Restrictions</h4><ul><li><b>No Data Management and Sharing (DMS) Plan in the NI Core.</b> The DMS Plan goes in the Center (Overall) only.</li></ul></div>
+            <div class="blk"><h4 class="cnap">CNAP guidance (not NOFO rules)</h4><ul><li><b>Keep it short and specific.</b> Say which resources the component will share (for example, model organisms, protocols, or tools), how, and when. If there is nothing to share, say so and give the reason.</li></ul>
+              <h4 style="margin-top: 12px;">How reviewers will score it</h4><ul><li>Reviewers comment on whether the Resource Sharing Plan, or the reason for not sharing resources, is reasonable. It is not scored.</li></ul></div>
+          </div>
+          <details class="sub-acc"><summary>For reference: the NOFO's exact words</summary><div class="in">
+            <div class="quote"><span class="src">NOFO, Sec. IV.2, Research Core › PHS 398 Research Plan</span><p>Resource Sharing Plan: Individuals are required to comply with the instructions for the Resource Sharing Plans as provided in the SF424 (R&amp;R) Application Guide.</p></div>
+            <div class="quote"><span class="src">NOFO, Sec. IV.2, Research Core › Other Plan(s)</span><p>Do not include a Data Management and Sharing (DMS) Plan within this Component. If a DMS Plan is required for this NOFO, it must be included within the Overall Component.</p></div>
+            <div class="quote"><span class="src">Review criteria · NOFO, Sec. V.1, Additional Review Considerations - Overall › Resource Sharing Plans</span><p>Reviewers will comment on whether the Resource Sharing Plan(s) (e.g., Sharing Model Organisms) or the rationale for not sharing the resources, is reasonable.</p></div>
+          </div></details>
+        </div>
+      </details>
+
+      <!-- 8 Biosketch draft -->
+      <details class="acc">
+        <summary>
+          <span class="due"><span class="dow">Thu</span><span class="md">Dec 17</span></span>
+          <span class="ttl">8. Your biosketch: review draft<span class="sub">Your Biographical Sketch Common Form plus the NIH Biographical Sketch Supplement.</span></span>
+          <span class="meta"><span class="badge gray">Set by SciENcv format</span><span class="badge">Morgan (checks format); Kim (reviews)</span><svg class="car" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span>
+        </summary>
+        <div class="body">
+          <div class="two">
+            <div class="blk"><h4>Requirements</h4><ul>
+              <li><b>One biosketch per person</b> for the whole application, no matter how many components you're in.</li>
+              <li><b>Made and certified in SciENcv</b> (an NIH requirement since Jan 25, 2026).</li>
+              <li><b>eRA Commons ID.</b> You need a valid eRA Commons ID. Morgan lists you in Cayuse with Project Role 'Other' and Category 'Core Director'.</li>
+              <li><b>Core Director qualifications.</b> Research Core Directors must be full-time staff at K-State with the knowledge, authority, leadership, administrative skills, and capabilities to direct the core.</li>
+            </ul></div>
+            <div class="blk"><h4 class="cnap">CNAP guidance (not NOFO rules)</h4><ul>
+              <li><b>Write the Personal Statement to your core.</b> Tie it to the core's Aims (Nov 13) and Research Strategy (Nov 30) so it holds through the Jan 11 revisions.</li>
+              <li><b>Show the review question's answer:</b> your expertise in overseeing, maintaining, and growing core resources.</li>
+            </ul>
+            <h4 style="margin-top: 12px;">How reviewers will score it</h4><ul><li>Does the Core Director have the expertise to oversee maintaining and growing the core's resources and facilities?</li></ul></div>
+          </div>
+          <div class="blk"><h4 class="cnap">Review timeline (CNAP)</h4><ul>
+            <li><b>Thu, Dec 17:</b> Review draft (the PDF from SciENcv) in WORKING DRAFTS, status Ready for Review. Morgan checks the formatting.</li>
+            <li><b>Fri, Dec 18:</b> Morgan sends it to Kim in Central Office for review.</li>
+            <li><b>Fri, Jan 8:</b> Kim's comments come back.</li>
+            <li><b>Wed, Jan 13:</b> Final version in WORKING DRAFTS, status Ready for Review, with Kim's fixes plus anything new since Dec 17 (new papers, new awards, pending proposals funded or declined). If nothing changed, tell Morgan "no changes."</li>
+            <li><b>Fri, Jan 15:</b> Morgan sends the finals to Central Office with the entire application.</li>
+          </ul></div>
+          <details class="sub-acc"><summary>For reference: the NOFO's exact words</summary><div class="in">
+            <div class="quote"><span class="src">NOFO, Sec. IV.2, Research Core › Research &amp; Related Senior/Key Person Profile (Research Core)</span><ol><li>In the Project Director/Principal Investigator section of the form, use Project Role of 'Other' with Category of 'Core Director' and provide a valid eRA Commons ID in the Credential field.</li><li>In the additional Senior/Key Profiles section, list Senior/Key persons who are working in the component.</li><li>Include a single Biographical Sketch Common Form and NIH Biographical Sketch Supplement for each Senior/Key person listed in the application regardless of the number of components in which they participate. When a Senior/Key person is listed in multiple components, the Biographical Sketch can be included in any one component.</li><li>If more than 100 Senior/Key persons are included in a component, the Additional Senior Key Person attachments should be used.</li></ol><p>The Director(s) of Research Core facilities must be full-time staff member(s) at the applicant organization and be experienced with the requisite knowledge, authority, leadership, administrative skills, and capabilities to direct the core. The Core Director will lead a team that provides services to:</p><ol start="5"><li>Develop or improve plans for standard operating procedures governing the utilization and management of core expertise and resources,</li><li>Develop or improve plans for disseminating information, training, and serving as subject-matter experts to investigators,</li><li>Maintain state-of-the-art technologies and knowledge capabilities, and</li><li>Recommend to the COBRE PD(s)/PI(s) any updates and/or replacement of equipment.</li></ol></div>
+          </div></details>
+        </div>
+      </details>
+
+      <!-- 9 Bibliography -->
+      <details class="acc">
+        <summary>
+          <span class="due"><span class="dow">Wed</span><span class="md">Jan 6</span></span>
+          <span class="ttl">9. NI Core Bibliography &amp; References Cited<span class="sub">The list of references cited in the component's Specific Aims and Research Strategy.</span></span>
+          <span class="meta"><span class="badge gray">No limit</span><svg class="car" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span>
+        </summary>
+        <div class="body">
+          <div class="two">
+            <div class="blk"><h4>Requirements</h4><ul><li><b>Standard NIH instructions apply:</b> a bibliography of any references cited. It is a separate attachment and doesn't count toward page limits.</li></ul></div>
+            <div class="blk"><h4 class="cnap">CNAP guidance (not NOFO rules)</h4><ul>
+              <li><b>Numbered style.</b> Use numbered superscript citations in order of first appearance, and a numbered reference list such as NLM (Vancouver), as set out in the <a href="Conventions.html#refs">Proposal Writing Conventions</a>.</li>
+              <li>Include PMCIDs for any cited paper covered by the NIH Public Access Policy.</li>
+              <li><b>One list per component.</b> If your Aims cite papers, number one list across the Aims and the Research Strategy.</li>
+              <li>Due Wed, Jan 6, so it reflects the final text; update it if the Jan 11 revisions add or drop a citation.</li>
+            </ul></div>
+          </div>
+        </div>
+      </details>
+
+      <!-- 10 Revisions -->
+      <details class="acc">
+        <summary>
+          <span class="due"><span class="dow">Mon</span><span class="md">Jan 11</span></span>
+          <span class="ttl">10. NI Core: revise Specific Aims + Research Strategy, must-fix items only<span class="sub">Changes to the Specific Aims and Research Strategy in response to the external scientific review.</span></span>
+          <span class="meta"><span class="badge gray">Same as originals</span><svg class="car" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span>
+        </summary>
+        <div class="body">
+          <div class="blk"><h4 class="cnap">CNAP guidance (not NOFO rules)</h4><ul>
+            <li><b>Must-fix items only.</b> External reviewer comments are due Mon, Jan 4. Heather and Morgan sort them by Wed, Jan 6 and send you only the must-fix items.</li>
+            <li><b>No scope or budget changes.</b> Budgets are being finalized Jan 8–15, so don't change anything that would change a budget.</li>
+            <li><b>Same page limits as the originals:</b> Specific Aims 1 page; Research Strategy 6 pages.</li>
+            <li>Due Mon, Jan 11, before the Project Summaries (Tue, Jan 12) and the Jan 15 handoff to Central Office.</li>
+          </ul></div>
+        </div>
+      </details>
+
+      <!-- 11 Project Summary -->
+      <details class="acc">
+        <summary>
+          <span class="due"><span class="dow">Tue</span><span class="md">Jan 12</span></span>
+          <span class="ttl">11. NI Core Project Summary/Abstract<span class="sub">A 30-line summary of the NI Core.</span></span>
+          <span class="meta"><span class="badge gray">30 lines of text</span><svg class="car" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span>
+        </summary>
+        <div class="body">
+          <div class="two">
+            <div class="blk"><h4>Requirements</h4><ul>
+              <li><b>30 lines of text.</b> Standard NIH instructions apply. The NOFO doesn't exclude a Project Summary from the NI Core, and NIH's validation requires one in every component.</li>
+              <li><b>No Project Narrative in the NI Core.</b> The NOFO says not to complete it, even though the online screens mark it with an asterisk. The Project Narrative goes in the Center (Overall) only.</li>
+            </ul></div>
+            <div class="blk"><h4 class="cnap">CNAP guidance (not NOFO rules)</h4><ul>
+              <li>Summarize this component only, not the whole Center.</li>
+              <li><b>Write it last.</b> It's due Tue, Jan 12, the day after the external-review revisions, so it matches the final text.</li>
+            </ul></div>
+          </div>
+          <details class="sub-acc"><summary>For reference: the NOFO's exact words</summary><div class="in">
+            <div class="quote"><span class="src">NOFO, Sec. IV.2, Admin Core / Research Core / SRP › Research &amp; Related Other Project Information</span><p>Project Narrative: Do not complete. Note: ASSIST screens will show an asterisk for this attachment indicating it is required. However, eRA systems only enforce this requirement in the Overall component and applications will not receive an error if omitted in other components.</p></div>
+          </div></details>
+        </div>
+      </details>
+
+      <!-- 12 Biosketch final -->
+      <details class="acc">
+        <summary>
+          <span class="due"><span class="dow">Wed</span><span class="md">Jan 13</span></span>
+          <span class="ttl">12. Your biosketch: final<span class="sub">Final version with Kim's fixes plus anything new since Dec 17.</span></span>
+          <span class="meta"><span class="badge gray">Set by SciENcv format</span><span class="badge">Morgan (checks format); Kim (reviews)</span><svg class="car" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span>
+        </summary>
+        <div class="body">
+          <div class="blk"><h4 class="cnap">Review timeline (CNAP)</h4><ul>
+            <li><b>Wed, Jan 13:</b> Final version in WORKING DRAFTS, status Ready for Review, with Kim's fixes plus anything new since Dec 17 (new papers, new awards, pending proposals funded or declined). If nothing changed, tell Morgan "no changes."</li>
+            <li><b>Fri, Jan 15:</b> Morgan sends the finals to Central Office with the entire application.</li>
+          </ul><p class="small muted" style="margin-top: 8px;">Requirements, guidance, and the NOFO's exact words are under task 8 (review draft).</p></div>
+        </div>
+      </details>
+
+      <!-- 13 Final budget -->
+      <details class="acc">
+        <summary>
+          <span class="due"><span class="dow">Fri</span><span class="md">Jan 15</span></span>
+          <span class="ttl">13. NI Core: revised (final) Budget + Budget Justification<span class="sub">Morning. Roxana checks it and sends the final budgets to Tim the same day.</span></span>
+          <span class="meta"><span class="badge">Roxana (reviews)</span><svg class="car" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span>
+        </summary>
+        <div class="body">
+          <div class="blk"><h4 class="cnap">Review timeline (CNAP)</h4><ul>
+            <li><b>Fri, Jan 15 (morning):</b> Your revised (final) budget and justification in WORKING DRAFTS, status Ready for Review. Roxana checks them and sends the final budgets to Tim that day. After this, critical edits only.</li>
+            <li><b>Tue, Jan 19:</b> Morgan uploads the final budgets to Cayuse (K-State is closed Mon, Jan 18).</li>
+          </ul><p class="small muted" style="margin-top: 8px;">Budget rules, what a Research Core can pay for, and the NOFO's exact words are under task 4.</p></div>
+        </div>
+      </details>
+      </div>
+      </details>
+    </section>
+
+    <section class="wrap sec band-w">
+      <div class="note">
+        <b>Shared with everyone:</b> the <a href="Workflow.html">Smartsheet and Dropbox workflow</a> (statuses, reviewers, finalization), the <a href="Conventions.html">Proposal Writing Conventions</a>, the <a href="Timeline.html">Team Timeline</a>, and the <a href="PhaseS.html">Phase S / NOFO Overview</a>. Your original packet remains available as a PDF reference from Morgan.
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap">
+      <img class="logo" src="assets/cnap-logo.jpg" alt="CNAP Center — Cognitive &amp; Neurobiological Approaches to Plasticity">
+      <span>CNAP Center · Phase S (COBRE-S) Application · PAR-27-055</span>
+      <span>Source: Assignments and Notes · NI Core · Doina, Core Director · Prepared Oct 13, 2026 · Live tracker: Smartsheet · Questions: Morgan, <a href="mailto:mkwills@ksu.edu">mkwills@ksu.edu</a></span>
+    </div>
+  </footer>
+</div>
+
+<script>
+(function(){ window.DCLogic = class { forceUpdate(){ if (window.__dcRender) window.__dcRender(); } }; })();
+
+class Component extends DCLogic {
+  componentDidMount() {
+    if (typeof window !== 'undefined') {
+      setTimeout(() => {
+        const h = (window.location.hash || '').slice(1);
+        if (!h || !window.__nmJump) return;
+        const t = document.querySelector('[id="' + h + '"]');
+        if (t) window.__nmJump(t);
+      }, 350);
+    }
+    if (typeof window !== 'undefined') setTimeout(() => { if (window.__xallSync) window.__xallSync(); }, 400);
+    if (typeof window !== 'undefined' && !window.__nmAutoClose13) {
+      window.__nmAutoClose13 = true;
+      const rootOf = (e) => { const t = e.composedPath ? e.composedPath()[0] : e.target; return (t && t.getRootNode) ? t.getRootNode() : document; };
+      document.addEventListener('mousemove', (e) => {
+        const root = rootOf(e); if (!root.querySelectorAll) return;
+        root.querySelectorAll('details.nm[open]').forEach((d) => {
+          if (d.matches(':hover')) { clearTimeout(d.__t); d.__t = null; }
+          else if (!d.__t) { d.__t = setTimeout(() => { d.__t = null; if (!d.matches(':hover')) d.removeAttribute('open'); }, 450); }
+        });
+      }, { passive: true });
+      document.addEventListener('click', (e) => {
+        const root = rootOf(e); if (!root.querySelectorAll) return;
+        const path = e.composedPath ? e.composedPath() : [e.target];
+        root.querySelectorAll('details.nm[open]').forEach((d) => { if (!path.includes(d)) d.removeAttribute('open'); });
+        const a = path.find((n) => n && n.tagName === 'A' && n.getAttribute && (n.getAttribute('href') || '').includes('#'));
+        if (!a) return;
+        const id = (a.getAttribute('href') || '').split('#')[1];
+        if (!id) return;
+        let el = a.parentElement, target = null;
+        while (el && !target) { target = el.querySelector ? el.querySelector('[id="' + id + '"]') : null; el = el.parentElement; }
+        if (!target) return;
+        e.preventDefault();
+        const d = a.closest('details.nm'); if (d) d.removeAttribute('open');
+        window.__nmJump(target);
+      });
+      const xallScope = (n) => (n && n.closest && (n.closest('.xscope') || n.closest('main'))) || document;
+      window.__xallItems = (scope) => Array.from(scope.querySelectorAll('details.sx, details.acc, details.stg'));
+      window.__xallSync = (root) => {
+        (root && root.querySelectorAll ? root : document).querySelectorAll('button.xall').forEach((b) => {
+          const list = window.__xallItems(xallScope(b));
+          const anyClosed = list.some((d) => !d.open);
+          const sc = b.closest('.xscope'); b.textContent = anyClosed ? (sc ? 'Expand all stages' : 'Expand all') : (sc ? 'Collapse all stages' : 'Collapse all');
+          b.setAttribute('aria-pressed', anyClosed ? 'false' : 'true');
+        });
+      };
+      document.addEventListener('click', (e) => {
+        const path = e.composedPath ? e.composedPath() : [e.target];
+        const btn = path.find((n) => n && n.classList && n.classList.contains('xall'));
+        if (btn) {
+          e.preventDefault();
+          const scope = xallScope(btn);
+          const list = window.__xallItems(scope);
+          const anyClosed = list.some((d) => !d.open);
+          list.forEach((d) => { if (anyClosed) d.setAttribute('open', ''); else d.removeAttribute('open'); });
+          if (scope.dataset) scope.dataset.xall = anyClosed ? '1' : '';
+          window.__xallSync(btn.getRootNode ? btn.getRootNode() : document);
+          return;
+        }
+      }, true);
+      document.addEventListener('toggle', (e) => { const t = e.composedPath ? e.composedPath()[0] : e.target; window.__xallSync(t && t.getRootNode ? t.getRootNode() : document); }, true);
+      window.__nmJump = (target) => {
+        if (target.tagName === 'DETAILS') target.setAttribute('open', '');
+        const sx = target.querySelector ? target.querySelector(':scope > details.sx') : null; if (sx) sx.setAttribute('open', '');
+        let host = target.parentElement, bar = null;
+        while (host && !bar) { bar = host.querySelector ? host.querySelector('.topbar') : null; host = host.parentElement; }
+        const offset = (bar ? (bar.querySelector('.nav') || bar).getBoundingClientRect().height : 0) + 20;
+        let sc = target.parentElement;
+        while (sc && sc !== document.body && sc !== document.documentElement) {
+          const oy = getComputedStyle(sc).overflowY;
+          if ((oy === 'auto' || oy === 'scroll') && sc.scrollHeight > sc.clientHeight) break;
+          sc = sc.parentElement;
+        }
+        const useWin = !sc || sc === document.body || sc === document.documentElement;
+        const top = target.getBoundingClientRect().top - (useWin ? 0 : sc.getBoundingClientRect().top) - offset;
+        (useWin ? window : sc).scrollBy({ top: top, behavior: 'smooth' });
+      };
+    }
+  }
+  renderVals() { return {}; }
+}
+
+(function(){
+  const start = () => { const c = new Component(); window.__dcComp = c; if (c.componentDidMount) c.componentDidMount(); };
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start); else start();
+})();
+</script>
+</body>
+</html>

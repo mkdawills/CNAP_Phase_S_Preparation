@@ -1,0 +1,431 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Team Timeline — CNAP Phase S Proposal Hub</title>
+<link rel="stylesheet" href="site.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&amp;family=Archivo:wght@500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F7F6FA}
+a{color:#512888}a:hover{color:#3B1C66}
+/* "Kickoff to submission" — matches the Cadence Overview page 1 */
+.kl{width:100%;border-collapse:collapse;font-size:14px;line-height:1.3;border-top:2px solid #512888;min-width:720px}
+.kl th{text-align:left;color:#512888;font-weight:700;font-size:14.5px;padding:8px 10px;border-bottom:2px solid #512888}
+.kl td{padding:7px 10px;vertical-align:top;border-bottom:1px solid #fff}
+.kl tr.a td{background:#F3F2F6}
+.kl tr.b td{background:#FAFAFC}
+.kl td.dt{white-space:nowrap;width:120px}
+.kl td.dt .w{display:inline-block;width:40px;color:#8A8599;font-size:11px;font-weight:600;text-transform:uppercase}
+.kl td.dt .m{display:inline-block;width:36px;color:#512888;font-weight:700;font-size:15px}
+.kl td.dt .d{display:inline-block;width:20px;color:#512888;font-weight:700;font-size:15px;text-align:right}
+.kl td.who{color:#6B6579;width:250px}
+.kl tr.stage td{background:#F7F6FA;border-top:2px solid #512888;border-bottom:1.5px solid #512888;text-align:center;color:#512888;font-weight:700;font-size:15.5px;padding:9px 10px}
+.kl tr.gap td{background:#F7F6FA;border:none;height:12px;padding:0}
+.kl tr.brk td{background:repeating-linear-gradient(135deg,#F3F2F6 0 6px,#E8E6EE 6px 8px);text-align:center;font-style:italic;color:#4A4458;font-size:13.5px;padding:6px}
+.kl tr.sub td{border-top:1px solid #E4E0EC}
+/* full-width stage bars between table sections (no column spanning needed) */
+.kl-wrap{min-width:720px}
+.bc-wrap{min-width:1180px}
+.band-w{position:relative;background:#FFFFFF;box-shadow:0 0 0 100vmax #FFFFFF;clip-path:inset(0 -100vmax);border-top:1px solid #E4E0EC}
+
+#bycomponent .bc-wrap{border:1px solid #E4E0EC;border-radius:8px}
+
+.kl,.bc{table-layout:fixed;width:100%;min-width:0 !important;border-top:none !important}
+.kl-head,.bc-head{border-top:2px solid #512888 !important}
+.kl-stage,.bc-stage{background:#F3F2F6;border-top:2px solid #512888;border-bottom:1.5px solid #512888;text-align:center;color:#512888;font-weight:700;font-size:15.5px;padding:9px 10px}
+.kl-head + .kl-stage,.bc-head + .bc-stage{border-top:none}
+.kl th:first-child,.kl td:first-child{width:120px}
+.kl th:last-child,.kl td:last-child{width:250px}
+.kl th + th,.kl td + td{border-left:1px solid #D3CDE0}
+.kl th{text-align:left !important}
+.bc th:first-child,.bc td:first-child{width:118px}
+.kl-gap,.bc-gap{height:12px}
+.kl-brk,.bc-brk{background:repeating-linear-gradient(135deg,#F3F2F6 0 6px,#E8E6EE 6px 8px);text-align:center;font-style:italic;color:#4A4458;font-size:13.5px;padding:7px;border-bottom:2px solid #fff}
+.bc-dl{display:grid;grid-template-columns:118px minmax(0,1fr);background:#F3F2F6}
+.bc-dl .dt{white-space:nowrap;padding:7px 6px 5px}
+.bc-dl .dt .w{display:inline-block;width:38px;color:#8A8599;font-size:11.5px;font-weight:600;text-transform:uppercase}
+.bc-dl .dt .m{display:inline-block;width:38px;color:#512888;font-weight:700;font-size:16px}
+.bc-dl .dt .d{display:inline-block;color:#512888;font-weight:700;font-size:16px;text-align:right;width:20px}
+.bc-dl .bar{height:auto;overflow:visible;margin:0;border-radius:0;align-self:center;background:#512888;color:#fff;text-align:center;font-weight:700;font-size:15px;padding:8px;letter-spacing:0.01em}
+/* "The same schedule, by component" — matches the Cadence Overview page 2 */
+.bc{width:100%;border-collapse:collapse;font-size:12.5px;line-height:1.25;min-width:1180px;border-top:2px solid #512888}
+.bc th{text-align:center;vertical-align:top;padding:8px 6px 10px;border-bottom:2px solid #512888;font-weight:400;color:#7A6E95;font-size:12.5px}
+.bc th b{display:block;color:#512888;font-size:15.5px;font-weight:700;margin-bottom:2px}
+.bc th.dt{color:#512888;font-weight:700;font-size:15.5px;vertical-align:middle}
+.bc td{padding:5px 6px;vertical-align:top;border-bottom:2px solid #fff;background:#F3F2F6}
+.bc td.dt{white-space:nowrap;padding-top:7px;width:118px;text-align:left}
+.bc td.dt .w{display:inline-block;width:38px;color:#8A8599;font-size:11.5px;font-weight:600;text-transform:uppercase;text-align:left}
+.bc td.dt .m{display:inline-block;width:38px;color:#512888;font-weight:700;font-size:16px;text-align:left}
+.bc td.dt .d{display:inline-block;color:#512888;font-weight:700;font-size:16px;text-align:right;width:20px}
+.bc td.co{border-left:1px solid #D3CDE0}
+.bc th + th,.bc td + td{border-left:1px solid #D3CDE0}
+.bc tr.split1 td{border-bottom:none;padding-bottom:0}
+.bc tr.split2 td{padding-top:0}
+.bc tr.fill td{padding:1px 6px;background:#FAF9FC;border-bottom:2px solid #fff}
+.bc tr.fill.we td{background:#EEECF2}
+.bc tr.fill td.dt{padding-top:1px}
+.bc tr.fill td.dt .w,.bc tr.fill td.dt .m,.bc tr.fill td.dt .d{color:#A9A3B6;font-size:11px;font-weight:600}
+.bc tr.stage td{background:#F3F2F6;border-top:2px solid #512888;border-bottom:1.5px solid #512888;text-align:center;color:#512888;font-weight:700;font-size:15.5px;padding:9px 6px}
+.bc tr.gap td{background:#F7F6FA;border:none;height:12px;padding:0}
+.bc tr.brk td{background:repeating-linear-gradient(135deg,#F3F2F6 0 6px,#E8E6EE 6px 8px);text-align:center;font-style:italic;color:#4A4458;font-size:13.5px;padding:7px}
+.bc tr.dl td.bar{background:#512888;color:#fff;text-align:center;font-weight:700;font-size:15px;padding:8px;letter-spacing:0.01em}
+.p{display:block;border:1.5px solid;border-radius:5px;padding:3px 7px;font-weight:700;margin-bottom:5px;background:#fff}
+.p:last-child{margin-bottom:0}
+.p-w{border-color:#512888;color:#512888}
+.p-e{border-color:#5B9A6E;background:#E6F3E9;color:#2F6B3F}
+.p-b{border-color:#D9A51F;background:#FBEBB8;color:#7A5A00}
+.p-k{border-color:#7FAAD8;background:#E3EEF9;color:#2B5C8F}
+.p-s{border-color:#B9B4C4;background:#fff;color:#1F1B2B}
+.p-g{border-color:#B9B4C4;background:#EDECF1;color:#1F1B2B}
+.lg{display:flex;flex-wrap:wrap;align-items:center;gap:6px 8px;margin-top:10px;font-size:13px;color:#4A4458}
+.lg .p{display:inline-block;margin:0;padding:3px 8px}
+/* compact, all-white section list */
+.band-g{--bandc:#FFFFFF}
+section.sec.band-w,section.sec.band-g{padding-top:18px !important;padding-bottom:18px}
+.band-w,.band-g{border-top:1px solid #E4E0EC}
+details.sx > summary .h2{background-image:linear-gradient(#512888,#512888) !important;background-size:40px 3px !important;background-position:0 100%;background-repeat:no-repeat;padding-bottom:8px;font-size:19px}
+details.sx:not([open]) > summary .h2{background-image:none !important;padding-bottom:0}
+details.sx > summary .sx-car{width:32px;height:32px;margin-bottom:0}
+details.sx[open] > summary{margin-bottom:14px}
+.pagehead + .band-w{border-top:none}
+details.stg > summary{list-style:none;cursor:pointer}
+details.stg > summary::-webkit-details-marker{display:none}
+details.stg > summary > div{position:relative}
+details.stg > summary > div::after{content:"";position:absolute;right:16px;top:50%;width:8px;height:8px;border-right:2.5px solid #512888;border-bottom:2.5px solid #512888;transform:translateY(-70%) rotate(45deg);transition:transform .2s}
+details.stg[open] > summary > div::after{transform:translateY(-30%) rotate(-135deg)}
+details.stg > summary:hover > div{background:#EAE5F3}
+details.stg + details.stg > summary > div{border-top:none}
+#kickoff .xall-bar{margin:0 0 10px}
+.sub-bar{margin:0 0 10px !important}
+.sub-bar .xall{background:#fff;color:#3A3640;border:1.5px solid #3A3640;padding:7px 14px;font-size:13px}
+.sub-bar .xall:hover{background:#F3EFF9;color:#512888;border-color:#512888}
+</style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<div class="hub" style="font-family: 'Source Sans 3', 'Segoe UI', system-ui, sans-serif; color: #1F1B2B; background: #F7F6FA; min-height: 100vh;">
+
+  <header class="topbar">
+    <div class="wrap">
+      <a class="brand" href="index.html" title="Back to the Dashboard"><svg class="home-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5L12 3l9 7.5"></path><path d="M5 9.5V21h5v-6h4v6h5V9.5"></path></svg><span>CNAP Phase S Proposal Hub</span></a>
+      <nav class="nav" aria-label="Site">
+        <a class="navlink" href="index.html">Dashboard</a>
+        <details class="nm on"><summary><a href="Timeline.html">Team Timeline</a><span class="car"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+          <div class="pop">
+            <a class="hd" href="Timeline.html">Team Timeline</a>
+            <a href="Timeline.html#kickoff">Kickoff to submission (by date)</a>
+            <a href="Timeline.html#bycomponent">The same schedule, by component</a>
+          </div>
+        </details>
+        <details class="nm"><summary><a href="Workflow.html">Workflow &amp; Files</a><span class="car"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+          <div class="pop">
+            <a class="hd" href="Workflow.html">Workflow &amp; File Management</a>
+            <a href="Workflow.html#summary">Please read first</a>
+            <a href="Workflow.html#smartsheet">Smartsheet</a>
+            <a href="Workflow.html#statuses">Statuses &amp; reviews</a>
+            <a href="Workflow.html#folders">Dropbox folders</a>
+            <a href="Workflow.html#reference">Reference materials</a>
+          </div>
+        </details>
+        <details class="nm"><summary><a href="Guidance.html">Contributor Guidance</a><span class="car"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+          <div class="pop">
+            <a class="hd" href="Guidance.html">Find your guidance</a>
+            <a href="HeatherBailey.html">Heather Bailey · Center Director (PD/PI), CN Core</a>
+            <a href="Chip.html">Chip · BN Core Director</a>
+            <a href="Doina.html">Doina · NI Core Director</a>
+            <a href="CarlAde.html">Carl Ade · Associate Director</a>
+            <a href="Roxana.html">Roxana · Budget Review</a>
+            <a href="Tim.html">Tim · Central Office Budget Review</a>
+            <a href="Kim.html">Kim · Central Office Biosketch Review</a>
+          </div>
+        </details>
+        <details class="nm"><summary><a href="PhaseS.html">Phase S Overview</a><span class="car"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+          <div class="pop">
+            <a class="hd" href="PhaseS.html">Phase S / NOFO Overview</a>
+            <a href="PhaseS.html#glance">Application components at a glance</a>
+            <a href="PhaseS.html#evs">COBRE-E vs. COBRE-S</a>
+            <a href="PhaseS.html#changes">Differences from previous NOFOs</a>
+            <a href="PhaseS.html#pi">Eligibility: Center Director</a>
+          </div>
+        </details>
+        <details class="nm"><summary><a href="SRP.html">SRP Core</a><span class="car"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+          <div class="pop">
+            <a class="hd" href="SRP.html">SRP Core &amp; SRP Investigators</a>
+            <a href="SRP.html#srpdir">The SRP Core Director</a>
+            <a href="SRP.html#srp1">How SIs are chosen</a>
+            <a href="SRP.html#srp2">Requirements every SI must meet</a>
+            <a href="SRP.html#srp3">Eligible career stages</a>
+            <a href="SRP.html#srp4">While an SI is supported</a>
+            <a href="SRP.html#srp5">When an SI leaves the program</a>
+            <a href="SRP.html#srp6">Adding a new SI after the award</a>
+          </div>
+        </details>
+        <details class="nm"><summary><a href="Conventions.html">Formatting Conventions</a><span class="car"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+          <div class="pop">
+            <a class="hd" href="Conventions.html">Formatting Conventions</a>
+            <a href="Conventions.html#names">Names and terms</a>
+            <a href="Conventions.html#format">NIH format (required)</a>
+            <a href="Conventions.html#tables">Tables and figures</a>
+            <a href="Conventions.html#refs">References</a>
+          </div>
+        </details>
+        <details class="nm"><summary><a href="Review.html">Review Criteria</a><span class="car"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+          <div class="pop">
+            <a class="hd" href="Review.html">Review Criteria</a>
+            <a href="Review.html#rc1">Administrative Core</a>
+            <a href="Review.html#rc2">Research Cores</a>
+            <a href="Review.html#rc3">Scientific Research Program</a>
+            <a href="Review.html#rc4">General criterion: Significance</a>
+            <a href="Review.html#rc5">General criterion: Investigators</a>
+            <a href="Review.html#rc6">General criterion: Innovation</a>
+            <a href="Review.html#rc7">General criterion: Approach</a>
+            <a href="Review.html#rc8">General criterion: Environment</a>
+            <a href="Review.html#rc9">After peer review: funding considerations</a>
+          </div>
+        </details>
+        <details class="nm"><summary><a href="Definitions.html">Definitions</a><span class="car"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+          <div class="pop">
+            <a class="hd" href="Definitions.html">Definitions (key terms)</a>
+            <a href="Definitions.html#kt1">Program and phases</a>
+            <a href="Definitions.html#kt2">Capacity and infrastructure</a>
+            <a href="Definitions.html#kt3">Center components</a>
+            <a href="Definitions.html#kt4">People</a>
+            <a href="Definitions.html#kt5">Plans and funding rules</a>
+            <a href="Definitions.html#kt6">Review</a>
+          </div>
+        </details>
+      </nav>
+      <div class="quick">
+        <a class="btn sm primary" href="https://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21">Open Smartsheet</a>
+        <a class="btn sm" href="https://files.simpler.grants.gov/opportunities/77942f5d-0b5f-4656-bfd7-a6148b1624a4/attachments/55f55944-4b0c-4a90-9e33-75b064598558/PAR-27-055-Full-Announcement.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6M8 13h8M8 17h6"></path></svg>Full NOFO</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="wrap pagehead">
+      <p class="eyebrow">Universal resource · Cadence Overview</p>
+      <h1 class="h1">Team Timeline</h1>
+      <p class="lede">Kickoff to submission, in date order and grouped by preparation stage: the date, what's due, and who's involved.<br>Smartsheet is the live version: if a date there differs, Smartsheet wins.</p>
+      <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px;">
+        <span class="chip">Work starts Thu, Oct 29, 2026</span>
+        <span class="chip">Application complete Fri, Jan 15, 2027</span>
+        <span class="chip">NIH due Mon, Jan 25, 2027 · 5:00 PM</span>
+        <a class="btn sm" href="index.html">← Back to dashboard</a>
+      </div>
+    </section>
+
+    <section class="wrap sec band-w" id="kickoff">
+      <div class="xall-bar"><button type="button" class="xall" aria-pressed="false">Expand all</button></div>
+      <details class="sx xscope">
+      <summary><h2 class="h2">Kickoff to submission, by date</h2><span class="sx-car" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+      <div class="xall-bar sub-bar"><button type="button" class="xall" aria-pressed="false">Expand all stages</button></div>
+
+      <div class="card scroll" style="padding: 10px 14px 14px; background: #fff;">
+        <div class="kl-wrap">
+<table class="kl kl-head"><colgroup><col style="width: 120px;"><col><col style="width: 250px;"></colgroup><thead>
+            <tr><th>Date</th><th>What's due</th><th>Who is Responsible</th></tr>
+          </thead></table>
+<details class="stg"><summary><div class="kl-stage">Preparation Stage 1 · Kickoff + Specific Aims</div></summary><div class="stg-body">
+<table class="kl"><colgroup><col style="width: 120px;"><col><col style="width: 250px;"></colgroup><tbody><tr class="a"><td class="dt"><span class="w">Thu</span><span class="m">Oct</span><span class="d">29</span></td><td><b>Kickoff</b> — assignment packets go out; Smartsheet goes live</td><td class="who">Everyone</td></tr><tr class="b"><td class="dt"><span class="w">Fri</span><span class="m">Nov</span><span class="d">6</span></td><td><b>Center Specific Aims</b> — draft shared with Core Directors to frame their Aims</td><td class="who">Heather Bailey + Morgan</td></tr><tr class="a"><td class="dt"><span class="w">Fri</span><span class="m">Nov</span><span class="d">13</span></td><td><b>Specific Aims</b> — Admin Core, BN, NI, CN, SRP Core (1 page each)</td><td class="who">Core Directors + Heather Bailey/Morgan</td></tr></tbody></table>
+</div></details>
+<div class="kl-gap"></div>
+<details class="stg"><summary><div class="kl-stage">Preparation Stage 2 · Research Strategies</div></summary><div class="stg-body">
+<table class="kl"><colgroup><col style="width: 120px;"><col><col style="width: 250px;"></colgroup><tbody><tr class="a"><td class="dt"><span class="w">Wed</span><span class="m">Nov</span><span class="d">18</span></td><td>Core input for the Center <b>Organization &amp; Management (O&amp;M) Plan</b></td><td class="who">Chip · Doina · Heather Bailey</td></tr><tr class="b"><td class="dt"><span class="w">Fri</span><span class="m">Nov</span><span class="d">20</span></td><td>External reviewer(s) confirmed</td><td class="who">Heather Bailey + Morgan</td></tr><tr class="a"><td class="dt"><span class="w">Mon</span><span class="m">Nov</span><span class="d">23</span></td><td>Center <b>Research Strategy</b>, Section A — Justification for the Center</td><td class="who">Heather Bailey + Morgan</td></tr></tbody></table>
+<div class="kl-brk">Thanksgiving — no deadlines Nov 24–27</div>
+<table class="kl"><colgroup><col style="width: 120px;"><col><col style="width: 250px;"></colgroup><tbody><tr class="b"><td class="dt"><span class="w">Mon</span><span class="m">Nov</span><span class="d">30</span></td><td><b>Research Strategies</b> — all five components (6 pages each)</td><td class="who">Core Directors + Heather Bailey/Morgan</td></tr><tr class="b sub"><td class="dt"></td><td>Center <b>Research Strategy</b>, Section B — final O&amp;M Plan</td><td class="who">Heather Bailey + Morgan</td></tr></tbody></table>
+</div></details>
+<div class="kl-gap"></div>
+<details class="stg"><summary><div class="kl-stage">Preparation Stage 3 · Research Strategy + Budgets</div></summary><div class="stg-body">
+<table class="kl"><colgroup><col style="width: 120px;"><col><col style="width: 250px;"></colgroup><tbody><tr class="a"><td class="dt"><span class="w">Wed</span><span class="m">Dec</span><span class="d">2</span></td><td>Center <b>Research Strategy</b>, Section C — Sustainability Plan</td><td class="who">Heather Bailey + Morgan</td></tr><tr class="b"><td class="dt"><span class="w">Thu</span><span class="m">Dec</span><span class="d">3</span></td><td>Center <b>Research Strategy</b>, Section D — Advisory Committee plan</td><td class="who">Heather Bailey + Morgan</td></tr><tr class="a"><td class="dt"><span class="w">Fri</span><span class="m">Dec</span><span class="d">4</span></td><td>Center <b>Research Strategy</b>, Section E — Career Development Plan (Center Research Strategy complete: 12 pages)</td><td class="who">Heather Bailey + Morgan</td></tr><tr class="a sub"><td class="dt"></td><td><b>Budget + Justification to Roxana</b> — all five components (cost out your strategy)</td><td class="who">Core Directors + Heather Bailey</td></tr><tr class="b"><td class="dt"><span class="w">Mon</span><span class="m">Dec</span><span class="d">7</span></td><td><b>Institutional Letter of Support</b> — mandatory; no letter, no review</td><td class="who">Heather Bailey + Morgan</td></tr><tr class="b sub"><td class="dt"></td><td>All Aims + Research Strategies sent to the <b>external reviewer(s)</b></td><td class="who">Morgan</td></tr><tr class="b sub"><td class="dt"></td><td>Roxana reviews all budgets + justifications (Dec 7–11, 5 working days)</td><td class="who">Roxana</td></tr></tbody></table>
+</div></details>
+<div class="kl-gap"></div>
+<details class="stg"><summary><div class="kl-stage">Preparation Stage 4 · Supporting documents + Central Office reviews</div></summary><div class="stg-body">
+<table class="kl"><colgroup><col style="width: 120px;"><col><col style="width: 250px;"></colgroup><tbody><tr class="a"><td class="dt"><span class="w">Mon</span><span class="m">Dec</span><span class="d">14</span></td><td><b>ALL budgets + justifications to Tim in Central Office</b> (Tim reviews at least two working weeks and may flag issues as he goes)</td><td class="who">Roxana + Morgan</td></tr><tr class="a sub"><td class="dt"></td><td><b>Equipment</b> — every component</td><td class="who">Core Directors + Heather Bailey/Morgan</td></tr><tr class="b"><td class="dt"><span class="w">Wed</span><span class="m">Dec</span><span class="d">16</span></td><td><b>Facilities &amp; Other Resources</b> — every component</td><td class="who">Core Directors + Heather Bailey/Morgan</td></tr><tr class="a"><td class="dt"><span class="w">Thu</span><span class="m">Dec</span><span class="d">17</span></td><td><b>Resource Sharing Plans</b> — all six components</td><td class="who">Core Directors + Heather Bailey/Morgan</td></tr><tr class="a sub"><td class="dt"></td><td>Center <b>Data Management &amp; Sharing Plan</b></td><td class="who">Heather Bailey + Morgan</td></tr><tr class="a sub"><td class="dt"></td><td><b>Biosketch review drafts</b> + Heather Bailey's <b>Current &amp; Pending</b> to Morgan</td><td class="who">Each person</td></tr><tr class="b"><td class="dt"><span class="w">Fri</span><span class="m">Dec</span><span class="d">18</span></td><td><b>Biosketch + Current &amp; Pending drafts to Kim in Central Office</b> (after Morgan's format check)</td><td class="who">Morgan</td></tr></tbody></table>
+<div class="kl-brk">Winter break — Dec 19 to Jan 3 (the external reviewer reads)</div>
+</div></details>
+<div class="kl-gap"></div>
+<details class="stg"><summary><div class="kl-stage">Preparation Stage 5 · Finish + revisions</div></summary><div class="stg-body">
+<table class="kl"><colgroup><col style="width: 120px;"><col><col style="width: 250px;"></colgroup><tbody><tr class="a"><td class="dt"><span class="w">Mon</span><span class="m">Jan</span><span class="d">4</span></td><td><b>External reviewer comments</b> due</td><td class="who">External reviewer(s)</td></tr><tr class="b"><td class="dt"><span class="w">Wed</span><span class="m">Jan</span><span class="d">6</span></td><td>Comments triaged and routed (must-fix only)</td><td class="who">Heather Bailey + Morgan</td></tr><tr class="b sub"><td class="dt"></td><td><b>Bibliographies</b> — every component</td><td class="who">Core Directors + Heather Bailey/Morgan</td></tr><tr class="a"><td class="dt"><span class="w">Fri</span><span class="m">Jan</span><span class="d">8</span></td><td><b>Budget comments from Tim + biosketch comments from Kim</b> in Central Office (one return day)</td><td class="who">Tim to Roxana · Kim to Morgan</td></tr><tr class="b"><td class="dt"><span class="w">Mon</span><span class="m">Jan</span><span class="d">11</span></td><td><b>Revisions per external review</b> — every component's Aims + Strategy</td><td class="who">Core Directors + Heather Bailey/Morgan</td></tr><tr class="a"><td class="dt"><span class="w">Tue</span><span class="m">Jan</span><span class="d">12</span></td><td><b>Project Summaries</b> (all six) + Center <b>Project Narrative</b></td><td class="who">Core Directors + Heather Bailey/Morgan</td></tr><tr class="b"><td class="dt"><span class="w">Wed</span><span class="m">Jan</span><span class="d">13</span></td><td><b>Final biosketches</b> (all leaders + SRP Pool) + Heather Bailey's <b>Current &amp; Pending</b> to Morgan — Kim's fixes + anything new</td><td class="who">Each person</td></tr><tr class="a"><td class="dt"><span class="w">Thu</span><span class="m">Jan</span><span class="d">14</span></td><td>Morgan re-checks changed biosketches</td><td class="who">Morgan</td></tr><tr class="b"><td class="dt"><span class="w">Fri</span><span class="m">Jan</span><span class="d">15</span></td><td><b>Revised (final) budget + justification to Roxana</b> (morning) — all five components; Roxana checks and sends to Tim</td><td class="who">Core Directors + Heather Bailey</td></tr><tr class="b sub"><td class="dt"></td><td><b>ENTIRE APPLICATION COMPLETE</b> — to Central Office, with final budgets to Tim and final biosketches to Kim (K-State closed Mon, Jan 18)</td><td class="who">Morgan + Roxana</td></tr></tbody></table>
+</div></details>
+<div class="kl-gap"></div>
+<details class="stg"><summary><div class="kl-stage">Preparation Stage 6 · Central Office review + NIH submission</div></summary><div class="stg-body">
+<table class="kl"><colgroup><col style="width: 120px;"><col><col style="width: 250px;"></colgroup><tbody><tr class="a"><td class="dt"><span class="w">Tue</span><span class="m">Jan</span><span class="d">19</span></td><td>Final budgets uploaded to Cayuse (critical budget edits only after Jan 15)</td><td class="who">Morgan + Central Office</td></tr><tr class="b"><td class="dt"><span class="w">Wed</span><span class="m">Jan</span><span class="d">20</span></td><td><b>Central Office reviews the entire package</b> (Jan 15–20; closed Mon, Jan 18; Tim: budgets · Kim: biosketches) — Morgan fixes anything flagged by Fri, Jan 22</td><td class="who">Tim + Kim + Morgan</td></tr><tr class="a"><td class="dt"><span class="w">Mon</span><span class="m">Jan</span><span class="d">25</span></td><td><b>Submitted to NIH by 5:00 PM</b> — writers stay reachable for small fixes</td><td class="who">Central Office + Morgan</td></tr></tbody></table>
+</div></details>
+</div>
+      </div>
+
+      <div class="note" style="margin-top: 20px;">
+        <b>Page limits:</b> Center Research Strategy 12 pp · each component's Strategy 6 pp · Specific Aims 1 p · Project Summary 30 lines. Biosketches + the Center Director's (PD/PI's) Current &amp; Pending Support in SciENcv only (other Senior/Key C&amp;P only at Just-in-Time). External-review revisions are must-fix only, with no scope or budget changes; after Jan 15, only critical budget edits. Appendix is optional (limited items only) — tell Morgan by Fri, Dec 11 if your component needs one. Questions: Morgan.
+      </div>
+      </details>
+    </section>
+
+    <section class="wrap sec band-w" id="bycomponent">
+      <details class="sx xscope">
+      <summary><h2 class="h2">The same schedule, by component</h2><span class="sx-car" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+      <div class="xall-bar sub-bar"><button type="button" class="xall" aria-pressed="false">Expand all stages</button></div>
+      <div class="sec-head">
+        <div>
+          <p>Read down the left for the date, across for each component.</p>
+        </div>
+      </div>
+      <div class="card scroll" style="padding: 10px 14px 14px; background: #fff;">
+        <div class="bc-wrap">
+<table class="bc bc-head"><colgroup><col style="width: 118px;"><col><col><col><col><col><col><col><col></colgroup><thead>
+            <tr>
+              <th class="dt">Date</th>
+              <th><b>Center</b>Overall · Heather Bailey + Morgan</th>
+              <th><b>Admin Core</b>Heather Bailey + Morgan; Carl Ade</th>
+              <th><b>BN Core</b>Chip</th>
+              <th><b>NI Core</b>Doina</th>
+              <th><b>CN Core</b>Heather Bailey</th>
+              <th><b>SRP Core</b>Heather Bailey + Morgan</th>
+              <th class="co"><b>Central Office</b><span class="p p-b" style="display:inline-block;margin:0 0 3px;padding:1px 7px;">budget</span><br><span class="p p-k" style="display:inline-block;margin:0;padding:1px 7px;">biosketch</span></th>
+              <th><b>External review</b><span class="p p-e" style="display:inline-block;margin:0;padding:1px 7px;">outside reader</span></th>
+            </tr>
+          </thead></table>
+<details class="stg"><summary><div class="bc-stage">Preparation Stage 1 · Kickoff + Specific Aims</div></summary><div class="stg-body">
+<table class="bc"><colgroup><col style="width: 118px;"><col><col><col><col><col><col><col><col></colgroup><tbody><tr><td class="dt"><span class="w">Thu</span><span class="m">Oct</span><span class="d">29</span></td><td><span class="p p-w">KICKOFF — packets out; Smartsheet live</span></td><td></td><td></td><td></td><td></td><td></td><td class="co"></td><td></td></tr><tr class="fill"><td class="dt"><span class="w">Fri</span><span class="m">Oct</span><span class="d">30</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="co"></td><td></td></tr><tr class="fill we"><td class="dt"><span class="w">Sat</span><span class="m">Oct</span><span class="d">31</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="co"></td><td></td></tr><tr class="fill we"><td class="dt"><span class="w">Sun</span><span class="m">Nov</span><span class="d">1</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="co"></td><td></td></tr><tr class="fill"><td class="dt"><span class="w">Mon</span><span class="m">Nov</span><span class="d">2</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="co"></td><td></td></tr><tr class="fill"><td class="dt"><span class="w">Tue</span><span class="m">Nov</span><span class="d">3</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="co"></td><td></td></tr><tr class="fill"><td class="dt"><span class="w">Wed</span><span class="m">Nov</span><span class="d">4</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="co"></td><td></td></tr><tr class="fill"><td class="dt"><span class="w">Thu</span><span class="m">Nov</span><span class="d">5</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="co"></td><td></td></tr><tr><td class="dt"><span class="w">Fri</span><span class="m">Nov</span><span class="d">6</span></td><td><span class="p p-w">Center Specific Aims</span></td><td></td><td></td><td></td><td></td><td></td><td class="co"></td><td></td></tr><tr class="fill we"><td class="dt"><span class="w">Sat</span><span class="m">Nov</span><span class="d">7</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="co"></td><td></td></tr><tr class="fill we"><td class="dt"><span class="w">Sun</span><span class="m">Nov</span><span class="d">8</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="co"></td><td></td></tr><tr class="fill"><td class="dt"><span class="w">Mon</span><span class="m">Nov</span><span class="d">9</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="co"></td><td></td></tr><tr class="fill"><td class="dt"><span class="w">Tue</span><span class="m">Nov</span><span class="d">10</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="co"></td><td></td></tr><tr class="fill"><td class="dt"><span class="w">Wed</span><span class="m">Nov</span><span class="d">11</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="co"></td><td></td></tr><tr class="fill"><td class="dt"><span class="w">Thu</span><span class="m">Nov</span><span class="d">12</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="co"></td><td></td></tr><tr><td class="dt"><span class="w">Fri</span><span class="m">Nov</span><span class="d">13</span></td><td></td><td><span class="p p-w">Admin Core Specific Aims</span></td><td><span class="p p-w">BN Core Specific Aims</span></td><td><span class="p p-w">NI Core Specific Aims</span></td><td><span class="p p-w">CN Core Specific Aims</span></td><td><span class="p p-w">SRP Core Specific Aims</span></td><td class="co"></td><td></td></tr><tr class="fill we"><td class="dt"><span class="w">Sat</span><span class="m">Nov</span><span class="d">14</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="co"></td><td></td></tr><tr class="fill we"><td class="dt"><span class="w">Sun</span><span class="m">Nov</span><span class="d">15</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="co"></td><td></td></tr><tr class="fill"><td class="dt"><span class="w">Mon</span><span class="m">Nov</span><span class="d">16</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="co"></td><td></td></tr><tr class="fill"><td class="dt"><span class="w">Tue</span><span class="m">Nov</span><span class="d">17</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="co"></td><td></td></tr></tbody></table>
+</div></details>
+<div class="bc-gap"></div>
+<details class="stg"><summary><div class="bc-stage">Preparation Stage 2 · Research Strategies</div></summary><div class="stg-body">
+<table class="bc"><colgroup><col style="width: 118px;"><col><col><col><col><col><col><col><col></colgroup><tbody><tr><td class="dt"><span class="w">Wed</span><span class="m">Nov</span><span class="d">18</span></td><td></td><td></td><td><span class="p p-w">BN Core O&amp;M input to Center</span></td><td><span class="p p-w">NI Core O&amp;M input to Center</span></td><td><span class="p p-w">CN Core O&amp;M input to Center</span></td><td></td><td class="co"></td><td></td></tr><tr class="fill"><td class="dt"><span class="w">Thu</span><span class="m">Nov</span><span class="d">19</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="co"></td><td></td></tr><tr><td class="dt"><span class="w">Fri</span><span class="m">Nov</span><span class="d">20</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="co"></td><td><span class="p p-e">Reviewer(s) confirmed</span></td></tr><tr class="fill we"><td class="dt"><span class="w">Sat</span><span class="m">Nov</span><span class="d">21</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="co"></td><td></td></tr><tr class="fill we"><td class="dt"><span class="w">Sun</span><span class="m">Nov</span><span class="d">22</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="co"></td><td></td></tr><tr><td class="dt"><span class="w">Mon</span><span class="m">Nov</span><span class="d">23</span></td><td><span class="p p-w">Center Research Strategy A (Justification)</span></td><td></td><td></td><td></td><td></td><td></td><td class="co"></td><td></td></tr></tbody></table>
+<div class="bc-brk">Thanksgiving — no deadlines Nov 24–27</div>
+<table class="bc"><colgroup><col style="width: 118px;"><col><col><col><col><col><col><col><col></colgroup><tbody><tr class="fill we"><td class="dt"><span class="w">Sat</span><span class="m">Nov</span><span class="d">28</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="co"></td><td></td></tr><tr class="fill we"><td class="dt"><span class="w">Sun</span><span class="m">Nov</span><span class="d">29</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="co"></td><td></td></tr><tr><td class="dt"><span class="w">Mon</span><span class="m">Nov</span><span class="d">30</span></td><td><span class="p p-w">Center Research Strategy B (O&amp;M Plan)</span></td><td><span class="p p-w">Admin Core Research Strategy</span></td><td><span class="p p-w">BN Core Research Strategy</span></td><td><span class="p p-w">NI Core Research Strategy</span></td><td><span class="p p-w">CN Core Research Strategy</span></td><td><span class="p p-w">SRP Core Research Strategy</span></td><td class="co"></td><td></td></tr><tr class="fill"><td class="dt"><span class="w">Tue</span><span class="m">Dec</span><span class="d">1</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="co"></td><td></td></tr></tbody></table>
+</div></details>
+<div class="bc-gap"></div>
+<details class="stg"><summary><div class="bc-stage">Preparation Stage 3 · Research Strategy + Budgets</div></summary><div class="stg-body">
+<table class="bc"><colgroup><col style="width: 118px;"><col><col><col><col><col><col><col><col></colgroup><tbody><tr><td class="dt"><span class="w">Wed</span><span class="m">Dec</span><span class="d">2</span></td><td><span class="p p-w">Center Research Strategy C (Sustainability)</span></td><td></td><td></td><td></td><td></td><td></td><td class="co"></td><td></td></tr><tr><td class="dt"><span class="w">Thu</span><span class="m">Dec</span><span class="d">3</span></td><td><span class="p p-w">Center Research Strategy D (Advisory Committee)</span></td><td></td><td></td><td></td><td></td><td></td><td class="co"></td><td></td></tr><tr><td class="dt"><span class="w">Fri</span><span class="m">Dec</span><span class="d">4</span></td><td><span class="p p-w">Center Research Strategy E (Career Development)</span></td><td><span class="p p-w">Admin Core Budget + justif. to Roxana</span></td><td><span class="p p-w">BN Core Budget + justif. to Roxana</span></td><td><span class="p p-w">NI Core Budget + justif. to Roxana</span></td><td><span class="p p-w">CN Core Budget + justif. to Roxana</span></td><td><span class="p p-w">SRP Core Budget + justif. to Roxana</span></td><td class="co"></td><td></td></tr><tr class="fill we"><td class="dt"><span class="w">Sat</span><span class="m">Dec</span><span class="d">5</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="co"></td><td></td></tr><tr class="fill we"><td class="dt"><span class="w">Sun</span><span class="m">Dec</span><span class="d">6</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="co"></td><td></td></tr><tr><td class="dt"><span class="w">Mon</span><span class="m">Dec</span><span class="d">7</span></td><td><span class="p p-s">Center Institutional Letter</span></td><td></td><td></td><td></td><td></td><td></td><td class="co"><span class="p p-b">Roxana reviews budgets (Dec 7–11)</span></td><td><span class="p p-e">Aims + Strategies to reviewer(s)</span></td></tr><tr class="fill"><td class="dt"><span class="w">Tue</span><span class="m">Dec</span><span class="d">8</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="co"></td><td></td></tr><tr class="fill"><td class="dt"><span class="w">Wed</span><span class="m">Dec</span><span class="d">9</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="co"></td><td></td></tr><tr class="fill"><td class="dt"><span class="w">Thu</span><span class="m">Dec</span><span class="d">10</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="co"></td><td></td></tr><tr class="fill"><td class="dt"><span class="w">Fri</span><span class="m">Dec</span><span class="d">11</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="co"></td><td></td></tr><tr class="fill we"><td class="dt"><span class="w">Sat</span><span class="m">Dec</span><span class="d">12</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="co"></td><td></td></tr><tr class="fill we"><td class="dt"><span class="w">Sun</span><span class="m">Dec</span><span class="d">13</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="co"></td><td></td></tr></tbody></table>
+</div></details>
+<div class="bc-gap"></div>
+<details class="stg"><summary><div class="bc-stage">Preparation Stage 4 · Supporting documents + Central Office reviews</div></summary><div class="stg-body">
+<table class="bc"><colgroup><col style="width: 118px;"><col><col><col><col><col><col><col><col></colgroup><tbody><tr><td class="dt"><span class="w">Mon</span><span class="m">Dec</span><span class="d">14</span></td><td><span class="p p-s">Center Equipment</span></td><td><span class="p p-s">Admin Core Equipment</span></td><td><span class="p p-s">BN Core Equipment</span></td><td><span class="p p-s">NI Core Equipment</span></td><td><span class="p p-s">CN Core Equipment</span></td><td><span class="p p-s">SRP Core Equipment</span></td><td class="co"><span class="p p-b">Budgets to Tim (reviews to Jan 8)</span></td><td></td></tr><tr class="fill"><td class="dt"><span class="w">Tue</span><span class="m">Dec</span><span class="d">15</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="co"></td><td></td></tr><tr><td class="dt"><span class="w">Wed</span><span class="m">Dec</span><span class="d">16</span></td><td><span class="p p-s">Center Facilities</span></td><td><span class="p p-s">Admin Core Facilities</span></td><td><span class="p p-s">BN Core Facilities</span></td><td><span class="p p-s">NI Core Facilities</span></td><td><span class="p p-s">CN Core Facilities</span></td><td><span class="p p-s">SRP Core Facilities</span></td><td class="co"></td><td></td></tr><tr class="split1"><td class="dt"><span class="w">Thu</span><span class="m">Dec</span><span class="d">17</span></td><td><span class="p p-s">Center DMS Plan</span><span class="p p-s">Center Resource Sharing</span></td><td><span class="p p-s">Admin Core Resource Sharing</span></td><td><span class="p p-s">BN Core Resource Sharing</span></td><td><span class="p p-s">NI Core Resource Sharing</span></td><td><span class="p p-s">CN Core Resource Sharing</span></td><td><span class="p p-s">SRP Core Resource Sharing</span></td><td class="co"></td><td></td></tr><tr class="split2"><td class="dt"></td><td><span class="p p-k">Center Biosketch, C&amp;P + SRP Pool drafts to Morgan</span></td><td><span class="p p-k">Admin Core Biosketch draft to Morgan</span></td><td><span class="p p-k">BN Core Biosketch draft to Morgan</span></td><td><span class="p p-k">NI Core Biosketch draft to Morgan</span></td><td><span class="p p-k">CN Core Biosketch draft to Morgan</span></td><td><span class="p p-k">SRP Core Biosketch draft to Morgan</span></td><td class="co"></td><td></td></tr><tr><td class="dt"><span class="w">Fri</span><span class="m">Dec</span><span class="d">18</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="co"><span class="p p-k">Biosketch + C&amp;P drafts to Kim</span></td><td></td></tr></tbody></table>
+<div class="bc-brk">Winter break — Dec 19 to Jan 3 (reviewer reads)</div>
+</div></details>
+<div class="bc-gap"></div>
+<details class="stg"><summary><div class="bc-stage">Preparation Stage 5 · Finish + revisions</div></summary><div class="stg-body">
+<table class="bc"><colgroup><col style="width: 118px;"><col><col><col><col><col><col><col><col></colgroup><tbody><tr><td class="dt"><span class="w">Mon</span><span class="m">Jan</span><span class="d">4</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="co"></td><td><span class="p p-e">Comments from reviewer(s)</span></td></tr><tr class="fill"><td class="dt"><span class="w">Tue</span><span class="m">Jan</span><span class="d">5</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="co"></td><td></td></tr><tr><td class="dt"><span class="w">Wed</span><span class="m">Jan</span><span class="d">6</span></td><td><span class="p p-s">Center Bibliography</span></td><td><span class="p p-s">Admin Core Bibliography</span></td><td><span class="p p-s">BN Core Bibliography</span></td><td><span class="p p-s">NI Core Bibliography</span></td><td><span class="p p-s">CN Core Bibliography</span></td><td><span class="p p-s">SRP Core Bibliography</span></td><td class="co"></td><td><span class="p p-e">Comments sorted, sent to writers</span></td></tr><tr class="fill"><td class="dt"><span class="w">Thu</span><span class="m">Jan</span><span class="d">7</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="co"></td><td></td></tr><tr><td class="dt"><span class="w">Fri</span><span class="m">Jan</span><span class="d">8</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="co"><span class="p p-b">Budget comments from Tim</span><span class="p p-k">Biosketch comments from Kim</span></td><td></td></tr><tr class="fill we"><td class="dt"><span class="w">Sat</span><span class="m">Jan</span><span class="d">9</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="co"></td><td></td></tr><tr class="fill we"><td class="dt"><span class="w">Sun</span><span class="m">Jan</span><span class="d">10</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="co"></td><td></td></tr><tr><td class="dt"><span class="w">Mon</span><span class="m">Jan</span><span class="d">11</span></td><td><span class="p p-e">Center Aims + Strategy revised per reviewer</span></td><td><span class="p p-e">Admin Core Aims + Strategy revised per reviewer</span></td><td><span class="p p-e">BN Core Aims + Strategy revised per reviewer</span></td><td><span class="p p-e">NI Core Aims + Strategy revised per reviewer</span></td><td><span class="p p-e">CN Core Aims + Strategy revised per reviewer</span></td><td><span class="p p-e">SRP Core Aims + Strategy revised per reviewer</span></td><td class="co"></td><td></td></tr><tr><td class="dt"><span class="w">Tue</span><span class="m">Jan</span><span class="d">12</span></td><td><span class="p p-s">Center Project Narrative</span><span class="p p-s">Center Project Summary</span></td><td><span class="p p-s">Admin Core Project Summary</span></td><td><span class="p p-s">BN Core Project Summary</span></td><td><span class="p p-s">NI Core Project Summary</span></td><td><span class="p p-s">CN Core Project Summary</span></td><td><span class="p p-s">SRP Core Project Summary</span></td><td class="co"></td><td></td></tr><tr><td class="dt"><span class="w">Wed</span><span class="m">Jan</span><span class="d">13</span></td><td><span class="p p-k">Center Final biosketches, C&amp;P + SRP Pool to Morgan</span></td><td><span class="p p-k">Admin Core Final biosketch to Morgan</span></td><td><span class="p p-k">BN Core Final biosketch to Morgan</span></td><td><span class="p p-k">NI Core Final biosketch to Morgan</span></td><td><span class="p p-k">CN Core Final biosketch to Morgan</span></td><td><span class="p p-k">SRP Core Final biosketch to Morgan</span></td><td class="co"></td><td></td></tr><tr class="fill"><td class="dt"><span class="w">Thu</span><span class="m">Jan</span><span class="d">14</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="co"></td><td></td></tr><tr><td class="dt"><span class="w">Fri</span><span class="m">Jan</span><span class="d">15</span></td><td></td><td><span class="p p-b">Admin Core Revised budget to Roxana</span></td><td><span class="p p-b">BN Core Revised budget to Roxana</span></td><td><span class="p p-b">NI Core Revised budget to Roxana</span></td><td><span class="p p-b">CN Core Revised budget to Roxana</span></td><td><span class="p p-b">SRP Core Revised budget to Roxana</span></td><td class="co"><span class="p p-b">Final budgets to Tim</span><span class="p p-k">Final biosketches to Kim</span><span class="p p-g">Full application to Central Office</span></td><td></td></tr><tr class="fill we"><td class="dt"><span class="w">Sat</span><span class="m">Jan</span><span class="d">16</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="co"></td><td></td></tr><tr class="fill we"><td class="dt"><span class="w">Sun</span><span class="m">Jan</span><span class="d">17</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="co"></td><td></td></tr><tr class="fill"><td class="dt"><span class="w">Mon</span><span class="m">Jan</span><span class="d">18</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="co"></td><td></td></tr></tbody></table>
+</div></details>
+<div class="bc-gap"></div>
+<details class="stg"><summary><div class="bc-stage">Preparation Stage 6 · Central Office review + NIH submission</div></summary><div class="stg-body">
+<table class="bc"><colgroup><col style="width: 118px;"><col><col><col><col><col><col><col><col></colgroup><tbody><tr><td class="dt"><span class="w">Tue</span><span class="m">Jan</span><span class="d">19</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="co"><span class="p p-g">Final budgets uploaded to Cayuse</span></td><td></td></tr><tr><td class="dt"><span class="w">Wed</span><span class="m">Jan</span><span class="d">20</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="co"><span class="p p-g">Tim + Kim review package (Jan 15–20)</span></td><td></td></tr><tr class="fill"><td class="dt"><span class="w">Thu</span><span class="m">Jan</span><span class="d">21</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="co"></td><td></td></tr><tr class="fill"><td class="dt"><span class="w">Fri</span><span class="m">Jan</span><span class="d">22</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="co"></td><td></td></tr><tr class="fill we"><td class="dt"><span class="w">Sat</span><span class="m">Jan</span><span class="d">23</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="co"></td><td></td></tr><tr class="fill we"><td class="dt"><span class="w">Sun</span><span class="m">Jan</span><span class="d">24</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="co"></td><td></td></tr></tbody></table>
+</div></details>
+<div class="bc-dl"><div class="dt"><span class="w">Mon</span><span class="m">Jan</span><span class="d">25</span></div><div class="bar">NIH DEADLINE — application submitted by Central Office by 5:00 PM</div></div>
+</div>
+        <div class="lg">
+          <span class="p p-w">Core writing (Aims / Strategy / Budget)</span><span>·</span>
+          <span class="p p-e">External review</span><span>·</span>
+          <span class="p p-b">Budget review (Roxana, Tim)</span><span>·</span>
+          <span class="p p-k">Biosketch review (Kim)</span><span>·</span>
+          <span class="p p-s">Supporting docs</span>
+        </div>
+      </div>
+      </details>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap">
+      <img class="logo" src="assets/cnap-logo.jpg" alt="CNAP Center — Cognitive &amp; Neurobiological Approaches to Plasticity">
+      <span>CNAP Center · Phase S (COBRE-S) Application · PAR-27-055</span>
+      <span>Source: Cadence Overview · Live tracker: Smartsheet · Questions: Morgan, <a href="mailto:mkwills@ksu.edu">mkwills@ksu.edu</a></span>
+    </div>
+  </footer>
+</div>
+
+<script>
+(function(){ window.DCLogic = class { forceUpdate(){ if (window.__dcRender) window.__dcRender(); } }; })();
+
+class Component extends DCLogic {
+  componentDidMount() {
+    if (typeof window !== 'undefined') {
+      setTimeout(() => {
+        const h = (window.location.hash || '').slice(1);
+        if (!h || !window.__nmJump) return;
+        const t = document.querySelector('[id="' + h + '"]');
+        if (t) window.__nmJump(t);
+      }, 350);
+    }
+    if (typeof window !== 'undefined') setTimeout(() => { if (window.__xallSync) window.__xallSync(); }, 400);
+    if (typeof window !== 'undefined' && !window.__nmAutoClose13) {
+      window.__nmAutoClose13 = true;
+      const rootOf = (e) => { const t = e.composedPath ? e.composedPath()[0] : e.target; return (t && t.getRootNode) ? t.getRootNode() : document; };
+      document.addEventListener('mousemove', (e) => {
+        const root = rootOf(e); if (!root.querySelectorAll) return;
+        root.querySelectorAll('details.nm[open]').forEach((d) => {
+          if (d.matches(':hover')) { clearTimeout(d.__t); d.__t = null; }
+          else if (!d.__t) { d.__t = setTimeout(() => { d.__t = null; if (!d.matches(':hover')) d.removeAttribute('open'); }, 450); }
+        });
+      }, { passive: true });
+      document.addEventListener('click', (e) => {
+        const root = rootOf(e); if (!root.querySelectorAll) return;
+        const path = e.composedPath ? e.composedPath() : [e.target];
+        root.querySelectorAll('details.nm[open]').forEach((d) => { if (!path.includes(d)) d.removeAttribute('open'); });
+        const a = path.find((n) => n && n.tagName === 'A' && n.getAttribute && (n.getAttribute('href') || '').includes('#'));
+        if (!a) return;
+        const id = (a.getAttribute('href') || '').split('#')[1];
+        if (!id) return;
+        let el = a.parentElement, target = null;
+        while (el && !target) { target = el.querySelector ? el.querySelector('[id="' + id + '"]') : null; el = el.parentElement; }
+        if (!target) return;
+        e.preventDefault();
+        const d = a.closest('details.nm'); if (d) d.removeAttribute('open');
+        window.__nmJump(target);
+      });
+      const xallScope = (n) => (n && n.closest && (n.closest('.xscope') || n.closest('main'))) || document;
+      window.__xallItems = (scope) => Array.from(scope.querySelectorAll('details.sx, details.acc, details.stg'));
+      window.__xallSync = (root) => {
+        (root && root.querySelectorAll ? root : document).querySelectorAll('button.xall').forEach((b) => {
+          const list = window.__xallItems(xallScope(b));
+          const anyClosed = list.some((d) => !d.open);
+          const sc = b.closest('.xscope'); b.textContent = anyClosed ? (sc ? 'Expand all stages' : 'Expand all') : (sc ? 'Collapse all stages' : 'Collapse all');
+          b.setAttribute('aria-pressed', anyClosed ? 'false' : 'true');
+        });
+      };
+      document.addEventListener('click', (e) => {
+        const path = e.composedPath ? e.composedPath() : [e.target];
+        const btn = path.find((n) => n && n.classList && n.classList.contains('xall'));
+        if (btn) {
+          e.preventDefault();
+          const scope = xallScope(btn);
+          const list = window.__xallItems(scope);
+          const anyClosed = list.some((d) => !d.open);
+          list.forEach((d) => { if (anyClosed) d.setAttribute('open', ''); else d.removeAttribute('open'); });
+          if (scope.dataset) scope.dataset.xall = anyClosed ? '1' : '';
+          window.__xallSync(btn.getRootNode ? btn.getRootNode() : document);
+          return;
+        }
+      }, true);
+      document.addEventListener('toggle', (e) => { const t = e.composedPath ? e.composedPath()[0] : e.target; window.__xallSync(t && t.getRootNode ? t.getRootNode() : document); }, true);
+      window.__nmJump = (target) => {
+        if (target.tagName === 'DETAILS') target.setAttribute('open', '');
+        const sx = target.querySelector ? target.querySelector(':scope > details.sx') : null; if (sx) sx.setAttribute('open', '');
+        let host = target.parentElement, bar = null;
+        while (host && !bar) { bar = host.querySelector ? host.querySelector('.topbar') : null; host = host.parentElement; }
+        const offset = (bar ? (bar.querySelector('.nav') || bar).getBoundingClientRect().height : 0) + 20;
+        let sc = target.parentElement;
+        while (sc && sc !== document.body && sc !== document.documentElement) {
+          const oy = getComputedStyle(sc).overflowY;
+          if ((oy === 'auto' || oy === 'scroll') && sc.scrollHeight > sc.clientHeight) break;
+          sc = sc.parentElement;
+        }
+        const useWin = !sc || sc === document.body || sc === document.documentElement;
+        const top = target.getBoundingClientRect().top - (useWin ? 0 : sc.getBoundingClientRect().top) - offset;
+        (useWin ? window : sc).scrollBy({ top: top, behavior: 'smooth' });
+      };
+    }
+  }
+  renderVals() { return {}; }
+}
+
+(function(){
+  const start = () => { const c = new Component(); window.__dcComp = c; if (c.componentDidMount) c.componentDidMount(); };
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start); else start();
+})();
+</script>
+</body>
+</html>
