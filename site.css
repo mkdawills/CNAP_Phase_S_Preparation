@@ -387,3 +387,6 @@ main section.wrap[style*="padding: 0 24px 8px"]{padding-bottom:30px !important}
 @media (max-width:760px){.topbar .quick .menu[open] > .pop{position:fixed;left:16px;right:16px;top:auto;min-width:0;margin-top:6px}}
 @media (max-width:760px){.topbar .wrap.quick-over::before{content:"\203A";position:absolute;right:0;top:var(--qtop);height:var(--qh);width:56px;display:flex;align-items:center;justify-content:flex-end;padding-right:14px;box-sizing:border-box;font-size:26px;font-weight:700;line-height:1;color:#512888;background:linear-gradient(to right,rgba(255,255,255,0),#FFFFFF 55%);pointer-events:none;z-index:2;transition:opacity .2s}
 .topbar .wrap.quick-over.quick-end::before{opacity:0}}
+
+/* 10% smaller overall: calmer, more inviting scale on laptop/desktop/iPad */
+@media (min-width:761px){.hub{zoom:0.9;min-height:calc(100vh / 0.9)}}
