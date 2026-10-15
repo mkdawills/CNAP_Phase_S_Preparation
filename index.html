@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>CNAP Phase S Proposal Hub — Dashboard</title>
-<link rel="stylesheet" href="site.css">
+<link rel="stylesheet" href="site.css?v=20261015b">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&amp;family=Archivo:wght@500;600;700;800&amp;display=swap" rel="stylesheet">
@@ -18,7 +18,7 @@ a{color:#512888}a:hover{color:#3B1C66}
 .cd-units > span{flex:1 1 0;flex-direction:column-reverse !important;align-items:center;justify-content:flex-end;gap:10px;padding:2px 6px}
 .cd-units > span + span{border-left:1px solid rgba(58,54,64,0.28)}
 .cd-units > span > span:last-child{margin-top:0 !important;font-size:12.5px !important;font-weight:700;letter-spacing:0.14em !important;opacity:0.75 !important;padding-bottom:8px;border-bottom:2px solid rgba(58,54,64,0.18);min-width:60%;text-align:center}
-.cd-num{font-size:clamp(44px, calc(100cqw / 6.4), 120px);line-height:0.95;letter-spacing:-0.01em}
+.cd-num{font-size:clamp(44px, calc(100cqw / 6.4), 120px);line-height:0.95;letter-spacing:-0.01em;color:#3B3349 !important}
 @media (max-width:900px){.cd-wrap{grid-template-columns:minmax(0,1fr)}}
 #stages .bar{display:none}
 .rail{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;margin:64px 0 18px}
@@ -55,6 +55,18 @@ a{color:#512888}a:hover{color:#3B1C66}
 #resources .tile:hover{background:rgba(90,82,110,0.09);border-color:#512888}
 #resources .tile .t,#resources .tile .d{align-self:stretch}
 #resources .tile .ic{align-self:center}
+#resources .grid.c4{max-width:660px;margin-left:auto;margin-right:auto}
+@media (min-width:761px){#resources .grid.c4{grid-template-columns:repeat(2,minmax(0,1fr))}}
+/* Resources tiles as circles */
+#resources .grid.c4{max-width:700px;justify-items:center;row-gap:22px}
+#resources .tile{width:100%;max-width:320px;aspect-ratio:1/1;min-height:0;border-radius:50%;padding:30px 38px;justify-content:center;gap:7px;box-sizing:border-box}
+#resources .tile:hover{transform:translateY(-2px)}
+#resources .tile .t{font-size:18px;min-height:0;padding-bottom:9px}
+#resources .tile .d{flex-grow:0;font-size:14px;line-height:1.5}
+#resources .tile .go{margin-top:6px;display:inline-flex;align-self:center;align-items:center;gap:6px;padding:6px 14px;border:1.5px solid #512888;border-radius:999px;background:#FFFFFF;color:#512888;font-size:13.5px;line-height:1.2;transition:background .15s,color .15s}
+#resources .tile:hover .go,#resources .tile:focus-visible .go{background:#512888;color:#FFFFFF}
+#resources .tile{border:1.5px solid rgba(81,40,136,0.32)}
+#resources .tile:hover{border-color:#512888}
 #resources .tile .d{line-height:1.65;font-size:15px}
 #resources .tile .d b{font-weight:700;color:#2A1349}
 #resources .tile .t{margin-bottom:2px;padding-bottom:12px;border-bottom:1px solid #E4E0EC}
@@ -66,7 +78,8 @@ a{color:#512888}a:hover{color:#3B1C66}
 .divider i{display:block;height:1px;background:#D3CDE0}
 #completion{color:#fff}
 #quick .h2.h2-dark{background-image:linear-gradient(#A9A7B0,#A9A7B0),linear-gradient(rgba(255,255,255,0.18),rgba(255,255,255,0.18)) !important}
-#completion .pc-panel{background:rgba(28,24,36,0.28);border:1px solid rgba(255,255,255,0.12);border-radius:16px;padding:28px 30px 24px}
+#completion .pc-panel{background:#3B3349;border:1px solid rgba(255,255,255,0.14);border-radius:16px;padding:28px 30px 24px}
+#completion .pc-panel{max-width:860px;margin-left:auto;margin-right:auto}
 /* light K-State gray panel: dark text inside */
 #completion .pc-track{position:relative;padding-top:30px;margin:6px 0 4px}
 #completion .pc-panel .pc-bar{height:22px;border-radius:11px}
@@ -307,7 +320,7 @@ section.sec.band-w,section.sec.band-g{padding-top:40px;padding-bottom:40px}
       <div class="cd-wrap">
         <div class="cd-box cd-when">
           <span style="font-size: 12.5px; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 700; opacity: 0.85;">Internal submission · entire application to Central Office</span>
-          <span style="font-family: 'Archivo', 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 34px; font-weight: 600; line-height: 1.1;">Friday,<br>January 15, 2027</span>
+          <span style="font-family: 'Archivo', 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 34px; font-weight: 600; line-height: 1.1; color: #3B3349;">Friday,<br>January 15, 2027</span>
           <span class="cd-nih">NIH deadline: Mon, Jan 25, 2027, 5:00 PM local time · submitted by Central Office ({{nihDays}} {{nihLabel}} away). K-State is closed Mon, Jan 18.</span>
         </div>
         <div class="cd-box cd-count" aria-live="off">
