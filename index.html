@@ -66,14 +66,8 @@ a{color:#512888}a:hover{color:#3B1C66}
 .divider i{display:block;height:1px;background:#D3CDE0}
 #completion{color:#fff}
 #quick .h2.h2-dark{background-image:linear-gradient(#A9A7B0,#A9A7B0),linear-gradient(rgba(255,255,255,0.18),rgba(255,255,255,0.18)) !important}
-#completion .pc-panel{background:#FFFFFF;border:1px solid #FFFFFF;border-radius:16px;padding:28px 30px 24px}
+#completion .pc-panel{background:rgba(28,24,36,0.28);border:1px solid rgba(255,255,255,0.12);border-radius:16px;padding:28px 30px 24px}
 /* light K-State gray panel: dark text inside */
-#completion .pc-panel{color:#1F1B2B}
-#completion .pc-panel .h2.h2-dark{color:#512888 !important;background-image:linear-gradient(#512888,#512888),linear-gradient(#C4C5C8,#C4C5C8) !important}
-#completion .pc-panel p.muted,#completion .pc-panel .small.muted{color:#3A3640 !important}
-#completion .pc-panel .pc-num{color:#512888}
-#completion .pc-panel .pc-of{color:#1F1B2B}
-#completion .pc-panel .pc-bar{background:#FFFFFF;border:1px solid #B9BABD;box-shadow:0 0 7px 2px rgba(140,142,150,0.38)}
 #completion .pc-track{position:relative;padding-top:30px;margin:6px 0 4px}
 #completion .pc-panel .pc-bar{height:22px;border-radius:11px}
 #completion .pc-bar{animation:pcGrow 1.1s cubic-bezier(.2,.7,.2,1) both}
@@ -83,23 +77,13 @@ a{color:#512888}a:hover{color:#3B1C66}
 #completion .pc-scale span{position:absolute;transform:translateX(-50%);font-size:12px;font-weight:600;color:#6B6579;white-space:nowrap}
 #completion .pc-scale span:first-child{transform:none}
 #completion .pc-scale span:last-child{transform:translateX(-100%)}
-#completion .pc-tip{position:absolute;top:0;transform:translateX(-50%);background:#512888;color:#fff;font-size:12.5px;font-weight:700;line-height:1;padding:5px 8px;border-radius:6px;white-space:nowrap}
-#completion .pc-tip::after{content:"";position:absolute;left:50%;bottom:-5px;margin-left:-5px;border:5px solid transparent;border-bottom:0;border-top-color:#512888}
+#completion .pc-tip{position:absolute;top:0;transform:translateX(-50%);background:#FFFFFF;color:#512888;font-size:12.5px;font-weight:700;line-height:1;padding:5px 8px;border-radius:6px;white-space:nowrap}
+#completion .pc-tip::after{content:"";position:absolute;left:50%;bottom:-5px;margin-left:-5px;border:5px solid transparent;border-bottom:0;border-top-color:#FFFFFF}
 #completion .pc-tip.start{transform:none}#completion .pc-tip.start::after{left:10px}
 #completion .pc-tip.end{transform:translateX(-100%)}#completion .pc-tip.end::after{left:auto;right:5px}
-#completion .pc-note{margin:10px 0 0;font-weight:700;color:#512888;font-size:15px}
+#completion .pc-note{margin:10px 0 0;font-weight:700;color:#FFFFFF;font-size:15px}
 @media (prefers-reduced-motion: reduce){#completion .pc-bar{animation:none}}
 
-#completion .pc-panel .card{background:#FFFFFF !important;border:1px solid #C4C5C8 !important}
-#completion .pc-panel .tbl th{color:#512888 !important;border-bottom:2px solid #512888 !important}
-#completion .pc-panel .tbl td{color:#1F1B2B;border-bottom-color:#E4E0EC}
-#completion .pc-panel .tbl th + th,#completion .pc-panel .tbl td + td{border-left-color:#D6D7D9 !important}
-#completion .pc-panel .pc-key{border:1px solid #9A9BA0}
-#completion .pc-panel .pc-bar .s5,#completion .pc-panel .pc-key.s5{background:#512888}
-#completion .pc-panel .pc-bar .s4,#completion .pc-panel .pc-key.s4{background:#7E5BB0}
-#completion .pc-panel .pc-bar .s3,#completion .pc-panel .pc-key.s3{background:#A68BCB}
-#completion .pc-panel .pc-bar .s2,#completion .pc-panel .pc-key.s2{background:#D9C8F5}
-#completion .pc-panel .pc-bar .s1,#completion .pc-panel .pc-key.s1{background:#FFFFFF}
 
 @media (max-width:760px){#completion .pc-panel{padding:20px 16px 18px}}
 #completion.band-dark{background:#512888;box-shadow:0 0 0 100vmax #512888}
@@ -112,7 +96,7 @@ a{color:#512888}a:hover{color:#3B1C66}
 #completion p.muted,#completion .small.muted{color:rgba(255,255,255,0.86) !important}
 #completion .pc-num{color:#FFFFFF}
 #completion .pc-of{color:#fff}
-#completion .pc-bar{background:#FFFFFF;border-color:#FFFFFF;box-shadow:0 0 6px 0 rgba(255,255,255,0.22)}
+#completion .pc-bar{background:#FFFFFF;border:1px solid #FFFFFF;box-shadow:0 0 6px 0 rgba(255,255,255,0.22)}
 #completion .card{background:transparent !important;border:1.5px solid rgba(255,255,255,0.7) !important;box-shadow:none}
 #completion .tbl th{color:#FFFFFF !important;border-bottom:2px solid rgba(255,255,255,0.7) !important}
 #completion .tbl td{color:#fff;border-bottom-color:rgba(255,255,255,0.16)}
@@ -369,7 +353,7 @@ section.sec.band-w,section.sec.band-g{padding-top:40px;padding-bottom:40px}
           </tbody>
         </table>
       </div>
-      <p class="small muted" style="margin: 12px 0 0;">Last updated from Smartsheet: {{pcUpdated}}. Smartsheet is the live version.</p>
+      <p class="small muted" style="margin: 12px 0 0;">Last updated automatically from Smartsheet: {{pcUpdated}}. Smartsheet is the live version.</p>
       </div>
     </section>
 
@@ -792,7 +776,7 @@ class Component extends DCLogic {
     return {
       pcPct: String(pcPct), pcDone: String(k5), pcTotal: String(tot), pcUpdated: P.updatedLabel || '',
       pcTipCls: pcPct < 4 ? 'start' : (pcPct > 96 ? 'end' : ''),
-      pcNote: pcPct >= 100 ? 'All assignments finalized. Thank you, team!' : (pcPct >= 75 ? '75% milestone reached! Next milestone: 100% finalized.' : (pcPct >= 50 ? 'Halfway there! Next milestone: 75% finalized.' : (pcPct >= 25 ? '25% milestone reached! Next milestone: 50% finalized.' : 'Next milestone: 25% finalized.'))),
+      pcNote: pcPct >= 100 ? 'All assignments finalized. Thank you, team!' : (pcPct >= 75 ? '75% milestone reached! Next milestone: 100% finalized by Friday, January 15.' : (pcPct >= 50 ? 'Halfway there! Next milestone: 75% finalized by Monday, January 11.' : (pcPct >= 25 ? '25% milestone reached! Next milestone: 50% finalized by Thursday, December 17.' : 'Next milestone: 25% finalized by Friday, December 4.'))),
       pcAria: k5 + ' of ' + tot + ' assignments finalized',
       w1: pw(k1), w2: pw(k2), w3: pw(k3), w4: pw(k4), w5: pw(k5),
       k1: String(k1), k2: String(k2), k3: String(k3), k4: String(k4), k5: String(k5),
