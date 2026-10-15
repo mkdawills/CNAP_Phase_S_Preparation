@@ -366,3 +366,24 @@ details > summary:focus-visible{outline:2px solid #C9BFDC;outline-offset:2px;bor
   .topbar .wrap::after{content:"\203A";position:absolute;right:0;bottom:8px;height:42px;width:56px;display:flex;align-items:center;justify-content:flex-end;padding-right:14px;box-sizing:border-box;font-size:26px;font-weight:700;line-height:1;color:#512888;background:linear-gradient(to right,rgba(255,255,255,0),#FFFFFF 55%);pointer-events:none}
 }
 @media (max-width:760px){.topbar .wrap::after{transition:opacity .2s}.topbar .wrap.nav-end::after{opacity:0}}
+/* breathing room: an opened section gets space below it, and the next section header gets space above it */
+main section.sec:has(details.sx[open]){padding-bottom:56px !important}
+main section.sec:has(details.sx[open]) + section.sec,
+main section.sec:has(details.sx[open]) + .divider + section.sec{padding-top:44px !important}
+main details.sx[open] > summary{margin-bottom:20px !important}
+/* breathing room between labeled blocks inside a task (Requirements, CNAP guidance, How reviewers will score it...) */
+.blk:not(:first-child){margin-top:20px !important;padding-top:18px !important;border-top:1px solid #EEEAF4}
+.blk h4{margin-bottom:10px !important}
+.blk + .sub-acc,.blk + details.sub-acc{margin-top:20px !important}
+.xall-bar{margin-bottom:20px !important}
+/* a little more air between stacked sections, even when they're closed */
+main section.sec.band-w,main section.sec.band-g{padding-top:30px !important;padding-bottom:26px !important}
+main section.sec:has(details.sx[open]).band-w,main section.sec:has(details.sx[open]).band-g{padding-bottom:56px !important}
+main section.sec:has(details.sx[open]) + section.sec.band-w,main section.sec:has(details.sx[open]) + section.sec.band-g{padding-top:44px !important}
+main section.wrap[style*="padding: 0 24px 8px"]{padding-bottom:30px !important}
+.rules-stack{gap:14px !important}
+.foot a{text-decoration:underline;text-underline-offset:2px}
+@media (min-width:1181px){.topbar .nav{flex-wrap:nowrap !important}.topbar .nav a,.topbar .nav a.navlink{font-size:12px}.topbar .nm summary a{padding-left:8px}.topbar .nm summary .car{width:17px}.topbar .nav a.navlink{padding-left:8px;padding-right:8px}}
+@media (max-width:760px){.topbar .quick .menu[open] > .pop{position:fixed;left:16px;right:16px;top:auto;min-width:0;margin-top:6px}}
+@media (max-width:760px){.topbar .wrap.quick-over::before{content:"\203A";position:absolute;right:0;top:var(--qtop);height:var(--qh);width:56px;display:flex;align-items:center;justify-content:flex-end;padding-right:14px;box-sizing:border-box;font-size:26px;font-weight:700;line-height:1;color:#512888;background:linear-gradient(to right,rgba(255,255,255,0),#FFFFFF 55%);pointer-events:none;z-index:2;transition:opacity .2s}
+.topbar .wrap.quick-over.quick-end::before{opacity:0}}

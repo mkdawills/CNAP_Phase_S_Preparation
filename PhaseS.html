@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Phase S Overview — CNAP Phase S Proposal Hub</title>
+<title>Phase S Overview &amp; NOFO Comparisons — CNAP Phase S Proposal Hub</title>
 <link rel="stylesheet" href="site.css">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -55,6 +55,19 @@ details.sx[open] > summary{margin-bottom:14px}
 .intro-band .stat .v{font-size:20px}
 .intro-band .xall-bar{margin:14px 0 4px}
 details.intro-sx{border-top:1px solid #E4E0EC;padding:12px 0}
+.dp-fig{margin:22px 0 0;border:2px solid #512888;border-radius:10px;padding:18px 22px 16px;background:#fff}
+.dp-panel+.dp-panel{margin-top:18px;padding-top:18px;border-top:1px solid #DDD6EA}
+.dp-t{margin:0 0 12px;padding-bottom:8px;border-bottom:1.5px solid #1E1A2B;font-size:13.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#1E1A2B}
+.dp-row{display:grid;grid-template-columns:minmax(0,230px) 70px minmax(0,1fr);align-items:center}
+.dp-q{background:#512888;color:#fff;font-weight:700;font-size:14.5px;line-height:1.4;text-align:center;padding:18px 16px;min-height:118px;display:flex;align-items:center;justify-content:center;border-radius:4px}
+.dp-br{width:70px;height:118px;display:block}
+.dp-ans{display:flex;flex-direction:column;gap:14px}
+.dp-a{font-size:14.5px;line-height:1.4;text-align:center;padding:10px 12px;min-height:50px;display:flex;align-items:center;justify-content:center;border:1.5px solid;border-radius:4px}
+.dp-yes{background:#EEEEEE;border-color:#777;color:#1E1A2B}
+.dp-no{background:#F3EEF9;border-color:#512888;color:#512888}
+.dp-l{display:none}
+.dp-cap{margin-top:14px;font-size:13px;color:#6B6480;font-style:italic}
+@media (max-width:640px){.dp-fig{padding:14px 14px 12px}.dp-row{grid-template-columns:minmax(0,1fr)}.dp-br{display:none}.dp-q{min-height:0;margin-bottom:10px}.dp-ans{gap:8px}.dp-a{justify-content:flex-start;text-align:left;gap:10px}.dp-l{display:inline-block;flex:0 0 auto;font-size:11px;letter-spacing:.06em;text-transform:uppercase;padding:2px 7px;border-radius:3px;background:#512888;color:#fff}.dp-yes .dp-l{background:#4A4458}}
 </style>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -77,11 +90,12 @@ details.intro-sx{border-top:1px solid #E4E0EC;padding:12px 0}
         <details class="nm"><summary><a href="Workflow.html">Workflow &amp; Files</a><span class="car"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
           <div class="pop">
             <a class="hd" href="Workflow.html">Workflow &amp; File Management</a>
-            <a href="Workflow.html#summary">Please read first</a>
-            <a href="Workflow.html#smartsheet">Smartsheet</a>
-            <a href="Workflow.html#statuses">Statuses &amp; reviews</a>
-            <a href="Workflow.html#folders">Dropbox folders</a>
-            <a href="Workflow.html#reference">Reference materials</a>
+            <a href="Workflow.html#summary">Start here: the short version</a>
+            <a href="Workflow.html#moves">From start to submission: the 5 steps</a>
+            <a href="Workflow.html#smartsheet">Helpful Smartsheet guidance</a>
+            <a href="Workflow.html#statuses">Progress status definitions (5 total)</a>
+            <a href="Workflow.html#folders">Folder organization: saving your documents (Dropbox)</a>
+            <a href="Workflow.html#reference">Prior proposals for your reference</a>
           </div>
         </details>
         <details class="nm"><summary><a href="Guidance.html">Contributor Guidance</a><span class="car"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
@@ -96,9 +110,9 @@ details.intro-sx{border-top:1px solid #E4E0EC;padding:12px 0}
             <a href="Kim.html">Kim · Central Office Biosketch Review</a>
           </div>
         </details>
-        <details class="nm on"><summary><a href="PhaseS.html">Phase S Overview</a><span class="car"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+        <details class="nm on"><summary><a href="PhaseS.html">Phase S Overview &amp; Comparisons</a><span class="car"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
           <div class="pop">
-            <a class="hd" href="PhaseS.html">Phase S / NOFO Overview</a>
+            <a class="hd" href="PhaseS.html">Phase S Overview &amp; NOFO Comparisons</a>
             <a href="PhaseS.html#glance">Application components at a glance</a>
             <a href="PhaseS.html#evs">COBRE-E vs. COBRE-S</a>
             <a href="PhaseS.html#changes">Differences from previous NOFOs</a>
@@ -153,8 +167,11 @@ details.intro-sx{border-top:1px solid #E4E0EC;padding:12px 0}
         </details>
       </nav>
       <div class="quick">
+        <a class="btn sm backbtn" href="index.html" data-back="1" title="Go back to the page you were just on">&larr; Back</a>
         <a class="btn sm primary" href="https://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21">Open Smartsheet</a>
+        <a class="btn sm" href="FAQ.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>CNAP FAQ</a>
         <a class="btn sm" href="https://files.simpler.grants.gov/opportunities/77942f5d-0b5f-4656-bfd7-a6148b1624a4/attachments/55f55944-4b0c-4a90-9e33-75b064598558/PAR-27-055-Full-Announcement.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6M8 13h8M8 17h6"></path></svg>Full NOFO</a>
+        <a class="btn sm" href="https://nigms.nih.gov/Research/DRCB/IDeA/Pages/COBRE-faqs" title="NIGMS answers to common COBRE-E/S (PAR-27-055) questions"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M9.1 9a3 3 0 0 1 5.8 1c0 2-3 3-3 3"></path><path d="M12 17h.01"></path></svg>NIGMS FAQs</a>
       </div>
     </div>
   </header>
@@ -162,11 +179,11 @@ details.intro-sx{border-top:1px solid #E4E0EC;padding:12px 0}
   <main>
     <section class="wrap pagehead">
       <p class="eyebrow">Universal resource · NOFO Briefing</p>
-      <h1 class="h1">Phase S / NOFO Overview</h1>
+      <h1 class="h1">Phase S Overview &amp; NOFO Comparisons</h1>
       <p class="lede">What Phase S is, what changed from earlier NOFOs, and who's eligible.<br>The <a href="SRP.html">SRP Core</a>, <a href="Review.html">review criteria</a>, and <a href="Definitions.html">key-term definitions</a> now have their own pages.<br>This briefing covers PAR-27-055, the COBRE-E/S NOFO.<br>CNAP is applying for its S (Sustainability) phase.</p>
       <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px;">
         <a class="btn primary" href="https://files.simpler.grants.gov/opportunities/77942f5d-0b5f-4656-bfd7-a6148b1624a4/attachments/55f55944-4b0c-4a90-9e33-75b064598558/PAR-27-055-Full-Announcement.html">Read the full NOFO (PAR-27-055)</a>
-        <a class="btn" href="https://nigms.nih.gov/node/151826">NIGMS PAR-27-055 FAQs</a>
+        <a class="btn" href="https://nigms.nih.gov/Research/DRCB/IDeA/Pages/COBRE-faqs">NIGMS PAR-27-055 FAQs</a>
       </div>
     </section>
 
@@ -183,7 +200,7 @@ details.intro-sx{border-top:1px solid #E4E0EC;padding:12px 0}
       <div class="card">
           <div class="blk"><ul>
             <li><b>No new cores.</b> Consolidating existing cores, and sharing facilities supported by other IDeA programs, is strongly encouraged.</li>
-            <li><b>The Scientific Research Program (SRP) Core is a required core.</b> It now also coordinates mentoring and career development.</li>
+            <li><b>Scientific Research Program (SRP) is a required component.</b> It now also coordinates mentoring and career development.</li>
             <li>The External Advisory Committee (EAC) is now the <b>Advisory Committee (AC)</b>.</li>
             <li><b>Clinical trials are not allowed.</b> Human subjects activities that are not clinical trials are allowed.</li>
             <li>The <b>Data Management and Sharing (DMS) Plan</b> goes in the Overall component.</li>
@@ -197,7 +214,7 @@ details.intro-sx{border-top:1px solid #E4E0EC;padding:12px 0}
           <div class="blk"><ul>
             <li><b>PAR-27-055:</b> COBRE-E/S NOFO (Expansion and Sustainability). This application (S phase). Current; expires May 26, 2029.</li>
             <li><b>PAR-23-063:</b> previous COBRE Phase 2 NOFO; reissued as PAR-27-055.</li>
-            <li><b>PAR-23-216:</b> previous COBRE Phase 3 (Transitional Centers) NOFO; expired October 1, 2025.</li>
+            <li><b>PAR-23-216:</b> previous COBRE Phase 3 (Transitional Centers) NOFO; expired October 1, 2025. Compared in Section 3.</li>
             <li><b>NOT-OD-26-026:</b> NIH notice (not a NOFO) on prior approval requests through the eRA Prior Approval module.</li>
           </ul></div>
           <p class="small muted" style="margin: 12px 0 0;">About this briefing: an overview of the aims of the COBRE-S Sustainability Phase, what is changing, the program's mission, and how applications will be reviewed. The exact application components are covered on each contributor's page.</p>
@@ -226,7 +243,7 @@ details.intro-sx{border-top:1px solid #E4E0EC;padding:12px 0}
 
     <section class="wrap sec band-w" id="evs">
       <details class="sx">
-      <summary><h2 class="h2">1 · Phase comparison: COBRE-E (Expansion) vs. COBRE-S (Sustainability)</h2><span class="sx-car" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+      <summary><h2 class="h2">1 · Phase Comparison: COBRE-E (Expansion) vs. COBRE-S (Sustainability)</h2><span class="sx-car" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
       <div class="card scroll" style="padding: 8px 12px;">
         <table class="tbl">
           <thead><tr><th style="width:150px;"></th><th>COBRE-E (Expansion) · Phase 2</th><th>COBRE-S (Sustainability) · Phase S</th></tr></thead>
@@ -245,30 +262,31 @@ details.intro-sx{border-top:1px solid #E4E0EC;padding:12px 0}
 
     <section class="wrap sec band-g" id="changes">
       <details class="sx">
-      <summary><h2 class="h2">2 · Differences from the expired Phase 2 NOFO (PAR-23-063)</h2><span class="sx-car" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+      <summary><h2 class="h2">2 · NOFO Comparison: Expired Phase 2 NOFO vs. New COBRE-E/S NOFO</h2><span class="sx-car" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
       <div class="card scroll" style="padding: 8px 12px;">
         <table class="tbl">
           <thead><tr><th style="width:190px;">Area</th><th>What's different <span style="text-transform:none;letter-spacing:0;font-weight:600;">(i.e., true of Phase S)</span></th><th style="width:130px;">Type</th></tr></thead>
           <tbody>
             <tr><td><b>Scientific Research Program (SRP)</b></td><td>New SRP core, which manages the Center's research activities. Its members are SRP Investigators (SIs): eligible faculty (early-career, plus qualifying mid-career or “at-risk” investigators) who each lead their own research program within the Center's scientific area and receive COBRE research support and mentoring through the SRP. The SRP's size may change over the award to reflect the Center's scientific needs. No required minimum number of SIs.</td><td><span class="badge">New</span></td></tr>
             <tr><td><b>SRP Core Director</b></td><td>The SRP Core has its own Core Director, listed as key personnel. SIs are not listed as key personnel.</td><td><span class="badge">New</span></td></tr>
-            <tr><td><b>SI gets independent funding</b></td><td>Overlapping or closely related grant: COBRE support ends when the new award begins. No overlap: up to 6 months for orderly closeout.</td><td><span class="badge">New rule</span></td></tr>
+            <tr><td><b>SI gets independent funding</b></td><td>Overlapping or closely related grant: COBRE support ends when the new award begins. No overlap: up to 6 months for orderly closeout.</td><td><span class="badge">New Rule</span></td></tr>
             <tr><td><b>Advisory committee</b></td><td>The EAC is now called the Advisory Committee (AC).</td><td><span class="badge gray">Renamed</span></td></tr>
             <tr><td><b>Mentoring and career development</b></td><td>The SRP now coordinates mentoring and professional development and organizes Center-wide career development (seminar series, workshops, retreats). Previously handled by the Administrative Core.</td><td><span class="badge gray">Now in SRP</span></td></tr>
-            <tr><td><b>Research cores</b></td><td>No new cores. Consolidation of existing cores for technology advancement and/or administrative efficiency, and sharing of research facilities supported by other IDeA programs (e.g., INBRE, CTR, other COBREs), is strongly encouraged.</td><td><span class="badge gold">Restricted</span></td></tr>
+            <tr><td><b>Research cores</b></td><td>No new cores. Consolidation of existing cores for technology advancement and/or administrative efficiency, and sharing of research facilities supported by other IDeA programs (e.g., INBRE, CTR, other COBREs), is strongly encouraged.</td><td><span class="badge gold">Restricted</span><span style="display:block;margin-top:6px;font-size:12.5px;color:#6B6480;">Limited or not allowed in COBRE-S.</span></td></tr>
             <tr><td><b>Clinical trials</b></td><td>Not allowed. Human subjects activities that are not clinical trials may still be proposed.</td><td><span class="badge gold">Restricted</span></td></tr>
             <tr><td><b>Starting a new SI</b></td><td>No human subjects or vertebrate animals: prior NIGMS approval no longer required. Send official notification with documentation (including AC approval) at least 14 days before research begins. With human subjects or vertebrate animals: NIGMS prior approval still required, submitted at least 30 days before research begins.</td><td><span class="badge gray">Simplified</span></td></tr>
-            <tr><td><b>DMS Plan</b></td><td>Must be provided in the Overall component.</td><td><span class="badge gray">New placement</span></td></tr>
+            <tr><td><b>DMS Plan</b></td><td>Must be provided in the Overall component.</td><td><span class="badge gray">New Placement</span></td></tr>
           </tbody>
         </table>
       </div>
+      <figure class="dp-fig"><div class="dp-panel"><h4 class="dp-t">SI receives independent funding</h4><div class="dp-row"><div class="dp-q">Is the new grant overlapping with, or closely related to, the SI&rsquo;s COBRE work?</div><svg class="dp-br" viewBox="0 0 70 118" aria-hidden="true"><path d="M0 59H18V29H64M18 59V89H64" fill="none" stroke="#512888" stroke-width="1.6"/><path d="M58 25L64 29L58 33M58 85L64 89L58 93" fill="none" stroke="#512888" stroke-width="1.6"/><text x="40" y="20" text-anchor="middle" font-size="11" font-weight="700" fill="#512888" letter-spacing=".05em">YES</text><text x="40" y="108" text-anchor="middle" font-size="11" font-weight="700" fill="#512888" letter-spacing=".05em">NO</text></svg><div class="dp-ans"><div class="dp-a dp-yes"><b class="dp-l">Yes</b><span>COBRE support ends when the new award begins</span></div><div class="dp-a dp-no"><b class="dp-l">No</b><span>Up to 6 months allowed for orderly closeout</span></div></div></div></div><div class="dp-panel"><h4 class="dp-t">Starting a new SI&rsquo;s COBRE research</h4><div class="dp-row"><div class="dp-q">Does the research involve human subjects or vertebrate animals?</div><svg class="dp-br" viewBox="0 0 70 118" aria-hidden="true"><path d="M0 59H18V29H64M18 59V89H64" fill="none" stroke="#512888" stroke-width="1.6"/><path d="M58 25L64 29L58 33M58 85L64 89L58 93" fill="none" stroke="#512888" stroke-width="1.6"/><text x="40" y="20" text-anchor="middle" font-size="11" font-weight="700" fill="#512888" letter-spacing=".05em">YES</text><text x="40" y="108" text-anchor="middle" font-size="11" font-weight="700" fill="#512888" letter-spacing=".05em">NO</text></svg><div class="dp-ans"><div class="dp-a dp-yes"><b class="dp-l">Yes</b><span>NIGMS prior approval required; submit &ge;30 days ahead</span></div><div class="dp-a dp-no"><b class="dp-l">No</b><span>Notify NIGMS &ge;14 days ahead, with documentation (including AC approval)</span></div></div></div></div><figcaption class="dp-cap">Figure 1. Two SRP Investigator (SI) rules as decision paths.</figcaption></figure>
       </details>
 
     </section>
 
     <section class="wrap sec band-w" id="changes3">
       <details class="sx">
-      <summary><h2 class="h2">3 · Differences from the expired Phase 3 NOFO (PAR-23-216)</h2><span class="sx-car" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+      <summary><h2 class="h2">3 · NOFO Comparison: Expired Phase 3 NOFO vs. New COBRE-E/S NOFO</h2><span class="sx-car" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
       <p class="muted" style="margin: 0 0 14px;">Before PAR-27-055, Centers finishing Phase 2 applied under the COBRE Phase 3 (Transitional Centers) NOFO, PAR-23-216, which expired October 1, 2025.<br>The Type column shows whether each item is the same, changed, new, replaced, or restricted.</p>
       <div class="card scroll" style="padding: 8px 12px;">
         <table class="tbl">
@@ -329,7 +347,7 @@ details.intro-sx{border-top:1px solid #E4E0EC;padding:12px 0}
 
     <section class="wrap sec band-w" id="unchanged">
       <details class="sx">
-      <summary><h2 class="h2">5 · Unchanged RPL (SI) rules</h2><span class="sx-car" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+      <summary><h2 class="h2">5 · Unchanged Rules: Expired Phase 2 NOFO to New COBRE-E/S NOFO</h2><span class="sx-car" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
       <div class="card scroll" style="padding: 8px 12px;">
         <table class="tbl">
           <thead><tr><th style="width:210px;">Rule</th><th>Detail</th></tr></thead>
@@ -352,7 +370,7 @@ details.intro-sx{border-top:1px solid #E4E0EC;padding:12px 0}
   <footer class="foot">
     <div class="wrap">
       <img class="logo" src="assets/cnap-logo.jpg" alt="CNAP Center — Cognitive &amp; Neurobiological Approaches to Plasticity">
-      <span>CNAP Center · Phase S (COBRE-S) Application · PAR-27-055</span>
+      <span>CNAP Center · Phase S (COBRE-S) Application · <a href="https://files.simpler.grants.gov/opportunities/77942f5d-0b5f-4656-bfd7-a6148b1624a4/attachments/55f55944-4b0c-4a90-9e33-75b064598558/PAR-27-055-Full-Announcement.html">PAR-27-055</a></span>
       <span>Source: COBRE-S Staff Briefing, October 2026 · Questions: Morgan, <a href="mailto:mkwills@ksu.edu">mkwills@ksu.edu</a></span>
     </div>
   </footer>
@@ -363,6 +381,29 @@ details.intro-sx{border-top:1px solid #E4E0EC;padding:12px 0}
 
 class Component extends DCLogic {
   componentDidMount() {
+    if (typeof window !== 'undefined') setTimeout(() => {
+      const roots = [document].concat(Array.from(document.querySelectorAll('*')).filter((e) => e.shadowRoot).map((e) => e.shadowRoot));
+      roots.forEach((r) => r.querySelectorAll('.topbar .quick').forEach((q) => {
+        const w = q.parentElement; if (!w) return;
+        const upd = () => {
+          const t = q.offsetTop + 'px', h = q.offsetHeight + 'px';
+          if (w.style.getPropertyValue('--qtop') !== t) w.style.setProperty('--qtop', t);
+          if (w.style.getPropertyValue('--qh') !== h) w.style.setProperty('--qh', h);
+          w.classList.toggle('quick-over', q.scrollWidth > q.clientWidth + 4);
+          w.classList.toggle('quick-end', q.scrollLeft + q.clientWidth >= q.scrollWidth - 8);
+        };
+        q.addEventListener('scroll', upd, { passive: true }); window.addEventListener('resize', upd); upd(); setInterval(upd, 400); if (window.MutationObserver) new MutationObserver(upd).observe(w, { attributes: true, attributeFilter: ['class', 'style'] });
+      }));
+    }, 300);
+    if (typeof window !== 'undefined' && !window.__backNav) {
+      window.__backNav = true;
+      document.addEventListener('click', (e) => {
+        const path = e.composedPath ? e.composedPath() : [e.target];
+        const a = path.find((n) => n && n.getAttribute && n.getAttribute('data-back') === '1');
+        if (!a) return;
+        if (window.history.length > 1) { e.preventDefault(); window.history.back(); }
+      }, true);
+    }
     if (typeof window !== 'undefined') setTimeout(() => {
       const roots = [document].concat(Array.from(document.querySelectorAll('*')).filter((e) => e.shadowRoot).map((e) => e.shadowRoot));
       roots.forEach((r) => r.querySelectorAll('.topbar .nav').forEach((n) => {
@@ -408,7 +449,7 @@ class Component extends DCLogic {
         window.__nmJump(target);
       });
       const xallScope = (n) => (n && n.closest && (n.closest('.xscope') || n.closest('main'))) || document;
-      window.__xallItems = (scope) => Array.from(scope.querySelectorAll('details.sx, details.acc, details.stg'));
+      window.__xallItems = (scope) => Array.from(scope.querySelectorAll('details.sx, details.acc, details.stg, details.fq'));
       window.__xallSync = (root) => {
         (root && root.querySelectorAll ? root : document).querySelectorAll('button.xall').forEach((b) => {
           const list = window.__xallItems(xallScope(b));

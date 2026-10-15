@@ -39,6 +39,35 @@ section.sec.band-w,section.sec.band-g{padding-top:40px !important;padding-bottom
 .step .loc-final{background:#512888;color:#fff}
 .step .loc-final b{color:#fff}
 .step .f{flex-basis:100%}
+/* stacked step cards: "Step N" and the title at the same size */
+.step{flex-direction:column !important;flex-wrap:nowrap !important;align-items:stretch !important;gap:6px !important}
+.step > span{flex-basis:auto !important}
+.step .s{min-width:0 !important;font-family:'Archivo','Segoe UI',Helvetica,Arial,sans-serif;font-size:18px !important;font-weight:700;letter-spacing:0 !important;text-transform:none !important;color:#512888;line-height:1.2}
+.step .t{font-size:18px !important;line-height:1.25;margin-bottom:4px}
+.step .w{font-size:15px}
+.step .f{font-size:14px;color:#4A4458}
+.step .loc{font-size:14px}
+.step{padding:20px 22px !important;gap:10px !important}
+.step .t{padding-bottom:12px;margin-bottom:4px !important;border-bottom:1px solid #E4E0EC}
+.step .w{line-height:1.6}
+.step .f{padding-top:12px !important;margin-top:4px}
+.step .loc{margin-top:6px}
+.step .loc{position:relative;margin-top:30px}
+.step .loc::before{content:"";position:absolute;left:-3px;right:0;top:-16px;border-top:1px solid #E4E0EC}
+.step .loc + .f{border-top:none;padding-top:4px !important;margin-top:0}
+.step .w a,.step .f a{color:#512888;text-decoration:underline;text-underline-offset:2px}
+.step .loc a{color:inherit;text-decoration:underline;text-underline-offset:2px}
+.step .loc a b{color:inherit}
+.flow{gap:14px !important}
+.ss-fig{margin:6px 0 4px;display:flex;flex-direction:column;gap:10px}
+.ss-fig img{display:block;width:100%;max-width:240px;height:auto;border:1px solid #E4E0EC;border-radius:10px}
+.ss-fig.ss-mid img{max-width:420px}
+.ss-fig.ss-small img{max-width:200px}
+.ss-fig.ss-wide img{max-width:640px}
+.ss-fig figcaption{display:flex;flex-direction:column;gap:6px;font-size:14px;color:#4A4458}
+.ss-fig .n{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;background:#512888;color:#fff;font-size:12px;margin-right:8px;vertical-align:1px}
+
+
 .wf-item .h3{margin:0 0 10px;padding-bottom:8px;border-bottom:1px solid #E4E0EC}
 .rules-stack .wf-item + .wf-item{margin-top:0}
 /* compact, all-white section list */
@@ -72,11 +101,12 @@ details.sx[open] > summary{margin-bottom:14px}
         <details class="nm on"><summary><a href="Workflow.html">Workflow &amp; Files</a><span class="car"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
           <div class="pop">
             <a class="hd" href="Workflow.html">Workflow &amp; File Management</a>
-            <a href="Workflow.html#summary">Please read first</a>
-            <a href="Workflow.html#smartsheet">Smartsheet</a>
-            <a href="Workflow.html#statuses">Statuses &amp; reviews</a>
-            <a href="Workflow.html#folders">Dropbox folders</a>
-            <a href="Workflow.html#reference">Reference materials</a>
+            <a href="Workflow.html#summary">Start here: the short version</a>
+            <a href="Workflow.html#moves">From start to submission: the 5 steps</a>
+            <a href="Workflow.html#smartsheet">Helpful Smartsheet guidance</a>
+            <a href="Workflow.html#statuses">Progress status definitions (5 total)</a>
+            <a href="Workflow.html#folders">Folder organization: saving your documents (Dropbox)</a>
+            <a href="Workflow.html#reference">Prior proposals for your reference</a>
           </div>
         </details>
         <details class="nm"><summary><a href="Guidance.html">Contributor Guidance</a><span class="car"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
@@ -91,9 +121,9 @@ details.sx[open] > summary{margin-bottom:14px}
             <a href="Kim.html">Kim · Central Office Biosketch Review</a>
           </div>
         </details>
-        <details class="nm"><summary><a href="PhaseS.html">Phase S Overview</a><span class="car"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+        <details class="nm"><summary><a href="PhaseS.html">Phase S Overview &amp; Comparisons</a><span class="car"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
           <div class="pop">
-            <a class="hd" href="PhaseS.html">Phase S / NOFO Overview</a>
+            <a class="hd" href="PhaseS.html">Phase S Overview &amp; NOFO Comparisons</a>
             <a href="PhaseS.html#glance">Application components at a glance</a>
             <a href="PhaseS.html#evs">COBRE-E vs. COBRE-S</a>
             <a href="PhaseS.html#changes">Differences from previous NOFOs</a>
@@ -148,8 +178,11 @@ details.sx[open] > summary{margin-bottom:14px}
         </details>
       </nav>
       <div class="quick">
+        <a class="btn sm backbtn" href="index.html" data-back="1" title="Go back to the page you were just on">&larr; Back</a>
         <a class="btn sm primary" href="https://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21">Open Smartsheet</a>
+        <a class="btn sm" href="FAQ.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>CNAP FAQ</a>
         <a class="btn sm" href="https://files.simpler.grants.gov/opportunities/77942f5d-0b5f-4656-bfd7-a6148b1624a4/attachments/55f55944-4b0c-4a90-9e33-75b064598558/PAR-27-055-Full-Announcement.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6M8 13h8M8 17h6"></path></svg>Full NOFO</a>
+        <a class="btn sm" href="https://nigms.nih.gov/Research/DRCB/IDeA/Pages/COBRE-faqs" title="NIGMS answers to common COBRE-E/S (PAR-27-055) questions"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M9.1 9a3 3 0 0 1 5.8 1c0 2-3 3-3 3"></path><path d="M12 17h.01"></path></svg>NIGMS FAQs</a>
       </div>
     </div>
   </header>
@@ -158,7 +191,7 @@ details.sx[open] > summary{margin-bottom:14px}
     <section class="wrap pagehead">
       <p class="eyebrow">Universal resource · Submission Workflow and File Management</p>
       <h1 class="h1">Workflow &amp; File Management</h1>
-      <p class="lede">How <a href="https://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21">Smartsheet</a>, the Dropbox <a href="#folders">WORKING DRAFTS folders</a>, and the <a href="#folders">FINAL VERSIONS folders</a> fit together, what each <a href="#statuses">Smartsheet status</a> means, and <a href="#moves">how a document gets finalized</a>.</p>
+      <p class="lede">Step by step: <a href="#moves">the 5 steps every document follows, from start to submission</a>, <a href="#folders">where to save your files in Dropbox</a>, and <a href="#smartsheet">how to update your row in Smartsheet</a> as you go.</p>
       <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px;">
         <a class="btn primary" href="https://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21">Open Smartsheet</a>
         <a class="btn" href="Timeline.html">View full team timeline</a>
@@ -168,15 +201,15 @@ details.sx[open] > summary{margin-bottom:14px}
     <section class="wrap sec band-w" id="summary">
       <div class="xall-bar"><button type="button" class="xall" aria-pressed="false">Expand all</button></div>
       <details class="sx">
-      <summary><h2 class="h2">Please read first</h2><span class="sx-car" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+      <summary><h2 class="h2">Start Here: The Short Version</h2><span class="sx-car" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
       <div class="xscope">
       <div class="rules-stack" style="gap:10px;display:flex;flex-direction:column;">
-        <div class="card wf-item"><h3 class="h3">Executive summary: please read first</h3><div class="blk"><ul>
-            <li>Smartsheet is our central project-management hub.</li>
-            <li>All drafts should be saved in the Dropbox WORKING DRAFTS folder.</li>
-            <li>The FINAL VERSIONS folder is reserved for approved, submission-ready documents.</li>
-            <li>Coordinate with other contributors when your component overlaps with their work.</li>
-            <li>Communicate questions, anticipated delays, and potential changes early. Our window for writing is fairly snug.</li>
+        <div class="card wf-item"><h3 class="h3">The short version</h3><div class="blk"><ul>
+            <li><b>Smartsheet</b> lists your assignments, due dates, and folder links, and tracks where each document stands.</li>
+            <li><b>Save your drafts</b> in your component's WORKING DRAFTS folder in Dropbox, once you're comfortable sharing your drafts, and no later than each Internal Due Date.</li>
+            <li><b>Don't save anything in FINAL VERSIONS.</b> Morgan and Heather move documents to the FINAL VERSIONS folder, once Morgan and Heather have approved your final draft.</li>
+            <li><b>If your piece overlaps with someone else's,</b> we encourage you to connect with the colleague writing the overlapping piece so your sections complement each other. For example, each core's Specific Aims build on the Center Specific Aims, and each core's input feeds the Center's Organization and Management Plan.</li>
+            <li><b>Don't hesitate to reach out</b> with questions, delays, or changes. We are excited to work through any hurdles that emerge. While our writing window is snug, together we can make this proposal happen.</li>
           </ul></div></div>
         <div class="card wf-item"><h3 class="h3">Message from the Admin Core</h3><p style="margin: 0 0 10px; color: #4A4458;">We appreciate the time, expertise, and care each of you brings to this process. Our goal is to make the writing and submission process as organized and straightforward as possible.</p>
           <p style="margin: 0; color: #4A4458;">Please contact the Admin Core if you have questions about component requirements, file organization, deadlines, or submission procedures. Thoughtful organization, clear communication, and collaboration will help us develop a strong COBRE Phase S proposal that reflects our center's scientific vision, shared resources, and plans for continued success.</p>
@@ -188,36 +221,36 @@ details.sx[open] > summary{margin-bottom:14px}
 
     <section class="wrap sec band-g" id="moves">
       <details class="sx">
-      <summary><h2 class="h2">How a document moves</h2><span class="sx-car" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
-      <p class="muted" style="margin: 0 0 14px;">The same path for every deliverable: write in WORKING DRAFTS, mark it Ready for Review, apply feedback, and let Morgan Wills and Heather Bailey finalize it.</p>
+      <summary><h2 class="h2">From Start to Submission: The 5 Steps for Every Document</h2><span class="sx-car" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+      <p class="muted" style="margin: 0 0 14px;">Every document follows the same 5 steps.</p>
       <div class="flow">
-        <div class="step"><span class="s">1 · Start</span><span class="t">Create the document</span><span class="w">Start with the applicable NIH-provided form or document, if required. Otherwise, create a Word document using the applicable component instructions and formatting guidance.</span><span class="f">Status: Not Started → In Progress</span><span class="loc">File lives in: <b>WORKING DRAFTS</b> (once you save it)</span></div>
-        <div class="step"><span class="s">2 · Write</span><span class="t">Save in WORKING DRAFTS</span><span class="w">All writing and revisions take place in your component's WORKING DRAFTS folder. Save your working draft there by the internal due date.</span><span class="f">Status: In Progress</span><span class="loc">File lives in: <b>WORKING DRAFTS</b></span></div>
-        <div class="step"><span class="s">3 · Review</span><span class="t">Set Ready for Review</span><span class="w">Setting Ready for Review in Smartsheet tells your reviewer the draft is waiting: internal (Roxana, Tim, or Kim) or the identified external scientific reviewer.</span><span class="f">Status: Ready for Review</span><span class="loc">File lives in: <b>WORKING DRAFTS</b></span></div>
-        <div class="step"><span class="s">4 · Revise</span><span class="t">Apply feedback</span><span class="w">Incorporate the reviewers' edits in WORKING DRAFTS.</span><span class="f">Status: Applying Reviewer Feedback</span><span class="loc">File lives in: <b>WORKING DRAFTS</b></span></div>
-        <div class="step"><span class="s">5 · Finalize</span><span class="t">Tell Morgan and Heather</span><span class="w">They give it a final review, move it to the FINAL VERSIONS folder for you, and change its status to Finalized. You don't need to move the file or update the status yourself.</span><span class="f">Status: Finalized</span><span class="loc loc-final">File lives in: <b>FINAL VERSIONS</b> (moved by Morgan and Heather)</span></div>
+        <div class="step"><span class="s">Step 1</span><span class="t">Create your document</span><span class="w"><span style="display:block">If NIH provides a form for your required document, start from the NIH form. (Stock format pages primarily only exist for biosketches and Current &amp; Pending (Other) Support, which are built in <a href="https://www.ncbi.nlm.nih.gov/sciencv/">SciENcv</a>, and the Data Management and Sharing (DMS) Plan, which has an <a href="https://grants.nih.gov/grants-process/write-application/forms-directory/data-management-and-sharing-plan-format-page">NIH format page</a> to start from.)</span><span style="display:block;margin-top:10px">Write your document using the <a href="Guidance.html">component's directions</a>, and by following <a href="Conventions.html">CNAP's Formatting Conventions</a>.</span><span style="display:block;margin-top:10px">Once you're comfortable, we invite you to save your document in your component's <a href="#folders">WORKING DRAFTS folder</a>.</span><span style="display:block;margin-top:10px">Note: your document is required to be saved in your component's WORKING DRAFTS folder no later than your document's Internal Due Date (listed in your <a href="https://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21">Smartsheet</a> row and on the <a href="Timeline.html">Team Timeline</a>).</span></span><figure class="ss-fig ss-mid"><figcaption><span>In Dropbox, inside the <b>COBRE Phase S Proposal Preparation</b> folder, the two main folders are as follows:</span></figcaption><img src="img/dropbox-folders.png" alt="Two Dropbox folders: 1. WORKING DRAFTS and 2. FINAL VERSIONS" width="250" height="73" style="max-width:250px"></figure><figure class="ss-fig ss-mid"><figcaption><span>Inside each main folder is one folder per proposal component. Save your work in your component's folder.</span><span>Inside <b>1. WORKING DRAFTS</b>:</span></figcaption><img src="img/dropbox-working-drafts.png" alt="Inside 1. WORKING DRAFTS: six component folders, from 1. Overall Section to 6. SRP" width="820" height="443" style="max-width:520px"></figure><figure class="ss-fig ss-wide"><figcaption><span>Shortcut (optional): in your Smartsheet row, click a purple-outlined link to open the linked folder in Dropbox.</span></figcaption><picture><source media="(max-width: 640px)" srcset="img/smartsheet-folders-phone.png"><img src="img/smartsheet-folders.png" alt="A Smartsheet row with the WORKING DRAFTS and FINAL VERSIONS folder links outlined" width="975" height="163"></picture></figure><figure class="ss-fig ss-mid"><figcaption><span><b>Once your document is saved in Dropbox, take a moment to update the progress in Smartsheet.</b></span><span>Find your name in the <b>Responsible</b> column, then search the <b>Assignment</b> column for your specific assigned document/component. Reminder that you can sort each column.</span></figcaption><img src="img/smartsheet-responsible.png" alt="A Smartsheet row with the Responsible name and the Assignment name outlined" width="505" height="154"></figure><figure class="ss-fig ss-small"><figcaption><span><b class="n">1</b>Within Smartsheet, click the dropdown arrow in the <b>Progress</b> cell of your given assignment/row.</span><span><b class="n">2</b>At this stage, you would select <b>&ldquo;In Progress&rdquo;</b> from the drop-down list.</span></figcaption><img src="img/smartsheet-inprogress.png" alt="Smartsheet with the Progress drop-down open on one row, and In Progress highlighted" width="247" height="295"></figure><span class="loc">Save your document to: <a href="#folders"><b>your component's WORKING DRAFTS folder</b></a></span><span class="f">Update <a href="https://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21">Smartsheet's &ldquo;Progress status&rdquo; label</a> to: <b>&ldquo;In Progress&rdquo;</b></span></div>
+        <div class="step"><span class="s">Step 2</span><span class="t">Write and revise your document</span><span class="w">Once you're comfortable with others seeing your work, we invite you to save the latest version of your drafts in your component's <a href="#folders">WORKING DRAFTS folder</a>. However, aim to have only one document for each of your assignments (i.e., save over or delete old versions). You'll update the status of your assignment in the Progress column in <a href="https://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21">Smartsheet</a>. However, you're also welcome to indicate the status in your document's file name. Your draft is due in the <a href="#folders">WORKING DRAFTS folder</a> by the Internal Due Date listed in <a href="https://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21">Smartsheet</a>.</span><span class="loc">Continue to save your document to: <a href="#folders"><b>your component's WORKING DRAFTS folder</b></a></span><span class="f">Continue to label <a href="https://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21">Smartsheet's &ldquo;Progress status&rdquo;</a>: <b>&ldquo;In Progress&rdquo;</b></span></div>
+        <div class="step"><span class="s">Step 3</span><span class="t">When your draft is ready for the review step, mark your document &ldquo;Ready for Review&rdquo; in Smartsheet</span><span class="w">In <a href="https://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21">Smartsheet</a>, update your document's Progress status to <b>&ldquo;Ready for Review&rdquo;</b> (see Step 1 for detailed directions). The &ldquo;Ready for Review&rdquo; status tells us that we can share your draft with the assigned reviewer. Morgan and Heather will take responsibility for sending your draft to the assigned reviewer, so there's no need to reach out to the reviewer yourself. Continue to save your document in <a href="#folders">WORKING DRAFTS</a>.</span><span class="loc">Continue to save your document to: <a href="#folders"><b>your component's WORKING DRAFTS folder</b></a></span><span class="f">Update <a href="https://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21">Smartsheet's &ldquo;Progress status&rdquo; label</a> to: <b>&ldquo;Ready for Review&rdquo;</b></span></div>
+        <div class="step"><span class="s">Step 4</span><span class="t">Make the reviewer's edits</span><span class="w">Morgan and Heather will send you the reviewer's comments. Once you receive the reviewer's comments, change the same Progress cell to <b>&ldquo;Applying Reviewer Feedback.&rdquo;</b> Continue to save your document in <a href="#folders">WORKING DRAFTS</a>. If you have questions about a reviewer's comment, please don't hesitate to send your questions to Morgan and Heather. Morgan and Heather will gladly follow up with the reviewer.</span><span class="loc">Continue to save your document to: <a href="#folders"><b>your component's WORKING DRAFTS folder</b></a></span><span class="f">Update <a href="https://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21">Smartsheet's &ldquo;Progress status&rdquo; label</a> to: <b>&ldquo;Applying Reviewer Feedback&rdquo;</b></span></div>
+        <div class="step"><span class="s">Step 5</span><span class="t">Tell Morgan and Heather you're done</span><span class="w">Let Morgan and Heather know your edits are finished. Morgan and Heather give the document a final review, move your document to <a href="#folders">FINAL VERSIONS</a>, and change Progress to <b>&ldquo;Finalized.&rdquo;</b> Please kindly refrain from moving your document to the FINAL VERSIONS folder or changing your document's Progress status yourself.</span><span class="loc loc-final">Your document ends up in: <a href="#folders"><b>your component's FINAL VERSIONS folder</b></a> (Morgan and Heather will take responsibility for moving your document)</span><span class="f"><a href="https://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21">Smartsheet's &ldquo;Progress status&rdquo; label</a>: <b>&ldquo;Finalized&rdquo;</b> (Morgan and Heather will take responsibility for updating the Progress status)</span></div>
       </div>
       <div class="callout" style="margin-top: 16px;">
-        <b>Important:</b> Completing a draft does not automatically mean that a component is approved for submission. Only documents that have completed the required review and approval process should be placed in the FINAL VERSIONS folder.
+        <b>After Step 5:</b> the Admin Core assembles the finalized documents and Central Office submits the application to NIH.<br><br><b>Helpful note:</b> your assignment is considered final once Morgan and Heather have done a final review. Morgan and Heather will take responsibility for moving your document over to the FINAL VERSIONS folder.
       </div>
       </details>
     </section>
 
     <section class="wrap sec band-w" id="smartsheet">
       <details class="sx">
-      <summary><h2 class="h2">Smartsheet</h2><span class="sx-car" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+      <summary><h2 class="h2">Helpful Smartsheet Guidance</h2><span class="sx-car" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
       <div class="xscope">
       <div class="rules-stack" style="gap:10px;display:flex;flex-direction:column;">
-        <div class="card wf-item"><h3 class="h3">Why Smartsheet</h3><p style="margin: 0 0 12px;">Smartsheet is the live version of every packet. Dates, links, and assignments are updated there first, so if Smartsheet and a packet (or this site) ever differ, <b>Smartsheet wins</b>.</p>
+        <div class="card wf-item"><h3 class="h3">Smartsheet always has the latest information</h3><p style="margin: 0 0 12px;">Dates, links, and assignments are updated in Smartsheet first. If a date or link on this site (or in your packet) differs from Smartsheet, <b>go with Smartsheet</b>.</p>
           <a class="btn primary" href="https://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21">Open Smartsheet</a></div>
-        <div class="card wf-item"><h3 class="h3">How to use it</h3><div class="blk"><ul>
-            <li><b>Find your rows:</b> filter by your name in the Assigned To column.</li>
-            <li><b>Open what you need from your row:</b> your directions (your packet), your WORKING DRAFTS folder, your FINAL VERSIONS folder, and reference materials such as prior COBRE proposals.</li>
-            <li><b>Update your status</b> from the Status drop-down as you work. Setting Ready for Review tells your reviewer the draft is waiting.</li>
-            <li><b>Due date definition:</b> save your working draft in your WORKING DRAFTS folder by the internal due date.</li>
-            <li><b>Add the deadlines to your calendar:</b> subscribe to the Smartsheet calendar in Outlook or Google Calendar, and date changes update automatically.</li>
-            <li><b>Getting in:</b> accept the invitation email and sign in with your K-State account. The mobile app works too.</li>
-          </ul></div></div>
+        <div class="card wf-item"><h3 class="h3">Finding and updating your assignments</h3><div class="blk"><ol style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px;">
+            <li><b><a href="https://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21">Sign in</a>:</b> accept the Smartsheet invitation email, then click <a href="https://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21">Sign in</a> and use your K-State account. The Smartsheet phone app works too.</li>
+            <li><b>Find your rows:</b> each row is one document. Use Smartsheet's <b>Filter</b> button to show only the rows where the <b>Responsible</b> column contains your name.</li>
+            <li><b>Read across your row:</b> <b>Assignment</b> names the document, <b>Internal Due Date</b> is when your draft should be saved in WORKING DRAFTS, and <b>Writing Prompt/Directions</b> has the NOFO's exact instructions.</li>
+            <li><b>Handy shortcut (optional):</b> your row also links to your folders. Click the <b>1. Working Draft Folder</b> or <b>2. Final Version folder</b> cell to open your component's folder in Dropbox. Further right are links to the 2021 Phase 2 and 2025 Phase 3 folders, the NIH instructions, and the Phase S NOFO.<figure class="ss-fig ss-wide"><picture><source media="(max-width: 640px)" srcset="img/smartsheet-folders-phone.png"><img src="img/smartsheet-folders.png" alt="A Smartsheet row with the WORKING DRAFTS and FINAL VERSIONS folder links outlined" width="975" height="163"></picture><figcaption><span>Click a purple-outlined link to open the linked folder in Dropbox.</span></figcaption></figure></li>
+            <li><b>Update Progress as you work:</b> click the row's <b>Progress</b> cell (the first column) and choose the status that matches your document's current stage. See the <a href="#moves">5 steps</a> above.</li>
+            <li><b>Add the deadlines to your calendar (optional):</b> <a href="https://share.google/Shr1lgXIhgqSaHnIM">subscribe to the Smartsheet calendar</a> in Outlook or Google Calendar, and date changes update automatically.</li>
+          </ol></div></div>
       </div>
       </div>
       </details>
@@ -225,24 +258,24 @@ details.sx[open] > summary{margin-bottom:14px}
 
     <section class="wrap sec band-g" id="statuses">
       <details class="sx">
-      <summary><h2 class="h2">Smartsheet statuses and the review process</h2><span class="sx-car" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
-      <p class="muted" style="margin: 0 0 14px;">Please keep your assigned Smartsheet status up to date so the Admin Core can monitor progress, coordinate reviews, and identify potential delays.</p>
+      <summary><h2 class="h2">Progress Status Definitions (5 Total)</h2><span class="sx-car" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+      <p class="muted" style="margin: 0 0 14px;">Progress is the first column in Smartsheet, with one cell per document.<br>Please keep your document's Progress status current so the Admin Core can see where each document stands, line up reviews, and spot delays early.</p><p style="font-size: 12.5px; line-height: 1.45; color: #8A8599; margin: -6px 0 14px;"><i>(Your status also feeds the <a href="index.html#completion">Proposal Completion</a> percentage on the Dashboard, which updates twice each weekday. Only documents marked &ldquo;Finalized&rdquo; count as complete.)</i></p>
       <div class="card scroll" style="padding: 8px 12px;">
         <table class="tbl">
-          <thead><tr><th style="width:190px;">Status</th><th>What it means</th><th style="width:240px;">Where it lives in Dropbox</th></tr></thead>
+          <thead><tr><th style="width:190px;">Progress status</th><th>What the status means</th><th style="width:150px;">Who changes the status</th><th style="width:200px;">Where your document is</th></tr></thead>
           <tbody>
-            <tr><td><span class="badge gray">Not Started</span></td><td>Work has not yet begun.</td><td>Nothing to save yet.</td></tr>
-            <tr><td><span class="badge">In Progress</span></td><td>You're actively writing the document.</td><td>Your WORKING DRAFTS folder</td></tr>
-            <tr><td><span class="badge">Ready for Review</span></td><td>Your working draft is ready for review, either internal (Roxana, Tim, or Kim) or by the identified external scientific reviewer.</td><td>Your WORKING DRAFTS folder</td></tr>
-            <tr><td><span class="badge">Applying Reviewer Feedback</span></td><td>You're incorporating the reviewers' edits.</td><td>Your WORKING DRAFTS folder</td></tr>
-            <tr><td><span class="badge" style="background:#512888;color:#fff;">Finalized</span></td><td>Morgan Wills and Heather Bailey have given the document a final review, moved it to the FINAL VERSIONS folder, and set this status.</td><td>Your FINAL VERSIONS folder</td></tr>
+            <tr><td><span class="badge gray">Not Started</span></td><td>Work hasn't started yet.</td><td>You</td><td>No document yet</td></tr>
+            <tr><td><span class="badge">In Progress</span></td><td>You're writing the document.</td><td>You</td><td>Your WORKING DRAFTS folder</td></tr>
+            <tr><td><span class="badge">Ready for Review</span></td><td>Your draft is ready for your reviewer: Roxana, Tim, or Kim inside K-State, or the external scientific reviewer.</td><td>You</td><td>Your WORKING DRAFTS folder</td></tr>
+            <tr><td><span class="badge">Applying Reviewer Feedback</span></td><td>You're applying your reviewer's edits.</td><td>You</td><td>Your WORKING DRAFTS folder</td></tr>
+            <tr><td><span class="badge" style="background:#512888;color:#fff;">Finalized</span></td><td>Morgan and Heather have done the final review and moved the document to FINAL VERSIONS.</td><td>Morgan and Heather</td><td>Your FINAL VERSIONS folder</td></tr>
           </tbody>
         </table>
       </div>
       <div class="xscope">
       <div class="rules-stack" style="gap:10px;display:flex;flex-direction:column;margin-top:16px;">
-        <div class="card wf-item"><h3 class="h3">Reviewers</h3><p style="margin: 0;">The CNAP Admin Core will identify the designated reviewer(s) for each document and let you know who they are. Please feel free to suggest reviewers to the Admin Core.</p></div>
-        <div class="card wf-item"><h3 class="h3">When your document is final</h3><p style="margin: 0;">Let Morgan Wills and Heather Bailey know. They will give it a final review, move it to the FINAL VERSIONS folder for you, and change its status in Smartsheet to Finalized. You don't need to move the file or update the status yourself.</p></div>
+        <div class="card wf-item"><h3 class="h3">Who reviews your document</h3><p style="margin: 0;">The Admin Core will tell you who your reviewer is for each document. You're welcome to suggest a reviewer.</p></div>
+        <div class="card wf-item"><h3 class="h3">When your edits are finished</h3><p style="margin: 0;">Let Morgan and Heather know. Morgan and Heather do the final review, move your document to FINAL VERSIONS, and change Progress to Finalized. Please kindly refrain from moving your document to the FINAL VERSIONS folder or changing your document's Progress status yourself.</p></div>
       </div>
       </div>
       </details>
@@ -250,11 +283,11 @@ details.sx[open] > summary{margin-bottom:14px}
 
     <section class="wrap sec band-w" id="folders">
       <details class="sx">
-      <summary><h2 class="h2">Where files live (Dropbox)</h2><span class="sx-car" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
-      <p class="muted" style="margin: 0 0 14px;">One WORKING DRAFTS folder and one FINAL VERSIONS folder per component.<br>Your own page lists only the folders for your component.</p>
+      <summary><h2 class="h2">Folder Organization: Saving Your Documents (Dropbox)</h2><span class="sx-car" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+      <p class="muted" style="margin: 0 0 14px;">Each component has two Dropbox folders: WORKING DRAFTS (where you save your work) and FINAL VERSIONS (approved documents only).<br>In addition to the list below, your individual <a href="Guidance.html">guidance page</a> also links to your two folders.</p><figure class="ss-fig ss-mid" style="margin:0 0 16px;"><figcaption><span>In Dropbox, inside the <b>COBRE Phase S Proposal Preparation</b> folder, the two main folders are as follows:</span></figcaption><img src="img/dropbox-folders.png" alt="Two Dropbox folders: 1. WORKING DRAFTS and 2. FINAL VERSIONS" width="250" height="73" style="max-width:250px"></figure><figure class="ss-fig ss-mid" style="margin:0 0 16px;"><figcaption><span>Inside each main folder is one folder per proposal component. Save your work in your component's folder.</span><span>Inside <b>1. WORKING DRAFTS</b>:</span></figcaption><img src="img/dropbox-working-drafts.png" alt="Inside 1. WORKING DRAFTS: six component folders, from 1. Overall Section to 6. SRP" width="820" height="443" style="max-width:520px"></figure>
       <div class="xscope">
       <div class="rules-stack" style="gap:10px;display:flex;flex-direction:column;">
-        <div class="card wf-item"><h3 class="h3">WORKING DRAFTS</h3><p class="small muted" style="margin: 0 0 12px;">Where you save your drafts. All writing and revisions are saved here.</p>
+        <div class="card wf-item"><h3 class="h3">WORKING DRAFTS: shared repository</h3><p class="small muted" style="margin: 0 0 12px; line-height: 1.55;">We respect that you may not wish to put very new or rough drafts in a shared space. Once a draft is at a point where you're comfortable with others seeing your work, we invite you to save that draft in the WORKING DRAFTS folder.<br><b>Note:</b> of course, your draft is required to be saved in the WORKING DRAFTS folder by your assignment's Internal Due Date.</p>
           <div class="flist">
             <a href="https://www.dropbox.com/scl/fo/qju9wh2rlvj2lpnw3cs33/AJ-L6UNFe6CtRs0QkR6wyt0?rlkey=oxshp9g686dvjig6n4jb9s358&amp;st=hnuinhmv&amp;dl=0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>WORKING DRAFTS › Center</a>
             <a href="https://www.dropbox.com/scl/fo/xq6r8le84xmx63rq3sq6e/AEidS1yGE9E1UbcrVGc6tZo?rlkey=4mg2rhwg2ivv8kvz168595szc&amp;st=wugxhc1c&amp;dl=0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>WORKING DRAFTS › Admin Core</a>
@@ -263,7 +296,7 @@ details.sx[open] > summary{margin-bottom:14px}
             <a href="https://www.dropbox.com/scl/fo/9hr9fqyummo503u7cs65z/ALLyiGRXdgQqQNfGZK8cEnM?rlkey=vwi0dpe93b0qkwh1bih8z3pug&amp;st=qneplw7v&amp;dl=0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>WORKING DRAFTS › CN Core</a>
             <a href="https://www.dropbox.com/scl/fo/q0z7z8mst7nundea8vrw2/AHIWF8JG3PP6xGgcSVuCZR4?rlkey=ivap04502uznsidk7dsdq46ci&amp;st=dr6di1dc&amp;dl=0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>WORKING DRAFTS › SRP Core</a>
           </div></div>
-        <div class="card wf-item"><h3 class="h3">FINAL VERSIONS</h3><p class="small muted" style="margin: 0 0 12px;">Where Morgan and Heather place your approved, submission-ready documents. Confirm the document is correctly formatted. The Admin Core will coordinate final-document tracking and proposal assembly.</p>
+        <div class="card wf-item"><h3 class="h3">FINAL VERSIONS: approved documents only</h3><p class="small muted" style="margin: 0 0 12px;">Morgan and Heather move approved, submission-ready documents into FINAL VERSIONS. (To learn how a document gets from WORKING DRAFTS to FINAL VERSIONS, see <a href="#moves">From Start to Submission: The 5 Steps for Every Document</a>.)</p>
           <div class="flist">
             <a href="https://www.dropbox.com/scl/fo/fpohj0efsvmb8gbmfvoqs/AKcFWiEEjHhHZisLLI33jco?rlkey=xgfgfe512tfbxet6p361san1i&amp;st=ml45ntia&amp;dl=0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"></path></svg>FINAL VERSIONS › Center</a>
             <a href="https://www.dropbox.com/scl/fo/qxgx2e7jukieka7ttrb1y/ADFzgEe35zUkLSQ9buNZeQA?rlkey=0ki8z4elan99epdlddmjmysov&amp;st=dn2buzey&amp;dl=0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"></path></svg>FINAL VERSIONS › Admin Core</a>
@@ -273,28 +306,28 @@ details.sx[open] > summary{margin-bottom:14px}
             <a href="https://www.dropbox.com/scl/fo/13pm59iuzreewh3wgj12d/AJ2aX4leTE-q1x5qqMqEKLE?rlkey=gq3iooda8ybei9qt5llsgg82z&amp;st=463b0her&amp;dl=0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"></path></svg>FINAL VERSIONS › SRP Core</a>
           </div></div>
       </div>
-      <div class="card wf-item"><h3 class="h3">Working drafts: when creating a document</h3><ol style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 6px;">
-          <li>Start with the applicable NIH-provided form or document, if required.</li>
-          <li>Otherwise, create a Word document using the applicable component instructions and formatting guidance.</li>
-          <li>Save the document in the designated WORKING DRAFTS folder.</li>
+      <div class="card wf-item"><h3 class="h3">Starting a new document</h3><ol style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 6px;">
+          <li>If NIH provides a form for your required document, start from the NIH form. (Stock format pages primarily only exist for biosketches and Current &amp; Pending (Other) Support, which are built in <a href="https://www.ncbi.nlm.nih.gov/sciencv/">SciENcv</a>, and the Data Management and Sharing (DMS) Plan, which has an <a href="https://grants.nih.gov/grants-process/write-application/forms-directory/data-management-and-sharing-plan-format-page">NIH format page</a> to start from.)</li>
+          <li>Write your document using the <a href="Guidance.html">component's directions</a>, and by following <a href="Conventions.html">CNAP's Formatting Conventions</a>.</li>
+          <li>Once you're comfortable with others seeing your draft, save your document in your component's <a href="#folders">WORKING DRAFTS folder</a>.</li>
         </ol>
-        <p style="margin: 12px 0 0; color: #4A4458;">When developing your component, consider how it supports the broader COBRE Phase S proposal. Where appropriate, coordinate with relevant contributors to ensure that the scientific narrative, core activities, milestones, evaluation measures, and resource requests align across the application.</p></div>
+        <p style="margin: 12px 0 0; color: #4A4458;">As you write, we encourage you to keep the whole proposal in mind. If your piece touches someone else's (the science, core activities, milestones, evaluation measures, or budget requests), check with the colleague writing that piece so the pieces match.</p></div>
       </div>
       </details>
     </section>
 
     <section class="wrap sec band-g" id="reference">
       <details class="sx">
-      <summary><h2 class="h2">Reference materials</h2><span class="sx-car" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+      <summary><h2 class="h2">Prior Proposals for Your Reference</h2><span class="sx-car" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
       <div class="xscope">
       <div class="rules-stack" style="gap:10px;display:flex;flex-direction:column;">
-        <div class="card wf-item"><h3 class="h3">2021, Phase 2 Proposal Materials</h3><p class="small muted" style="margin: 0 0 12px;">Linked/made available in case it is helpful to reflect on what was said or done previously.</p>
+        <div class="card wf-item"><h3 class="h3">2021 Phase 2 proposal</h3><p class="small muted" style="margin: 0 0 12px;">For reference: what CNAP proposed and wrote in Phase 2.</p>
           <a class="btn" href="https://www.dropbox.com/scl/fo/6e7p5xvasg17tu30tbuap/ALAsqq_6xoUEM23Qavsmc8A?rlkey=bvluagyz2a3fnk0stzh3rqb65&amp;st=rc344g48&amp;dl=0">Open in Dropbox</a></div>
-        <div class="card wf-item"><h3 class="h3">2025 Phase 3 Materials</h3><p class="small muted" style="margin: 0 0 12px;">Linked/made available in case it is helpful to reflect on what you wrote last year, toward the outdated Notice of Funding Opportunity.</p>
+        <div class="card wf-item"><h3 class="h3">2025 Phase 3 drafts</h3><p class="small muted" style="margin: 0 0 12px;">For reference: what you wrote last year for the older, now-expired NOFO.</p>
           <a class="btn" href="https://www.dropbox.com/scl/fo/fo68jlm4h36wmwbqtopx0/AFeDo-1BwnMgspxdrlweV_Q?rlkey=z76y4x9udqbriiayw6f9e7q2e&amp;st=g83ytov9&amp;dl=0">Open in Dropbox</a></div>
       </div>
       <div class="note" style="margin-top: 16px;">
-        Prior COBRE Phase 2 proposal materials and last year's Phase 3 draft documents are available in the Dropbox. <b>COBRE Phase S requirements may differ</b> from those of previous funding opportunities. Please verify current requirements before relying on prior proposal materials.
+        <b>Phase S rules differ from earlier NOFOs.</b> Before reusing anything from the prior proposal folders, check that material against your directions and the <a href="PhaseS.html">Phase S Overview &amp; NOFO Comparisons</a>.
       </div>
       </div>
       </details>
@@ -304,7 +337,7 @@ details.sx[open] > summary{margin-bottom:14px}
   <footer class="foot">
     <div class="wrap">
       <img class="logo" src="assets/cnap-logo.jpg" alt="CNAP Center — Cognitive &amp; Neurobiological Approaches to Plasticity">
-      <span>CNAP Center · Phase S (COBRE-S) Application · PAR-27-055</span>
+      <span>CNAP Center · Phase S (COBRE-S) Application · <a href="https://files.simpler.grants.gov/opportunities/77942f5d-0b5f-4656-bfd7-a6148b1624a4/attachments/55f55944-4b0c-4a90-9e33-75b064598558/PAR-27-055-Full-Announcement.html">PAR-27-055</a></span>
       <span>Source: Submission Workflow and File Management · Questions: the Admin Core — Morgan, <a href="mailto:mkwills@ksu.edu">mkwills@ksu.edu</a></span>
     </div>
   </footer>
@@ -315,6 +348,29 @@ details.sx[open] > summary{margin-bottom:14px}
 
 class Component extends DCLogic {
   componentDidMount() {
+    if (typeof window !== 'undefined') setTimeout(() => {
+      const roots = [document].concat(Array.from(document.querySelectorAll('*')).filter((e) => e.shadowRoot).map((e) => e.shadowRoot));
+      roots.forEach((r) => r.querySelectorAll('.topbar .quick').forEach((q) => {
+        const w = q.parentElement; if (!w) return;
+        const upd = () => {
+          const t = q.offsetTop + 'px', h = q.offsetHeight + 'px';
+          if (w.style.getPropertyValue('--qtop') !== t) w.style.setProperty('--qtop', t);
+          if (w.style.getPropertyValue('--qh') !== h) w.style.setProperty('--qh', h);
+          w.classList.toggle('quick-over', q.scrollWidth > q.clientWidth + 4);
+          w.classList.toggle('quick-end', q.scrollLeft + q.clientWidth >= q.scrollWidth - 8);
+        };
+        q.addEventListener('scroll', upd, { passive: true }); window.addEventListener('resize', upd); upd(); setInterval(upd, 400); if (window.MutationObserver) new MutationObserver(upd).observe(w, { attributes: true, attributeFilter: ['class', 'style'] });
+      }));
+    }, 300);
+    if (typeof window !== 'undefined' && !window.__backNav) {
+      window.__backNav = true;
+      document.addEventListener('click', (e) => {
+        const path = e.composedPath ? e.composedPath() : [e.target];
+        const a = path.find((n) => n && n.getAttribute && n.getAttribute('data-back') === '1');
+        if (!a) return;
+        if (window.history.length > 1) { e.preventDefault(); window.history.back(); }
+      }, true);
+    }
     if (typeof window !== 'undefined') setTimeout(() => {
       const roots = [document].concat(Array.from(document.querySelectorAll('*')).filter((e) => e.shadowRoot).map((e) => e.shadowRoot));
       roots.forEach((r) => r.querySelectorAll('.topbar .nav').forEach((n) => {
@@ -360,7 +416,7 @@ class Component extends DCLogic {
         window.__nmJump(target);
       });
       const xallScope = (n) => (n && n.closest && (n.closest('.xscope') || n.closest('main'))) || document;
-      window.__xallItems = (scope) => Array.from(scope.querySelectorAll('details.sx, details.acc, details.stg'));
+      window.__xallItems = (scope) => Array.from(scope.querySelectorAll('details.sx, details.acc, details.stg, details.fq'));
       window.__xallSync = (root) => {
         (root && root.querySelectorAll ? root : document).querySelectorAll('button.xall').forEach((b) => {
           const list = window.__xallItems(xallScope(b));

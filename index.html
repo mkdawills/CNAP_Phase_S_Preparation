@@ -35,6 +35,7 @@ a{color:#512888}a:hover{color:#3B1C66}
 .rail-cell.last .rail-node.fut{border-color:#4A4458;color:#4A4458}
 .rail-pin{position:absolute;top:-8px;width:2px;height:44px;margin-left:-1px;background:#B8860B;z-index:2}
 .rail-pin-l{position:absolute;bottom:100%;left:50%;transform:translateX(-50%);margin-bottom:4px;white-space:nowrap;font-size:11px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:#7A5A00;background:#FBEBB8;border:1px solid #E8C866;padding:2px 7px;border-radius:3px}
+.arc{display:block;margin:30px 0 8px}.arc svg{display:block;overflow:visible}.arc-track{fill:none;stroke:#DDD6EA;stroke-width:5;stroke-linecap:round}.arc-fill{fill:none;stroke:#512888;stroke-width:5;stroke-linecap:round}.an .an-halo{fill:none}.an.cur .an-halo{fill:rgba(81,40,136,0.18)}.an .an-dot{fill:#fff;stroke:#C9BFDD;stroke-width:2.5}.an.done .an-dot,.an.cur .an-dot{fill:#512888;stroke:#512888}.an text{font-weight:700;font-size:14px;fill:#8A80A3}.an.done text,.an.cur text{fill:#fff}.arc-end{font-size:11px;font-weight:700;letter-spacing:.06em;fill:#4A4458}.arc-pin line{stroke:#B8860B;stroke-width:2}.arc-pin text{font-size:11px;font-weight:700;letter-spacing:.06em;fill:#7A5A00}.arc-pin.off{display:none}@media (max-width:980px){.arc{display:none}}
 @media (max-width:980px){.rail{display:none}#stages .bar{display:block}}
 #stages .stage{border-radius:4px}
 #stages .stage.now,#stages .stage.next{box-shadow:inset 0 0 0 1px #512888,0 0 0 4px rgba(81,40,136,0.10),0 6px 22px rgba(81,40,136,0.22)}
@@ -63,6 +64,9 @@ a{color:#512888}a:hover{color:#3B1C66}
 #stages .btn{border-radius:3px}
 .divider{max-width:none;margin:0;padding:0}
 .divider i{display:block;height:1px;background:#D3CDE0}
+#quick .qbox{display:flex;flex-direction:column;align-items:center;gap:22px;text-align:center;background:#3B3349;color:#fff;border-radius:18px;padding:36px 28px;border:1px solid #B9A3E0;box-shadow:0 0 0 6px rgba(185,163,224,0.28),0 0 34px 6px rgba(126,91,176,0.45),0 14px 40px rgba(59,51,73,0.25)}@media (max-width:760px){#quick .qbox{padding:28px 18px}}
+
+main .divider + section.sec{padding-top:58px !important}
 .band-w,.band-g{position:relative}
 .band-dark{position:relative;background:#3B3349;box-shadow:0 0 0 100vmax #3B3349;clip-path:inset(0 -100vmax);color:#fff}
 section.sec.band-dark{padding-top:44px;padding-bottom:44px}
@@ -118,11 +122,12 @@ section.sec.band-w,section.sec.band-g{padding-top:40px;padding-bottom:40px}
         <details class="nm"><summary><a href="Workflow.html">Workflow &amp; Files</a><span class="car"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
           <div class="pop">
             <a class="hd" href="Workflow.html">Workflow &amp; File Management</a>
-            <a href="Workflow.html#summary">Please read first</a>
-            <a href="Workflow.html#smartsheet">Smartsheet</a>
-            <a href="Workflow.html#statuses">Statuses &amp; reviews</a>
-            <a href="Workflow.html#folders">Dropbox folders</a>
-            <a href="Workflow.html#reference">Reference materials</a>
+            <a href="Workflow.html#summary">Start here: the short version</a>
+            <a href="Workflow.html#moves">From start to submission: the 5 steps</a>
+            <a href="Workflow.html#smartsheet">Helpful Smartsheet guidance</a>
+            <a href="Workflow.html#statuses">Progress status definitions (5 total)</a>
+            <a href="Workflow.html#folders">Folder organization: saving your documents (Dropbox)</a>
+            <a href="Workflow.html#reference">Prior proposals for your reference</a>
           </div>
         </details>
         <details class="nm"><summary><a href="Guidance.html">Contributor Guidance</a><span class="car"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
@@ -137,9 +142,9 @@ section.sec.band-w,section.sec.band-g{padding-top:40px;padding-bottom:40px}
             <a href="Kim.html">Kim · Central Office Biosketch Review</a>
           </div>
         </details>
-        <details class="nm"><summary><a href="PhaseS.html">Phase S Overview</a><span class="car"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+        <details class="nm"><summary><a href="PhaseS.html">Phase S Overview &amp; Comparisons</a><span class="car"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
           <div class="pop">
-            <a class="hd" href="PhaseS.html">Phase S / NOFO Overview</a>
+            <a class="hd" href="PhaseS.html">Phase S Overview &amp; NOFO Comparisons</a>
             <a href="PhaseS.html#glance">Application components at a glance</a>
             <a href="PhaseS.html#evs">COBRE-E vs. COBRE-S</a>
             <a href="PhaseS.html#changes">Differences from previous NOFOs</a>
@@ -195,6 +200,7 @@ section.sec.band-w,section.sec.band-g{padding-top:40px;padding-bottom:40px}
       </nav>
       <div class="quick">
         <a class="btn sm primary" href="https://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3h7v7"></path><path d="M21 3l-9 9"></path><path d="M19 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h5"></path></svg>Open Smartsheet</a>
+        <a class="btn sm" href="FAQ.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>CNAP FAQ</a>
         <details class="menu">
           <summary class="btn sm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>Working Drafts</summary>
           <div class="pop">
@@ -219,7 +225,16 @@ section.sec.band-w,section.sec.band-g{padding-top:40px;padding-bottom:40px}
             <a href="https://www.dropbox.com/scl/fo/13pm59iuzreewh3wgj12d/AJ2aX4leTE-q1x5qqMqEKLE?rlkey=gq3iooda8ybei9qt5llsgg82z&amp;st=463b0her&amp;dl=0">SRP Core</a>
           </div>
         </details>
+        <details class="menu">
+          <summary class="btn sm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"></path><path d="M3 3v5h5"></path><path d="M12 7v5l3 2"></path></svg>Prior Proposals</summary>
+          <div class="pop">
+            <span class="lbl">Dropbox · PRIOR PROPOSALS</span>
+            <a href="https://www.dropbox.com/scl/fo/6e7p5xvasg17tu30tbuap/ALAsqq_6xoUEM23Qavsmc8A?rlkey=bvluagyz2a3fnk0stzh3rqb65&amp;st=rc344g48&amp;dl=0">2021 Phase 2 materials</a>
+            <a href="https://www.dropbox.com/scl/fo/fo68jlm4h36wmwbqtopx0/AFeDo-1BwnMgspxdrlweV_Q?rlkey=z76y4x9udqbriiayw6f9e7q2e&amp;st=g83ytov9&amp;dl=0">2025 Phase 3 materials</a>
+          </div>
+        </details>
         <a class="btn sm" href="https://files.simpler.grants.gov/opportunities/77942f5d-0b5f-4656-bfd7-a6148b1624a4/attachments/55f55944-4b0c-4a90-9e33-75b064598558/PAR-27-055-Full-Announcement.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6M8 13h8M8 17h6"></path></svg>Full NOFO</a>
+        <a class="btn sm" href="https://nigms.nih.gov/Research/DRCB/IDeA/Pages/COBRE-faqs" title="NIGMS answers to common COBRE-E/S (PAR-27-055) questions"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M9.1 9a3 3 0 0 1 5.8 1c0 2-3 3-3 3"></path><path d="M12 17h.01"></path></svg>NIGMS FAQs</a>
       </div>
     </div>
   </header>
@@ -291,46 +306,14 @@ section.sec.band-w,section.sec.band-g{padding-top:40px;padding-bottom:40px}
     <section class="wrap sec roll r2 band-w" id="stages">
       <div class="sec-head">
         <div>
-          <h2 class="h2">Proposal Preparation Progress</h2>
+          <h2 class="h2">Proposal Preparation Arc: Where we are in the process</h2>
           <p>Six preparation stages from kickoff to submission.</p>
           <p style="margin-top: 4px;"><b>Now:</b> {{nowLabel}}</p>
         </div>
         <a class="btn" href="Timeline.html">View full team timeline</a>
       </div>
       <div class="bar"><i style="width: {{pct}}%;"></i></div>
-      <div class="rail" aria-hidden="true">
-        <div class="rail-cell">
-          <span class="rail-line"><i style="width: {{f1}};"></i></span>
-          <span class="rail-node {{n1}}">1</span>
-          <sc-if value="{{p1}}" hint-placeholder-val="{{ false }}"><span class="rail-pin" style="left: {{pinLeft}};"><span class="rail-pin-l">Today · {{today}}</span></span></sc-if>
-        </div>
-        <div class="rail-cell">
-          <span class="rail-line"><i style="width: {{f2}};"></i></span>
-          <span class="rail-node {{n2}}">2</span>
-          <sc-if value="{{p2}}" hint-placeholder-val="{{ false }}"><span class="rail-pin" style="left: {{pinLeft}};"><span class="rail-pin-l">Today · {{today}}</span></span></sc-if>
-        </div>
-        <div class="rail-cell">
-          <span class="rail-line"><i style="width: {{f3}};"></i></span>
-          <span class="rail-node {{n3}}">3</span>
-          <sc-if value="{{p3}}" hint-placeholder-val="{{ false }}"><span class="rail-pin" style="left: {{pinLeft}};"><span class="rail-pin-l">Today · {{today}}</span></span></sc-if>
-        </div>
-        <div class="rail-cell">
-          <span class="rail-line"><i style="width: {{f4}};"></i></span>
-          <span class="rail-node {{n4}}">4</span>
-          <sc-if value="{{p4}}" hint-placeholder-val="{{ false }}"><span class="rail-pin" style="left: {{pinLeft}};"><span class="rail-pin-l">Today · {{today}}</span></span></sc-if>
-        </div>
-        <div class="rail-cell">
-          <span class="rail-line"><i style="width: {{f5}};"></i></span>
-          <span class="rail-node {{n5}}">5</span>
-          <sc-if value="{{p5}}" hint-placeholder-val="{{ false }}"><span class="rail-pin" style="left: {{pinLeft}};"><span class="rail-pin-l">Today · {{today}}</span></span></sc-if>
-        </div>
-        <div class="rail-cell last">
-          <span class="rail-line"><i style="width: {{f6}};"></i></span>
-          <span class="rail-node {{n6}}">6</span>
-          <span class="rail-end {{endCls}}" title="NIH submission · Mon, Jan 25"></span>
-          <sc-if value="{{p6}}" hint-placeholder-val="{{ false }}"><span class="rail-pin" style="left: {{pinLeft}};"><span class="rail-pin-l">Today · {{today}}</span></span></sc-if>
-        </div>
-      </div>
+      <div class="arc" aria-hidden="true"><svg viewBox="0 0 1200 160" width="100%" preserveAspectRatio="xMidYMid meet"><path class="arc-track" d="M100.0,125 Q600.0,-55 1100.0,125"></path><path class="arc-fill" d="{{arcD}}"></path><g class="arc-pin {{arcPinCls}}"><line x1="{{arcX}}" y1="{{arcPinY1}}" x2="{{arcX}}" y2="{{arcPinY2}}"></line><text x="{{arcX}}" y="{{arcLabY}}" text-anchor="middle">TODAY · {{todayUp}}</text></g><g class="an {{n1}}"><circle class="an-halo" cx="100.0" cy="125.0" r="25"></circle><circle class="an-dot" cx="100.0" cy="125.0" r="17"></circle><text x="100.0" y="130.0" text-anchor="middle">1</text></g><g class="an {{n2}}"><circle class="an-halo" cx="300.0" cy="67.4" r="25"></circle><circle class="an-dot" cx="300.0" cy="67.4" r="17"></circle><text x="300.0" y="72.4" text-anchor="middle">2</text></g><g class="an {{n3}}"><circle class="an-halo" cx="500.0" cy="38.6" r="25"></circle><circle class="an-dot" cx="500.0" cy="38.6" r="17"></circle><text x="500.0" y="43.6" text-anchor="middle">3</text></g><g class="an {{n4}}"><circle class="an-halo" cx="700.0" cy="38.6" r="25"></circle><circle class="an-dot" cx="700.0" cy="38.6" r="17"></circle><text x="700.0" y="43.6" text-anchor="middle">4</text></g><g class="an {{n5}}"><circle class="an-halo" cx="900.0" cy="67.4" r="25"></circle><circle class="an-dot" cx="900.0" cy="67.4" r="17"></circle><text x="900.0" y="72.4" text-anchor="middle">5</text></g><g class="an {{n6}}"><circle class="an-halo" cx="1100.0" cy="125.0" r="25"></circle><circle class="an-dot" cx="1100.0" cy="125.0" r="17"></circle><text x="1100.0" y="130.0" text-anchor="middle">6</text></g><text class="arc-end" x="100.0" y="158" text-anchor="middle">KICKOFF</text><text class="arc-end" x="1100.0" y="158" text-anchor="middle">SUBMISSION</text></svg></div>
       <div class="stages">
         <a class="stage {{c1}}" href="Timeline.html">
           <span class="when">Oct 29 – Nov 13</span>
@@ -387,13 +370,13 @@ section.sec.band-w,section.sec.band-g{padding-top:40px;padding-bottom:40px}
         </a>
         <a class="tile" href="Conventions.html">
           <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7V4h16v3M9 20h6M12 4v16"></path></svg></span>
-          <span class="t">Proposal Writing Conventions</span>
+          <span class="t">Formatting Conventions</span>
           <span class="d"><b>Names and terms</b>, <b>NIH format</b>, <b>tables and figures</b>, and <b>references</b>. Follow these in everything you write.</span>
           <span class="go">Open conventions →</span>
         </a>
         <a class="tile" href="PhaseS.html">
           <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg></span>
-          <span class="t">Phase S / NOFO Overview</span>
+          <span class="t">Phase S Overview &amp; NOFO Comparisons</span>
           <span class="d"><b>What Phase S is</b>, <b>what changed</b> from earlier NOFOs, <b>eligibility</b>, <b>review criteria</b>, and <b>key terms</b>.</span>
           <span class="go">Open overview →</span>
         </a>
@@ -459,6 +442,24 @@ section.sec.band-w,section.sec.band-g{padding-top:40px;padding-bottom:40px}
     </section>
 
     <div class="divider roll r5"><i></i></div>
+    <!-- Quick access: glow box -->
+    <section class="wrap sec roll r5 band-w" id="quick">
+      <div class="qbox">
+        <div style="max-width: 720px;">
+          <h2 class="h2 h2-dark">Quick access</h2>
+          <p style="margin: 6px 0 0; color: #FFFFFF;">Smartsheet is the live tracker for dates, links, assignments, and status. Dropbox holds the drafts and finals. Your own page lists the folders for your component.</p>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
+          <a class="qbtn qbtn-solid" href="https://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21">Open Smartsheet</a>
+          <a class="qbtn" href="Workflow.html#folders">Working Drafts folders</a>
+          <a class="qbtn" href="Workflow.html#folders">Final Versions folders</a>
+          <a class="qbtn" href="https://www.dropbox.com/scl/fo/6e7p5xvasg17tu30tbuap/ALAsqq_6xoUEM23Qavsmc8A?rlkey=bvluagyz2a3fnk0stzh3rqb65&amp;st=rc344g48&amp;dl=0">2021 Phase 2 materials</a>
+          <a class="qbtn" href="https://www.dropbox.com/scl/fo/fo68jlm4h36wmwbqtopx0/AFeDo-1BwnMgspxdrlweV_Q?rlkey=z76y4x9udqbriiayw6f9e7q2e&amp;st=g83ytov9&amp;dl=0">2025 Phase 3 materials</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider roll r5"><i></i></div>
     <!-- Page limits at a glance -->
     <section class="wrap sec roll r5 band-g" id="limits">
       <div class="sec-head">
@@ -476,28 +477,12 @@ section.sec.band-w,section.sec.band-g{padding-top:40px;padding-bottom:40px}
       <p class="small muted" style="margin: 12px 0 0;">Biosketches and the Center Director's (PD/PI's) Current &amp; Pending Support in SciENcv only (other Senior/Key C&amp;P only at Just-in-Time). External-review revisions are must-fix only, with no scope or budget changes; after Jan 15, only critical budget edits. Appendix is optional (limited items only) — tell Morgan by Fri, Dec 11 if your component needs one.</p>
     </section>
 
-    <!-- Quick access: closing band -->
-    <section class="wrap sec roll r6 band-dark" id="quick">
-      <div style="display: flex; flex-direction: column; align-items: center; gap: 22px;">
-        <div style="max-width: 720px;">
-          <h2 class="h2 h2-dark">Quick access</h2>
-          <p style="margin: 6px 0 0; color: #FFFFFF;">Smartsheet is the live tracker for dates, links, assignments, and status. Dropbox holds the drafts and finals. Your own page lists the folders for your component.</p>
-        </div>
-        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
-          <a class="qbtn qbtn-solid" href="https://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21">Open Smartsheet</a>
-          <a class="qbtn" href="Workflow.html#folders">Working Drafts folders</a>
-          <a class="qbtn" href="Workflow.html#folders">Final Versions folders</a>
-          <a class="qbtn" href="https://www.dropbox.com/scl/fo/6e7p5xvasg17tu30tbuap/ALAsqq_6xoUEM23Qavsmc8A?rlkey=bvluagyz2a3fnk0stzh3rqb65&amp;st=rc344g48&amp;dl=0">2021 Phase 2 materials</a>
-          <a class="qbtn" href="https://www.dropbox.com/scl/fo/fo68jlm4h36wmwbqtopx0/AFeDo-1BwnMgspxdrlweV_Q?rlkey=z76y4x9udqbriiayw6f9e7q2e&amp;st=g83ytov9&amp;dl=0">2025 Phase 3 materials</a>
-        </div>
-      </div>
-    </section>
   </main>
 
   <footer class="foot">
     <div class="wrap">
       <img class="logo" src="assets/cnap-logo.jpg" alt="CNAP Center — Cognitive &amp; Neurobiological Approaches to Plasticity">
-      <span>CNAP Center · Phase S (COBRE-S) Application · PAR-27-055</span>
+      <span>CNAP Center · Phase S (COBRE-S) Application · <a href="https://files.simpler.grants.gov/opportunities/77942f5d-0b5f-4656-bfd7-a6148b1624a4/attachments/55f55944-4b0c-4a90-9e33-75b064598558/PAR-27-055-Full-Announcement.html">PAR-27-055</a></span>
       <span>Prepared Oct 13, 2026 · Live tracker: Smartsheet · Questions: Morgan, <a href="mailto:mkwills@ksu.edu">mkwills@ksu.edu</a></span>
     </div>
   </footer>
@@ -508,6 +493,20 @@ section.sec.band-w,section.sec.band-g{padding-top:40px;padding-bottom:40px}
 
 class Component extends DCLogic {
   componentDidMount() {
+    if (typeof window !== 'undefined') setTimeout(() => {
+      const roots = [document].concat(Array.from(document.querySelectorAll('*')).filter((e) => e.shadowRoot).map((e) => e.shadowRoot));
+      roots.forEach((r) => r.querySelectorAll('.topbar .quick').forEach((q) => {
+        const w = q.parentElement; if (!w) return;
+        const upd = () => {
+          const t = q.offsetTop + 'px', h = q.offsetHeight + 'px';
+          if (w.style.getPropertyValue('--qtop') !== t) w.style.setProperty('--qtop', t);
+          if (w.style.getPropertyValue('--qh') !== h) w.style.setProperty('--qh', h);
+          w.classList.toggle('quick-over', q.scrollWidth > q.clientWidth + 4);
+          w.classList.toggle('quick-end', q.scrollLeft + q.clientWidth >= q.scrollWidth - 8);
+        };
+        q.addEventListener('scroll', upd, { passive: true }); window.addEventListener('resize', upd); upd(); setInterval(upd, 400); if (window.MutationObserver) new MutationObserver(upd).observe(w, { attributes: true, attributeFilter: ['class', 'style'] });
+      }));
+    }, 300);
     if (typeof window !== 'undefined') setTimeout(() => {
       const roots = [document].concat(Array.from(document.querySelectorAll('*')).filter((e) => e.shadowRoot).map((e) => e.shadowRoot));
       roots.forEach((r) => r.querySelectorAll('.topbar .nav').forEach((n) => {
@@ -567,7 +566,7 @@ class Component extends DCLogic {
         window.__nmJump(target);
       });
       const xallScope = (n) => (n && n.closest && (n.closest('.xscope') || n.closest('main'))) || document;
-      window.__xallItems = (scope) => Array.from(scope.querySelectorAll('details.sx, details.acc, details.stg'));
+      window.__xallItems = (scope) => Array.from(scope.querySelectorAll('details.sx, details.acc, details.stg, details.fq'));
       window.__xallSync = (root) => {
         (root && root.querySelectorAll ? root : document).querySelectorAll('button.xall').forEach((b) => {
           const list = window.__xallItems(xallScope(b));
@@ -666,6 +665,17 @@ class Component extends DCLogic {
       node.push(now > nih || idx > i ? 'done' : (idx === i ? 'cur' : 'fut'));
     }
     const showPin = now <= nih;
+    // Arc: quadratic curve through the six stage nodes; t runs 0 (stage 1) to 1 (stage 6).
+    let at = 0;
+    if (now > nih) at = 1;
+    else if (idx >= 5) at = 1;
+    else if (idx >= 0) at = (idx + Math.min(1, Math.max(0, (now - starts[idx]) / (ends[idx] - starts[idx])))) / 5;
+    const AX0 = 100, AX5 = 1100, AY0 = 125, AXC = 600, AYC = -55;
+    const bx = (t) => AX0 + t * (AX5 - AX0);
+    const by = (t) => (1 - t) * (1 - t) * AY0 + 2 * t * (1 - t) * AYC + t * t * AY0;
+    const qx = AX0 + at * (AXC - AX0), qy = AY0 + at * (AYC - AY0);
+    const arcD = at > 0 ? 'M' + AX0 + ',' + AY0 + ' Q' + qx.toFixed(1) + ',' + qy.toFixed(1) + ' ' + bx(at).toFixed(1) + ',' + by(at).toFixed(1) : 'M' + AX0 + ',' + AY0;
+    const arcX = bx(at).toFixed(1), arcY = by(at);
     const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
     const P = this.progress || { updatedLabel: 'Wed, Oct 14, 2026, 12:54 PM CT', total: 92, counts: { 'No status yet': 92 } };
     const C = P.counts || {};
@@ -685,6 +695,8 @@ class Component extends DCLogic {
       p1: showPin && pinCell === 0, p2: showPin && pinCell === 1, p3: showPin && pinCell === 2,
       p4: showPin && pinCell === 3, p5: showPin && pinCell === 4, p6: showPin && pinCell === 5,
       pinLeft: pinLeft,
+      arcD: arcD, arcX: arcX, arcPinY1: (arcY - 30).toFixed(1), arcPinY2: (arcY + 22).toFixed(1), arcLabY: (arcY - 36).toFixed(1),
+      arcPinCls: showPin ? '' : 'off', todayUp: (months[now.getMonth()] + ' ' + now.getDate()).toUpperCase(),
       endCls: now > nih ? 'done' : '',
       today: months[now.getMonth()] + ' ' + now.getDate(),
       days: String(days),

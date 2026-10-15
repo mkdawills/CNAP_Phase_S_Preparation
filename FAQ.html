@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>CNAP FAQ — CNAP Phase S Proposal Hub</title>
+<link rel="stylesheet" href="site.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&amp;family=Archivo:wght@500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F7F6FA}
+a{color:#512888}a:hover{color:#3B1C66}
+.q{display:flex;gap:10px;align-items:flex-start;padding:8px 0;border-bottom:1px solid #E4E0EC;font-size:15px}
+.q:last-child{border-bottom:none}
+.tbl th + th,.tbl td + td{border-left:1px solid #D3CDE0}
+.two.rc-stack{grid-template-columns:minmax(0,1fr) !important;display:grid;gap:16px}
+.kv.kt{gap:0}
+.kv.kt dt,.kv.kt dd{padding:12px 14px;border-bottom:1px solid #D3CDE0}
+.kv.kt dt{padding-left:0}
+.kv.kt dd{border-left:1px solid #D3CDE0}
+.kv.kt .kh{font-size:13px;font-weight:800;letter-spacing:0.06em;text-transform:uppercase;color:#512888;border-bottom:2px solid #512888;padding-top:0;padding-bottom:10px}
+.kv.kt dt:nth-last-child(2),.kv.kt dd:last-child{border-bottom:none}
+@media (max-width:640px){.kv.kt dd{border-left:none;padding-left:0}.kv.kt dd.kh{display:none}}
+.band-w,.band-g{position:relative;border-top:2px solid #D3CDE0;box-shadow:0 0 0 100vmax var(--bandc);clip-path:inset(0 -100vmax);background:var(--bandc)}
+.band-w{--bandc:#FFFFFF}
+.pagehead + .band-w{border-top:none}
+.band-g{--bandc:#F7F6FA}
+section.sec.band-w,section.sec.band-g{padding-top:40px !important;padding-bottom:40px;margin-top:0;margin-bottom:0}
+.si-ol{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:8px}
+.si-stack .blk li{line-height:1.5}
+.si-stack{display:flex;flex-direction:column;border-top:1px solid #D3CDE0}
+.si-stack > .blk{padding:16px 0}
+.si-stack > .blk + .blk{border-top:1px solid #D3CDE0;padding-bottom:0}
+.q .bx{width:16px;height:16px;border:1.5px solid #512888;border-radius:4px;flex:none;margin-top:4px}
+.fq-list{display:flex;flex-direction:column;gap:10px}
+details.fq{background:#fff;border:1px solid #E4E0EC;border-radius:12px}
+details.fq[open]{border-color:#C9C1D9}
+details.fq summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px 20px;min-height:56px;font-weight:600;font-size:16.5px;line-height:1.35;color:#1F1B2B}
+details.fq summary::-webkit-details-marker{display:none}
+details.fq summary:hover{background:#F3EEF9;border-radius:12px}
+details.fq[open] summary{border-bottom:1px solid #E4E0EC;border-radius:12px 12px 0 0}
+.fq-car{width:18px;height:18px;flex:none;color:#6B6579;transition:transform .2s}
+details.fq[open] .fq-car{transform:rotate(180deg)}
+.fq-a{padding:16px 22px 18px;font-size:15.5px;line-height:1.55;color:#2B2738}
+.fq-a p{margin:0 0 10px}.fq-a p:last-child{margin-bottom:0}
+.fq-a ul{margin:0 0 10px;padding-left:20px;display:flex;flex-direction:column;gap:6px}
+</style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<div class="hub" style="font-family: 'Source Sans 3', 'Segoe UI', system-ui, sans-serif; color: #1F1B2B; background: #F7F6FA; min-height: 100vh;">
+
+  <header class="topbar">
+    <div class="wrap">
+      <a class="brand" href="index.html" title="Back to the Dashboard"><svg class="home-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5L12 3l9 7.5"></path><path d="M5 9.5V21h5v-6h4v6h5V9.5"></path></svg><span>CNAP Phase S Proposal Hub</span></a>
+      <nav class="nav" aria-label="Site">
+        <a class="navlink" href="index.html">Dashboard</a>
+        <details class="nm"><summary><a href="Timeline.html">Team Timeline</a><span class="car"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+          <div class="pop">
+            <a class="hd" href="Timeline.html">Team Timeline</a>
+            <a href="Timeline.html#kickoff">Kickoff to submission (by date)</a>
+            <a href="Timeline.html#bycomponent">The same schedule, by component</a>
+          </div>
+        </details>
+        <details class="nm"><summary><a href="Workflow.html">Workflow &amp; Files</a><span class="car"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+          <div class="pop">
+            <a class="hd" href="Workflow.html">Workflow &amp; File Management</a>
+            <a href="Workflow.html#summary">Start here: the short version</a>
+            <a href="Workflow.html#moves">From start to submission: the 5 steps</a>
+            <a href="Workflow.html#smartsheet">Helpful Smartsheet guidance</a>
+            <a href="Workflow.html#statuses">Progress status definitions (5 total)</a>
+            <a href="Workflow.html#folders">Folder organization: saving your documents (Dropbox)</a>
+            <a href="Workflow.html#reference">Prior proposals for your reference</a>
+          </div>
+        </details>
+        <details class="nm"><summary><a href="Guidance.html">Contributor Guidance</a><span class="car"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+          <div class="pop">
+            <a class="hd" href="Guidance.html">Find your guidance</a>
+            <a href="HeatherBailey.html">Heather Bailey · Center Director (PD/PI), CN Core</a>
+            <a href="Chip.html">Chip · BN Core Director</a>
+            <a href="Doina.html">Doina · NI Core Director</a>
+            <a href="CarlAde.html">Carl Ade · Associate Director</a>
+            <a href="Roxana.html">Roxana · Budget Review</a>
+            <a href="Tim.html">Tim · Central Office Budget Review</a>
+            <a href="Kim.html">Kim · Central Office Biosketch Review</a>
+          </div>
+        </details>
+        <details class="nm"><summary><a href="PhaseS.html">Phase S Overview &amp; Comparisons</a><span class="car"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+          <div class="pop">
+            <a class="hd" href="PhaseS.html">Phase S Overview &amp; NOFO Comparisons</a>
+            <a href="PhaseS.html#glance">Application components at a glance</a>
+            <a href="PhaseS.html#evs">COBRE-E vs. COBRE-S</a>
+            <a href="PhaseS.html#changes">Differences from previous NOFOs</a>
+            <a href="PhaseS.html#pi">Eligibility: Center Director</a>
+          </div>
+        </details>
+        <details class="nm"><summary><a href="SRP.html">SRP Core</a><span class="car"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+          <div class="pop">
+            <a class="hd" href="SRP.html">SRP Core &amp; SRP Investigators</a>
+            <a href="SRP.html#srpdir">The SRP Core Director</a>
+            <a href="SRP.html#srp1">How SIs are chosen</a>
+            <a href="SRP.html#srp2">Requirements every SI must meet</a>
+            <a href="SRP.html#srp3">Eligible career stages</a>
+            <a href="SRP.html#srp4">While an SI is supported</a>
+            <a href="SRP.html#srp5">When an SI leaves the program</a>
+            <a href="SRP.html#srp6">Adding a new SI after the award</a>
+          </div>
+        </details>
+        <details class="nm"><summary><a href="Conventions.html">Formatting Conventions</a><span class="car"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+          <div class="pop">
+            <a class="hd" href="Conventions.html">Formatting Conventions</a>
+            <a href="Conventions.html#names">Names and terms</a>
+            <a href="Conventions.html#format">NIH format (required)</a>
+            <a href="Conventions.html#tables">Tables and figures</a>
+            <a href="Conventions.html#refs">References</a>
+          </div>
+        </details>
+        <details class="nm"><summary><a href="Review.html">Review Criteria</a><span class="car"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+          <div class="pop">
+            <a class="hd" href="Review.html">Review Criteria</a>
+            <a href="Review.html#rc1">Administrative Core</a>
+            <a href="Review.html#rc2">Research Cores</a>
+            <a href="Review.html#rc3">Scientific Research Program</a>
+            <a href="Review.html#rc4">General criterion: Significance</a>
+            <a href="Review.html#rc5">General criterion: Investigators</a>
+            <a href="Review.html#rc6">General criterion: Innovation</a>
+            <a href="Review.html#rc7">General criterion: Approach</a>
+            <a href="Review.html#rc8">General criterion: Environment</a>
+            <a href="Review.html#rc9">After peer review: funding considerations</a>
+          </div>
+        </details>
+        <details class="nm"><summary><a href="Definitions.html">Definitions</a><span class="car"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+          <div class="pop">
+            <a class="hd" href="Definitions.html">Definitions (key terms)</a>
+            <a href="Definitions.html#kt1">Program and phases</a>
+            <a href="Definitions.html#kt2">Capacity and infrastructure</a>
+            <a href="Definitions.html#kt3">Center components</a>
+            <a href="Definitions.html#kt4">People</a>
+            <a href="Definitions.html#kt5">Plans and funding rules</a>
+            <a href="Definitions.html#kt6">Review</a>
+          </div>
+        </details>
+      </nav>
+      <div class="quick">
+        <a class="btn sm backbtn" href="index.html" data-back="1" title="Go back to the page you were just on">&larr; Back</a>
+        <a class="btn sm primary" href="https://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21">Open Smartsheet</a>
+        <a class="btn sm" href="FAQ.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>CNAP FAQ</a>
+        <a class="btn sm" href="https://files.simpler.grants.gov/opportunities/77942f5d-0b5f-4656-bfd7-a6148b1624a4/attachments/55f55944-4b0c-4a90-9e33-75b064598558/PAR-27-055-Full-Announcement.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6M8 13h8M8 17h6"></path></svg>Full NOFO</a>
+        <a class="btn sm" href="https://nigms.nih.gov/Research/DRCB/IDeA/Pages/COBRE-faqs" title="NIGMS answers to common COBRE-E/S (PAR-27-055) questions"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M9.1 9a3 3 0 0 1 5.8 1c0 2-3 3-3 3"></path><path d="M12 17h.01"></path></svg>NIGMS FAQs</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="wrap pagehead">
+      <p class="eyebrow">Universal resource · Frequently asked questions</p>
+      <h1 class="h1">CNAP FAQ</h1>
+      <p class="lede">Quick answers to common questions. Click a question to open the answer. Each answer links to the full details elsewhere on the hub.</p>
+      <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px;">
+        <button class="btn xall" type="button" aria-pressed="false">Expand all</button>
+      </div>
+    </section>
+
+    <section class="wrap sec band-w" id="faq">
+      <div class="fq-list">
+        <details class="fq" id="q1"><summary><span class="fq-q">Where do I save my drafts, and when?</span><svg class="fq-car" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></summary><div class="fq-a"><p>In your component's <a href="Workflow.html#folders">WORKING DRAFTS folder</a> in Dropbox. Once you're comfortable with others seeing your work, we invite you to save your draft there.</p><p>Note: your document is required to be saved in your component's WORKING DRAFTS folder no later than your document's Internal Due Date.</p></div></details>
+        <details class="fq" id="q2"><summary><span class="fq-q">When is my document due?</span><svg class="fq-car" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></summary><div class="fq-a"><p>Each document's Internal Due Date is listed in your <a href="https://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21">Smartsheet</a> row and on the <a href="Timeline.html">Team Timeline</a>.</p><p>The full application is due to Central Office on Fri, Jan 15, 2027. Central Office submits to NIH by Mon, Jan 25, 2027, 5:00 PM.</p></div></details>
+        <details class="fq" id="q3"><summary><span class="fq-q">How do I update my status in Smartsheet?</span><svg class="fq-car" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></summary><div class="fq-a"><p>In <a href="https://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21">Smartsheet</a>, find your name in the Responsible column, then find your document in the Assignment column. Click the dropdown arrow in the Progress cell of that row and choose your status.</p><p>See <a href="Workflow.html#moves">Step 1 of the 5 steps</a> for screenshots.</p></div></details>
+        <details class="fq" id="q4"><summary><span class="fq-q">What do the five Progress statuses mean?</span><svg class="fq-car" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></summary><div class="fq-a"><ul><li><b>Not Started:</b> work hasn't started yet.</li><li><b>In Progress:</b> you're writing the document.</li><li><b>Ready for Review:</b> your draft is ready for your reviewer.</li><li><b>Applying Reviewer Feedback:</b> you're applying your reviewer's edits.</li><li><b>Finalized:</b> Morgan and Heather have done the final review and moved the document to FINAL VERSIONS.</li></ul><p>See <a href="Workflow.html#statuses">Progress Status Definitions</a> for who changes each status.</p></div></details>
+        <details class="fq" id="q5"><summary><span class="fq-q">Do I send my draft to my reviewer myself?</span><svg class="fq-car" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></summary><div class="fq-a"><p>No. When your draft is ready, update the Progress status in Smartsheet to &ldquo;Ready for Review.&rdquo; Morgan and Heather will take responsibility for sending your draft to the assigned reviewer, and Morgan and Heather will send you the reviewer's comments.</p><p>If you have questions about a reviewer's comment, please don't hesitate to send your questions to Morgan and Heather. Morgan and Heather will gladly follow up with the reviewer.</p></div></details>
+        <details class="fq" id="q6"><summary><span class="fq-q">Who moves my document to FINAL VERSIONS?</span><svg class="fq-car" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></summary><div class="fq-a"><p>Morgan and Heather. Your assignment is considered final once Morgan and Heather have done a final review. Morgan and Heather will take responsibility for moving your document to the FINAL VERSIONS folder and for updating the Progress status to &ldquo;Finalized.&rdquo;</p><p>Please kindly refrain from moving your document to the FINAL VERSIONS folder or changing your document's Progress status yourself.</p></div></details>
+        <details class="fq" id="q7"><summary><span class="fq-q">Does NIH provide a form for my document?</span><svg class="fq-car" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></summary><div class="fq-a"><p>Stock format pages primarily only exist for biosketches and Current &amp; Pending (Other) Support, which are built in <a href="https://www.ncbi.nlm.nih.gov/sciencv/">SciENcv</a>, and the Data Management and Sharing (DMS) Plan, which has an <a href="https://grants.nih.gov/grants-process/write-application/forms-directory/data-management-and-sharing-plan-format-page">NIH format page</a> to start from.</p><p>For other documents, write your document using the <a href="Guidance.html">component's directions</a>, and by following <a href="Conventions.html">CNAP's Formatting Conventions</a>.</p></div></details>
+        <details class="fq" id="q8"><summary><span class="fq-q">What formatting should I follow?</span><svg class="fq-car" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></summary><div class="fq-a"><p><a href="Conventions.html">CNAP's Formatting Conventions</a>: names and terms, NIH format (required), tables and figures, and references.</p></div></details>
+        <details class="fq" id="q9"><summary><span class="fq-q">What are the page limits?</span><svg class="fq-car" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></summary><div class="fq-a"><ul><li><b>Center Research Strategy:</b> 12 pages (Sections A&ndash;E combined)</li><li><b>Each Core's Research Strategy:</b> 6 pages (Admin, BN, NI, CN, SRP Core)</li><li><b>Specific Aims:</b> 1 page (each component)</li><li><b>Project Summary:</b> 30 lines (each component)</li></ul><p>Your individual <a href="Guidance.html">guidance page</a> lists the limits that apply to you.</p></div></details>
+        <details class="fq" id="q10"><summary><span class="fq-q">Where can I find the 2021 Phase 2 proposal material and 2025 Phase 3 proposal material?</span><svg class="fq-car" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></summary><div class="fq-a"><p>These two Dropbox folders hold CNAP's earlier proposal materials, for reference only (not for saving new work):</p><ul><li><a href="https://www.dropbox.com/scl/fo/6e7p5xvasg17tu30tbuap/ALAsqq_6xoUEM23Qavsmc8A?rlkey=bvluagyz2a3fnk0stzh3rqb65&amp;st=rc344g48&amp;dl=0"><b>2021 Phase 2 materials</b></a>: what CNAP proposed and wrote for its Phase 2 application.</li><li><a href="https://www.dropbox.com/scl/fo/fo68jlm4h36wmwbqtopx0/AFeDo-1BwnMgspxdrlweV_Q?rlkey=z76y4x9udqbriiayw6f9e7q2e&amp;st=g83ytov9&amp;dl=0"><b>2025 Phase 3 materials</b></a>: the drafts written last year for the COBRE Phase 3 (Transitional Centers) NOFO, PAR-23-216, which expired October 1, 2025. This year's application is for Phase S, under the new COBRE-E/S NOFO, PAR-27-055.</li></ul><p>Phase S rules differ from both earlier NOFOs. Before reusing anything, please check that material against your component's directions and the <a href="PhaseS.html">Phase S Overview &amp; NOFO Comparisons</a>.</p><p>You can also open both folders from the Prior Proposals menu at the top of the Dashboard, the Quick access box, and the &ldquo;Your links&rdquo; box on your guidance page.</p></div></details>
+        <details class="fq" id="q11"><summary><span class="fq-q">When can I expect email reminders?</span><svg class="fq-car" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></summary><div class="fq-a"><p>Smartsheet sends reminders (from automation@app.smartsheet.com) at 8 AM:</p><ul><li><b>One week before</b> each Internal Due Date: a friendly heads-up.</li><li><b>Two days before</b> each Internal Due Date: a gentle reminder. If that day falls on a weekend, the reminder arrives the Friday before.</li><li><b>The morning after</b> a missed Internal Due Date: a gentle check-in. Morgan and Heather are also notified.</li></ul><p>Reminders only go out for your own assignments, and they stop once your assignment is marked &ldquo;Ready for Review&rdquo; or later.</p></div></details>
+        <details class="fq" id="q12"><summary><span class="fq-q">How do I add the Smartsheet deadlines to my own calendar?</span><svg class="fq-car" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></summary><div class="fq-a"><p><a href="https://share.google/Shr1lgXIhgqSaHnIM">Subscribe to the Smartsheet calendar</a>. Your calendar will then show every deadline and update automatically when a date changes.</p><ul><li><b>Outlook:</b> Add calendar &rarr; Subscribe from web &rarr; paste the calendar link.</li><li><b>Google Calendar:</b> Other calendars (+) &rarr; From URL &rarr; paste the calendar link.</li></ul><p>Subscribed calendars refresh on their own schedule, so a date change in Smartsheet can take several hours to appear. Smartsheet is always the live version.</p></div></details>
+        <details class="fq" id="q13"><summary><span class="fq-q">A date on the hub doesn't match Smartsheet. Which is right?</span><svg class="fq-car" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></summary><div class="fq-a"><p><a href="https://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21">Smartsheet</a>. Dates, links, and assignments are updated in Smartsheet first. If a date or link on the hub (or in your packet) differs from Smartsheet, go with Smartsheet.</p></div></details>
+        <details class="fq" id="q14"><summary><span class="fq-q">What's different about Phase S?</span><svg class="fq-car" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></summary><div class="fq-a"><p>A few key changes: no new cores; the Scientific Research Program (SRP) is a required component; the External Advisory Committee (EAC) is now the Advisory Committee (AC); clinical trials are not allowed; and the DMS Plan goes in the Overall component.</p><p>For the full picture, see the <a href="PhaseS.html">Phase S Overview &amp; NOFO Comparisons</a> and the <a href="https://nigms.nih.gov/Research/DRCB/IDeA/Pages/COBRE-faqs">NIGMS FAQs</a>.</p></div></details>
+        <details class="fq" id="q15"><summary><span class="fq-q">Who do I contact with questions?</span><svg class="fq-car" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></summary><div class="fq-a"><p>Morgan coordinates the full Phase S proposal: <a href="mailto:mkwills@ksu.edu">mkwills@ksu.edu</a>. Please don't hesitate to reach out with questions, delays, or changes.</p></div></details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap">
+      <img class="logo" src="assets/cnap-logo.jpg" alt="CNAP Center — Cognitive &amp; Neurobiological Approaches to Plasticity">
+      <span>CNAP Center · Phase S (COBRE-S) Application · <a href="https://files.simpler.grants.gov/opportunities/77942f5d-0b5f-4656-bfd7-a6148b1624a4/attachments/55f55944-4b0c-4a90-9e33-75b064598558/PAR-27-055-Full-Announcement.html">PAR-27-055</a></span>
+      <span>Source: COBRE-S Staff Briefing, October 2026 · Questions: Morgan, <a href="mailto:mkwills@ksu.edu">mkwills@ksu.edu</a></span>
+    </div>
+  </footer>
+</div>
+
+<script>
+(function(){ window.DCLogic = class { forceUpdate(){ if (window.__dcRender) window.__dcRender(); } }; })();
+
+class Component extends DCLogic {
+  componentDidMount() {
+    if (typeof window !== 'undefined') setTimeout(() => {
+      const roots = [document].concat(Array.from(document.querySelectorAll('*')).filter((e) => e.shadowRoot).map((e) => e.shadowRoot));
+      roots.forEach((r) => r.querySelectorAll('.topbar .quick').forEach((q) => {
+        const w = q.parentElement; if (!w) return;
+        const upd = () => {
+          const t = q.offsetTop + 'px', h = q.offsetHeight + 'px';
+          if (w.style.getPropertyValue('--qtop') !== t) w.style.setProperty('--qtop', t);
+          if (w.style.getPropertyValue('--qh') !== h) w.style.setProperty('--qh', h);
+          w.classList.toggle('quick-over', q.scrollWidth > q.clientWidth + 4);
+          w.classList.toggle('quick-end', q.scrollLeft + q.clientWidth >= q.scrollWidth - 8);
+        };
+        q.addEventListener('scroll', upd, { passive: true }); window.addEventListener('resize', upd); upd(); setInterval(upd, 400); if (window.MutationObserver) new MutationObserver(upd).observe(w, { attributes: true, attributeFilter: ['class', 'style'] });
+      }));
+    }, 300);
+    if (typeof window !== 'undefined') window.__xallItems = (scope) => Array.from(scope.querySelectorAll('details.sx, details.acc, details.stg, details.fq'));
+    if (typeof window !== 'undefined' && !window.__backNav) {
+      window.__backNav = true;
+      document.addEventListener('click', (e) => {
+        const path = e.composedPath ? e.composedPath() : [e.target];
+        const a = path.find((n) => n && n.getAttribute && n.getAttribute('data-back') === '1');
+        if (!a) return;
+        if (window.history.length > 1) { e.preventDefault(); window.history.back(); }
+      }, true);
+    }
+    if (typeof window !== 'undefined') setTimeout(() => {
+      const roots = [document].concat(Array.from(document.querySelectorAll('*')).filter((e) => e.shadowRoot).map((e) => e.shadowRoot));
+      roots.forEach((r) => r.querySelectorAll('.topbar .nav').forEach((n) => {
+        const on = n.querySelector('.on');
+        if (on && n.scrollWidth > n.clientWidth + 4) n.scrollLeft = Math.max(0, on.offsetLeft - n.offsetLeft - 16);
+        const w = n.parentElement;
+        const upd = () => { if (w) w.classList.toggle('nav-end', n.scrollLeft + n.clientWidth >= n.scrollWidth - 8); };
+        n.addEventListener('scroll', upd, { passive: true }); upd();
+      }));
+    }, 300);
+    if (typeof window !== 'undefined') {
+      setTimeout(() => {
+        const h = (window.location.hash || '').slice(1);
+        if (!h || !window.__nmJump) return;
+        const t = document.querySelector('[id="' + h + '"]');
+        if (t) window.__nmJump(t);
+      }, 350);
+    }
+    if (typeof window !== 'undefined') setTimeout(() => { if (window.__xallSync) window.__xallSync(); }, 400);
+    if (typeof window !== 'undefined' && !window.__nmAutoClose13) {
+      window.__nmAutoClose13 = true;
+      const rootOf = (e) => { const t = e.composedPath ? e.composedPath()[0] : e.target; return (t && t.getRootNode) ? t.getRootNode() : document; };
+      document.addEventListener('mousemove', (e) => {
+        const root = rootOf(e); if (!root.querySelectorAll) return;
+        root.querySelectorAll('details.nm[open]').forEach((d) => {
+          if (d.matches(':hover')) { clearTimeout(d.__t); d.__t = null; }
+          else if (!d.__t) { d.__t = setTimeout(() => { d.__t = null; if (!d.matches(':hover')) d.removeAttribute('open'); }, 450); }
+        });
+      }, { passive: true });
+      document.addEventListener('click', (e) => {
+        const root = rootOf(e); if (!root.querySelectorAll) return;
+        const path = e.composedPath ? e.composedPath() : [e.target];
+        root.querySelectorAll('details.nm[open]').forEach((d) => { if (!path.includes(d)) d.removeAttribute('open'); });
+        const a = path.find((n) => n && n.tagName === 'A' && n.getAttribute && (n.getAttribute('href') || '').includes('#'));
+        if (!a) return;
+        const id = (a.getAttribute('href') || '').split('#')[1];
+        if (!id) return;
+        let el = a.parentElement, target = null;
+        while (el && !target) { target = el.querySelector ? el.querySelector('[id="' + id + '"]') : null; el = el.parentElement; }
+        if (!target) return;
+        e.preventDefault();
+        const d = a.closest('details.nm'); if (d) d.removeAttribute('open');
+        window.__nmJump(target);
+      });
+      const xallScope = (n) => (n && n.closest && (n.closest('.xscope') || n.closest('main'))) || document;
+      window.__xallItems = (scope) => Array.from(scope.querySelectorAll('details.sx, details.acc, details.stg, details.fq'));
+      window.__xallSync = (root) => {
+        (root && root.querySelectorAll ? root : document).querySelectorAll('button.xall').forEach((b) => {
+          const list = window.__xallItems(xallScope(b));
+          const anyClosed = list.some((d) => !d.open);
+          const sc = b.closest('.xscope'); b.textContent = anyClosed ? (sc ? 'Expand all stages' : 'Expand all') : (sc ? 'Collapse all stages' : 'Collapse all');
+          b.setAttribute('aria-pressed', anyClosed ? 'false' : 'true');
+        });
+      };
+      document.addEventListener('click', (e) => {
+        const path = e.composedPath ? e.composedPath() : [e.target];
+        const btn = path.find((n) => n && n.classList && n.classList.contains('xall'));
+        if (btn) {
+          e.preventDefault();
+          const scope = xallScope(btn);
+          const list = window.__xallItems(scope);
+          const anyClosed = list.some((d) => !d.open);
+          list.forEach((d) => { if (anyClosed) d.setAttribute('open', ''); else d.removeAttribute('open'); });
+          if (scope.dataset) scope.dataset.xall = anyClosed ? '1' : '';
+          window.__xallSync(btn.getRootNode ? btn.getRootNode() : document);
+          return;
+        }
+      }, true);
+      document.addEventListener('toggle', (e) => { const t = e.composedPath ? e.composedPath()[0] : e.target; window.__xallSync(t && t.getRootNode ? t.getRootNode() : document); }, true);
+      window.__nmJump = (target) => {
+        if (target.tagName === 'DETAILS') target.setAttribute('open', '');
+        const sx = target.querySelector ? target.querySelector(':scope > details.sx') : null; if (sx) sx.setAttribute('open', '');
+        let host = target.parentElement, bar = null;
+        while (host && !bar) { bar = host.querySelector ? host.querySelector('.topbar') : null; host = host.parentElement; }
+        const offset = (bar ? (bar.querySelector('.nav') || bar).getBoundingClientRect().height : 0) + 20;
+        let sc = target.parentElement;
+        while (sc && sc !== document.body && sc !== document.documentElement) {
+          const oy = getComputedStyle(sc).overflowY;
+          if ((oy === 'auto' || oy === 'scroll') && sc.scrollHeight > sc.clientHeight) break;
+          sc = sc.parentElement;
+        }
+        const useWin = !sc || sc === document.body || sc === document.documentElement;
+        const top = target.getBoundingClientRect().top - (useWin ? 0 : sc.getBoundingClientRect().top) - offset;
+        (useWin ? window : sc).scrollBy({ top: top, behavior: 'smooth' });
+      };
+    }
+  }
+  renderVals() { return {}; }
+}
+
+(function(){
+  const start = () => { const c = new Component(); window.__dcComp = c; if (c.componentDidMount) c.componentDidMount(); };
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start); else start();
+})();
+</script>
+</body>
+</html>
