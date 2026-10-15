@@ -64,7 +64,39 @@ a{color:#512888}a:hover{color:#3B1C66}
 #stages .btn{border-radius:3px}
 .divider{max-width:none;margin:0;padding:0}
 .divider i{display:block;height:1px;background:#D3CDE0}
-#quick .qbox{display:flex;flex-direction:column;align-items:center;gap:22px;text-align:center;background:#3B3349;color:#fff;border-radius:18px;padding:36px 28px;border:1px solid #B9A3E0;box-shadow:0 0 0 6px rgba(185,163,224,0.28),0 0 34px 6px rgba(126,91,176,0.45),0 14px 40px rgba(59,51,73,0.25)}@media (max-width:760px){#quick .qbox{padding:28px 18px}}
+#completion{color:#fff}
+#completion .pc-panel{background:rgba(28,24,36,0.28);border:1px solid rgba(255,255,255,0.12);border-radius:16px;padding:28px 30px 24px}
+@media (max-width:760px){#completion .pc-panel{padding:20px 16px 18px}}
+#completion.band-dark{background:#512888;box-shadow:0 0 0 100vmax #512888}
+#completion .h2.h2-dark{background-image:linear-gradient(#FFFFFF,#FFFFFF),linear-gradient(rgba(255,255,255,0.25),rgba(255,255,255,0.25))}
+#completion .pc-bar .s5,#completion .pc-key.s5{background:#2E1452}
+#completion .pc-bar .s4,#completion .pc-key.s4{background:#6A45A0}
+#completion .pc-bar .s3,#completion .pc-key.s3{background:#A68BCB}
+#completion .pc-bar .s2,#completion .pc-key.s2{background:#D9C8F5}
+#completion .pc-bar .s1,#completion .pc-key.s1{background:#FFFFFF}
+#completion p.muted,#completion .small.muted{color:rgba(255,255,255,0.86) !important}
+#completion .pc-num{color:#FFFFFF}
+#completion .pc-of{color:#fff}
+#completion .pc-bar{background:#FFFFFF;border-color:#FFFFFF;box-shadow:0 0 8px 1px rgba(255,255,255,0.28)}
+#completion .card{background:transparent !important;border:1.5px solid rgba(255,255,255,0.7) !important;box-shadow:none}
+#completion .tbl th{color:#FFFFFF !important;border-bottom:2px solid rgba(255,255,255,0.7) !important}
+#completion .tbl td{color:#fff;border-bottom-color:rgba(255,255,255,0.16)}
+#completion .tbl th + th,#completion .tbl td + td{border-left-color:rgba(255,255,255,0.22) !important}
+#completion .pc-key{border:1.5px solid #FFFFFF}
+#completion a{color:#fff}
+
+#quick .qrow{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
+#quick .qmenu{position:relative}
+#quick .qmenu > summary{list-style:none;cursor:pointer;gap:8px}
+#quick .qmenu > summary::-webkit-details-marker{display:none}
+#quick .qmenu > summary svg{width:15px;height:15px}
+#quick .qmenu .pop{left:0;right:auto;top:auto;bottom:calc(100% + 6px);text-align:left}
+#quick .qrow .qbtn{padding:0 14px;font-size:14.5px}
+#quick .qmenu .pop a{color:#1F1B2B !important}
+#quick .qmenu .pop a:hover{color:#512888 !important}
+@media (max-width:760px){#quick .qrow{flex-direction:column;align-items:stretch}#quick .qrow > *{justify-content:center}#quick .qmenu > summary{justify-content:center;width:100%;box-sizing:border-box}#quick .qmenu .pop{left:0;right:0;min-width:0}}
+
+#quick .qbox{display:flex;flex-direction:column;align-items:center;gap:22px;text-align:center;background:#3B3349;color:#fff;border-radius:18px;padding:36px 28px;border:1px solid #9A97A3;box-shadow:0 0 0 6px rgba(150,147,160,0.22),0 0 30px 6px rgba(110,107,120,0.35),0 14px 40px rgba(40,38,48,0.22)}@media (max-width:760px){#quick .qbox{padding:28px 18px}}
 
 main .divider + section.sec{padding-top:58px !important}
 .band-w,.band-g{position:relative}
@@ -247,7 +279,7 @@ section.sec.band-w,section.sec.band-g{padding-top:40px;padding-bottom:40px}
         <h1 class="h1" style="font-size: 46px;">CNAP Phase S Proposal Hub</h1>
         <img src="assets/cnap-logo.jpg" alt="CNAP Center — Cognitive &amp; Neurobiological Approaches to Plasticity" style="display: block; align-self: flex-start; flex: none; width: 340px; max-width: 100%; height: auto; aspect-ratio: 2048 / 739; object-fit: contain; border-radius: 8px; margin: 6px 0 8px;">
         <p class="lede" style="font-size: 20px;">COBRE-S Application · <a href="https://files.simpler.grants.gov/opportunities/77942f5d-0b5f-4656-bfd7-a6148b1624a4/attachments/55f55944-4b0c-4a90-9e33-75b064598558/PAR-27-055-Full-Announcement.html" style="text-decoration: underline; text-underline-offset: 3px;" title="Read the full NOFO">PAR-27-055</a></p>
-        <p class="lede" style="margin-top: 6px;">The front door to the Phase S proposal: where the team is in the cycle, your own guidance and dates, the shared rules, and the working folders.</p>
+        <p class="lede" style="margin-top: 6px;">The front door to the Phase S proposal: Phase S overview and comparison, the team's proposal preparation status, your individualized guidance, internal due dates, working folders, and access to and use of Smartsheet.</p>
         <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px;">
           <a class="btn primary" href="#guidance">Find your guidance</a>
           <a class="btn" href="Timeline.html">View full team timeline</a>
@@ -274,8 +306,9 @@ section.sec.band-w,section.sec.band-g{padding-top:40px;padding-bottom:40px}
     <div class="divider"><i></i></div>
 
     <!-- Completion tracker (counts come from Smartsheet via progress.json) -->
-    <section class="wrap sec band-w" id="completion">
-      <h2 class="h2">Proposal Completion</h2>
+    <section class="wrap sec band-dark" id="completion">
+      <div class="pc-panel">
+      <h2 class="h2 h2-dark">Proposal Completion: Percent Complete</h2>
       <p class="muted" style="margin: 6px 0 0;">How many Smartsheet assignments are Finalized.</p>
       <p class="muted" style="margin: 2px 0 0;">Counted from the Progress column in Smartsheet, twice each weekday.</p>
       <div class="pc-head">
@@ -298,6 +331,7 @@ section.sec.band-w,section.sec.band-g{padding-top:40px;padding-bottom:40px}
         </table>
       </div>
       <p class="small muted" style="margin: 12px 0 0;">Last updated from Smartsheet: {{pcUpdated}}. Smartsheet is the live version.</p>
+      </div>
     </section>
 
     <div class="divider pc-div"><i></i></div>
@@ -448,13 +482,45 @@ section.sec.band-w,section.sec.band-g{padding-top:40px;padding-bottom:40px}
         <div style="max-width: 720px;">
           <h2 class="h2 h2-dark">Quick access</h2>
           <p style="margin: 6px 0 0; color: #FFFFFF;">Smartsheet is the live tracker for dates, links, assignments, and status. Dropbox holds the drafts and finals. Your own page lists the folders for your component.</p>
+          <p style="margin: 6px 0 0; color: #FFFFFF;">The CNAP FAQ answers common questions. The Full NOFO and the NIGMS FAQs are the official sources.</p>
         </div>
-        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
+        <div class="qrow">
           <a class="qbtn qbtn-solid" href="https://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21">Open Smartsheet</a>
-          <a class="qbtn" href="Workflow.html#folders">Working Drafts folders</a>
-          <a class="qbtn" href="Workflow.html#folders">Final Versions folders</a>
-          <a class="qbtn" href="https://www.dropbox.com/scl/fo/6e7p5xvasg17tu30tbuap/ALAsqq_6xoUEM23Qavsmc8A?rlkey=bvluagyz2a3fnk0stzh3rqb65&amp;st=rc344g48&amp;dl=0">2021 Phase 2 materials</a>
-          <a class="qbtn" href="https://www.dropbox.com/scl/fo/fo68jlm4h36wmwbqtopx0/AFeDo-1BwnMgspxdrlweV_Q?rlkey=z76y4x9udqbriiayw6f9e7q2e&amp;st=g83ytov9&amp;dl=0">2025 Phase 3 materials</a>
+          <a class="qbtn" href="FAQ.html">CNAP FAQ</a>
+          <details class="menu qmenu">
+          <summary class="qbtn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>Working Drafts</summary>
+          <div class="pop">
+            <span class="lbl">Dropbox · WORKING DRAFTS</span>
+            <a href="https://www.dropbox.com/scl/fo/qju9wh2rlvj2lpnw3cs33/AJ-L6UNFe6CtRs0QkR6wyt0?rlkey=oxshp9g686dvjig6n4jb9s358&amp;st=hnuinhmv&amp;dl=0">Center</a>
+            <a href="https://www.dropbox.com/scl/fo/xq6r8le84xmx63rq3sq6e/AEidS1yGE9E1UbcrVGc6tZo?rlkey=4mg2rhwg2ivv8kvz168595szc&amp;st=wugxhc1c&amp;dl=0">Admin Core</a>
+            <a href="https://www.dropbox.com/scl/fo/zpmt88ochlovpwp3c0951/AAJqOO_OzLjNeXdBJA5GTbY?rlkey=of1g4dw3btkem995y2i4b1jvh&amp;st=4x6gep0q&amp;dl=0">BN Core</a>
+            <a href="https://www.dropbox.com/scl/fo/pous7ow51nzwt6sxxidi2/AJGSAf5rCishWvX4F0SMBqA?rlkey=6y3f3n46aqkl12xivk674i6yu&amp;st=635vxrrf&amp;dl=0">NI Core</a>
+            <a href="https://www.dropbox.com/scl/fo/9hr9fqyummo503u7cs65z/ALLyiGRXdgQqQNfGZK8cEnM?rlkey=vwi0dpe93b0qkwh1bih8z3pug&amp;st=qneplw7v&amp;dl=0">CN Core</a>
+            <a href="https://www.dropbox.com/scl/fo/q0z7z8mst7nundea8vrw2/AHIWF8JG3PP6xGgcSVuCZR4?rlkey=ivap04502uznsidk7dsdq46ci&amp;st=dr6di1dc&amp;dl=0">SRP Core</a>
+          </div>
+        </details>
+          <details class="menu qmenu">
+          <summary class="qbtn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"></path></svg>Final Versions</summary>
+          <div class="pop">
+            <span class="lbl">Dropbox · FINAL VERSIONS</span>
+            <a href="https://www.dropbox.com/scl/fo/fpohj0efsvmb8gbmfvoqs/AKcFWiEEjHhHZisLLI33jco?rlkey=xgfgfe512tfbxet6p361san1i&amp;st=ml45ntia&amp;dl=0">Center</a>
+            <a href="https://www.dropbox.com/scl/fo/qxgx2e7jukieka7ttrb1y/ADFzgEe35zUkLSQ9buNZeQA?rlkey=0ki8z4elan99epdlddmjmysov&amp;st=dn2buzey&amp;dl=0">Admin Core</a>
+            <a href="https://www.dropbox.com/scl/fo/zlenqnxmkfzo1j9fwnlck/ABIcw_hARWFrw2uasL3QrqE?rlkey=fow89o6rf8f7hkp9acb8csgge&amp;st=2dtcwgn0&amp;dl=0">BN Core</a>
+            <a href="https://www.dropbox.com/scl/fo/kanp193ti0r8eolga1l4x/AP5WKL1oXCR8C6LDu-sNVhc?rlkey=qpcgnfpgxze2xvzlt7gd534rg&amp;st=w1zai1a7&amp;dl=0">NI Core</a>
+            <a href="https://www.dropbox.com/scl/fo/gm2zob8wvfhfr1f1219ae/ANhp8T7ksE7QtwfJKynIp_0?rlkey=gbfxkzjna2hq5yr4nnl1f78j3&amp;st=w0fh8crm&amp;dl=0">CN Core</a>
+            <a href="https://www.dropbox.com/scl/fo/13pm59iuzreewh3wgj12d/AJ2aX4leTE-q1x5qqMqEKLE?rlkey=gq3iooda8ybei9qt5llsgg82z&amp;st=463b0her&amp;dl=0">SRP Core</a>
+          </div>
+        </details>
+          <details class="menu qmenu">
+          <summary class="qbtn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"></path><path d="M3 3v5h5"></path><path d="M12 7v5l3 2"></path></svg>Prior Proposals</summary>
+          <div class="pop">
+            <span class="lbl">Dropbox · PRIOR PROPOSALS</span>
+            <a href="https://www.dropbox.com/scl/fo/6e7p5xvasg17tu30tbuap/ALAsqq_6xoUEM23Qavsmc8A?rlkey=bvluagyz2a3fnk0stzh3rqb65&amp;st=rc344g48&amp;dl=0">2021 Phase 2 materials</a>
+            <a href="https://www.dropbox.com/scl/fo/fo68jlm4h36wmwbqtopx0/AFeDo-1BwnMgspxdrlweV_Q?rlkey=z76y4x9udqbriiayw6f9e7q2e&amp;st=g83ytov9&amp;dl=0">2025 Phase 3 materials</a>
+          </div>
+        </details>
+          <a class="qbtn" href="https://files.simpler.grants.gov/opportunities/77942f5d-0b5f-4656-bfd7-a6148b1624a4/attachments/55f55944-4b0c-4a90-9e33-75b064598558/PAR-27-055-Full-Announcement.html">Full NOFO</a>
+          <a class="qbtn" href="https://nigms.nih.gov/Research/DRCB/IDeA/Pages/COBRE-faqs">NIGMS FAQs</a>
         </div>
       </div>
     </section>
