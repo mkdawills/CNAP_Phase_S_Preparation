@@ -263,6 +263,16 @@ section.sec.band-w,section.sec.band-g{padding-top:40px !important;padding-bottom
 
 class Component extends DCLogic {
   componentDidMount() {
+    if (typeof window !== 'undefined') setTimeout(() => {
+      const roots = [document].concat(Array.from(document.querySelectorAll('*')).filter((e) => e.shadowRoot).map((e) => e.shadowRoot));
+      roots.forEach((r) => r.querySelectorAll('.topbar .nav').forEach((n) => {
+        const on = n.querySelector('.on');
+        if (on && n.scrollWidth > n.clientWidth + 4) n.scrollLeft = Math.max(0, on.offsetLeft - n.offsetLeft - 16);
+        const w = n.parentElement;
+        const upd = () => { if (w) w.classList.toggle('nav-end', n.scrollLeft + n.clientWidth >= n.scrollWidth - 8); };
+        n.addEventListener('scroll', upd, { passive: true }); upd();
+      }));
+    }, 300);
     if (typeof window !== 'undefined') {
       setTimeout(() => {
         const h = (window.location.hash || '').slice(1);

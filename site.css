@@ -359,3 +359,10 @@ details > summary:focus-visible{outline:2px solid #C9BFDC;outline-offset:2px;bor
 .topbar .nav a.navlink:hover{background:var(--purple-tint);color:var(--purple);text-decoration:none}
 .topbar .nav a.navlink.on,.topbar .nav a.navlink.on:hover{background:#3A3640;color:#fff}
 @media (max-width:760px){.topbar .nav a.navlink{font-size:13px}}
+/* phones: show that the tab row scrolls (fade + arrow at the right edge) */
+@media (max-width:760px){
+  .topbar .wrap{position:relative}
+  .topbar .wrap > .nav{padding-right:52px !important}
+  .topbar .wrap::after{content:"\203A";position:absolute;right:0;bottom:8px;height:42px;width:56px;display:flex;align-items:center;justify-content:flex-end;padding-right:14px;box-sizing:border-box;font-size:26px;font-weight:700;line-height:1;color:#512888;background:linear-gradient(to right,rgba(255,255,255,0),#FFFFFF 55%);pointer-events:none}
+}
+@media (max-width:760px){.topbar .wrap::after{transition:opacity .2s}.topbar .wrap.nav-end::after{opacity:0}}
