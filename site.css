@@ -418,3 +418,10 @@ main section.sec:has(details.sx:not([open])):not(:has(details.sx[open])){padding
 .card.links3 > span.small{grid-column:1 / -1}
 .card.links3 > .btn{justify-content:center;text-align:center;white-space:normal;line-height:1.25;padding-top:6px;padding-bottom:6px}
 @media (max-width:640px){.card.links3{grid-template-columns:minmax(0,1fr)}}
+/* light vertical dividers between nav tabs (computers and iPads) */
+@media (min-width:761px){
+  .topbar .nav > *{position:relative}
+  .topbar .nav > * + *{margin-left:5px}
+  .topbar .nav > * + *::before{content:"";position:absolute;left:-3px;top:50%;height:16px;margin-top:-8px;width:1px;background:#D9D4E2;pointer-events:none}
+}
+@media (min-width:761px){.topbar .nm summary a{padding-left:6px !important}.topbar .nm summary .car{width:16px !important}.topbar .nav > a.navlink{padding-left:6px;padding-right:6px}}
