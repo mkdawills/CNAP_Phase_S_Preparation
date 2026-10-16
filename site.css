@@ -425,3 +425,6 @@ main section.sec:has(details.sx:not([open])):not(:has(details.sx[open])){padding
   .topbar .nav > * + *::before{content:"";position:absolute;left:-3px;top:50%;height:16px;margin-top:-8px;width:1px;background:#D9D4E2;pointer-events:none}
 }
 @media (min-width:761px){.topbar .nm summary a{padding-left:6px !important}.topbar .nm summary .car{width:16px !important}.topbar .nav > a.navlink{padding-left:6px;padding-right:6px}}
+.quote .gap{color:#8A8599;margin:6px 0}
+.quote ul{margin:6px 0 8px;padding-left:20px}
+.quote p + p{margin-top:6px}
