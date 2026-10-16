@@ -308,7 +308,7 @@ section.sec.band-w,section.sec.band-g{padding-top:40px;padding-bottom:40px}
     <!-- Hero -->
     <section class="wrap roll r1 band-g" id="countdown" style="padding: 48px 24px 24px; display: flex; flex-direction: column; gap: 28px; align-items: flex-start;">
       <div style="display: flex; flex-direction: column; justify-content: center; gap: 10px;">
-        <p class="eyebrow">CNAP Center · Kansas State University (K-State)</p>
+        <p class="eyebrow">CNAP Center · Kansas State University</p>
         <h1 class="h1" style="font-size: 46px;">CNAP Phase S Proposal Hub</h1>
         <img src="assets/cnap-logo.jpg" alt="CNAP Center — Cognitive &amp; Neurobiological Approaches to Plasticity" style="display: block; align-self: flex-start; flex: none; width: 340px; max-width: 100%; height: auto; aspect-ratio: 2048 / 739; object-fit: contain; border-radius: 8px; margin: 6px 0 8px;">
         <p class="lede" style="font-size: 20px;">COBRE-S Application · <a href="https://files.simpler.grants.gov/opportunities/77942f5d-0b5f-4656-bfd7-a6148b1624a4/attachments/55f55944-4b0c-4a90-9e33-75b064598558/PAR-27-055-Full-Announcement.html" style="text-decoration: underline; text-underline-offset: 3px;" title="Read the full NOFO">PAR-27-055</a></p>
@@ -595,6 +595,18 @@ section.sec.band-w,section.sec.band-g{padding-top:40px;padding-bottom:40px}
 
 class Component extends DCLogic {
   componentDidMount() {
+
+    if (typeof window !== 'undefined' && !window.__menuOutsideClose) {
+      window.__menuOutsideClose = true;
+      const sel = 'details.nm[open], details.menu[open], details.qmenu[open]';
+      const closeOutside = (e) => {
+        const path = e.composedPath ? e.composedPath() : [e.target];
+        const t = path[0]; const root = (t && t.getRootNode) ? t.getRootNode() : document;
+        [document, root].forEach((r) => { if (r && r.querySelectorAll) r.querySelectorAll(sel).forEach((d) => { if (!path.includes(d)) d.removeAttribute('open'); }); });
+      };
+      document.addEventListener('pointerdown', closeOutside, true);
+      document.addEventListener('keydown', (e) => { if (e.key === 'Escape') document.querySelectorAll(sel).forEach((d) => d.removeAttribute('open')); });
+    }
 
     if (typeof window !== 'undefined' && !window.__posMem) {
       window.__posMem = true;

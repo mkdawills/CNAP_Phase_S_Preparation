@@ -348,6 +348,18 @@ details.stg + details.stg > summary > div{border-top:none}
 class Component extends DCLogic {
   componentDidMount() {
 
+    if (typeof window !== 'undefined' && !window.__menuOutsideClose) {
+      window.__menuOutsideClose = true;
+      const sel = 'details.nm[open], details.menu[open], details.qmenu[open]';
+      const closeOutside = (e) => {
+        const path = e.composedPath ? e.composedPath() : [e.target];
+        const t = path[0]; const root = (t && t.getRootNode) ? t.getRootNode() : document;
+        [document, root].forEach((r) => { if (r && r.querySelectorAll) r.querySelectorAll(sel).forEach((d) => { if (!path.includes(d)) d.removeAttribute('open'); }); });
+      };
+      document.addEventListener('pointerdown', closeOutside, true);
+      document.addEventListener('keydown', (e) => { if (e.key === 'Escape') document.querySelectorAll(sel).forEach((d) => d.removeAttribute('open')); });
+    }
+
     if (typeof window !== 'undefined' && !window.__posMem) {
       window.__posMem = true;
       const key = 'cnapPos:' + location.pathname.split('/').pop();
