@@ -402,3 +402,7 @@ main section.sec:has(details.sx:not([open])):not(:has(details.sx[open])){padding
 .xall::before{width:6px;height:6px;border-right-width:1.5px;border-bottom-width:1.5px}
 /* phones and tablets: bigger tap target for the dropdown arrow on each nav tab */
 @media (hover:none),(max-width:760px){.topbar .nm summary .car{width:34px !important;border-left:1px solid rgba(58,54,64,0.12)}.topbar .nm summary a{padding-right:6px !important}}
+/* phones: the right-edge cue says "swipe" instead of a tappable-looking arrow */
+@media (max-width:760px){
+  .topbar .wrap::after,.topbar .wrap.quick-over::before{content:"swipe \2192" !important;width:96px !important;font-size:11px !important;font-weight:700 !important;letter-spacing:0.06em;text-transform:uppercase;color:#7A7389 !important;padding-right:6px !important;background:linear-gradient(to right,rgba(255,255,255,0),#FFFFFF 42%) !important}
+}

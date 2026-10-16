@@ -268,6 +268,22 @@ section.sec.band-w,section.sec.band-g{padding-top:40px !important;padding-bottom
 class Component extends DCLogic {
   componentDidMount() {
 
+    if (typeof window !== 'undefined' && !window.__swipePeek) {
+      window.__swipePeek = true;
+      setTimeout(() => {
+        try {
+          if (window.innerWidth > 760 || sessionStorage.getItem('cnapPeek') === '1') return;
+          sessionStorage.setItem('cnapPeek', '1');
+          if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+          const rows = Array.from(document.querySelectorAll('.topbar .nav, .topbar .quick, .topbar .qrow, .topbar .toprow')).filter((r) => r.scrollWidth > r.clientWidth + 4 && r.scrollLeft < 4);
+          rows.forEach((r, i) => setTimeout(() => {
+            r.scrollTo({ left: 56, behavior: 'smooth' });
+            setTimeout(() => r.scrollTo({ left: 0, behavior: 'smooth' }), 650);
+          }, i * 250));
+        } catch (err) {}
+      }, 900);
+    }
+
     if (typeof window !== 'undefined' && !window.__menuOutsideClose) {
       window.__menuOutsideClose = true;
       const sel = 'details.nm[open], details.menu[open], details.qmenu[open]';
