@@ -6,62 +6,58 @@ METHOD:PUBLISH
 X-WR-CALNAME:CNAP Phase S due dates
 BEGIN:VEVENT
 UID:cnap-phase-s-tim-roxana-sends-you-all-five-budgets-20261214@cnap-hub
-DTSTAMP:20261016T145746Z
+DTSTAMP:20261016T151957Z
 DTSTART;VALUE=DATE:20261214
 DTEND;VALUE=DATE:20261215
 SUMMARY:CNAP Phase S: Roxana sends you all five budgets
 DESCRIPTION:Each budget comes with its budget justification\, and Roxana 
  has already checked every one. This is about six weeks before NIH's Jan 2
- 5 deadline.\n\nInternal due date for the CNAP Phase S proposal. Smartshee
- t is the live version: if a date there differs\, Smartsheet wins.\nSmarts
- heet: https://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M
- 7GRwx21\nYour guidance page: https://mkdawills.github.io/CNAP_Phase_S_Pre
- paration/Tim.html
+ 5 deadline.\n\nInternal due date for the CNAP Phase S proposal.\nSmartshe
+ et: https://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7G
+ Rwx21\nYour guidance page: https://mkdawills.github.io/CNAP_Phase_S_Prepa
+ ration/Tim.html
 URL:https://mkdawills.github.io/CNAP_Phase_S_Preparation/Tim.html
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:cnap-phase-s-tim-send-your-comments-to-roxana-20270108@cnap-hub
-DTSTAMP:20261016T145746Z
+DTSTAMP:20261016T151957Z
 DTSTART;VALUE=DATE:20270108
 DTEND;VALUE=DATE:20270109
 SUMMARY:CNAP Phase S: Send your comments to Roxana
 DESCRIPTION:You have Dec 14 to Jan 8 to review\, which is about two worki
  ng weeks with winter break in between. You can send comments as you go.\n
- \nInternal due date for the CNAP Phase S proposal. Smartsheet is the live
-  version: if a date there differs\, Smartsheet wins.\nSmartsheet: https:/
- /app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21\nYour
-  guidance page: https://mkdawills.github.io/CNAP_Phase_S_Preparation/Tim.
- html
+ \nInternal due date for the CNAP Phase S proposal.\nSmartsheet: https://a
+ pp.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21\nYour g
+ uidance page: https://mkdawills.github.io/CNAP_Phase_S_Preparation/Tim.ht
+ ml
 URL:https://mkdawills.github.io/CNAP_Phase_S_Preparation/Tim.html
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:cnap-phase-s-tim-roxana-sends-you-the-final-budgets-20270115@cnap-hub
-DTSTAMP:20261016T145746Z
+DTSTAMP:20261016T151957Z
 DTSTART;VALUE=DATE:20270115
 DTEND;VALUE=DATE:20270116
 SUMMARY:CNAP Phase S: Roxana sends you the final budgets
 DESCRIPTION:These are the budgets updated after your comments.\n\nInterna
- l due date for the CNAP Phase S proposal. Smartsheet is the live version:
-  if a date there differs\, Smartsheet wins.\nSmartsheet: https://app.smar
- tsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21\nYour guidance
-  page: https://mkdawills.github.io/CNAP_Phase_S_Preparation/Tim.html
+ l due date for the CNAP Phase S proposal.\nSmartsheet: https://app.smarts
+ heet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21\nYour guidance p
+ age: https://mkdawills.github.io/CNAP_Phase_S_Preparation/Tim.html
 URL:https://mkdawills.github.io/CNAP_Phase_S_Preparation/Tim.html
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:cnap-phase-s-tim-if-anything-still-needs-fixing-tell-roxana-20270119@cnap-hub
-DTSTAMP:20261016T145746Z
+DTSTAMP:20261016T151957Z
 DTSTART;VALUE=DATE:20270119
 DTEND;VALUE=DATE:20270120
 SUMMARY:CNAP Phase S: If anything still needs fixing\, tell Roxana
 DESCRIPTION:Only if something needs to change. If everything looks right\
- , you're done.\n\nInternal due date for the CNAP Phase S proposal. Smarts
- heet is the live version: if a date there differs\, Smartsheet wins.\nSma
- rtsheet: https://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR2
- 65M7GRwx21\nYour guidance page: https://mkdawills.github.io/CNAP_Phase_S_
- Preparation/Tim.html
+ , you're done.\n\nInternal due date for the CNAP Phase S proposal.\nSmart
+ sheet: https://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265
+ M7GRwx21\nYour guidance page: https://mkdawills.github.io/CNAP_Phase_S_Pr
+ eparation/Tim.html
 URL:https://mkdawills.github.io/CNAP_Phase_S_Preparation/Tim.html
 TRANSP:TRANSPARENT
 END:VEVENT

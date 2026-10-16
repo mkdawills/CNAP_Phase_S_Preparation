@@ -6,32 +6,30 @@ METHOD:PUBLISH
 X-WR-CALNAME:CNAP Phase S due dates
 BEGIN:VEVENT
 UID:cnap-phase-s-carlade-your-biosketch-review-draft-20261217@cnap-hub
-DTSTAMP:20261016T145746Z
+DTSTAMP:20261016T151957Z
 DTSTART;VALUE=DATE:20261217
 DTEND;VALUE=DATE:20261218
 SUMMARY:CNAP Phase S: Your biosketch: review draft
 DESCRIPTION:The PDF from SciENcv\, in WORKING DRAFTS with Progress set to
   Ready for Review in your Smartsheet row. Morgan checks the formatting.\n
- \nInternal due date for the CNAP Phase S proposal. Smartsheet is the live
-  version: if a date there differs\, Smartsheet wins.\nSmartsheet: https:/
- /app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21\nYour
-  guidance page: https://mkdawills.github.io/CNAP_Phase_S_Preparation/Carl
- Ade.html
+ \nInternal due date for the CNAP Phase S proposal.\nSmartsheet: https://a
+ pp.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21\nYour g
+ uidance page: https://mkdawills.github.io/CNAP_Phase_S_Preparation/CarlAd
+ e.html
 URL:https://mkdawills.github.io/CNAP_Phase_S_Preparation/CarlAde.html
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:cnap-phase-s-carlade-your-biosketch-final-20270113@cnap-hub
-DTSTAMP:20261016T145746Z
+DTSTAMP:20261016T151957Z
 DTSTART;VALUE=DATE:20270113
 DTEND;VALUE=DATE:20270114
 SUMMARY:CNAP Phase S: Your biosketch: final
 DESCRIPTION:Final version with Kim's fixes plus anything new since Dec 17
- .\n\nInternal due date for the CNAP Phase S proposal. Smartsheet is the l
- ive version: if a date there differs\, Smartsheet wins.\nSmartsheet: http
- s://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21\nY
- our guidance page: https://mkdawills.github.io/CNAP_Phase_S_Preparation/C
- arlAde.html
+ .\n\nInternal due date for the CNAP Phase S proposal.\nSmartsheet: https:
+ //app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21\nYou
+ r guidance page: https://mkdawills.github.io/CNAP_Phase_S_Preparation/Car
+ lAde.html
 URL:https://mkdawills.github.io/CNAP_Phase_S_Preparation/CarlAde.html
 TRANSP:TRANSPARENT
 END:VEVENT

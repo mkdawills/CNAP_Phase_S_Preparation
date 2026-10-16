@@ -6,93 +6,87 @@ METHOD:PUBLISH
 X-WR-CALNAME:CNAP Phase S due dates
 BEGIN:VEVENT
 UID:cnap-phase-s-roxana-receive-budget-budget-justification-from-all-five--20261204@cnap-hub
-DTSTAMP:20261016T145746Z
+DTSTAMP:20261016T151957Z
 DTSTART;VALUE=DATE:20261204
 DTEND;VALUE=DATE:20261205
 SUMMARY:CNAP Phase S: Receive Budget + Budget Justification from all five
   components
 DESCRIPTION:Admin Core\, BN Core\, NI Core\, CN Core\, and the Scientific
   Research Program (SRP) Core\, a newly required component.\n\nInternal du
- e date for the CNAP Phase S proposal. Smartsheet is the live version: if 
- a date there differs\, Smartsheet wins.\nSmartsheet: https://app.smartshe
- et.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21\nYour guidance pag
- e: https://mkdawills.github.io/CNAP_Phase_S_Preparation/Roxana.html
+ e date for the CNAP Phase S proposal.\nSmartsheet: https://app.smartsheet
+ .com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21\nYour guidance page:
+  https://mkdawills.github.io/CNAP_Phase_S_Preparation/Roxana.html
 URL:https://mkdawills.github.io/CNAP_Phase_S_Preparation/Roxana.html
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:cnap-phase-s-roxana-review-every-budget-justification-dec-7-11-5-worki-20261211@cnap-hub
-DTSTAMP:20261016T145746Z
+DTSTAMP:20261016T151957Z
 DTSTART;VALUE=DATE:20261211
 DTEND;VALUE=DATE:20261212
 SUMMARY:CNAP Phase S: Review every budget + justification (Dec 7–11\, 5
   working days)\; send fixes back to each writer
-DESCRIPTION:Internal due date for the CNAP Phase S proposal. Smartsheet i
- s the live version: if a date there differs\, Smartsheet wins.\nSmartshee
- t: https://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GR
- wx21\nYour guidance page: https://mkdawills.github.io/CNAP_Phase_S_Prepar
- ation/Roxana.html
+DESCRIPTION:Internal due date for the CNAP Phase S proposal.\nSmartsheet:
+  https://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx
+ 21\nYour guidance page: https://mkdawills.github.io/CNAP_Phase_S_Preparat
+ ion/Roxana.html
 URL:https://mkdawills.github.io/CNAP_Phase_S_Preparation/Roxana.html
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:cnap-phase-s-roxana-send-all-budgets-justifications-to-tim-in-central--20261214@cnap-hub
-DTSTAMP:20261016T145746Z
+DTSTAMP:20261016T151957Z
 DTSTART;VALUE=DATE:20261214
 DTEND;VALUE=DATE:20261215
 SUMMARY:CNAP Phase S: Send all budgets + justifications to Tim in Central
   Office
-DESCRIPTION:Internal due date for the CNAP Phase S proposal. Smartsheet i
- s the live version: if a date there differs\, Smartsheet wins.\nSmartshee
- t: https://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GR
- wx21\nYour guidance page: https://mkdawills.github.io/CNAP_Phase_S_Prepar
- ation/Roxana.html
+DESCRIPTION:Internal due date for the CNAP Phase S proposal.\nSmartsheet:
+  https://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx
+ 21\nYour guidance page: https://mkdawills.github.io/CNAP_Phase_S_Preparat
+ ion/Roxana.html
 URL:https://mkdawills.github.io/CNAP_Phase_S_Preparation/Roxana.html
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:cnap-phase-s-roxana-all-of-tim-s-comments-are-back-route-each-one-to-i-20270108@cnap-hub
-DTSTAMP:20261016T145746Z
+DTSTAMP:20261016T151957Z
 DTSTART;VALUE=DATE:20270108
 DTEND;VALUE=DATE:20270109
 SUMMARY:CNAP Phase S: All of Tim's comments are back\; route each one to 
  its writer the day it arrives
 DESCRIPTION:Tim may also send issues earlier\, Dec 14 – Jan 8.\n\nInter
- nal due date for the CNAP Phase S proposal. Smartsheet is the live versio
- n: if a date there differs\, Smartsheet wins.\nSmartsheet: https://app.sm
- artsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21\nYour guidan
- ce page: https://mkdawills.github.io/CNAP_Phase_S_Preparation/Roxana.html
+ nal due date for the CNAP Phase S proposal.\nSmartsheet: https://app.smar
+ tsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21\nYour guidance
+  page: https://mkdawills.github.io/CNAP_Phase_S_Preparation/Roxana.html
 URL:https://mkdawills.github.io/CNAP_Phase_S_Preparation/Roxana.html
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:cnap-phase-s-roxana-revised-final-budgets-arrive-in-the-morning-check--20270115@cnap-hub
-DTSTAMP:20261016T145746Z
+DTSTAMP:20261016T151957Z
 DTSTART;VALUE=DATE:20270115
 DTEND;VALUE=DATE:20270116
 SUMMARY:CNAP Phase S: Revised (final) budgets arrive in the morning\; che
  ck them and send the final budgets to Tim the same day
-DESCRIPTION:Internal due date for the CNAP Phase S proposal. Smartsheet i
- s the live version: if a date there differs\, Smartsheet wins.\nSmartshee
- t: https://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GR
- wx21\nYour guidance page: https://mkdawills.github.io/CNAP_Phase_S_Prepar
- ation/Roxana.html
+DESCRIPTION:Internal due date for the CNAP Phase S proposal.\nSmartsheet:
+  https://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx
+ 21\nYour guidance page: https://mkdawills.github.io/CNAP_Phase_S_Preparat
+ ion/Roxana.html
 URL:https://mkdawills.github.io/CNAP_Phase_S_Preparation/Roxana.html
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:cnap-phase-s-roxana-morgan-uploads-the-final-budgets-to-cayuse-you-re--20270119@cnap-hub
-DTSTAMP:20261016T145746Z
+DTSTAMP:20261016T151957Z
 DTSTART;VALUE=DATE:20270119
 DTEND;VALUE=DATE:20270120
 SUMMARY:CNAP Phase S: Morgan uploads the final budgets to Cayuse\; you're
   on call for critical edits only\, through the Jan 15–20 Central Office
   review
-DESCRIPTION:Internal due date for the CNAP Phase S proposal. Smartsheet i
- s the live version: if a date there differs\, Smartsheet wins.\nSmartshee
- t: https://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GR
- wx21\nYour guidance page: https://mkdawills.github.io/CNAP_Phase_S_Prepar
- ation/Roxana.html
+DESCRIPTION:Internal due date for the CNAP Phase S proposal.\nSmartsheet:
+  https://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx
+ 21\nYour guidance page: https://mkdawills.github.io/CNAP_Phase_S_Preparat
+ ion/Roxana.html
 URL:https://mkdawills.github.io/CNAP_Phase_S_Preparation/Roxana.html
 TRANSP:TRANSPARENT
 END:VEVENT
