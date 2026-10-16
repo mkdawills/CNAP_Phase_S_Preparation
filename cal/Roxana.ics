@@ -6,7 +6,7 @@ METHOD:PUBLISH
 X-WR-CALNAME:CNAP Phase S due dates
 BEGIN:VEVENT
 UID:cnap-phase-s-roxana-receive-budget-budget-justification-from-all-five--20261204@cnap-hub
-DTSTAMP:20261016T145226Z
+DTSTAMP:20261016T145746Z
 DTSTART;VALUE=DATE:20261204
 DTEND;VALUE=DATE:20261205
 SUMMARY:CNAP Phase S: Receive Budget + Budget Justification from all five
@@ -22,7 +22,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:cnap-phase-s-roxana-review-every-budget-justification-dec-7-11-5-worki-20261211@cnap-hub
-DTSTAMP:20261016T145226Z
+DTSTAMP:20261016T145746Z
 DTSTART;VALUE=DATE:20261211
 DTEND;VALUE=DATE:20261212
 SUMMARY:CNAP Phase S: Review every budget + justification (Dec 7–11\, 5
@@ -37,7 +37,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:cnap-phase-s-roxana-send-all-budgets-justifications-to-tim-in-central--20261214@cnap-hub
-DTSTAMP:20261016T145226Z
+DTSTAMP:20261016T145746Z
 DTSTART;VALUE=DATE:20261214
 DTEND;VALUE=DATE:20261215
 SUMMARY:CNAP Phase S: Send all budgets + justifications to Tim in Central
@@ -52,7 +52,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:cnap-phase-s-roxana-all-of-tim-s-comments-are-back-route-each-one-to-i-20270108@cnap-hub
-DTSTAMP:20261016T145226Z
+DTSTAMP:20261016T145746Z
 DTSTART;VALUE=DATE:20270108
 DTEND;VALUE=DATE:20270109
 SUMMARY:CNAP Phase S: All of Tim's comments are back\; route each one to 
@@ -67,7 +67,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:cnap-phase-s-roxana-revised-final-budgets-arrive-in-the-morning-check--20270115@cnap-hub
-DTSTAMP:20261016T145226Z
+DTSTAMP:20261016T145746Z
 DTSTART;VALUE=DATE:20270115
 DTEND;VALUE=DATE:20270116
 SUMMARY:CNAP Phase S: Revised (final) budgets arrive in the morning\; che
@@ -82,7 +82,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:cnap-phase-s-roxana-morgan-uploads-the-final-budgets-to-cayuse-you-re--20270119@cnap-hub
-DTSTAMP:20261016T145226Z
+DTSTAMP:20261016T145746Z
 DTSTART;VALUE=DATE:20270119
 DTEND;VALUE=DATE:20270120
 SUMMARY:CNAP Phase S: Morgan uploads the final budgets to Cayuse\; you're
