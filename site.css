@@ -400,3 +400,5 @@ main section.sec:has(details.sx:not([open])):not(:has(details.sx[open])){padding
 .xall{font-size:12.5px;font-weight:600;color:#5A5468;background:transparent;border:1px solid #D9D4E2;padding:6px 13px;gap:8px}
 .xall:hover{background:#F3EFF9;color:#512888;border-color:#C9BFDB}
 .xall::before{width:6px;height:6px;border-right-width:1.5px;border-bottom-width:1.5px}
+/* phones and tablets: bigger tap target for the dropdown arrow on each nav tab */
+@media (hover:none),(max-width:760px){.topbar .nm summary .car{width:34px !important;border-left:1px solid rgba(58,54,64,0.12)}.topbar .nm summary a{padding-right:6px !important}}

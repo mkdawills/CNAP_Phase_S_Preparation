@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Contributor Guidance — CNAP Phase S Proposal Hub</title>
+<title>Individualized Guidance — CNAP Phase S Proposal Hub</title>
 <link rel="stylesheet" href="site.css?v=20261015b">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -62,9 +62,9 @@ section.sec.band-w,section.sec.band-g{padding-top:40px !important;padding-bottom
             <a href="Workflow.html#reference">Prior proposals for your reference</a>
           </div>
         </details>
-        <details class="nm on"><summary><a href="Guidance.html">Contributor Guidance</a><span class="car"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+        <details class="nm on"><summary><a href="Guidance.html">Individualized Guidance</a><span class="car"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
           <div class="pop">
-            <a class="hd" href="Guidance.html">Find your guidance</a>
+            <a class="hd" href="Guidance.html">Find your individualized guidance</a>
             <a href="HeatherBailey.html">Heather Bailey · Center Director (PD/PI), CN Core</a>
             <a href="Chip.html">Chip · BN Core Director</a>
             <a href="Doina.html">Doina · NI Core Director</a>
@@ -142,7 +142,7 @@ section.sec.band-w,section.sec.band-g{padding-top:40px !important;padding-bottom
 
   <main>
     <section class="wrap pagehead">
-      <p class="eyebrow">Contributor guidance · One page per packet</p>
+      <p class="eyebrow">Individualized guidance · One page per packet</p>
       <h1 class="h1">Find Your Individualized Guidance</h1>
       <p class="lede">Click your name for your tasks, dates, page limits, plain-language directions, review criteria, and folders.</p>
       <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px;">
@@ -210,6 +210,43 @@ section.sec.band-w,section.sec.band-g{padding-top:40px !important;padding-bottom
 
 class Component extends DCLogic {
   componentDidMount() {
+
+    if (typeof window !== 'undefined' && !window.__posMem) {
+      window.__posMem = true;
+      const key = 'cnapPos:' + location.pathname.split('/').pop();
+      const roots = () => [document].concat(Array.from(document.querySelectorAll('*')).filter((e) => e.shadowRoot).map((e) => e.shadowRoot));
+      const allDetails = () => roots().flatMap((r) => Array.from(r.querySelectorAll('details'))).filter((d) => !d.closest('.topbar') && !d.classList.contains('qmenu') && !d.classList.contains('menu'));
+      const save = () => {
+        try {
+          const open = []; allDetails().forEach((d, i) => { if (d.open) open.push(i); });
+          sessionStorage.setItem(key, JSON.stringify({ y: window.scrollY, open: open }));
+        } catch (err) {}
+      };
+      document.addEventListener('click', (e) => {
+        const path = e.composedPath ? e.composedPath() : [e.target];
+        const a = path.find((n) => n && n.tagName === 'A' && n.getAttribute('href'));
+        if (a && !(a.getAttribute('href') || '').startsWith('#')) save();
+        if (a && a.getAttribute('data-back') === '1') { try { sessionStorage.setItem('cnapBack', '1'); } catch (err) {} }
+      }, true);
+      window.addEventListener('pagehide', save);
+      let cameBack = false;
+      try {
+        const nav = performance.getEntriesByType && performance.getEntriesByType('navigation')[0];
+        cameBack = (nav && nav.type === 'back_forward') || sessionStorage.getItem('cnapBack') === '1';
+        sessionStorage.removeItem('cnapBack');
+      } catch (err) {}
+      if (cameBack) {
+        try { if ('scrollRestoration' in history) history.scrollRestoration = 'manual'; } catch (err) {}
+        let st = null; try { st = JSON.parse(sessionStorage.getItem(key) || 'null'); } catch (err) {}
+        if (st) {
+          const restore = () => {
+            const ds = allDetails(); (st.open || []).forEach((i) => { if (ds[i]) ds[i].open = true; });
+            window.scrollTo(0, st.y || 0);
+          };
+          [150, 500, 1000].forEach((t) => setTimeout(restore, t));
+        }
+      }
+    }
     if (typeof window !== 'undefined') setTimeout(() => {
       const roots = [document].concat(Array.from(document.querySelectorAll('*')).filter((e) => e.shadowRoot).map((e) => e.shadowRoot));
       roots.forEach((r) => r.querySelectorAll('.topbar .quick').forEach((q) => {
