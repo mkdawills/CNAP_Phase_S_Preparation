@@ -1,0 +1,205 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//CNAP Center//Phase S Proposal Hub//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:CNAP Phase S due dates
+BEGIN:VEVENT
+UID:cnap-phase-s-doina-ni-core-specific-aims-20261113@cnap-hub
+DTSTAMP:20261016T145226Z
+DTSTART;VALUE=DATE:20261113
+DTEND;VALUE=DATE:20261114
+SUMMARY:CNAP Phase S: NI Core Specific Aims
+DESCRIPTION:One page stating what the NI Core will do over the five years
+ .\n\nInternal due date for the CNAP Phase S proposal. Smartsheet is the l
+ ive version: if a date there differs\, Smartsheet wins.\nSmartsheet: http
+ s://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21\nY
+ our guidance page: https://mkdawills.github.io/CNAP_Phase_S_Preparation/D
+ oina.html
+URL:https://mkdawills.github.io/CNAP_Phase_S_Preparation/Doina.html
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:cnap-phase-s-doina-ni-core-input-to-the-center-s-o-m-plan-20261118@cnap-hub
+DTSTAMP:20261016T145226Z
+DTSTART;VALUE=DATE:20261118
+DTEND;VALUE=DATE:20261119
+SUMMARY:CNAP Phase S: NI Core input to the Center's O&M Plan
+DESCRIPTION:A short write-up of how your core fits with K-State's existin
+ g resources. Heather and Morgan fold it into the final Organization and M
+ anagement (O&M) Plan\, Section B of the Center Research Strategy (final d
+ ue Mon\, Nov 30).\n\nInternal due date for the CNAP Phase S proposal. Sma
+ rtsheet is the live version: if a date there differs\, Smartsheet wins.\n
+ Smartsheet: https://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8
+ RR265M7GRwx21\nYour guidance page: https://mkdawills.github.io/CNAP_Phase
+ _S_Preparation/Doina.html
+URL:https://mkdawills.github.io/CNAP_Phase_S_Preparation/Doina.html
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:cnap-phase-s-doina-ni-core-research-strategy-20261130@cnap-hub
+DTSTAMP:20261016T145226Z
+DTSTART;VALUE=DATE:20261130
+DTEND;VALUE=DATE:20261201
+SUMMARY:CNAP Phase S: NI Core Research Strategy
+DESCRIPTION:The main description of the NI Core: what it provides\, who u
+ ses it\, and how it will be sustained.\n\nInternal due date for the CNAP 
+ Phase S proposal. Smartsheet is the live version: if a date there differs
+ \, Smartsheet wins.\nSmartsheet: https://app.smartsheet.com/sheets/R9cphx
+ w5McqvH7RWRVJG6rGwWh8RR265M7GRwx21\nYour guidance page: https://mkdawills
+ .github.io/CNAP_Phase_S_Preparation/Doina.html
+URL:https://mkdawills.github.io/CNAP_Phase_S_Preparation/Doina.html
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:cnap-phase-s-doina-ni-core-budget-budget-justification-20261204@cnap-hub
+DTSTAMP:20261016T145226Z
+DTSTART;VALUE=DATE:20261204
+DTEND;VALUE=DATE:20261205
+SUMMARY:CNAP Phase S: NI Core Budget + Budget Justification
+DESCRIPTION:The NI Core's five-year budget (entered as forms) and the wri
+ tten justification for each cost.\n\nInternal due date for the CNAP Phase
+  S proposal. Smartsheet is the live version: if a date there differs\, Sm
+ artsheet wins.\nSmartsheet: https://app.smartsheet.com/sheets/R9cphxw5Mcq
+ vH7RWRVJG6rGwWh8RR265M7GRwx21\nYour guidance page: https://mkdawills.gith
+ ub.io/CNAP_Phase_S_Preparation/Doina.html
+URL:https://mkdawills.github.io/CNAP_Phase_S_Preparation/Doina.html
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:cnap-phase-s-doina-ni-core-equipment-20261214@cnap-hub
+DTSTAMP:20261016T145226Z
+DTSTART;VALUE=DATE:20261214
+DTEND;VALUE=DATE:20261215
+SUMMARY:CNAP Phase S: NI Core Equipment
+DESCRIPTION:A list of the major equipment already available for this work
+ .\n\nInternal due date for the CNAP Phase S proposal. Smartsheet is the l
+ ive version: if a date there differs\, Smartsheet wins.\nSmartsheet: http
+ s://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21\nY
+ our guidance page: https://mkdawills.github.io/CNAP_Phase_S_Preparation/D
+ oina.html
+URL:https://mkdawills.github.io/CNAP_Phase_S_Preparation/Doina.html
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:cnap-phase-s-doina-ni-core-facilities-other-resources-20261216@cnap-hub
+DTSTAMP:20261016T145226Z
+DTSTART;VALUE=DATE:20261216
+DTEND;VALUE=DATE:20261217
+SUMMARY:CNAP Phase S: NI Core Facilities & Other Resources
+DESCRIPTION:A description of the space\, resources\, and institutional su
+ pport behind this work.\n\nInternal due date for the CNAP Phase S proposa
+ l. Smartsheet is the live version: if a date there differs\, Smartsheet w
+ ins.\nSmartsheet: https://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6
+ rGwWh8RR265M7GRwx21\nYour guidance page: https://mkdawills.github.io/CNAP
+ _Phase_S_Preparation/Doina.html
+URL:https://mkdawills.github.io/CNAP_Phase_S_Preparation/Doina.html
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:cnap-phase-s-doina-ni-core-resource-sharing-plan-20261217@cnap-hub
+DTSTAMP:20261016T145226Z
+DTSTART;VALUE=DATE:20261217
+DTEND;VALUE=DATE:20261218
+SUMMARY:CNAP Phase S: NI Core Resource Sharing Plan
+DESCRIPTION:A short plan for sharing research resources produced by the N
+ I Core\, or the reason for not sharing them.\n\nInternal due date for the
+  CNAP Phase S proposal. Smartsheet is the live version: if a date there d
+ iffers\, Smartsheet wins.\nSmartsheet: https://app.smartsheet.com/sheets/
+ R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21\nYour guidance page: https://mkd
+ awills.github.io/CNAP_Phase_S_Preparation/Doina.html
+URL:https://mkdawills.github.io/CNAP_Phase_S_Preparation/Doina.html
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:cnap-phase-s-doina-your-biosketch-review-draft-20261217@cnap-hub
+DTSTAMP:20261016T145226Z
+DTSTART;VALUE=DATE:20261217
+DTEND;VALUE=DATE:20261218
+SUMMARY:CNAP Phase S: Your biosketch: review draft
+DESCRIPTION:Your Biographical Sketch Common Form plus the NIH Biographica
+ l Sketch Supplement.\n\nInternal due date for the CNAP Phase S proposal. 
+ Smartsheet is the live version: if a date there differs\, Smartsheet wins
+ .\nSmartsheet: https://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGw
+ Wh8RR265M7GRwx21\nYour guidance page: https://mkdawills.github.io/CNAP_Ph
+ ase_S_Preparation/Doina.html
+URL:https://mkdawills.github.io/CNAP_Phase_S_Preparation/Doina.html
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:cnap-phase-s-doina-ni-core-bibliography-references-cited-20270106@cnap-hub
+DTSTAMP:20261016T145226Z
+DTSTART;VALUE=DATE:20270106
+DTEND;VALUE=DATE:20270107
+SUMMARY:CNAP Phase S: NI Core Bibliography & References Cited
+DESCRIPTION:The list of references cited in the component's Specific Aims
+  and Research Strategy.\n\nInternal due date for the CNAP Phase S proposa
+ l. Smartsheet is the live version: if a date there differs\, Smartsheet w
+ ins.\nSmartsheet: https://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6
+ rGwWh8RR265M7GRwx21\nYour guidance page: https://mkdawills.github.io/CNAP
+ _Phase_S_Preparation/Doina.html
+URL:https://mkdawills.github.io/CNAP_Phase_S_Preparation/Doina.html
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:cnap-phase-s-doina-ni-core-revise-specific-aims-research-strategy-mus-20270111@cnap-hub
+DTSTAMP:20261016T145226Z
+DTSTART;VALUE=DATE:20270111
+DTEND;VALUE=DATE:20270112
+SUMMARY:CNAP Phase S: NI Core: revise Specific Aims + Research Strategy\,
+  must-fix items only
+DESCRIPTION:Changes to the Specific Aims and Research Strategy in respons
+ e to the external scientific review.\n\nInternal due date for the CNAP Ph
+ ase S proposal. Smartsheet is the live version: if a date there differs\,
+  Smartsheet wins.\nSmartsheet: https://app.smartsheet.com/sheets/R9cphxw5
+ McqvH7RWRVJG6rGwWh8RR265M7GRwx21\nYour guidance page: https://mkdawills.g
+ ithub.io/CNAP_Phase_S_Preparation/Doina.html
+URL:https://mkdawills.github.io/CNAP_Phase_S_Preparation/Doina.html
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:cnap-phase-s-doina-ni-core-project-summary-abstract-20270112@cnap-hub
+DTSTAMP:20261016T145226Z
+DTSTART;VALUE=DATE:20270112
+DTEND;VALUE=DATE:20270113
+SUMMARY:CNAP Phase S: NI Core Project Summary/Abstract
+DESCRIPTION:A 30-line summary of the NI Core.\n\nInternal due date for th
+ e CNAP Phase S proposal. Smartsheet is the live version: if a date there 
+ differs\, Smartsheet wins.\nSmartsheet: https://app.smartsheet.com/sheets
+ /R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21\nYour guidance page: https://mk
+ dawills.github.io/CNAP_Phase_S_Preparation/Doina.html
+URL:https://mkdawills.github.io/CNAP_Phase_S_Preparation/Doina.html
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:cnap-phase-s-doina-your-biosketch-final-20270113@cnap-hub
+DTSTAMP:20261016T145226Z
+DTSTART;VALUE=DATE:20270113
+DTEND;VALUE=DATE:20270114
+SUMMARY:CNAP Phase S: Your biosketch: final
+DESCRIPTION:Final version with Kim's fixes plus anything new since Dec 17
+ .\n\nInternal due date for the CNAP Phase S proposal. Smartsheet is the l
+ ive version: if a date there differs\, Smartsheet wins.\nSmartsheet: http
+ s://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21\nY
+ our guidance page: https://mkdawills.github.io/CNAP_Phase_S_Preparation/D
+ oina.html
+URL:https://mkdawills.github.io/CNAP_Phase_S_Preparation/Doina.html
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:cnap-phase-s-doina-ni-core-revised-final-budget-budget-justification-20270115@cnap-hub
+DTSTAMP:20261016T145226Z
+DTSTART;VALUE=DATE:20270115
+DTEND;VALUE=DATE:20270116
+SUMMARY:CNAP Phase S: NI Core: revised (final) Budget + Budget Justificat
+ ion
+DESCRIPTION:Morning. Roxana checks it and sends the final budgets to Tim 
+ the same day.\n\nInternal due date for the CNAP Phase S proposal. Smartsh
+ eet is the live version: if a date there differs\, Smartsheet wins.\nSmar
+ tsheet: https://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR26
+ 5M7GRwx21\nYour guidance page: https://mkdawills.github.io/CNAP_Phase_S_P
+ reparation/Doina.html
+URL:https://mkdawills.github.io/CNAP_Phase_S_Preparation/Doina.html
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR

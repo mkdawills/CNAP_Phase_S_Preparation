@@ -1,0 +1,80 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//CNAP Center//Phase S Proposal Hub//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:CNAP Phase S due dates
+BEGIN:VEVENT
+UID:cnap-phase-s-kim-receive-biosketch-review-drafts-and-heather-bailey-20261218@cnap-hub
+DTSTAMP:20261016T145226Z
+DTSTART;VALUE=DATE:20261218
+DTEND;VALUE=DATE:20261219
+SUMMARY:CNAP Phase S: Receive biosketch review drafts and Heather Bailey'
+ s Current & Pending draft from Morgan
+DESCRIPTION:Formatting already checked.\n\nInternal due date for the CNAP
+  Phase S proposal. Smartsheet is the live version: if a date there differ
+ s\, Smartsheet wins.\nSmartsheet: https://app.smartsheet.com/sheets/R9cph
+ xw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21\nYour guidance page: https://mkdawill
+ s.github.io/CNAP_Phase_S_Preparation/Kim.html
+URL:https://mkdawills.github.io/CNAP_Phase_S_Preparation/Kim.html
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:cnap-phase-s-kim-send-your-comments-to-morgan-20270108@cnap-hub
+DTSTAMP:20261016T145226Z
+DTSTART;VALUE=DATE:20270108
+DTEND;VALUE=DATE:20270109
+SUMMARY:CNAP Phase S: Send your comments to Morgan
+DESCRIPTION:The same day Tim's budget comments come back.\n\nInternal due
+  date for the CNAP Phase S proposal. Smartsheet is the live version: if a
+  date there differs\, Smartsheet wins.\nSmartsheet: https://app.smartshee
+ t.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21\nYour guidance page
+ : https://mkdawills.github.io/CNAP_Phase_S_Preparation/Kim.html
+URL:https://mkdawills.github.io/CNAP_Phase_S_Preparation/Kim.html
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:cnap-phase-s-kim-receive-final-biosketches-and-current-pending-from-20270115@cnap-hub
+DTSTAMP:20261016T145226Z
+DTSTART;VALUE=DATE:20270115
+DTEND;VALUE=DATE:20270116
+SUMMARY:CNAP Phase S: Receive final biosketches and Current & Pending fro
+ m Morgan\, with the entire application
+DESCRIPTION:Internal due date for the CNAP Phase S proposal. Smartsheet i
+ s the live version: if a date there differs\, Smartsheet wins.\nSmartshee
+ t: https://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GR
+ wx21\nYour guidance page: https://mkdawills.github.io/CNAP_Phase_S_Prepar
+ ation/Kim.html
+URL:https://mkdawills.github.io/CNAP_Phase_S_Preparation/Kim.html
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:cnap-phase-s-kim-final-look-at-biosketches-and-current-pending-in-t-20270120@cnap-hub
+DTSTAMP:20261016T145226Z
+DTSTART;VALUE=DATE:20270120
+DTEND;VALUE=DATE:20270121
+SUMMARY:CNAP Phase S: Final look at biosketches and Current & Pending in 
+ the full-package review
+DESCRIPTION:Jan 15–20\; K-State closed Mon\, Jan 18.\n\nInternal due da
+ te for the CNAP Phase S proposal. Smartsheet is the live version: if a da
+ te there differs\, Smartsheet wins.\nSmartsheet: https://app.smartsheet.c
+ om/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21\nYour guidance page: h
+ ttps://mkdawills.github.io/CNAP_Phase_S_Preparation/Kim.html
+URL:https://mkdawills.github.io/CNAP_Phase_S_Preparation/Kim.html
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:cnap-phase-s-kim-central-office-submits-to-nih-by-5-00-pm-20270125@cnap-hub
+DTSTAMP:20261016T145226Z
+DTSTART;VALUE=DATE:20270125
+DTEND;VALUE=DATE:20270126
+SUMMARY:CNAP Phase S: Central Office submits to NIH by 5:00 PM
+DESCRIPTION:Internal due date for the CNAP Phase S proposal. Smartsheet i
+ s the live version: if a date there differs\, Smartsheet wins.\nSmartshee
+ t: https://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GR
+ wx21\nYour guidance page: https://mkdawills.github.io/CNAP_Phase_S_Prepar
+ ation/Kim.html
+URL:https://mkdawills.github.io/CNAP_Phase_S_Preparation/Kim.html
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR
