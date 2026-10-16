@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>Doina — NI Core Director — CNAP Phase S Proposal Hub</title>
-<link rel="stylesheet" href="site.css?v=20261015b">
+<link rel="stylesheet" href="site.css?v=20261016c">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&amp;family=Archivo:wght@500;600;700;800&amp;display=swap" rel="stylesheet">
@@ -215,7 +215,7 @@ details.sx[open] > summary{margin-bottom:14px}
       <summary><h2 class="h2">13 Tasks</h2><span class="sx-car" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
       <div class="sec-head">
         <div>
-          <p>In date order.<br>Open a task for the plain-language guidance, review criteria, and the NOFO's exact words.<br>Save your drafts to <a href="https://www.dropbox.com/scl/fo/pous7ow51nzwt6sxxidi2/AJGSAf5rCishWvX4F0SMBqA?rlkey=6y3f3n46aqkl12xivk674i6yu&amp;st=635vxrrf&amp;dl=0">WORKING DRAFTS › NI Core</a> once you're comfortable with others seeing them, and by each due date. Once approved, Morgan and Heather move them to <a href="https://www.dropbox.com/scl/fo/kanp193ti0r8eolga1l4x/AP5WKL1oXCR8C6LDu-sNVhc?rlkey=qpcgnfpgxze2xvzlt7gd534rg&amp;st=w1zai1a7&amp;dl=0">FINAL VERSIONS › NI Core</a>.<br>For everyone's dates in one view, see the <a href="Timeline.html">Team Timeline</a>.</p>
+          <p>In date order.<br>Open a task for the plain-language guidance, review criteria, and the NOFO's exact words.<br>We invite you to save your drafts in the <a href="https://www.dropbox.com/scl/fo/pous7ow51nzwt6sxxidi2/AJGSAf5rCishWvX4F0SMBqA?rlkey=6y3f3n46aqkl12xivk674i6yu&amp;st=635vxrrf&amp;dl=0">WORKING DRAFTS › NI Core</a> folder once you're comfortable with others seeing them.<br>Please save each draft no later than its internal due date in Smartsheet.<br>Once approved, Morgan and Heather move your document to the <a href="https://www.dropbox.com/scl/fo/kanp193ti0r8eolga1l4x/AP5WKL1oXCR8C6LDu-sNVhc?rlkey=qpcgnfpgxze2xvzlt7gd534rg&amp;st=w1zai1a7&amp;dl=0">FINAL VERSIONS › NI Core</a> folder.<br>For everyone's dates in one view, see the <a href="Timeline.html">Team Timeline</a>.</p>
         </div>
         <div style="display: flex; gap: 8px; flex-wrap: wrap;">
           <a class="btn sm" href="Conventions.html">Formatting Conventions</a>
@@ -625,16 +625,17 @@ class Component extends DCLogic {
         const tb = owner.closest('.topbar'); const r = (tb || owner).getBoundingClientRect();
         sheet.style.top = Math.max(8, Math.round(r.bottom + 6)) + 'px';
       };
-      document.addEventListener('toggle', (e) => {
-        const d = e.target;
+      const sync = (d) => {
         if (!d || !d.matches || !d.matches('details.nm')) return;
         if (!d.open) { if (owner === d) closeSheet(); return; }
+        if (owner === d && sheet) return;
         if (window.innerWidth > 1024) return;
         const pop = d.querySelector('.pop'); if (!pop) return;
         closeSheet();
         owner = d;
         sheet = document.createElement('div');
         sheet.className = 'nm-sheet';
+        sheet.style.cssText = 'position:fixed;left:12px;right:12px;z-index:1000;background:#FFFFFF;border:1px solid #D9D4E2;border-radius:10px;box-shadow:0 10px 28px rgba(31,27,43,0.18);padding:6px;max-height:70vh;overflow-y:auto;display:flex;flex-direction:column;';
         sheet.innerHTML = pop.innerHTML;
         sheet.addEventListener('click', (ev) => {
           const a = ev.target.closest && ev.target.closest('a');
@@ -643,7 +644,9 @@ class Component extends DCLogic {
         sheet.addEventListener('pointerdown', (ev) => ev.stopPropagation());
         document.body.appendChild(sheet);
         place();
-      }, true);
+      };
+      document.addEventListener('toggle', (e) => sync(e.target), true);
+      document.addEventListener('click', (e) => { const s = e.target && e.target.closest && e.target.closest('details.nm > summary'); if (s) setTimeout(() => sync(s.parentElement), 40); }, true);
       window.addEventListener('scroll', place, { passive: true });
       window.addEventListener('resize', () => { if (window.innerWidth > 1024 && owner) { owner.removeAttribute('open'); closeSheet(); } else place(); });
     }

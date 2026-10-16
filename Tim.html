@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>Tim — Central Office Budget Review — CNAP Phase S Proposal Hub</title>
-<link rel="stylesheet" href="site.css?v=20261015b">
+<link rel="stylesheet" href="site.css?v=20261016c">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&amp;family=Archivo:wght@500;600;700;800&amp;display=swap" rel="stylesheet">
@@ -358,16 +358,17 @@ class Component extends DCLogic {
         const tb = owner.closest('.topbar'); const r = (tb || owner).getBoundingClientRect();
         sheet.style.top = Math.max(8, Math.round(r.bottom + 6)) + 'px';
       };
-      document.addEventListener('toggle', (e) => {
-        const d = e.target;
+      const sync = (d) => {
         if (!d || !d.matches || !d.matches('details.nm')) return;
         if (!d.open) { if (owner === d) closeSheet(); return; }
+        if (owner === d && sheet) return;
         if (window.innerWidth > 1024) return;
         const pop = d.querySelector('.pop'); if (!pop) return;
         closeSheet();
         owner = d;
         sheet = document.createElement('div');
         sheet.className = 'nm-sheet';
+        sheet.style.cssText = 'position:fixed;left:12px;right:12px;z-index:1000;background:#FFFFFF;border:1px solid #D9D4E2;border-radius:10px;box-shadow:0 10px 28px rgba(31,27,43,0.18);padding:6px;max-height:70vh;overflow-y:auto;display:flex;flex-direction:column;';
         sheet.innerHTML = pop.innerHTML;
         sheet.addEventListener('click', (ev) => {
           const a = ev.target.closest && ev.target.closest('a');
@@ -376,7 +377,9 @@ class Component extends DCLogic {
         sheet.addEventListener('pointerdown', (ev) => ev.stopPropagation());
         document.body.appendChild(sheet);
         place();
-      }, true);
+      };
+      document.addEventListener('toggle', (e) => sync(e.target), true);
+      document.addEventListener('click', (e) => { const s = e.target && e.target.closest && e.target.closest('details.nm > summary'); if (s) setTimeout(() => sync(s.parentElement), 40); }, true);
       window.addEventListener('scroll', place, { passive: true });
       window.addEventListener('resize', () => { if (window.innerWidth > 1024 && owner) { owner.removeAttribute('open'); closeSheet(); } else place(); });
     }
