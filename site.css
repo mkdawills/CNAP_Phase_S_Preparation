@@ -413,3 +413,8 @@ main section.sec:has(details.sx:not([open])):not(:has(details.sx[open])){padding
 .nm-sheet a:active,.nm-sheet a:hover{background:var(--purple-tint,#F3EFF9);color:var(--purple,#512888)}
 .nm-sheet a.hd{font-weight:700;color:var(--purple,#512888);border-bottom:1px solid var(--line,#E4E0EC);border-radius:7px 7px 0 0;margin-bottom:4px}
 .nm-sheet .sm{font-size:13px;color:var(--ink-3,#6B6579);padding:0 12px 6px}
+/* personal pages: "Your links" buttons, three per row, left aligned */
+.card.links3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;align-items:stretch}
+.card.links3 > span.small{grid-column:1 / -1}
+.card.links3 > .btn{justify-content:center;text-align:center;white-space:normal;line-height:1.25;padding-top:6px;padding-bottom:6px}
+@media (max-width:640px){.card.links3{grid-template-columns:minmax(0,1fr)}}
