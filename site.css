@@ -432,3 +432,4 @@ main section.sec:has(details.sx:not([open])):not(:has(details.sx[open])){padding
 ul.intro-list{margin:6px 0 0;padding-left:20px}
 ul.intro-list li{margin:3px 0}
 main details.sx[open] > summary{margin-bottom:8px !important}
+.person .r .rl{display:block;margin-top:6px;padding-top:6px;border-top:1px solid #E4E0EC}
