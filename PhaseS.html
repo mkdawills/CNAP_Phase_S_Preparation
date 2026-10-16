@@ -382,6 +382,38 @@ details.intro-sx{border-top:1px solid #E4E0EC;padding:12px 0}
 class Component extends DCLogic {
   componentDidMount() {
 
+    if (typeof window !== 'undefined' && !window.__nmSheet) {
+      window.__nmSheet = true;
+      let sheet = null, owner = null;
+      const closeSheet = () => { if (sheet) { sheet.remove(); sheet = null; } owner = null; };
+      const place = () => {
+        if (!sheet || !owner) return;
+        const tb = owner.closest('.topbar'); const r = (tb || owner).getBoundingClientRect();
+        sheet.style.top = Math.max(8, Math.round(r.bottom + 6)) + 'px';
+      };
+      document.addEventListener('toggle', (e) => {
+        const d = e.target;
+        if (!d || !d.matches || !d.matches('details.nm')) return;
+        if (!d.open) { if (owner === d) closeSheet(); return; }
+        if (window.innerWidth > 1024) return;
+        const pop = d.querySelector('.pop'); if (!pop) return;
+        closeSheet();
+        owner = d;
+        sheet = document.createElement('div');
+        sheet.className = 'nm-sheet';
+        sheet.innerHTML = pop.innerHTML;
+        sheet.addEventListener('click', (ev) => {
+          const a = ev.target.closest && ev.target.closest('a');
+          if (a) { const o = owner; setTimeout(() => { if (o) o.removeAttribute('open'); closeSheet(); }, 0); }
+        });
+        sheet.addEventListener('pointerdown', (ev) => ev.stopPropagation());
+        document.body.appendChild(sheet);
+        place();
+      }, true);
+      window.addEventListener('scroll', place, { passive: true });
+      window.addEventListener('resize', () => { if (window.innerWidth > 1024 && owner) { owner.removeAttribute('open'); closeSheet(); } else place(); });
+    }
+
     if (typeof window !== 'undefined' && !window.__hashOpen) {
       window.__hashOpen = true;
       const openHash = () => {
@@ -416,6 +448,7 @@ class Component extends DCLogic {
       const sel = 'details.nm[open], details.menu[open], details.qmenu[open]';
       const closeOutside = (e) => {
         const path = e.composedPath ? e.composedPath() : [e.target];
+        if (path.some((n) => n && n.classList && n.classList.contains('nm-sheet'))) return;
         const t = path[0]; const root = (t && t.getRootNode) ? t.getRootNode() : document;
         [document, root].forEach((r) => { if (r && r.querySelectorAll) r.querySelectorAll(sel).forEach((d) => { if (!path.includes(d)) d.removeAttribute('open'); }); });
       };
