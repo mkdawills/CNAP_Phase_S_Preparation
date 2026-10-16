@@ -348,6 +348,19 @@ details.stg + details.stg > summary > div{border-top:none}
 class Component extends DCLogic {
   componentDidMount() {
 
+    if (typeof window !== 'undefined' && !window.__hashOpen) {
+      window.__hashOpen = true;
+      const openHash = () => {
+        const id = (location.hash || '').slice(1); if (!id) return;
+        const el = document.getElementById(id); if (!el) return;
+        const d = el.matches('details') ? el : el.querySelector('details.sx');
+        if (d && !d.open) d.open = true;
+        setTimeout(() => el.scrollIntoView({ block: 'start' }), 60);
+      };
+      setTimeout(openHash, 350);
+      window.addEventListener('hashchange', openHash);
+    }
+
     if (typeof window !== 'undefined' && !window.__swipePeek) {
       window.__swipePeek = true;
       setTimeout(() => {

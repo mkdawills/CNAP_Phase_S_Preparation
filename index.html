@@ -56,6 +56,9 @@ a{color:#512888}a:hover{color:#3B1C66}
 #resources .tile .t,#resources .tile .d{align-self:stretch}
 #resources .tile .ic{align-self:center}
 @media (min-width:1180px){#quick .qrow{gap:8px !important;flex-wrap:nowrap !important}#quick .qbtn{padding:0 12px !important;font-size:14px !important;white-space:nowrap}}
+#quick .qbtn:not(.qbtn-solid){background:rgba(255,255,255,0.09);border-color:rgba(255,255,255,0.6) !important;transition:background .15s,color .15s,border-color .15s}
+#quick .qbtn:not(.qbtn-solid):hover,#quick details.qmenu[open] > summary.qbtn{background:#FFFFFF !important;color:#3B3349 !important;border-color:#FFFFFF !important}
+#quick .qbtn:not(.qbtn-solid):hover svg,#quick details.qmenu[open] > summary.qbtn svg{color:#3B3349}
 #resources .grid.c4{max-width:660px;margin-left:auto;margin-right:auto}
 @media (min-width:761px){#resources .grid.c4{grid-template-columns:repeat(2,minmax(0,1fr))}}
 /* Resources tiles as circles */
@@ -577,6 +580,7 @@ section.sec.band-w,section.sec.band-g{padding-top:40px;padding-bottom:40px}
         <div class="stat"><span class="k">Project Summary</span><span class="v">30 lines</span><span class="s">Each component</span></div>
       </div>
       <p class="small muted" style="margin: 12px 0 0;">Biosketches and the Center Director's (PD/PI's) Current &amp; Pending Support in SciENcv only (other Senior/Key C&amp;P only at Just-in-Time). External-review revisions are must-fix only, with no scope or budget changes; after Jan 15, only critical budget edits. Appendix is optional (limited items only) — tell Morgan by Fri, Dec 11 if your component needs one.</p>
+      <p style="margin: 14px 0 0;"><a class="btn sm" href="PhaseS.html#glance">See all page limits and components &rarr;</a></p>
     </section>
 
   </main>
@@ -595,6 +599,19 @@ section.sec.band-w,section.sec.band-g{padding-top:40px;padding-bottom:40px}
 
 class Component extends DCLogic {
   componentDidMount() {
+
+    if (typeof window !== 'undefined' && !window.__hashOpen) {
+      window.__hashOpen = true;
+      const openHash = () => {
+        const id = (location.hash || '').slice(1); if (!id) return;
+        const el = document.getElementById(id); if (!el) return;
+        const d = el.matches('details') ? el : el.querySelector('details.sx');
+        if (d && !d.open) d.open = true;
+        setTimeout(() => el.scrollIntoView({ block: 'start' }), 60);
+      };
+      setTimeout(openHash, 350);
+      window.addEventListener('hashchange', openHash);
+    }
 
     if (typeof window !== 'undefined' && !window.__swipePeek) {
       window.__swipePeek = true;
