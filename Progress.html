@@ -13,29 +13,6 @@ a{color:#512888}a:hover{color:#3B1C66}
 .band-w{position:relative;border-top:2px solid #D3CDE0;box-shadow:0 0 0 100vmax #FFFFFF;clip-path:inset(0 -100vmax);background:#FFFFFF}
 .pagehead + .band-w{border-top:none}
 section.sec.band-w{padding-top:32px !important;padding-bottom:40px;margin-top:0;margin-bottom:0}
-.up-gate{max-width:460px}
-.up-gate label{display:block;font-weight:700;margin:0 0 6px}
-.up-row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
-.up-in,.up-sel{font:inherit;font-size:15px;padding:8px 10px;border:1.5px solid #C9C1D9;border-radius:8px;background:#fff;color:#1F1B2B}
-.up-in{flex:1;min-width:0}
-.up-in:focus,.up-sel:focus{outline:2px solid #512888;outline-offset:1px;border-color:#512888}
-.up-msg{margin:10px 0 0;font-size:14px}
-.up-err{color:#A1262C}
-.up-bar{display:flex;flex-wrap:wrap;gap:12px 20px;align-items:center;margin:0 0 18px}
-.up-bar label{font-weight:600;font-size:14.5px;display:flex;gap:8px;align-items:center}
-.up-sec{margin:0 0 22px}
-.up-sec h3{font-family:Archivo,'Source Sans 3',sans-serif;font-size:15px;letter-spacing:0.04em;text-transform:uppercase;color:#512888;margin:0 0 8px;padding-bottom:6px;border-bottom:2px solid #512888}
-.up-item{display:grid;grid-template-columns:minmax(0,1fr) 240px;gap:8px 16px;align-items:center;padding:10px 0;border-bottom:1px solid #E4E0EC}
-.up-item:last-child{border-bottom:none}
-.up-t{font-size:15px;line-height:1.4}
-.up-meta{display:block;font-size:13px;color:#6B6579;margin-top:2px}
-.up-ctl{display:flex;flex-direction:column;gap:3px}
-.up-ctl .up-sel{width:100%}
-.up-st{font-size:12.5px;min-height:16px;color:#6B6579}
-.up-st.ok{color:#2F6B3F}
-.up-st.bad{color:#A1262C}
-.up-item.done .up-t{color:#6B6579}
-@media (max-width:640px){.up-item{grid-template-columns:minmax(0,1fr)}}
 </style>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -154,29 +131,8 @@ section.sec.band-w{padding-top:32px !important;padding-bottom:40px;margin-top:0;
     </section>
 
     <section class="wrap sec band-w" id="update">
-      <div id="up-off" class="card" hidden>
-        <p style="margin: 0;">Updating from the hub isn't switched on yet. For now, update your status in <a href="https://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21">Smartsheet</a>.</p>
-      </div>
-
-      <form id="up-gate" class="card up-gate" hidden>
-        <label for="up-pass">Team passcode</label>
-        <div class="up-row">
-          <input id="up-pass" class="up-in" type="password" autocomplete="current-password" required>
-          <button class="btn primary" type="submit">Continue</button>
-        </div>
-        <p class="up-msg muted">Ask Morgan if you don't have it. This browser remembers it after the first time.</p>
-        <p id="up-gate-err" class="up-msg up-err" hidden></p>
-      </form>
-
-      <div id="up-main" hidden>
-        <div class="up-bar">
-          <label>Show assignments for <select id="up-who" class="up-sel"><option value="">Everyone</option></select></label>
-          <label><input id="up-hide" type="checkbox"> Hide finalized</label>
-          <button id="up-lock" class="btn sm" type="button">Forget passcode</button>
-        </div>
-        <p class="small muted" style="margin: 0 0 18px;">What each status means: <a href="Workflow.html#statuses">Progress status definitions</a>.</p>
-        <div id="up-list"><p class="muted">Loading assignments from Smartsheet…</p></div>
-      </div>
+      <p class="small muted" style="margin: 0 0 18px;">You can also update your own assignments from your <a href="Guidance.html">individualized guidance page</a>. What each status means: <a href="Workflow.html#statuses">Progress status definitions</a>.</p>
+      <div class="cnap-progress"></div>
     </section>
   </main>
 
@@ -428,102 +384,6 @@ class Component extends DCLogic {
 })();
 </script>
 <script src="hub-config.js"></script>
-<script>
-(function () {
-  const API = (window.CNAP_API || '').replace(/\/+$/, '');
-  const $ = (id) => document.getElementById(id);
-  const store = {
-    get: (k) => { try { return localStorage.getItem(k) || ''; } catch (e) { return ''; } },
-    set: (k, v) => { try { if (v) localStorage.setItem(k, v); else localStorage.removeItem(k); } catch (e) {} },
-  };
-  let pass = store.get('cnapPass');
-  let data = null;
-
-  if (!API) { $('up-off').hidden = false; return; }
-
-  const call = (path, opts) => fetch(API + path, Object.assign({}, opts, {
-    headers: Object.assign({ 'X-Team-Passcode': pass, 'Content-Type': 'application/json' }, (opts && opts.headers) || {}),
-  })).then((r) => r.json().catch(() => ({})).then((j) => { if (!r.ok) { const e = new Error(j.error || ('Error ' + r.status)); e.status = r.status; throw e; } return j; }));
-
-  const showGate = (msg) => {
-    $('up-main').hidden = true; $('up-gate').hidden = false;
-    $('up-gate-err').hidden = !msg; $('up-gate-err').textContent = msg || '';
-    $('up-pass').value = ''; $('up-pass').focus();
-  };
-
-  const names = (resp) => resp.split('/').map((s) => s.replace(/\(.*?\)/g, '').trim()).filter(Boolean);
-  const fmtDate = (d) => {
-    if (!d) return '';
-    const dt = new Date(d + 'T12:00:00');
-    return isNaN(dt) ? d : dt.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
-  };
-  const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
-
-  const render = () => {
-    const who = $('up-who').value, hide = $('up-hide').checked;
-    const rows = data.rows.filter((r) => (!who || names(r.responsible).includes(who)) && !(hide && r.progress === 'Finalized'));
-    if (!rows.length) { $('up-list').innerHTML = '<p class="muted">No assignments match.</p>'; return; }
-    const groups = [];
-    rows.forEach((r) => {
-      let g = groups.find((x) => x.name === r.section);
-      if (!g) { g = { name: r.section, rows: [] }; groups.push(g); }
-      g.rows.push(r);
-    });
-    $('up-list').innerHTML = groups.map((g) => '<div class="up-sec"><h3>' + esc(g.name || 'Other') + '</h3>' + g.rows.map((r) => {
-      const meta = [r.responsible && 'Responsible: ' + r.responsible, r.due && 'Due ' + fmtDate(r.due), r.reviewer && 'Reviewer: ' + r.reviewer].filter(Boolean).join(' · ');
-      const opts = ['<option value=""' + (r.progress ? '' : ' selected') + ' disabled>No status yet</option>']
-        .concat(data.statuses.map((s) => '<option' + (s === r.progress ? ' selected' : '') + '>' + esc(s) + '</option>')).join('');
-      return '<div class="up-item' + (r.progress === 'Finalized' ? ' done' : '') + '" data-id="' + esc(r.id) + '"><div class="up-t">' + esc(r.assignment) +
-        '<span class="up-meta">' + esc(meta) + '</span></div><div class="up-ctl"><select class="up-sel" aria-label="Progress for ' + esc(r.assignment) + '">' + opts +
-        '</select><span class="up-st" aria-live="polite"></span></div></div>';
-    }).join('') + '</div>').join('');
-  };
-
-  const load = () => {
-    $('up-gate').hidden = true; $('up-main').hidden = false;
-    call('/tasks').then((j) => {
-      data = j;
-      const sel = $('up-who'), keep = store.get('cnapWho');
-      const all = Array.from(new Set(j.rows.flatMap((r) => names(r.responsible)))).sort();
-      sel.innerHTML = '<option value="">Everyone</option>' + all.map((n) => '<option' + (n === keep ? ' selected' : '') + '>' + esc(n) + '</option>').join('');
-      render();
-    }).catch((e) => {
-      if (e.status === 401) { store.set('cnapPass', ''); pass = ''; showGate('That passcode didn’t work. Try again.'); }
-      else $('up-list').innerHTML = '<p class="up-err">Couldn’t load assignments: ' + esc(e.message) + '. Refresh to try again, or use <a href="https://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21">Smartsheet</a>.</p>';
-    });
-  };
-
-  $('up-gate').addEventListener('submit', (e) => {
-    e.preventDefault();
-    pass = $('up-pass').value.trim();
-    store.set('cnapPass', pass);
-    load();
-  });
-  $('up-lock').addEventListener('click', () => { store.set('cnapPass', ''); pass = ''; showGate(); });
-  $('up-who').addEventListener('change', () => { store.set('cnapWho', $('up-who').value); render(); });
-  $('up-hide').addEventListener('change', render);
-  $('up-list').addEventListener('change', (e) => {
-    const sel = e.target.closest('select'); if (!sel) return;
-    const item = sel.closest('.up-item'), st = item.querySelector('.up-st');
-    const row = data.rows.find((r) => r.id === item.dataset.id);
-    const prev = row.progress, next = sel.value;
-    sel.disabled = true; st.className = 'up-st'; st.textContent = 'Saving…';
-    call('/tasks/' + row.id, { method: 'POST', body: JSON.stringify({ progress: next }) })
-      .then(() => {
-        row.progress = next;
-        st.className = 'up-st ok'; st.textContent = 'Saved to Smartsheet';
-        item.classList.toggle('done', next === 'Finalized');
-      })
-      .catch((err) => {
-        sel.value = prev;
-        st.className = 'up-st bad'; st.textContent = 'Not saved: ' + err.message;
-        if (err.status === 401) { store.set('cnapPass', ''); pass = ''; showGate('Your passcode has changed. Enter the new one.'); }
-      })
-      .finally(() => { sel.disabled = false; });
-  });
-
-  if (pass) load(); else showGate();
-})();
-</script>
+<script src="progress-widget.js"></script>
 </body>
 </html>

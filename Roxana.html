@@ -182,6 +182,14 @@ details.sx[open] > summary{margin-bottom:14px}
       </div>
     </section>
 
+    <section class="wrap sec band-g" id="progress">
+      <details class="sx" open>
+      <summary><h2 class="h2">Update your progress</h2><span class="sx-car" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+      <p class="small muted" style="margin: 0 0 14px;">Change a status here and it's saved to Smartsheet. In date order. What each status means: <a href="Workflow.html#statuses">Progress status definitions</a>.</p>
+      <div class="cnap-progress" data-who="Roxana"></div>
+      </details>
+    </section>
+
     <section class="wrap sec band-w">
       <details class="sx">
       <summary><h2 class="h2">Helpful notes</h2><span class="sx-car" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
@@ -621,5 +629,7 @@ class Component extends DCLogic {
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start); else start();
 })();
 </script>
+<script src="hub-config.js"></script>
+<script src="progress-widget.js"></script>
 </body>
 </html>
