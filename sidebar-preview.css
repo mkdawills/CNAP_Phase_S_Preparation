@@ -49,3 +49,8 @@
   .sb-close{display:inline-flex;margin-left:auto;border:0;background:transparent;color:var(--sb-ink-3);font-size:20px;line-height:1;cursor:pointer;padding:4px 6px}
 }
 .sb-preview-note{font-family:'Source Sans 3','Segoe UI',system-ui,sans-serif;position:fixed;right:14px;bottom:14px;z-index:50;background:#fff;border:1px solid var(--sb-line);color:var(--sb-ink-2);font-size:12px;padding:6px 10px;border-radius:8px;box-shadow:0 2px 8px rgba(31,27,43,0.08)}
+
+/* No hub name in the menu: the header only holds the close button on phones */
+.sb-head{display:none}
+@media (max-width:1100px){.sb-head{display:flex;justify-content:flex-end;height:auto;padding:10px 10px 0;border-bottom:0}}
+.sb-nav{padding-top:16px}

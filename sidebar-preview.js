@@ -14,7 +14,7 @@
     'Review.html': svg('<circle cx="12" cy="12" r="9"/><path d="M8 12.5l3 3 5-6"/>'),
     'PhaseS.html': svg('<circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/>'),
     'StrategicPlan.html': svg('<path d="M5 21V4M5 4h11l-2 4 2 4H5"/>'),
-    'SRP.html': svg('<path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 1.7 3h10.6a2 2 0 0 0 1.7-3l-5-9V3"/>'),
+    'SRP.html': svg('<circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><path d="M16 4.6a3.5 3.5 0 0 1 0 6.8M18 14.2a6.5 6.5 0 0 1 3.5 5.8"/>'),
     'Definitions.html': svg('<path d="M5 4.5A1.5 1.5 0 0 1 6.5 3H19v15H6.5A1.5 1.5 0 0 0 5 19.5z"/><path d="M5 19.5A1.5 1.5 0 0 0 6.5 21H19"/>'),
   };
   // Shorter labels and three groups keep the list easy to scan.
@@ -55,7 +55,7 @@
     if (rest.length) html += '<div class="sb-group"><p class="sb-label">More</p>' + rest.map(itemHtml).join('') + '</div>';
     const aside = document.createElement('aside');
     aside.className = 'sb'; aside.setAttribute('aria-label', 'Site menu');
-    aside.innerHTML = '<div class="sb-head"><a class="sb-brand" href="preview-dashboard.html">CNAP Phase S Proposal Hub</a><button class="sb-close" type="button" aria-label="Close menu">×</button></div>' +
+    aside.innerHTML = '<div class="sb-head"><button class="sb-close" type="button" aria-label="Close menu">×</button></div>' +
       '<nav class="sb-nav">' + html + '</nav>';
     document.body.appendChild(aside);
     aside.addEventListener('click', (e) => {
