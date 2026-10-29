@@ -171,9 +171,9 @@ details.sx[open] > summary{margin-bottom:14px}
 
     <section class="wrap sec band-g" id="progress">
       <details class="sx" open>
-      <summary><h2 class="h2">Update your progress</h2><span class="sx-car" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
-      <p class="small muted" style="margin: 0 0 14px;">Choose a status and it saves right away. In date order. Morgan and Heather set &ldquo;Finalized&rdquo; after their final review. What each status means: <a href="Workflow.html#statuses">Progress status definitions</a>.</p>
-      <div class="cnap-progress" data-who="Carl Ade"></div>
+      <summary><h2 class="h2">More assignments to update</h2><span class="sx-car" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+      <p class="small muted" style="margin: 0 0 14px;">These assignments aren&rsquo;t listed in the sections below. Choose a status and it saves right away. In date order. Morgan and Heather set &ldquo;Finalized&rdquo; after their final review. What each status means: <a href="Workflow.html#statuses">Progress status definitions</a>.</p>
+      <div class="cnap-progress" data-who="Carl Ade" data-rest="1"></div>
       </details>
     </section>
 
@@ -206,7 +206,7 @@ details.sx[open] > summary{margin-bottom:14px}
       <summary><h2 class="h2">2 Writing Assignments</h2><span class="sx-car" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
       <div class="sec-head">
         <div>
-          <p>Your Biographical Sketch Common Form plus the NIH Biographical Sketch Supplement, listed in the Administrative Core.</p><ul class="intro-list"><li>We invite you to save your biosketch in the <a href="https://www.dropbox.com/scl/fo/xq6r8le84xmx63rq3sq6e/AEidS1yGE9E1UbcrVGc6tZo?rlkey=4mg2rhwg2ivv8kvz168595szc&amp;st=wugxhc1c&amp;dl=0">WORKING DRAFTS › Admin Core</a> folder.</li><li>Please save the biosketch no later than its internal due date.</li><li>Once approved, Morgan and Heather move your biosketch to the <a href="https://www.dropbox.com/scl/fo/qxgx2e7jukieka7ttrb1y/ADFzgEe35zUkLSQ9buNZeQA?rlkey=0ki8z4elan99epdlddmjmysov&amp;st=dn2buzey&amp;dl=0">FINAL VERSIONS › Admin Core</a> folder.</li><li>For everyone's dates in one view, see the <a href="Timeline.html">Team Timeline</a>.</li></ul>
+          <p>Your Biographical Sketch Common Form plus the NIH Biographical Sketch Supplement, listed in the Administrative Core.</p><ul class="intro-list"><li><b>Your status is on each assignment.</b> The label on each row shows where it stands; open the assignment to change it, and it saves straight to Smartsheet. (Morgan and Heather set &ldquo;Finalized.&rdquo;)</li><li>We invite you to save your biosketch in the <a href="https://www.dropbox.com/scl/fo/xq6r8le84xmx63rq3sq6e/AEidS1yGE9E1UbcrVGc6tZo?rlkey=4mg2rhwg2ivv8kvz168595szc&amp;st=wugxhc1c&amp;dl=0">WORKING DRAFTS › Admin Core</a> folder.</li><li>Please save the biosketch no later than its internal due date.</li><li>Once approved, Morgan and Heather move your biosketch to the <a href="https://www.dropbox.com/scl/fo/qxgx2e7jukieka7ttrb1y/ADFzgEe35zUkLSQ9buNZeQA?rlkey=0ki8z4elan99epdlddmjmysov&amp;st=dn2buzey&amp;dl=0">FINAL VERSIONS › Admin Core</a> folder.</li><li>For everyone's dates in one view, see the <a href="Timeline.html">Team Timeline</a>.</li></ul>
         </div>
         <div style="display: flex; gap: 8px; flex-wrap: wrap;">
           <a class="btn sm" href="Workflow.html">Workflow &amp; Files</a>
@@ -214,7 +214,7 @@ details.sx[open] > summary{margin-bottom:14px}
       </div>
 
       <div class="xscope">
-      <details class="acc" open="">
+      <details class="acc" data-rows="8460731724857220" open="">
         <summary>
           <span class="due"><span class="dow">Thu</span><span class="md">Dec 17</span></span>
           <span class="ttl">1. Your biosketch: review draft<span class="sub">The PDF from SciENcv, in WORKING DRAFTS with Progress set to Ready for Review. Morgan checks the formatting.</span></span>
@@ -252,7 +252,7 @@ details.sx[open] > summary{margin-bottom:14px}
         </div>
       </details>
 
-      <details class="acc">
+      <details class="acc" data-rows="1423857307090820">
         <summary>
           <span class="due"><span class="dow">Wed</span><span class="md">Jan 13</span></span>
           <span class="ttl">2. Your biosketch: final<span class="sub">Final version with Kim's fixes plus anything new since Dec 17.</span></span>
@@ -533,6 +533,6 @@ class Component extends DCLogic {
 })();
 </script>
 <script src="hub-config.js"></script>
-<script src="progress-widget.js"></script>
+<script src="progress-widget.js?v=2"></script>
 </body>
 </html>
