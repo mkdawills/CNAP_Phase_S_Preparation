@@ -195,7 +195,7 @@ section.sec.band-w,section.sec.band-g{padding-top:40px;padding-bottom:40px}
             <a class="hd" href="Workflow.html">Workflow &amp; File Management</a>
             <a href="Workflow.html#summary">Start here: the short version</a>
             <a href="Workflow.html#moves">From start to submission: the 5 steps</a>
-            <a href="Workflow.html#smartsheet">Helpful Smartsheet guidance</a>
+            <a href="Workflow.html#smartsheet">Updating your progress</a>
             <a href="Workflow.html#statuses">Progress status definitions (5 total)</a>
             <a href="Workflow.html#folders">Folder organization: saving your documents (Dropbox)</a>
             <a href="Workflow.html#reference">Prior proposals for your reference</a>
@@ -271,7 +271,6 @@ section.sec.band-w,section.sec.band-g{padding-top:40px;padding-bottom:40px}
         </details>
       </nav>
       <div class="quick">
-        <a class="btn sm primary" href="https://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3h7v7"></path><path d="M21 3l-9 9"></path><path d="M19 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h5"></path></svg>Open Smartsheet</a>
         <a class="btn sm" href="FAQ.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>CNAP FAQ</a>
         <details class="menu">
           <summary class="btn sm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>Dropbox: Working Drafts</summary>
@@ -319,7 +318,7 @@ section.sec.band-w,section.sec.band-g{padding-top:40px;padding-bottom:40px}
         <h1 class="h1" style="font-size: 46px;">CNAP Phase S Proposal Hub</h1>
         <img src="assets/cnap-logo.jpg" alt="CNAP Center — Cognitive &amp; Neurobiological Approaches to Plasticity" style="display: block; align-self: flex-start; flex: none; width: 340px; max-width: 100%; height: auto; aspect-ratio: 2048 / 739; object-fit: contain; border-radius: 8px; margin: 6px 0 8px;">
         <p class="lede" style="font-size: 20px;">COBRE-S Application · <a href="https://files.simpler.grants.gov/opportunities/77942f5d-0b5f-4656-bfd7-a6148b1624a4/attachments/55f55944-4b0c-4a90-9e33-75b064598558/PAR-27-055-Full-Announcement.html" style="text-decoration: underline; text-underline-offset: 3px;" title="Read the full NOFO">PAR-27-055</a></p>
-        <p class="lede" style="margin-top: 6px;">The front door to the Phase S proposal: Phase S overview and comparison, the team's proposal preparation status, your individualized guidance, internal due dates, working folders, and access to and use of Smartsheet.</p>
+        <p class="lede" style="margin-top: 6px;">The front door to the Phase S proposal: Phase S overview and comparison, the team's proposal preparation status, your individualized guidance, internal due dates, working folders, and where to update your progress.</p>
         <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px;">
           <a class="btn primary" href="#guidance">Find your individualized guidance</a>
           <a class="btn" href="Timeline.html">View full team timeline</a>
@@ -362,7 +361,7 @@ section.sec.band-w,section.sec.band-g{padding-top:40px;padding-bottom:40px}
       <p class="pc-note">{{pcNote}}</p>
       <div class="card scroll" style="padding: 8px 12px; margin-top: 16px;">
         <table class="tbl pc-tbl">
-          <thead><tr><th>Status in Smartsheet</th><th style="width: 120px;"><a href="#guidance" title="Find your individualized guidance" style="color: #FFFFFF; text-decoration: underline; text-decoration-color: rgba(255,255,255,0.55); text-underline-offset: 3px;">Assignments</a></th></tr></thead>
+          <thead><tr><th>Status</th><th style="width: 120px;"><a href="#guidance" title="Find your individualized guidance" style="color: #FFFFFF; text-decoration: underline; text-decoration-color: rgba(255,255,255,0.55); text-underline-offset: 3px;">Assignments</a></th></tr></thead>
           <tbody>
             <tr><td><span class="pc-key s5"></span>Finalized</td><td>{{k5}}</td></tr>
             <tr><td><span class="pc-key s4"></span>Applying Reviewer Feedback</td><td>{{k4}}</td></tr>
@@ -372,7 +371,7 @@ section.sec.band-w,section.sec.band-g{padding-top:40px;padding-bottom:40px}
           </tbody>
         </table>
       </div>
-      <p class="small muted" style="margin: 12px 0 0;">Last updated automatically from Smartsheet: {{pcUpdated}}. Smartsheet is the live version.</p>
+      <p class="small muted" style="margin: 12px 0 0;">Last updated: {{pcUpdated}}.</p>
       </div>
     </section>
 
@@ -523,12 +522,11 @@ section.sec.band-w,section.sec.band-g{padding-top:40px;padding-bottom:40px}
       <div class="qbox">
         <div style="max-width: 720px;">
           <h2 class="h2 h2-dark">Quick access</h2>
-          <p style="margin: 6px 0 0; color: #FFFFFF;">Smartsheet is the live tracker for dates, links, assignments, and status. Dropbox holds the drafts and finals. Your own page lists the folders for your component.</p>
+          <p style="margin: 6px 0 0; color: #FFFFFF;">Your own guidance page lists your assignments and due dates, and is where you update your progress. Dropbox holds the drafts and finals.</p>
           <p style="margin: 6px 0 0; color: #FFFFFF;">The CNAP FAQ answers common questions. The Full NOFO and the NIGMS FAQs are the official sources.</p>
         </div>
         <div class="qrow">
-          <a class="qbtn qbtn-solid" href="https://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21">Open Smartsheet</a>
-          <a class="qbtn" href="Progress.html">Update Progress</a>
+          <a class="qbtn qbtn-solid" href="Progress.html">Update Progress</a>
           <a class="qbtn" href="FAQ.html">CNAP FAQ</a>
           <details class="menu qmenu">
           <summary class="qbtn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>Dropbox: Working Drafts</summary>

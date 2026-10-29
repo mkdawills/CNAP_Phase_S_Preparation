@@ -74,9 +74,13 @@
     };
     const item = (r, meta) => {
       const opts = ['<option value=""' + (r.progress ? '' : ' selected') + ' disabled>No status yet</option>']
-        .concat(data.statuses.map((s) => '<option' + (s === r.progress ? ' selected' : '') + '>' + esc(s) + '</option>')).join('');
+        .concat(data.statuses.map((s) => {
+          // On personal pages only Morgan and Heather's final step, "Finalized", can't be chosen.
+          const locked = fixed && s === 'Finalized';
+          return '<option value="' + esc(s) + '"' + (s === r.progress ? ' selected' : '') + (locked ? ' disabled' : '') + '>' + esc(s) + (locked ? ' (set by Morgan and Heather)' : '') + '</option>';
+        })).join('');
       return '<div class="up-item' + (r.progress === 'Finalized' ? ' done' : '') + '" data-id="' + esc(r.id) + '"><div class="up-t">' + esc(r.assignment) +
-        '<span class="up-meta">' + esc(meta) + '</span></div><div class="up-ctl"><select class="up-sel" aria-label="Progress for ' + esc(r.assignment) + '">' + opts +
+        '<span class="up-meta">' + esc(meta) + '</span></div><div class="up-ctl"><select class="up-sel" aria-label="Progress for ' + esc(r.assignment) + '"' + (fixed && r.progress === 'Finalized' ? ' disabled' : '') + '>' + opts +
         '</select><span class="up-st" aria-live="polite"></span></div></div>';
     };
     const render = () => {
