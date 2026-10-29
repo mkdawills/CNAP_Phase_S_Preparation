@@ -62,9 +62,10 @@
     let pass = store.get('cnapPass');
     let data = null;
 
-    const call = (path, opts) => fetch(API + path, Object.assign({}, opts, {
-      headers: { 'X-Team-Passcode': pass, 'Content-Type': 'application/json' },
-    })).then((r) => r.json().catch(() => ({})).then((j) => { if (!r.ok) { const e = new Error(j.error || ('Error ' + r.status)); e.status = r.status; throw e; } return j; }));
+    // Plain-text POST keeps this a "simple" request, which the Apps Script relay can answer.
+    const call = (body) => fetch(API, { method: 'POST', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify(Object.assign({ passcode: pass }, body)) })
+      .then((r) => r.json().catch(() => ({ error: 'Error ' + r.status, status: r.status })))
+      .then((j) => { if (j.error) { const e = new Error(j.error); e.status = j.status; throw e; } return j; });
 
     const showGate = (msg) => {
       main.hidden = true; gate.hidden = false;
@@ -98,7 +99,7 @@
     };
     const load = () => {
       gate.hidden = true; main.hidden = false;
-      call('/tasks').then((j) => {
+      call({ action: 'tasks' }).then((j) => {
         data = j;
         if (who) {
           const keep = store.get('cnapWho');
@@ -127,7 +128,7 @@
       const row = data.rows.find((r) => r.id === el.dataset.id);
       const prev = row.progress, next = sel.value;
       sel.disabled = true; st.className = 'up-st'; st.textContent = 'Saving…';
-      call('/tasks/' + row.id, { method: 'POST', body: JSON.stringify({ progress: next }) })
+      call({ action: 'set', rowId: row.id, progress: next })
         .then(() => {
           row.progress = next;
           st.className = 'up-st ok'; st.textContent = 'Saved to Smartsheet';

@@ -754,7 +754,7 @@ class Component extends DCLogic {
       tryNext(0);
       const api = (window.CNAP_API || '').replace(/\/+$/, '');
       if (api) {
-        fetch(api + '/progress', { cache: 'no-store' })
+        fetch(api + '?action=progress', { cache: 'no-store' })
           .then((r) => (r.ok ? r.json() : Promise.reject(r.status)))
           .then((j) => { if (j && j.counts && j.total) { this.progressLive = true; this.progress = j; this.forceUpdate(); } })
           .catch(() => {});
