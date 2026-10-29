@@ -66,13 +66,30 @@
     edge.className = 'sb-edge'; edge.type = 'button';
     edge.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>';
     const label = () => { const h = document.documentElement.classList.contains('sb-collapsed'); edge.setAttribute('aria-label', h ? 'Show the menu' : 'Hide the menu'); edge.title = h ? 'Show the menu' : 'Hide the menu'; edge.setAttribute('aria-expanded', String(!h)); };
+    const hint = document.createElement('div');
+    hint.className = 'sb-hint'; hint.setAttribute('role', 'status'); hint.textContent = 'Expand to view website pages';
+    let hintTimer = null;
+    // Show the note for a few seconds when the menu is hidden, and again on hover or focus.
+    const showHint = (ms) => {
+      if (!document.documentElement.classList.contains('sb-collapsed')) return;
+      hint.classList.add('on'); clearTimeout(hintTimer);
+      if (ms) hintTimer = setTimeout(() => hint.classList.remove('on'), ms);
+    };
+    const hideHint = () => { clearTimeout(hintTimer); hint.classList.remove('on'); };
     edge.addEventListener('click', () => {
       const h = document.documentElement.classList.toggle('sb-collapsed');
       try { localStorage.setItem(KEY, h ? '1' : '0'); } catch (e) {}
       label();
+      if (h) showHint(6000); else hideHint();
     });
+    edge.addEventListener('mouseenter', () => showHint(0));
+    edge.addEventListener('focus', () => showHint(0));
+    edge.addEventListener('mouseleave', () => showHint(1500));
+    edge.addEventListener('blur', () => showHint(1500));
     label();
     document.body.appendChild(edge);
+    document.body.appendChild(hint);
+    setTimeout(() => showHint(6000), 400);
     aside.addEventListener('click', (e) => {
       const t = e.target.closest('.sb-tog');
       if (t) {
