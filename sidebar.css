@@ -37,8 +37,28 @@
 .sb-open{display:none}
 .sb-close{display:none}
 @media (min-width:1101px){
-  body{padding-left:var(--sb-w)}
+  body{padding-left:var(--sb-w);transition:padding-left .25s ease}
+  .sb{transition:transform .25s ease}
+  /* Hidden menu: the page takes the full width */
+  html.sb-collapsed body{padding-left:0}
+  html.sb-collapsed .sb{transform:translateX(-100%)}
 }
+/* Arrow tab on the menu's edge: hides the menu, and beats like a heart while it's hidden */
+.sb-edge{position:fixed;top:50%;left:var(--sb-w);z-index:41;transform:translate(-50%,-50%);transform-origin:left center;width:26px;height:44px;padding:0;border-radius:13px;border:1px solid var(--sb-line);background:#fff;color:var(--sb-ink-2);align-items:center;justify-content:center;cursor:pointer;box-shadow:0 1px 4px rgba(31,27,43,0.08);transition:left .25s ease,color .15s,border-color .15s}
+.sb-edge:hover{color:var(--sb-accent);border-color:#C9B6E4}
+.sb-edge:focus-visible{outline:2px solid var(--sb-accent);outline-offset:2px}
+.sb-edge svg{width:14px;height:14px;transition:transform .25s}
+html.sb-collapsed .sb-edge{left:0;transform:translate(0,-50%);width:30px;height:54px;border-radius:0 14px 14px 0;border-color:var(--sb-accent);background:var(--sb-accent);color:#fff;animation:sb-heart 1.4s ease-in-out infinite}
+html.sb-collapsed .sb-edge svg{transform:rotate(180deg)}
+@keyframes sb-heart{
+  0%,45%,100%{transform:translate(0,-50%) scale(1);box-shadow:0 0 0 0 rgba(81,40,136,0.35)}
+  12%{transform:translate(0,-50%) scale(1.2);box-shadow:0 0 0 6px rgba(81,40,136,0.18)}
+  24%{transform:translate(0,-50%) scale(1);box-shadow:0 0 0 3px rgba(81,40,136,0.10)}
+  34%{transform:translate(0,-50%) scale(1.12);box-shadow:0 0 0 8px rgba(81,40,136,0.12)}
+}
+@media (max-width:1100px){.sb-edge{display:none !important}}
+.sb-edge{display:flex}
+@media (prefers-reduced-motion:reduce){html.sb-collapsed .sb-edge{animation:none;box-shadow:0 0 0 4px rgba(81,40,136,0.18)}body,.sb,.sb-edge{transition:none}}
 @media (max-width:1100px){
   .sb{transform:translateX(-100%);transition:transform .2s;width:min(280px,86vw);box-shadow:none}
   body.sb-show .sb{transform:none;box-shadow:4px 0 24px rgba(31,27,43,0.14)}

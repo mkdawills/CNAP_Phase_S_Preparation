@@ -86,6 +86,9 @@
       '<label><input class="up-hide" type="checkbox"> Hide finalized</label>' +
       '</div>' +
       '<div class="up-list"><p class="muted">Loading assignments from Smartsheet…</p></div></div>';
+    // A person's safety-net list stays hidden unless some of their rows aren't covered on the page.
+    const restSec = restOnly ? root.closest('section') : null;
+    if (restSec) restSec.hidden = true;
     const q = (s) => root.querySelector(s);
     const list = q('.up-list'), who = q('.up-who'), hide = q('.up-hide');
     let data = null;
@@ -125,8 +128,8 @@
         if (restOnly) {
           const covered = coveredIds();
           data = Object.assign({}, j, { rows: j.rows.filter((r) => !covered.has(r.id) && (!fixed || names(r.responsible).includes(fixed))) });
-          const sec = root.closest('section');
-          if (!data.rows.length && sec) { sec.hidden = true; return; }
+          if (!data.rows.length) return;
+          if (restSec) restSec.hidden = false;
         }
         if (who) {
           const keep = store.get('cnapWho');

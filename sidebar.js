@@ -1,6 +1,10 @@
 // Side menu: built from the page's existing top menu (hidden by sidebar.css), so every page's
 // menu stays in one place in its HTML. Desktop shows it on the left; phones open it with Menu.
 (function () {
+  // Hidden or shown menu is remembered in this browser; apply it before the page paints.
+  const KEY = 'cnapMenuHidden';
+  const isHidden = () => { try { return localStorage.getItem(KEY) === '1'; } catch (e) { return false; } };
+  document.documentElement.classList.toggle('sb-collapsed', isHidden());
   const fix = (href) => href || '';
   const CAR = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg>';
   const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
@@ -21,8 +25,8 @@
   const LABEL = { 'Phase S Overview & Comparisons': 'Phase S Overview' };
   const GROUPS = [
     { name: '', pages: ['index.html'] },
-    { name: 'Your work', pages: ['Guidance.html', 'Timeline.html', 'Workflow.html'] },
-    { name: 'Writing', pages: ['Conventions.html', 'Review.html'] },
+    { name: 'Your Guidance', pages: ['Guidance.html'] },
+    { name: 'Universal Guidelines', pages: ['Timeline.html', 'Workflow.html', 'Conventions.html', 'Review.html'] },
     { name: 'Background', pages: ['PhaseS.html', 'StrategicPlan.html', 'SRP.html', 'Definitions.html'] },
   ];
   const shortKid = (t) => { const name = t.split(' · ')[0]; return /^(Dr|Mr|Ms|Mrs)\. /.test(name) ? name.replace(/^(Dr|Mr|Ms|Mrs)\. /, '') : t; };
@@ -58,6 +62,17 @@
     aside.innerHTML = '<div class="sb-head"><button class="sb-close" type="button" aria-label="Close menu">×</button></div>' +
       '<nav class="sb-nav">' + html + '</nav>';
     document.body.appendChild(aside);
+    const edge = document.createElement('button');
+    edge.className = 'sb-edge'; edge.type = 'button';
+    edge.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>';
+    const label = () => { const h = document.documentElement.classList.contains('sb-collapsed'); edge.setAttribute('aria-label', h ? 'Show the menu' : 'Hide the menu'); edge.title = h ? 'Show the menu' : 'Hide the menu'; edge.setAttribute('aria-expanded', String(!h)); };
+    edge.addEventListener('click', () => {
+      const h = document.documentElement.classList.toggle('sb-collapsed');
+      try { localStorage.setItem(KEY, h ? '1' : '0'); } catch (e) {}
+      label();
+    });
+    label();
+    document.body.appendChild(edge);
     aside.addEventListener('click', (e) => {
       const t = e.target.closest('.sb-tog');
       if (t) {
