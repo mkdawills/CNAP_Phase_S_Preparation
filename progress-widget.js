@@ -33,6 +33,12 @@
     get: (k) => { try { return localStorage.getItem(k) || ''; } catch (e) { return ''; } },
     set: (k, v) => { try { if (v) localStorage.setItem(k, v); else localStorage.removeItem(k); } catch (e) {} },
   };
+  // The passcode lasts only while this browser tab is open (sessionStorage), not between visits.
+  const passStore = {
+    get: () => { try { return sessionStorage.getItem('cnapPass') || ''; } catch (e) { return ''; } },
+    set: (v) => { try { if (v) sessionStorage.setItem('cnapPass', v); else sessionStorage.removeItem('cnapPass'); } catch (e) {} },
+  };
+  try { localStorage.removeItem('cnapPass'); } catch (e) {}
   const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
   const names = (resp) => resp.split('/').map((s) => s.replace(/\(.*?\)/g, '').trim()).filter(Boolean);
   const fmtDate = (d) => {
@@ -51,7 +57,7 @@
     root.innerHTML =
       '<form class="card up-gate" hidden><label>Team passcode<input class="up-in" type="password" autocomplete="current-password" required style="display:block;width:100%;margin-top:6px;box-sizing:border-box"></label>' +
       '<div class="up-row" style="margin-top:10px"><button class="btn primary" type="submit">Continue</button></div>' +
-      '<p class="up-msg muted">Ask Morgan if you don’t have it. This browser remembers it after the first time.</p><p class="up-msg up-err" hidden></p></form>' +
+      '<p class="up-msg muted">Ask Morgan if you don’t have it. It\u2019s remembered until you close this tab.</p><p class="up-msg up-err" hidden></p></form>' +
       '<div class="up-main" hidden><div class="up-bar">' +
       (fixed ? '' : '<label>Show assignments for <select class="up-sel up-who"><option value="">Everyone</option></select></label>') +
       '<label><input class="up-hide" type="checkbox"> Hide finalized</label>' +
@@ -59,7 +65,7 @@
       '<div class="up-list"><p class="muted">Loading assignments from Smartsheet…</p></div></div>';
     const q = (s) => root.querySelector(s);
     const gate = q('.up-gate'), main = q('.up-main'), list = q('.up-list'), who = q('.up-who'), hide = q('.up-hide');
-    let pass = store.get('cnapPass');
+    let pass = passStore.get();
     let data = null;
 
     // Plain-text POST keeps this a "simple" request, which the Apps Script relay can answer.
@@ -112,7 +118,7 @@
         }
         render();
       }).catch((e) => {
-        if (e.status === 401) { store.set('cnapPass', ''); pass = ''; showGate('That passcode didn’t work. Try again.'); }
+        if (e.status === 401) { passStore.set(''); pass = ''; showGate('That passcode didn’t work. Try again.'); }
         else list.innerHTML = '<p class="up-err">Couldn’t load assignments: ' + esc(e.message) + '. Refresh to try again, or use <a href="' + SHEET + '">Smartsheet</a>.</p>';
       });
     };
@@ -120,10 +126,10 @@
     gate.addEventListener('submit', (e) => {
       e.preventDefault();
       pass = gate.querySelector('input').value.trim();
-      store.set('cnapPass', pass);
+      passStore.set(pass);
       load();
     });
-    q('.up-lock').addEventListener('click', () => { store.set('cnapPass', ''); pass = ''; showGate(); });
+    q('.up-lock').addEventListener('click', () => { passStore.set(''); pass = ''; showGate(); });
     if (who) who.addEventListener('change', () => { store.set('cnapWho', who.value); render(); });
     hide.addEventListener('change', render);
     list.addEventListener('change', (e) => {
@@ -141,7 +147,7 @@
         .catch((err) => {
           sel.value = prev;
           st.className = 'up-st bad'; st.textContent = 'Not saved: ' + err.message;
-          if (err.status === 401) { store.set('cnapPass', ''); pass = ''; showGate('The passcode has changed. Enter the new one.'); }
+          if (err.status === 401) { passStore.set(''); pass = ''; showGate('The passcode has changed. Enter the new one.'); }
         })
         .finally(() => { sel.disabled = false; });
     });

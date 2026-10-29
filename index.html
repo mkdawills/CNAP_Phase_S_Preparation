@@ -881,13 +881,13 @@ class Component extends DCLogic {
   }
   pcLoad() {
     let pass = '';
-    try { pass = localStorage.getItem('cnapPass') || ''; } catch (e) {}
+    try { localStorage.removeItem('cnapPass'); pass = sessionStorage.getItem('cnapPass') || ''; } catch (e) {}
     if (!pass) { this.pcNeedPass = true; this.forceUpdate(); return; }
     this.pcNeedPass = false; this.pcErr = ''; this.forceUpdate();
     fetch(window.CNAP_API, { method: 'POST', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify({ action: 'tasks', passcode: pass }) })
       .then((r) => r.json())
       .then((j) => {
-        if (j.status === 401) { try { localStorage.removeItem('cnapPass'); } catch (e) {} this.pcNeedPass = true; this.pcErr = 'That passcode didn’t work. Try again.'; }
+        if (j.status === 401) { try { sessionStorage.removeItem('cnapPass'); } catch (e) {} this.pcNeedPass = true; this.pcErr = 'That passcode didn’t work. Try again.'; }
         else if (j.error) this.pcErr = 'Couldn’t load assignments: ' + j.error;
         else { this.pcTasks = j.rows; this.pcErr = ''; }
         this.forceUpdate();
@@ -911,7 +911,7 @@ class Component extends DCLogic {
       if (!e.target.classList || !e.target.classList.contains('pc-pass')) return;
       e.preventDefault();
       const v = (e.target.querySelector('input').value || '').trim();
-      try { localStorage.setItem('cnapPass', v); } catch (err) {}
+      try { sessionStorage.setItem('cnapPass', v); } catch (err) {}
       this.pcLoad();
     });
   }
