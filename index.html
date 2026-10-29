@@ -168,6 +168,8 @@ section.sec.band-w,section.sec.band-g{padding-top:40px;padding-bottom:40px}
 .pc-key{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:10px;vertical-align:-1px;border:1px solid #D3CDE0}
 .pc-tbl{min-width:0 !important;width:100%;table-layout:auto}.pc-tbl td,.pc-tbl th{white-space:normal !important}
 .pc-tbl td + td,.pc-tbl th + th{text-align:center !important;font-variant-numeric:tabular-nums}
+/* Top-bar buttons keep one-line labels; the row wraps instead of squeezing them */
+@media (min-width:761px){.topbar .wrap > .quick{flex-wrap:wrap !important;row-gap:6px}.topbar .quick > *{flex:none}.topbar .quick .btn.sm,.topbar .quick summary{white-space:nowrap}}
 </style>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -270,7 +272,6 @@ section.sec.band-w,section.sec.band-g{padding-top:40px;padding-bottom:40px}
       </nav>
       <div class="quick">
         <a class="btn sm primary" href="https://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3h7v7"></path><path d="M21 3l-9 9"></path><path d="M19 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h5"></path></svg>Open Smartsheet</a>
-        <a class="btn sm" href="Progress.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>Update Progress</a>
         <a class="btn sm" href="FAQ.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>CNAP FAQ</a>
         <details class="menu">
           <summary class="btn sm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>Dropbox: Working Drafts</summary>
