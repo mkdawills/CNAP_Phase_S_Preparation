@@ -439,3 +439,5 @@ details.sx.sx-key:not([open]) > summary .h2{color:#512888 !important;font-weight
 details.sx.sx-key:not([open]) > summary .sx-car{border-color:#512888;color:#512888;background:#FFFFFF}
 details.sx.sx-key:not([open]) > summary:hover{background:#ECE4F7}
 details.sx.sx-key[open] > summary{background:transparent;border-color:transparent;padding:0}
+/* Room for the Strategic Plan menu item: slightly narrower dropdown arrows */
+@media (min-width:761px){.topbar .nm summary .car{width:15px !important}}
