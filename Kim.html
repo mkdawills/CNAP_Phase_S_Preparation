@@ -181,6 +181,7 @@ details.sx[open] > summary{margin-bottom:14px}
         </div>
       </div>
       <div class="xscope">
+      <div class="xall-bar"><button type="button" class="xall" data-noun="" aria-pressed="false">Expand all</button></div>
       <details class="acc" open=""><summary><span class="due"><span class="dow">Fri</span><span class="md">Dec 18</span></span><span class="ttl">1. Receive biosketch review drafts and Heather Bailey's Current &amp; Pending draft from Morgan<span class="sub">Formatting already checked.</span></span><span class="meta"><span class="badge">Morgan</span><svg class="car" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
         <div class="body"><div class="blk"><h4>Biosketches you'll review</h4>
           <div class="scroll"><table class="tbl"><thead><tr><th>Person</th><th>Role</th><th>Where it's uploaded</th><th>Also includes</th></tr></thead><tbody>
@@ -214,6 +215,7 @@ details.sx[open] > summary{margin-bottom:14px}
       <summary><h2 class="h2">NOFO directions</h2><span class="sx-car" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
       <p class="muted" style="margin: 0 0 14px;">The rules to check each biosketch against.<br>Morgan checks formatting before files reach you.</p>
       <div class="xscope">
+      <div class="xall-bar"><button type="button" class="xall" data-noun="" aria-pressed="false">Expand all</button></div>
       <div class="rules-stack">
         <details class="acc" id="whatthen1">
           <summary style="grid-template-columns: minmax(0,1fr) auto;"><span class="ttl">Every biosketch</span><span class="meta"><svg class="car" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
@@ -477,7 +479,7 @@ class Component extends DCLogic {
         (root && root.querySelectorAll ? root : document).querySelectorAll('button.xall').forEach((b) => {
           const list = window.__xallItems(xallScope(b));
           const anyClosed = list.some((d) => !d.open);
-          const sc = b.closest('.xscope'); b.textContent = anyClosed ? (sc ? 'Expand all stages' : 'Expand all') : (sc ? 'Collapse all stages' : 'Collapse all');
+          const sc = b.closest('.xscope'); const noun = sc ? (b.dataset.noun !== undefined ? b.dataset.noun : 'stages') : ''; b.textContent = (anyClosed ? 'Expand all' : 'Collapse all') + (noun ? ' ' + noun : '');
           b.setAttribute('aria-pressed', anyClosed ? 'false' : 'true');
         });
       };

@@ -225,6 +225,7 @@ details.sx[open] > summary{margin-bottom:14px}
         <a class="btn sm" href="Workflow.html">Workflow &amp; Files</a>
       </div>
       <div class="xscope">
+      <div class="xall-bar"><button type="button" class="xall" data-noun="assignments" aria-pressed="false">Expand all</button></div>
       <details class="acc" open=""><summary><span class="due"><span class="dow">Fri</span><span class="md">Dec 4</span></span><span class="ttl">1. Receive Budget + Budget Justification from all five components<span class="sub">Admin Core, BN Core, NI Core, CN Core, and the Scientific Research Program (SRP) Core, a newly required component.</span></span><span class="meta"><span class="badge">Heather Bailey, Chip, Doina, Morgan</span><svg class="car" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
         <div class="body"><div class="blk"><h4>Who sends you what</h4><p style="margin-bottom: 10px;">Five components have budgets. The Center (Overall) has no budget or budget justification. Each budget covers all five years.</p>
           <div class="scroll"><table class="tbl"><thead><tr><th>Component</th><th>Writer</th></tr></thead><tbody>
@@ -261,6 +262,7 @@ details.sx[open] > summary{margin-bottom:14px}
       <p class="muted" style="margin: 0 0 14px;">Each component's budget rules, so you can check each budget against them.<br>Items marked CNAP guidance are consistency checks, not NOFO rules.</p>
 
       <div class="xscope">
+      <div class="xall-bar"><button type="button" class="xall" data-noun="" aria-pressed="false">Expand all</button></div>
       <details class="acc" open="">
         <summary style="grid-template-columns: minmax(0,1fr) auto;"><span class="ttl">Rules for every budget</span><span class="meta"><svg class="car" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
         <div class="body">
@@ -588,7 +590,7 @@ class Component extends DCLogic {
         (root && root.querySelectorAll ? root : document).querySelectorAll('button.xall').forEach((b) => {
           const list = window.__xallItems(xallScope(b));
           const anyClosed = list.some((d) => !d.open);
-          const sc = b.closest('.xscope'); b.textContent = anyClosed ? (sc ? 'Expand all stages' : 'Expand all') : (sc ? 'Collapse all stages' : 'Collapse all');
+          const sc = b.closest('.xscope'); const noun = sc ? (b.dataset.noun !== undefined ? b.dataset.noun : 'stages') : ''; b.textContent = (anyClosed ? 'Expand all' : 'Collapse all') + (noun ? ' ' + noun : '');
           b.setAttribute('aria-pressed', anyClosed ? 'false' : 'true');
         });
       };

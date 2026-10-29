@@ -182,6 +182,7 @@ details.sx[open] > summary{margin-bottom:14px}
       <details class="sx">
       <summary><h2 class="h2">Helpful notes</h2><span class="sx-car" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
       <div class="xscope">
+      <div class="xall-bar"><button type="button" class="xall" data-noun="" aria-pressed="false">Expand all</button></div>
       <div class="rules-stack">
         <details class="acc" id="rulestok1">
           <summary style="grid-template-columns: minmax(0,1fr) auto;"><span class="ttl">Your role</span><span class="meta"><svg class="car" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
@@ -215,6 +216,7 @@ details.sx[open] > summary{margin-bottom:14px}
       </div>
 
       <div class="xscope">
+      <div class="xall-bar"><button type="button" class="xall" data-noun="assignments" aria-pressed="false">Expand all</button></div>
       <details class="acc" data-rows="8460731724857220" open="">
         <summary>
           <span class="due"><span class="dow">Thu</span><span class="md">Dec 17</span></span>
@@ -483,7 +485,7 @@ class Component extends DCLogic {
         (root && root.querySelectorAll ? root : document).querySelectorAll('button.xall').forEach((b) => {
           const list = window.__xallItems(xallScope(b));
           const anyClosed = list.some((d) => !d.open);
-          const sc = b.closest('.xscope'); b.textContent = anyClosed ? (sc ? 'Expand all stages' : 'Expand all') : (sc ? 'Collapse all stages' : 'Collapse all');
+          const sc = b.closest('.xscope'); const noun = sc ? (b.dataset.noun !== undefined ? b.dataset.noun : 'stages') : ''; b.textContent = (anyClosed ? 'Expand all' : 'Collapse all') + (noun ? ' ' + noun : '');
           b.setAttribute('aria-pressed', anyClosed ? 'false' : 'true');
         });
       };
