@@ -127,5 +127,29 @@
     setInterval(() => { addOpenBtn(); syncHeight(); }, 500);
     syncHeight();
   };
-  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start); else start();
+  // Floating "Collapse all" for pages with expandable items (assignments, FAQ answers, and so on).
+  const ITEMS = 'details.acc, details.fq, details.stg';
+  const collapseAll = () => {
+    const btn = document.createElement('button');
+    btn.className = 'cx-all'; btn.type = 'button';
+    btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 11l5-5 5 5M7 18l5-5 5 5"/></svg>Collapse all<span class="n"></span>';
+    document.body.appendChild(btn);
+    const open = () => Array.from(document.querySelectorAll(ITEMS)).filter((d) => d.open && d.offsetParent !== null);
+    const sync = () => { const n = open().length; btn.classList.toggle('on', n >= 2); btn.querySelector('.n').textContent = n; btn.setAttribute('aria-label', 'Collapse all ' + n + ' open items'); };
+    btn.addEventListener('click', () => {
+      const list = open(); if (!list.length) return;
+      const first = list[0];
+      list.forEach((d) => d.removeAttribute('open'));
+      // Bring the first item that was open back into view, under the sticky top bar.
+      const bar = document.querySelector('.topbar');
+      const top = first.getBoundingClientRect().top + window.scrollY - (bar ? bar.getBoundingClientRect().height : 0) - 16;
+      if (first.getBoundingClientRect().top < 0) window.scrollTo({ top, behavior: 'smooth' });
+      sync();
+    });
+    document.addEventListener('toggle', sync, true);
+    setInterval(sync, 1000);
+    sync();
+  };
+  const startAll = () => { start(); collapseAll(); };
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', startAll); else startAll();
 })();
