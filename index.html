@@ -173,7 +173,6 @@ section.sec.band-w,section.sec.band-g{padding-top:40px;padding-bottom:40px}
 .pc-li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:2px 16px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,0.14);font-size:14px;line-height:1.35}
 .pc-li:last-child{border-bottom:none}.pc-li .m{grid-column:1;font-size:12.5px;color:rgba(255,255,255,0.72)}.pc-li .d{grid-column:2;grid-row:1;font-size:12.5px;color:rgba(255,255,255,0.72);white-space:nowrap}
 .pc-msg{font-size:13.5px;color:rgba(255,255,255,0.85);margin:4px 0}
-.pc-pass{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:6px 0}.pc-pass input{font:inherit;font-size:14px;padding:6px 9px;border-radius:7px;border:1px solid rgba(255,255,255,0.5);background:#fff;color:#1F1B2B;min-width:0}.pc-pass button{font:inherit;font-size:14px;font-weight:600;padding:6px 12px;border-radius:7px;border:1px solid #fff;background:#fff;color:#3B3349;cursor:pointer}
 .pc-tbl{min-width:0 !important;width:100%;table-layout:auto}.pc-tbl td,.pc-tbl th{white-space:normal !important}
 .pc-tbl td + td,.pc-tbl th + th{text-align:center !important;font-variant-numeric:tabular-nums}
 /* Top-bar buttons keep one-line labels; the row wraps instead of squeezing them */
@@ -861,10 +860,7 @@ class Component extends DCLogic {
       out['h' + n] = open ? '' : 'off';
       if (!open) { out['l' + n] = ''; continue; }
       let body;
-      if (this.pcNeedPass) {
-        body = '<form class="pc-pass"><label class="pc-msg" for="pc-pass-in">Enter the team passcode to see assignments:</label><input id="pc-pass-in" type="password" autocomplete="current-password" required><button type="submit">Show</button></form>' +
-          (this.pcErr ? '<p class="pc-msg">' + esc(this.pcErr) + '</p>' : '');
-      } else if (this.pcErr) {
+      if (this.pcErr) {
         body = '<p class="pc-msg">' + esc(this.pcErr) + '</p>';
       } else if (!this.pcTasks) {
         body = '<p class="pc-msg">Loading…</p>';
@@ -880,15 +876,11 @@ class Component extends DCLogic {
     return out;
   }
   pcLoad() {
-    let pass = '';
-    try { localStorage.removeItem('cnapPass'); pass = sessionStorage.getItem('cnapPass') || ''; } catch (e) {}
-    if (!pass) { this.pcNeedPass = true; this.forceUpdate(); return; }
-    this.pcNeedPass = false; this.pcErr = ''; this.forceUpdate();
-    fetch(window.CNAP_API, { method: 'POST', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify({ action: 'tasks', passcode: pass }) })
+    this.pcErr = ''; this.forceUpdate();
+    fetch(window.CNAP_API, { method: 'POST', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify({ action: 'tasks' }) })
       .then((r) => r.json())
       .then((j) => {
-        if (j.status === 401) { try { sessionStorage.removeItem('cnapPass'); } catch (e) {} this.pcNeedPass = true; this.pcErr = 'That passcode didn’t work. Try again.'; }
-        else if (j.error) this.pcErr = 'Couldn’t load assignments: ' + j.error;
+        if (j.error) this.pcErr = 'Couldn’t load assignments: ' + j.error;
         else { this.pcTasks = j.rows; this.pcErr = ''; }
         this.forceUpdate();
       })
@@ -906,13 +898,6 @@ class Component extends DCLogic {
     document.addEventListener('keydown', (e) => {
       const row = e.target.closest && e.target.closest('.pc-row.on');
       if (row && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); toggle(row); }
-    });
-    document.addEventListener('submit', (e) => {
-      if (!e.target.classList || !e.target.classList.contains('pc-pass')) return;
-      e.preventDefault();
-      const v = (e.target.querySelector('input').value || '').trim();
-      try { sessionStorage.setItem('cnapPass', v); } catch (err) {}
-      this.pcLoad();
     });
   }
   renderVals() {
