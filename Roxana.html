@@ -24,14 +24,6 @@ details.sx > summary .h2{background-image:linear-gradient(#512888,#512888) !impo
 details.sx:not([open]) > summary .h2{background-image:none !important;padding-bottom:0}
 details.sx > summary .sx-car{width:32px;height:32px;margin-bottom:0}
 details.sx[open] > summary{margin-bottom:14px}
-/* "Your links" dropdown */
-.links-menu{display:inline-block}
-.links-menu > summary{display:inline-flex;align-items:center;gap:8px}
-.links-menu > summary svg{width:16px;height:16px}
-.links-menu .pop{left:0;right:auto;min-width:320px;max-width:min(440px,calc(100vw - 32px));max-height:min(70vh,560px);overflow-y:auto}
-.links-menu .pop a svg{width:15px;height:15px;margin-right:8px;flex:none}
-.links-menu .pop .lbl{margin-top:4px}
-.links-note{margin:6px 6px 4px;padding:8px 6px 2px;border-top:1px solid var(--line-2);font-size:12.5px;line-height:1.45;color:var(--ink-3)}
 </style>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -163,27 +155,37 @@ details.sx[open] > summary{margin-bottom:14px}
       </div>
     </section>
 
-    <section class="wrap" style="padding: 24px 24px 8px;">
-      <details class="menu links-menu">
-        <summary class="btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg>Your links</summary>
-        <div class="pop">
-          <a href="https://mkdawills.github.io/CNAP_Phase_S_Preparation/cal/Roxana.ics" download="CNAP-Phase-S-due-dates-Roxana.ics" target="_blank" rel="noopener" title="Downloads a calendar file with your due dates. Opens in Outlook, Google Calendar, or Apple Calendar."><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:15px;height:15px;"><rect x="3" y="4" width="18" height="17" rx="2"></rect><path d="M3 10h18M8 2v4M16 2v4M12 14v4M10 16h4"></path></svg>Add my due dates to my calendar</a>
-          <a href="https://www.dropbox.com/scl/fo/6e7p5xvasg17tu30tbuap/ALAsqq_6xoUEM23Qavsmc8A?rlkey=bvluagyz2a3fnk0stzh3rqb65&amp;st=rc344g48&amp;dl=0">2021 Phase 2 materials</a>
-          <a href="https://www.dropbox.com/scl/fo/fo68jlm4h36wmwbqtopx0/AFeDo-1BwnMgspxdrlweV_Q?rlkey=z76y4x9udqbriiayw6f9e7q2e&amp;st=g83ytov9&amp;dl=0">2025 Phase 3 materials</a>
-          <span class="lbl">Working Drafts Folders</span>
-          <a href="https://www.dropbox.com/scl/fo/xq6r8le84xmx63rq3sq6e/AEidS1yGE9E1UbcrVGc6tZo?rlkey=4mg2rhwg2ivv8kvz168595szc&amp;st=wugxhc1c&amp;dl=0">Admin Core folder</a>
-          <a href="https://www.dropbox.com/scl/fo/zpmt88ochlovpwp3c0951/AAJqOO_OzLjNeXdBJA5GTbY?rlkey=of1g4dw3btkem995y2i4b1jvh&amp;st=4x6gep0q&amp;dl=0">BN Core folder</a>
-          <a href="https://www.dropbox.com/scl/fo/pous7ow51nzwt6sxxidi2/AJGSAf5rCishWvX4F0SMBqA?rlkey=6y3f3n46aqkl12xivk674i6yu&amp;st=635vxrrf&amp;dl=0">NI Core folder</a>
-          <a href="https://www.dropbox.com/scl/fo/9hr9fqyummo503u7cs65z/ALLyiGRXdgQqQNfGZK8cEnM?rlkey=vwi0dpe93b0qkwh1bih8z3pug&amp;st=qneplw7v&amp;dl=0">CN Core folder</a>
-          <a href="https://www.dropbox.com/scl/fo/q0z7z8mst7nundea8vrw2/AHIWF8JG3PP6xGgcSVuCZR4?rlkey=ivap04502uznsidk7dsdq46ci&amp;st=dr6di1dc&amp;dl=0">SRP Core folder</a>
-          <span class="lbl">Final Versions Folders</span>
-          <a href="https://www.dropbox.com/scl/fo/qxgx2e7jukieka7ttrb1y/ADFzgEe35zUkLSQ9buNZeQA?rlkey=0ki8z4elan99epdlddmjmysov&amp;st=dn2buzey&amp;dl=0">Admin Core folder</a>
-          <a href="https://www.dropbox.com/scl/fo/zlenqnxmkfzo1j9fwnlck/ABIcw_hARWFrw2uasL3QrqE?rlkey=fow89o6rf8f7hkp9acb8csgge&amp;st=2dtcwgn0&amp;dl=0">BN Core folder</a>
-          <a href="https://www.dropbox.com/scl/fo/kanp193ti0r8eolga1l4x/AP5WKL1oXCR8C6LDu-sNVhc?rlkey=qpcgnfpgxze2xvzlt7gd534rg&amp;st=w1zai1a7&amp;dl=0">NI Core folder</a>
-          <a href="https://www.dropbox.com/scl/fo/gm2zob8wvfhfr1f1219ae/ANhp8T7ksE7QtwfJKynIp_0?rlkey=gbfxkzjna2hq5yr4nnl1f78j3&amp;st=w0fh8crm&amp;dl=0">CN Core folder</a>
-          <a href="https://www.dropbox.com/scl/fo/13pm59iuzreewh3wgj12d/AJ2aX4leTE-q1x5qqMqEKLE?rlkey=gq3iooda8ybei9qt5llsgg82z&amp;st=463b0her&amp;dl=0">SRP Core folder</a>
+    <section class="wrap" style="padding: 32px 24px 8px;">
+      <div class="card" style="display: flex; flex-direction: column; gap: 12px;">
+        <div style="display: flex; flex-wrap: wrap; gap: 10px; align-items: center;">
+          <span class="small" style="flex-basis: 100%; margin: 0 0 -2px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; font-size: 12px; color: #6B6579;">Your links:</span>
+        <a class="btn sm" href="https://mkdawills.github.io/CNAP_Phase_S_Preparation/cal/Roxana.ics" download="CNAP-Phase-S-due-dates-Roxana.ics" target="_blank" rel="noopener" title="Downloads a calendar file with your due dates. Opens in Outlook, Google Calendar, or Apple Calendar."><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:15px;height:15px;"><rect x="3" y="4" width="18" height="17" rx="2"></rect><path d="M3 10h18M8 2v4M16 2v4M12 14v4M10 16h4"></path></svg>Add my due dates to my calendar</a>
+          <a class="btn sm" href="https://www.dropbox.com/scl/fo/6e7p5xvasg17tu30tbuap/ALAsqq_6xoUEM23Qavsmc8A?rlkey=bvluagyz2a3fnk0stzh3rqb65&amp;st=rc344g48&amp;dl=0">2021 Phase 2 materials</a>
+          <a class="btn sm" href="https://www.dropbox.com/scl/fo/fo68jlm4h36wmwbqtopx0/AFeDo-1BwnMgspxdrlweV_Q?rlkey=z76y4x9udqbriiayw6f9e7q2e&amp;st=g83ytov9&amp;dl=0">2025 Phase 3 materials</a>
         </div>
-      </details>
+        <div class="linkstack" style="display: flex; flex-direction: column; gap: 14px;">
+          <div>
+            <p class="small" style="margin: 0 0 8px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; font-size: 12px; color: #6B6579;">Working Drafts Folders · where writers save their draft budgets:</p>
+            <div class="folders">
+              <a class="btn sm" href="https://www.dropbox.com/scl/fo/xq6r8le84xmx63rq3sq6e/AEidS1yGE9E1UbcrVGc6tZo?rlkey=4mg2rhwg2ivv8kvz168595szc&amp;st=wugxhc1c&amp;dl=0">Admin Core folder</a>
+              <a class="btn sm" href="https://www.dropbox.com/scl/fo/zpmt88ochlovpwp3c0951/AAJqOO_OzLjNeXdBJA5GTbY?rlkey=of1g4dw3btkem995y2i4b1jvh&amp;st=4x6gep0q&amp;dl=0">BN Core folder</a>
+              <a class="btn sm" href="https://www.dropbox.com/scl/fo/pous7ow51nzwt6sxxidi2/AJGSAf5rCishWvX4F0SMBqA?rlkey=6y3f3n46aqkl12xivk674i6yu&amp;st=635vxrrf&amp;dl=0">NI Core folder</a>
+              <a class="btn sm" href="https://www.dropbox.com/scl/fo/9hr9fqyummo503u7cs65z/ALLyiGRXdgQqQNfGZK8cEnM?rlkey=vwi0dpe93b0qkwh1bih8z3pug&amp;st=qneplw7v&amp;dl=0">CN Core folder</a>
+              <a class="btn sm" href="https://www.dropbox.com/scl/fo/q0z7z8mst7nundea8vrw2/AHIWF8JG3PP6xGgcSVuCZR4?rlkey=ivap04502uznsidk7dsdq46ci&amp;st=dr6di1dc&amp;dl=0">SRP Core folder</a>
+            </div>
+          </div>
+          <div>
+            <p class="small" style="margin: 0 0 8px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; font-size: 12px; color: #6B6579;">Final Versions Folders · approved, submission-ready budgets:</p>
+            <div class="folders">
+              <a class="btn sm" href="https://www.dropbox.com/scl/fo/qxgx2e7jukieka7ttrb1y/ADFzgEe35zUkLSQ9buNZeQA?rlkey=0ki8z4elan99epdlddmjmysov&amp;st=dn2buzey&amp;dl=0">Admin Core folder</a>
+              <a class="btn sm" href="https://www.dropbox.com/scl/fo/zlenqnxmkfzo1j9fwnlck/ABIcw_hARWFrw2uasL3QrqE?rlkey=fow89o6rf8f7hkp9acb8csgge&amp;st=2dtcwgn0&amp;dl=0">BN Core folder</a>
+              <a class="btn sm" href="https://www.dropbox.com/scl/fo/kanp193ti0r8eolga1l4x/AP5WKL1oXCR8C6LDu-sNVhc?rlkey=qpcgnfpgxze2xvzlt7gd534rg&amp;st=w1zai1a7&amp;dl=0">NI Core folder</a>
+              <a class="btn sm" href="https://www.dropbox.com/scl/fo/gm2zob8wvfhfr1f1219ae/ANhp8T7ksE7QtwfJKynIp_0?rlkey=gbfxkzjna2hq5yr4nnl1f78j3&amp;st=w0fh8crm&amp;dl=0">CN Core folder</a>
+              <a class="btn sm" href="https://www.dropbox.com/scl/fo/13pm59iuzreewh3wgj12d/AJ2aX4leTE-q1x5qqMqEKLE?rlkey=gq3iooda8ybei9qt5llsgg82z&amp;st=463b0her&amp;dl=0">SRP Core folder</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section class="wrap sec band-g" id="progress">
