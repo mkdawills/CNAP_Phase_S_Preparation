@@ -1,0 +1,8 @@
+name = "cnap-progress"
+main = "worker.js"
+compatibility_date = "2026-10-01"
+
+[vars]
+SHEET_ID = "4867656760119172"
+# Website addresses allowed to call this service, comma-separated.
+ALLOWED_ORIGINS = "https://mkdawills.github.io"

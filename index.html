@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <title>CNAP Phase S Proposal Hub — Dashboard</title>
 <link rel="stylesheet" href="site.css?v=20261016c">
+<script src="hub-config.js"></script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&amp;family=Archivo:wght@500;600;700;800&amp;display=swap" rel="stylesheet">
@@ -269,6 +270,7 @@ section.sec.band-w,section.sec.band-g{padding-top:40px;padding-bottom:40px}
       </nav>
       <div class="quick">
         <a class="btn sm primary" href="https://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3h7v7"></path><path d="M21 3l-9 9"></path><path d="M19 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h5"></path></svg>Open Smartsheet</a>
+        <a class="btn sm" href="Progress.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>Update Progress</a>
         <a class="btn sm" href="FAQ.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>CNAP FAQ</a>
         <details class="menu">
           <summary class="btn sm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>Dropbox: Working Drafts</summary>
@@ -525,6 +527,7 @@ section.sec.band-w,section.sec.band-g{padding-top:40px;padding-bottom:40px}
         </div>
         <div class="qrow">
           <a class="qbtn qbtn-solid" href="https://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21">Open Smartsheet</a>
+          <a class="qbtn" href="Progress.html">Update Progress</a>
           <a class="qbtn" href="FAQ.html">CNAP FAQ</a>
           <details class="menu qmenu">
           <summary class="qbtn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>Dropbox: Working Drafts</summary>
@@ -745,10 +748,17 @@ class Component extends DCLogic {
         if (i >= urls.length) return;
         fetch(urls[i] + (urls[i].includes('?') ? '&' : '?') + 't=' + Date.now(), { cache: 'no-store' })
           .then((r) => (r.ok ? r.json() : Promise.reject(r.status)))
-          .then((j) => { if (j && j.counts && j.total) { this.progress = j; this.forceUpdate(); } else tryNext(i + 1); })
+          .then((j) => { if (this.progressLive) return; if (j && j.counts && j.total) { this.progress = j; this.forceUpdate(); } else tryNext(i + 1); })
           .catch(() => tryNext(i + 1));
       };
       tryNext(0);
+      const api = (window.CNAP_API || '').replace(/\/+$/, '');
+      if (api) {
+        fetch(api + '/progress', { cache: 'no-store' })
+          .then((r) => (r.ok ? r.json() : Promise.reject(r.status)))
+          .then((j) => { if (j && j.counts && j.total) { this.progressLive = true; this.progress = j; this.forceUpdate(); } })
+          .catch(() => {});
+      }
     }
     if (typeof window !== 'undefined') {
       setTimeout(() => {
