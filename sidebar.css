@@ -1,4 +1,4 @@
-/* PREVIEW: quiet gray side menu (built from the existing top menu by sidebar-preview.js) */
+/* Quiet gray side menu (built from the existing top menu by sidebar.js) */
 :root{--sb-w:264px;--sb-bg:#F4F3F6;--sb-line:#E4E0EC;--sb-ink:#3A3640;--sb-ink-2:#6B6579;--sb-ink-3:#8A8599;--sb-hover:#EAE7F0;--sb-accent:#512888;--tb-h:58px}
 .sb{position:fixed;top:0;left:0;bottom:0;width:var(--sb-w);background:var(--sb-bg);border-right:1px solid var(--sb-line);z-index:40;display:flex;flex-direction:column;font-family:'Source Sans 3','Segoe UI',system-ui,sans-serif;color:var(--sb-ink)}
 /* Same height as the top bar, so the hub name sits level with the folder buttons and the dividers line up */
@@ -48,7 +48,6 @@
   .sb-head{height:auto;align-items:center;padding:14px 12px 14px 16px}
   .sb-close{display:inline-flex;margin-left:auto;border:0;background:transparent;color:var(--sb-ink-3);font-size:20px;line-height:1;cursor:pointer;padding:4px 6px}
 }
-.sb-preview-note{font-family:'Source Sans 3','Segoe UI',system-ui,sans-serif;position:fixed;right:14px;bottom:14px;z-index:50;background:#fff;border:1px solid var(--sb-line);color:var(--sb-ink-2);font-size:12px;padding:6px 10px;border-radius:8px;box-shadow:0 2px 8px rgba(31,27,43,0.08)}
 
 /* No hub name in the menu: the header only holds the close button on phones */
 .sb-head{display:none}

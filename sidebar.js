@@ -1,7 +1,7 @@
-// PREVIEW: builds a quiet side menu from the page's existing top menu.
+// Side menu: built from the page's existing top menu (hidden by sidebar.css), so every page's
+// menu stays in one place in its HTML. Desktop shows it on the left; phones open it with Menu.
 (function () {
-  const MAP = { 'index.html': 'preview-dashboard.html', 'Chip.html': 'preview-chip.html' };
-  const fix = (href) => { const [p, h] = (href || '').split('#'); return (MAP[p] || p) + (h !== undefined ? '#' + h : ''); };
+  const fix = (href) => href || '';
   const CAR = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg>';
   const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
   const svg = (d) => '<svg class="sb-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + d + '</svg>';
@@ -33,7 +33,7 @@
       const kids = Array.from(el.querySelectorAll('.pop a')).filter((a) => !a.classList.contains('hd')).map((a) => ({ href: a.getAttribute('href'), text: a.textContent.trim() }));
       return { href: top.getAttribute('href'), text: top.textContent.trim(), on: el.classList.contains('on'), kids };
     });
-    const here = location.pathname.split('/').pop();
+    const here = location.pathname.split('/').pop() || 'index.html';
     const byHref = {}; items.forEach((it) => { byHref[it.href] = it; });
     const listed = new Set();
     const itemHtml = (it) => {
@@ -69,9 +69,6 @@
       }
       if (e.target.closest('.sb-close') || e.target.closest('a')) document.body.classList.remove('sb-show');
     });
-    const note = document.createElement('div'); note.className = 'sb-preview-note';
-    note.textContent = 'Side-menu preview · the live hub is unchanged';
-    document.body.appendChild(note);
   };
   const addOpenBtn = () => {
     const quick = document.querySelector('.topbar .wrap');
