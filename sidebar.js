@@ -102,12 +102,13 @@
       if (e.target.closest('.sb-close') || e.target.closest('a')) document.body.classList.remove('sb-show');
     });
   };
+  // The phone Menu button floats on its own, outside anything a page redraws (the Dashboard
+  // redraws its top bar every second, and a button inside it would make the page flicker).
   const addOpenBtn = () => {
-    const quick = document.querySelector('.topbar .wrap');
-    if (!quick || quick.querySelector('.sb-open')) return;
+    if (document.querySelector('.sb-open')) return;
     const b = document.createElement('button'); b.className = 'sb-open'; b.type = 'button'; b.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg>Menu';
     b.addEventListener('click', () => document.body.classList.add('sb-show'));
-    quick.insertBefore(b, quick.firstChild);
+    document.body.appendChild(b);
   };
   document.addEventListener('click', (e) => { if (document.body.classList.contains('sb-show') && !e.target.closest('.sb') && !e.target.closest('.sb-open')) document.body.classList.remove('sb-show'); });
   const syncHeight = () => {
@@ -123,8 +124,7 @@
     if (!nav) return setTimeout(start, 50);
     if (!document.querySelector('.sb')) build(nav);
     addOpenBtn();
-    // The Dashboard redraws its top bar; put the menu button back if it disappears.
-    setInterval(() => { addOpenBtn(); syncHeight(); }, 500);
+    setInterval(syncHeight, 1000);
     syncHeight();
   };
   // Floating "Collapse all" for pages with expandable items (assignments, FAQ answers, and so on).
@@ -135,7 +135,7 @@
     btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 11l5-5 5 5M7 18l5-5 5 5"/></svg>Collapse all<span class="n"></span>';
     document.body.appendChild(btn);
     const open = () => Array.from(document.querySelectorAll(ITEMS)).filter((d) => d.open && d.offsetParent !== null);
-    const sync = () => { const n = open().length; btn.classList.toggle('on', n >= 2); btn.querySelector('.n').textContent = n; btn.setAttribute('aria-label', 'Collapse all ' + n + ' open items'); };
+    const sync = () => { const n = open().length; btn.classList.toggle('on', n >= 2); const c = btn.querySelector('.n'); if (c.textContent !== String(n)) c.textContent = n; btn.setAttribute('aria-label', 'Collapse all ' + n + ' open items'); };
     btn.addEventListener('click', () => {
       const list = open(); if (!list.length) return;
       const first = list[0];
