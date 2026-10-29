@@ -1,11 +1,11 @@
 // CNAP Phase S hub: relay between the website and Smartsheet, run as a Google Apps Script web app.
 // The Smartsheet token lives here in Script Properties, never in the website.
 //
-// GET  ?action=progress                                  status counts for the Dashboard (no passcode)
-// POST {"action":"tasks","passcode":"…"}                 every assignment row
-// POST {"action":"set","passcode":"…","rowId":"…","progress":"…"}   sets one row's Progress
+// GET  ?action=progress                          status counts for the Dashboard
+// POST {"action":"tasks"}                        every assignment row
+// POST {"action":"set","rowId":"…","progress":"…"}   sets one row's Progress
 //
-// Script Properties (Project Settings > Script Properties): SMARTSHEET_TOKEN, TEAM_PASSCODE
+// Script Properties (Project Settings > Script Properties): SMARTSHEET_TOKEN
 // The website sends POST bodies as text/plain, because Apps Script can't answer CORS preflight requests.
 
 var SHEET_ID = '4867656760119172';
@@ -30,7 +30,6 @@ function doPost(e) {
   return handle_(function () {
     var body = {};
     try { body = JSON.parse(e.postData.contents); } catch (err) {}
-    if (!passcodeOk_(body.passcode)) throw httpError_(401, 'Wrong or missing team passcode.');
     if (body.action === 'tasks') return tasks_();
     if (body.action === 'set') return setProgress_(String(body.rowId || ''), body.progress);
     throw httpError_(404, 'Not found.');
@@ -52,11 +51,6 @@ function httpError_(status, message) {
 
 function prop_(name) {
   return PropertiesService.getScriptProperties().getProperty(name) || '';
-}
-
-function passcodeOk_(given) {
-  var want = prop_('TEAM_PASSCODE');
-  return !!want && typeof given === 'string' && given === want;
 }
 
 function smartsheet_(path, method, payload) {
@@ -133,5 +127,5 @@ function setProgress_(rowId, value) {
 // Run this once from the editor (select it, then click Run) to check the token and sheet before deploying.
 function testSetup() {
   var r = progress_();
-  Logger.log('Read ' + r.total + ' rows. Finalized: ' + r.counts['Finalized'] + '. Passcode set: ' + (prop_('TEAM_PASSCODE') ? 'yes' : 'NO'));
+  Logger.log('Read ' + r.total + ' rows. Finalized: ' + r.counts['Finalized'] + '.');
 }

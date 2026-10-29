@@ -7,7 +7,7 @@ Smartsheet token safely, so this small script holds it and makes the change
 in Smartsheet for the site.
 
 It runs under one Google account (whoever sets it up). Nobody else on the team
-needs a Google account; they just enter the team passcode once.
+needs a Google account or a passcode.
 
 It also gives the Dashboard live status counts. Until it is set up, the
 Dashboard keeps using `progress.json`, which GitHub refreshes twice each weekday.
@@ -24,7 +24,6 @@ You need the Smartsheet API token (the same one stored in GitHub as
 3. Click the gear (**Project Settings**) on the left. Under **Script
    Properties**, click **Add script property** twice and add:
    - `SMARTSHEET_TOKEN`: the Smartsheet token
-   - `TEAM_PASSCODE`: a passcode you choose for the team
 
    Click **Save script properties**.
 4. Back in the editor (`< >` on the left), choose `testSetup` in the function
@@ -47,16 +46,9 @@ You need the Smartsheet API token (the same one stored in GitHub as
    ```
 
    Once that's pushed, the status dropdowns and live Dashboard counts work.
-7. Share the passcode with the team. Each browser asks for it once.
-
 If **Who has access** doesn't offer plain "Anyone" (only "Anyone within
 your organization"), your Google Workspace admin has restricted it. Set it up
 from a personal Google account instead.
-
-## Changing the passcode
-
-Edit `TEAM_PASSCODE` in **Project Settings** > **Script Properties**. Everyone
-is asked for the new one the next time they save a change. No redeploy needed.
 
 ## Updating the script later
 
@@ -67,4 +59,6 @@ the same web address, so `hub-config.js` doesn't change.
 ## Notes
 
 - Only the Progress column can be changed, and only to one of the five statuses.
+- There's no passcode: anyone with the hub's address can change a status.
+  Smartsheet's cell history keeps every change, so a wrong one can be undone.
 - Smartsheet records the token's owner as the editor for changes made through the hub.
