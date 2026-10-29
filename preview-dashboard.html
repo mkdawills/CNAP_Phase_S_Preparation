@@ -1,0 +1,1053 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>CNAP Phase S Proposal Hub — Dashboard</title>
+<link rel="stylesheet" href="site.css?v=20261029b">
+<script src="hub-config.js"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&amp;family=Archivo:wght@500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F7F6FA}
+a{color:#512888}a:hover{color:#3B1C66}
+.cd-wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:16px;width:100%}
+.cd-box{background:transparent;border:2px solid #3A3640;color:#2A2630;border-radius:14px;padding:30px 32px;display:flex;flex-direction:column;justify-content:center;gap:12px}
+.cd-nih{font-size:14px;line-height:1.5;opacity:0.85;margin-top:6px;padding-top:14px;border-top:1px solid rgba(58,54,64,0.25)}
+.cd-count{container-type:inline-size}
+.cd-units{display:flex;flex-wrap:nowrap;align-items:stretch;font-variant-numeric:tabular-nums;width:100%}
+.cd-units > span{flex:1 1 0;flex-direction:column-reverse !important;align-items:center;justify-content:flex-end;gap:10px;padding:2px 6px}
+.cd-units > span + span{border-left:1px solid rgba(58,54,64,0.28)}
+.cd-units > span > span:last-child{margin-top:0 !important;font-size:12.5px !important;font-weight:700;letter-spacing:0.14em !important;opacity:0.75 !important;padding-bottom:8px;border-bottom:2px solid rgba(58,54,64,0.18);min-width:60%;text-align:center}
+.cd-num{font-size:clamp(44px, calc(100cqw / 6.4), 120px);line-height:0.95;letter-spacing:-0.01em;color:#3B3349 !important}
+@media (max-width:900px){.cd-wrap{grid-template-columns:minmax(0,1fr)}}
+#stages .bar{display:none}
+.rail{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;margin:64px 0 18px}
+.rail-cell{position:relative;height:28px}
+.rail-line{position:absolute;left:0;right:-10px;top:12px;height:4px;background:#DDD6EA;border-radius:2px;overflow:hidden}
+.rail-cell.last .rail-line{right:6px}
+.rail-end{position:absolute;right:0;top:7px;width:14px;height:14px;box-sizing:border-box;border:2px solid #4A4458;background:#fff;transform:rotate(45deg);z-index:1}
+.rail-end.done{background:#512888;border-color:#512888}
+.rail-line i{position:absolute;left:0;top:0;bottom:0;background:#512888;transition:width .6s ease}
+.rail-node{position:absolute;left:14px;top:0;width:28px;height:28px;box-sizing:border-box;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;z-index:1}
+.rail-node.fut{background:#fff;border:2px solid #C9BFDD;color:#8A80A3}
+.rail-node.done{background:#512888;color:#fff}
+.rail-node.cur{background:#512888;color:#fff;box-shadow:0 0 0 5px rgba(81,40,136,0.18)}
+.rail-cell.last .rail-node.fut{border-color:#4A4458;color:#4A4458}
+.rail-pin{position:absolute;top:-8px;width:2px;height:44px;margin-left:-1px;background:#B8860B;z-index:2}
+.rail-pin-l{position:absolute;bottom:100%;left:50%;transform:translateX(-50%);margin-bottom:4px;white-space:nowrap;font-size:11px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:#7A5A00;background:#FBEBB8;border:1px solid #E8C866;padding:2px 7px;border-radius:3px}
+.arc{display:block;margin:30px 0 8px}.arc svg{display:block;overflow:visible}.arc-track{fill:none;stroke:#DDD6EA;stroke-width:5;stroke-linecap:round}.arc-fill{fill:none;stroke:#512888;stroke-width:5;stroke-linecap:round}.an .an-halo{fill:none}.an.cur .an-halo{fill:rgba(81,40,136,0.18)}.an .an-dot{fill:#fff;stroke:#C9BFDD;stroke-width:2.5}.an.done .an-dot,.an.cur .an-dot{fill:#512888;stroke:#512888}.an text{font-weight:700;font-size:14px;fill:#8A80A3}.an.done text,.an.cur text{fill:#fff}.arc-end{font-size:11px;font-weight:700;letter-spacing:.06em;fill:#4A4458}.arc-pin line{stroke:#B8860B;stroke-width:2}.arc-pin text{font-size:11px;font-weight:700;letter-spacing:.06em;fill:#7A5A00}.arc-pin.off{display:none}@media (max-width:980px){.arc{display:none}}
+@media (max-width:980px){.rail{display:none}#stages .bar{display:block}}
+#stages .stage{border-radius:4px}
+#stages .stage.now,#stages .stage.next{box-shadow:inset 0 0 0 1px #512888,0 0 0 4px rgba(81,40,136,0.10),0 6px 22px rgba(81,40,136,0.22)}
+#stages .stages{align-items:stretch}
+#stages .stage{padding:20px 16px 22px;gap:8px}
+#stages .stage .when{margin-top:2px}
+#stages .stage .what{font-size:16.5px;line-height:1.25;padding-bottom:10px;border-bottom:1px solid #E4E0EC;margin-bottom:4px}
+#stages .who-list{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:9px;font-size:14px;line-height:1.35;color:#4A4458}
+#stages .who-list li{position:relative;padding-left:14px}
+#stages .who-list li::before{content:"";position:absolute;left:0;top:7px;width:6px;height:6px;border-radius:50%;background:#B9ADD0}
+#stages .stage.now .who-list li::before,#stages .stage.next .who-list li::before{background:#512888}
+#stages .stage.now::after,#stages .stage.next::after{border-radius:3px;top:calc(100% + 8px);right:auto;left:0}
+#stages .stages{margin-bottom:36px}
+#resources .sec-head{justify-content:center;text-align:center;background-position:center bottom,center bottom;background-image:linear-gradient(#512888,#512888),linear-gradient(#3A3640,#3A3640);background-size:56px 4px,100% 2px}
+#resources .sec-head > div{display:flex;flex-direction:column;align-items:center}
+#resources .tile{text-align:center;align-items:center;background:rgba(90,82,110,0.06);border-color:rgba(90,82,110,0.14)}
+#resources .tile:hover{background:rgba(90,82,110,0.09);border-color:#512888}
+#resources .tile .t,#resources .tile .d{align-self:stretch}
+#resources .tile .ic{align-self:center}
+@media (min-width:1180px){#quick .qrow{gap:8px !important;flex-wrap:nowrap !important}#quick .qbtn{padding:0 12px !important;font-size:14px !important;white-space:nowrap}}
+#quick .qbtn:not(.qbtn-solid){background:rgba(255,255,255,0.09);border-color:rgba(255,255,255,0.6) !important;transition:background .15s,color .15s,border-color .15s}
+#quick .qbtn:not(.qbtn-solid):hover,#quick details.qmenu[open] > summary.qbtn{background:#FFFFFF !important;color:#3B3349 !important;border-color:#FFFFFF !important}
+#quick .qbtn:not(.qbtn-solid):hover svg,#quick details.qmenu[open] > summary.qbtn svg{color:#3B3349}
+#resources .grid.c4{max-width:660px;margin-left:auto;margin-right:auto}
+@media (min-width:761px){#resources .grid.c4{grid-template-columns:repeat(2,minmax(0,1fr))}}
+/* Resources tiles as circles */
+#resources .grid.c4{max-width:700px;justify-items:center;row-gap:22px}
+#resources .tile{width:100%;max-width:320px;aspect-ratio:1/1;min-height:0;border-radius:50%;padding:30px 38px;justify-content:center;gap:7px;box-sizing:border-box}
+#resources .tile:hover{transform:translateY(-2px)}
+#resources .tile .t{font-size:18px;min-height:0;padding-bottom:9px}
+#resources .tile .d{flex-grow:0;font-size:14px;line-height:1.5}
+#resources .tile .go{margin-top:6px;display:inline-flex;align-self:center;align-items:center;gap:6px;padding:6px 14px;border:1.5px solid #512888;border-radius:999px;background:#FFFFFF;color:#512888;font-size:13.5px;line-height:1.2;transition:background .15s,color .15s}
+#resources .tile:hover .go,#resources .tile:focus-visible .go{background:#512888;color:#FFFFFF}
+#resources .tile{border:1.5px solid rgba(81,40,136,0.32)}
+#resources .tile:hover{border-color:#512888}
+#resources .tile .d{line-height:1.65;font-size:15px}
+#resources .tile .d b{font-weight:700;color:#2A1349}
+#resources .tile .t{margin-bottom:2px;padding-bottom:12px;border-bottom:1px solid #E4E0EC}
+#resources .tile .t{min-height:calc(1.25em * 2);box-sizing:content-box}
+#stages .stage .what{min-height:calc(1.25em * 3);box-sizing:content-box}
+@media (max-width:980px){#stages .stage .what{min-height:calc(1.25em * 2)}}
+#stages .btn{border-radius:3px}
+.divider{max-width:none;margin:0;padding:0}
+.divider i{display:block;height:1px;background:#D3CDE0}
+#completion{color:#fff}
+#quick .h2.h2-dark{background-image:linear-gradient(#A9A7B0,#A9A7B0),linear-gradient(rgba(255,255,255,0.18),rgba(255,255,255,0.18)) !important}
+#completion .pc-panel{background:#3B3349;border:1px solid rgba(255,255,255,0.14);border-radius:16px;padding:28px 30px 24px}
+#completion .pc-panel{max-width:860px;margin-left:auto;margin-right:auto}
+/* light K-State gray panel: dark text inside */
+#completion .pc-track{position:relative;padding-top:30px;margin:6px 0 4px}
+#completion .pc-panel .pc-bar{height:22px;border-radius:11px}
+#completion .pc-bar{animation:pcGrow 1.1s cubic-bezier(.2,.7,.2,1) both}
+@keyframes pcGrow{from{clip-path:inset(-20px 100% -20px -20px)}to{clip-path:inset(-20px -20px -20px -20px)}}
+#completion .pc-tick{position:absolute;top:30px;height:22px;width:2px;margin-left:-1px;background:rgba(31,27,43,0.22);pointer-events:none}
+#completion .pc-scale{position:relative;height:18px;margin-top:6px}
+#completion .pc-scale span{position:absolute;transform:translateX(-50%);font-size:12px;font-weight:600;color:#6B6579;white-space:nowrap}
+#completion .pc-scale span:first-child{transform:none}
+#completion .pc-scale span:last-child{transform:translateX(-100%)}
+#completion .pc-tip{position:absolute;top:0;transform:translateX(-50%);background:#FFFFFF;color:#512888;font-size:12.5px;font-weight:700;line-height:1;padding:5px 8px;border-radius:6px;white-space:nowrap}
+#completion .pc-tip::after{content:"";position:absolute;left:50%;bottom:-5px;margin-left:-5px;border:5px solid transparent;border-bottom:0;border-top-color:#FFFFFF}
+#completion .pc-tip.start{transform:none}#completion .pc-tip.start::after{left:10px}
+#completion .pc-tip.end{transform:translateX(-100%)}#completion .pc-tip.end::after{left:auto;right:5px}
+#completion .pc-note{margin:10px 0 0;font-weight:700;color:#FFFFFF;font-size:15px}
+@media (prefers-reduced-motion: reduce){#completion .pc-bar{animation:none}}
+
+
+@media (max-width:760px){#completion .pc-panel{padding:20px 16px 18px}}
+#completion.band-dark{background:#512888;box-shadow:0 0 0 100vmax #512888}
+#completion .h2.h2-dark{background-image:linear-gradient(#FFFFFF,#FFFFFF),linear-gradient(rgba(255,255,255,0.25),rgba(255,255,255,0.25))}
+#completion .pc-bar .s5,#completion .pc-key.s5{background:#2E1452}
+#completion .pc-bar .s4,#completion .pc-key.s4{background:#6A45A0}
+#completion .pc-bar .s3,#completion .pc-key.s3{background:#A68BCB}
+#completion .pc-bar .s2,#completion .pc-key.s2{background:#D9C8F5}
+#completion .pc-bar .s1,#completion .pc-key.s1{background:#FFFFFF}
+#completion p.muted,#completion .small.muted{color:rgba(255,255,255,0.86) !important}
+#completion .pc-num{color:#FFFFFF}
+#completion .pc-of{color:#fff}
+#completion .pc-bar{background:#FFFFFF;border:1px solid #FFFFFF;box-shadow:0 0 6px 0 rgba(255,255,255,0.22)}
+#completion .card{background:transparent !important;border:1.5px solid rgba(255,255,255,0.7) !important;box-shadow:none}
+#completion .tbl th{color:#FFFFFF !important;border-bottom:2px solid rgba(255,255,255,0.7) !important}
+#completion .tbl td{color:#fff;border-bottom-color:rgba(255,255,255,0.16)}
+#completion .tbl th + th,#completion .tbl td + td{border-left-color:rgba(255,255,255,0.22) !important}
+#completion .pc-key{border:1.5px solid #FFFFFF}
+#completion a{color:#fff}
+
+#quick .qrow{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
+#quick .qmenu{position:relative}
+#quick .qmenu > summary{list-style:none;cursor:pointer;gap:8px}
+#quick .qmenu > summary::-webkit-details-marker{display:none}
+#quick .qmenu > summary svg{width:15px;height:15px}
+#quick .qmenu .pop{left:0;right:auto;top:auto;bottom:calc(100% + 6px);text-align:left}
+#quick .qrow .qbtn{padding:0 14px;font-size:14.5px}
+#quick .qmenu .pop a{color:#1F1B2B !important}
+#quick .qmenu .pop a:hover{color:#512888 !important}
+@media (max-width:760px){#quick .qrow{flex-direction:column;align-items:stretch}#quick .qrow > *{justify-content:center}#quick .qmenu > summary{justify-content:center;width:100%;box-sizing:border-box}#quick .qmenu .pop{left:0;right:0;min-width:0}}
+
+#quick .qbox{display:flex;flex-direction:column;align-items:center;gap:22px;text-align:center;background:#3B3349;color:#fff;border-radius:18px;padding:36px 28px;border:1px solid #9A97A3;box-shadow:0 0 0 6px rgba(150,147,160,0.22),0 0 30px 6px rgba(110,107,120,0.35),0 14px 40px rgba(40,38,48,0.22)}@media (max-width:760px){#quick .qbox{padding:28px 18px}}
+
+main .divider + section.sec{padding-top:58px !important}
+.band-w,.band-g{position:relative}
+.band-dark{position:relative;background:#3B3349;box-shadow:0 0 0 100vmax #3B3349;clip-path:inset(0 -100vmax);color:#fff}
+section.sec.band-dark{padding-top:44px;padding-bottom:44px}
+.h2.h2-dark{color:#fff;background-image:linear-gradient(#B9A3E0,#B9A3E0),linear-gradient(rgba(255,255,255,0.18),rgba(255,255,255,0.18))}
+.qbtn{display:inline-flex;align-items:center;min-height:44px;padding:0 18px;border-radius:9px;font-weight:600;font-size:15px;color:#fff;border:1px solid rgba(255,255,255,0.35);text-decoration:none}
+.qbtn:hover{border-color:#fff;background:rgba(255,255,255,0.08);color:#fff;text-decoration:none}
+.qbtn-solid{background:#fff;color:#3B3349;border-color:#fff}
+.qbtn-solid:hover{background:#EDE7F6;color:#3B3349}
+#quick{text-align:center}
+#quick,#quick p,#quick .h2,#quick .h2.h2-dark{color:#FFFFFF !important}
+#quick a.qbtn{color:#FFFFFF !important;text-decoration:none !important}
+#quick a.qbtn.qbtn-solid{color:#3B3349 !important}
+#quick .h2.h2-dark{display:inline-block;padding-left:4px;padding-right:4px;background-position:center bottom,center bottom}
+.band-w{background:#FFFFFF;box-shadow:0 0 0 100vmax #FFFFFF;clip-path:inset(0 -100vmax)}
+.band-g{background:#F7F6FA;box-shadow:0 0 0 100vmax #F7F6FA;clip-path:inset(0 -100vmax)}
+section.sec.band-w,section.sec.band-g{padding-top:40px;padding-bottom:40px}
+#countdown.band-g{padding-top:56px !important;padding-bottom:48px !important}
+
+@keyframes rollout{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+.roll{opacity:0;animation:rollout .9s cubic-bezier(.2,.7,.2,1) forwards}
+.r1{animation-delay:.1s}.r2{animation-delay:.6s}.r3{animation-delay:1.1s}.r4{animation-delay:1.6s}.r5{animation-delay:2.1s}.r6{animation-delay:2.6s}.r7{animation-delay:3.1s}
+@media (prefers-reduced-motion: reduce){.roll{opacity:1;animation:none}}
+.pc-div{position:relative;z-index:2}.pc-div i{background:#D3CDE0 !important;height:1px}
+.pc-head{display:flex;flex-direction:column;gap:2px;margin:18px 0 12px}
+.pc-num{font-family:'Archivo','Segoe UI',Helvetica,Arial,sans-serif;font-weight:700;font-size:44px;line-height:1;color:#512888}
+.pc-of{font-size:15px;color:#4A4458}
+.pc-bar{display:flex;height:14px;border-radius:7px;overflow:hidden;background:#EEEAF4;border:1px solid #D3CDE0}
+.pc-bar i{display:block;height:100%}
+.s5{background:#512888}.s4{background:#7E5BB0}.s3{background:#A68BCB}.s2{background:#CFC2E3}.s1{background:#EEEAF4}
+.pc-key{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:10px;vertical-align:-1px;border:1px solid #D3CDE0}
+.pc-row.on{cursor:pointer}.pc-row.on:hover td,.pc-row.on:focus-visible td{background:rgba(255,255,255,0.06)}.pc-row.on:focus-visible{outline:2px solid #fff;outline-offset:-2px}
+.pc-row.on .pc-car{display:inline-block;width:7px;height:7px;margin-left:10px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:translateY(-3px) rotate(45deg);opacity:.75;transition:transform .2s}
+.pc-row.on[aria-expanded="true"] .pc-car{transform:translateY(0) rotate(-135deg)}
+.pc-list.off{display:none}.pc-list td{padding:4px 12px 14px !important;text-align:left !important}
+.pc-li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:2px 16px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,0.14);font-size:14px;line-height:1.35}
+.pc-li:last-child{border-bottom:none}.pc-li .m{grid-column:1;font-size:12.5px;color:rgba(255,255,255,0.72)}.pc-li .d{grid-column:2;grid-row:1;font-size:12.5px;color:rgba(255,255,255,0.72);white-space:nowrap}
+.pc-msg{font-size:13.5px;color:rgba(255,255,255,0.85);margin:4px 0}
+.pc-tbl{min-width:0 !important;width:100%;table-layout:auto}.pc-tbl td,.pc-tbl th{white-space:normal !important}
+.pc-tbl td + td,.pc-tbl th + th{text-align:center !important;font-variant-numeric:tabular-nums}
+/* Top-bar buttons keep one-line labels; the row wraps instead of squeezing them */
+@media (min-width:761px){.topbar .wrap > .quick{flex-wrap:wrap !important;row-gap:6px}.topbar .quick > *{flex:none}.topbar .quick .btn.sm,.topbar .quick summary{white-space:nowrap}}
+</style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="sidebar-preview.css">
+</head>
+<body>
+<div id="dc-root"></div>
+<template id="dc-tpl">
+<div class="hub" style="font-family: 'Source Sans 3', 'Segoe UI', system-ui, sans-serif; color: #1F1B2B; background: #F7F6FA; min-height: 100vh;">
+
+  <header class="topbar">
+    <div class="wrap">
+      <a class="brand" href="index.html" title="Back to the Dashboard"><svg class="home-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5L12 3l9 7.5"></path><path d="M5 9.5V21h5v-6h4v6h5V9.5"></path></svg><span>CNAP Phase S Proposal Hub</span></a>
+      <nav class="nav" aria-label="Site">
+        <a class="navlink on" href="index.html" aria-current="page">Dashboard</a>
+        <details class="nm"><summary><a href="Timeline.html">Team Timeline</a><span class="car"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+          <div class="pop">
+            <a class="hd" href="Timeline.html">Team Timeline</a>
+            <a href="Timeline.html#kickoff">Kickoff to submission (by date)</a>
+            <a href="Timeline.html#bycomponent">The same schedule, by component</a>
+          </div>
+        </details>
+        <details class="nm"><summary><a href="Workflow.html">Workflow &amp; Files</a><span class="car"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+          <div class="pop">
+            <a class="hd" href="Workflow.html">Workflow &amp; File Management</a>
+            <a href="Workflow.html#summary">Start here: the short version</a>
+            <a href="Workflow.html#moves">From start to submission: the 5 steps</a>
+            <a href="Workflow.html#smartsheet">Updating your progress</a>
+            <a href="Workflow.html#statuses">Progress status definitions (5 total)</a>
+            <a href="Workflow.html#folders">Folder organization: saving your documents (Dropbox)</a>
+            <a href="Workflow.html#reference">Prior proposals for your reference</a>
+            <a href="Progress.html">Update progress: everyone's assignments</a>
+          </div>
+        </details>
+        <details class="nm"><summary><a href="Guidance.html">Individualized Guidance</a><span class="car"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+          <div class="pop">
+            <a class="hd" href="Guidance.html">Find your individualized guidance</a>
+            <a href="HeatherBailey.html">Dr. Heather Bailey · Center Director (PD/PI), CN Core</a>
+            <a href="Chip.html">Dr. Charles Pickens · BN Core Director</a>
+            <a href="Doina.html">Dr. Doina Caragea · NI Core Director</a>
+            <a href="CarlAde.html">Dr. Carl Ade · Associate Director</a>
+            <a href="Roxana.html">Ms. Roxana Ortiz · CNAP Accountant II, Budget Review</a>
+            <a href="Tim.html">Mr. Tim McDaniel · Central Office CPA, Budget Review</a>
+            <a href="Kim.html">Ms. Kim Rewinkel · Central Office, Biosketch Review plus Federal Compliance</a>
+          </div>
+        </details>
+        <details class="nm"><summary><a href="PhaseS.html">Phase S Overview &amp; Comparisons</a><span class="car"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+          <div class="pop">
+            <a class="hd" href="PhaseS.html">Phase S Overview &amp; NOFO Comparisons</a>
+            <a href="PhaseS.html#glance">Proposal components at a glance</a>
+            <a href="PhaseS.html#evs">COBRE-E vs. COBRE-S</a>
+            <a href="PhaseS.html#changes">Differences from previous NOFOs</a>
+            <a href="PhaseS.html#pi">Eligibility: Center Director</a>
+          </div>
+        </details>
+        <details class="nm"><summary><a href="StrategicPlan.html">K-State Strategic Plan</a><span class="car"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+          <div class="pop">
+            <a class="hd" href="StrategicPlan.html">K-State Strategic Plan alignment</a>
+            <a href="StrategicPlan.html#ks1">What the NOFO asks for</a>
+            <a href="StrategicPlan.html#ks2">Next-Gen K-State in brief</a>
+            <a href="StrategicPlan.html#ks3">Plan language that connects to COBRE-S</a>
+            <a href="StrategicPlan.html#ks4">Notes for writers</a>
+          </div>
+        </details>
+        <details class="nm"><summary><a href="SRP.html">SRP Core</a><span class="car"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+          <div class="pop">
+            <a class="hd" href="SRP.html">SRP Core &amp; SRP Investigators</a>
+            <a href="SRP.html#srpdir">The SRP Core Director</a>
+            <a href="SRP.html#srp1">How SIs are chosen</a>
+            <a href="SRP.html#srp2">Requirements every SI must meet</a>
+            <a href="SRP.html#srp3">Eligible career stages</a>
+            <a href="SRP.html#srp4">While an SI is supported</a>
+            <a href="SRP.html#srp5">When an SI leaves the program</a>
+            <a href="SRP.html#srp6">Adding a new SI after the award</a>
+          </div>
+        </details>
+        <details class="nm"><summary><a href="Conventions.html">Formatting Conventions</a><span class="car"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+          <div class="pop">
+            <a class="hd" href="Conventions.html">Formatting Conventions</a>
+            <a href="Conventions.html#names">Names and terms</a>
+            <a href="Conventions.html#format">NIH format (required)</a>
+            <a href="Conventions.html#tables">Tables and figures</a>
+            <a href="Conventions.html#refs">References</a>
+          </div>
+        </details>
+        <details class="nm"><summary><a href="Review.html">Review Criteria</a><span class="car"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+          <div class="pop">
+            <a class="hd" href="Review.html">Review Criteria</a>
+            <a href="Review.html#rc1">Administrative Core</a>
+            <a href="Review.html#rc2">Research Cores</a>
+            <a href="Review.html#rc3">Scientific Research Program</a>
+            <a href="Review.html#rc4">General criterion: Significance</a>
+            <a href="Review.html#rc5">General criterion: Investigators</a>
+            <a href="Review.html#rc6">General criterion: Innovation</a>
+            <a href="Review.html#rc7">General criterion: Approach</a>
+            <a href="Review.html#rc8">General criterion: Environment</a>
+            <a href="Review.html#rc9">After peer review: funding considerations</a>
+          </div>
+        </details>
+        <details class="nm"><summary><a href="Definitions.html">Definitions</a><span class="car"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+          <div class="pop">
+            <a class="hd" href="Definitions.html">Definitions (key terms)</a>
+            <a href="Definitions.html#kt1">Program and phases</a>
+            <a href="Definitions.html#kt2">Capacity and infrastructure</a>
+            <a href="Definitions.html#kt3">Center components</a>
+            <a href="Definitions.html#kt4">People</a>
+            <a href="Definitions.html#kt5">Plans and funding rules</a>
+            <a href="Definitions.html#kt6">Review</a>
+          </div>
+        </details>
+      </nav>
+      <div class="quick">
+        <a class="btn sm" href="FAQ.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>CNAP FAQ</a>
+        <details class="menu">
+          <summary class="btn sm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>Dropbox: Working Drafts</summary>
+          <div class="pop">
+            <span class="lbl">Dropbox · WORKING DRAFTS</span>
+            <a href="https://www.dropbox.com/scl/fo/qju9wh2rlvj2lpnw3cs33/AJ-L6UNFe6CtRs0QkR6wyt0?rlkey=oxshp9g686dvjig6n4jb9s358&amp;st=hnuinhmv&amp;dl=0">Center</a>
+            <a href="https://www.dropbox.com/scl/fo/xq6r8le84xmx63rq3sq6e/AEidS1yGE9E1UbcrVGc6tZo?rlkey=4mg2rhwg2ivv8kvz168595szc&amp;st=wugxhc1c&amp;dl=0">Admin Core</a>
+            <a href="https://www.dropbox.com/scl/fo/zpmt88ochlovpwp3c0951/AAJqOO_OzLjNeXdBJA5GTbY?rlkey=of1g4dw3btkem995y2i4b1jvh&amp;st=4x6gep0q&amp;dl=0">BN Core</a>
+            <a href="https://www.dropbox.com/scl/fo/pous7ow51nzwt6sxxidi2/AJGSAf5rCishWvX4F0SMBqA?rlkey=6y3f3n46aqkl12xivk674i6yu&amp;st=635vxrrf&amp;dl=0">NI Core</a>
+            <a href="https://www.dropbox.com/scl/fo/9hr9fqyummo503u7cs65z/ALLyiGRXdgQqQNfGZK8cEnM?rlkey=vwi0dpe93b0qkwh1bih8z3pug&amp;st=qneplw7v&amp;dl=0">CN Core</a>
+            <a href="https://www.dropbox.com/scl/fo/q0z7z8mst7nundea8vrw2/AHIWF8JG3PP6xGgcSVuCZR4?rlkey=ivap04502uznsidk7dsdq46ci&amp;st=dr6di1dc&amp;dl=0">SRP Core</a>
+          </div>
+        </details>
+        <details class="menu">
+          <summary class="btn sm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"></path></svg>Dropbox: Final Versions</summary>
+          <div class="pop">
+            <span class="lbl">Dropbox · FINAL VERSIONS</span>
+            <a href="https://www.dropbox.com/scl/fo/fpohj0efsvmb8gbmfvoqs/AKcFWiEEjHhHZisLLI33jco?rlkey=xgfgfe512tfbxet6p361san1i&amp;st=ml45ntia&amp;dl=0">Center</a>
+            <a href="https://www.dropbox.com/scl/fo/qxgx2e7jukieka7ttrb1y/ADFzgEe35zUkLSQ9buNZeQA?rlkey=0ki8z4elan99epdlddmjmysov&amp;st=dn2buzey&amp;dl=0">Admin Core</a>
+            <a href="https://www.dropbox.com/scl/fo/zlenqnxmkfzo1j9fwnlck/ABIcw_hARWFrw2uasL3QrqE?rlkey=fow89o6rf8f7hkp9acb8csgge&amp;st=2dtcwgn0&amp;dl=0">BN Core</a>
+            <a href="https://www.dropbox.com/scl/fo/kanp193ti0r8eolga1l4x/AP5WKL1oXCR8C6LDu-sNVhc?rlkey=qpcgnfpgxze2xvzlt7gd534rg&amp;st=w1zai1a7&amp;dl=0">NI Core</a>
+            <a href="https://www.dropbox.com/scl/fo/gm2zob8wvfhfr1f1219ae/ANhp8T7ksE7QtwfJKynIp_0?rlkey=gbfxkzjna2hq5yr4nnl1f78j3&amp;st=w0fh8crm&amp;dl=0">CN Core</a>
+            <a href="https://www.dropbox.com/scl/fo/13pm59iuzreewh3wgj12d/AJ2aX4leTE-q1x5qqMqEKLE?rlkey=gq3iooda8ybei9qt5llsgg82z&amp;st=463b0her&amp;dl=0">SRP Core</a>
+          </div>
+        </details>
+        <details class="menu">
+          <summary class="btn sm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"></path><path d="M3 3v5h5"></path><path d="M12 7v5l3 2"></path></svg>Prior Proposals</summary>
+          <div class="pop">
+            <span class="lbl">Dropbox · PRIOR PROPOSALS</span>
+            <a href="https://www.dropbox.com/scl/fo/6e7p5xvasg17tu30tbuap/ALAsqq_6xoUEM23Qavsmc8A?rlkey=bvluagyz2a3fnk0stzh3rqb65&amp;st=rc344g48&amp;dl=0">2021 Phase 2 materials</a>
+            <a href="https://www.dropbox.com/scl/fo/fo68jlm4h36wmwbqtopx0/AFeDo-1BwnMgspxdrlweV_Q?rlkey=z76y4x9udqbriiayw6f9e7q2e&amp;st=g83ytov9&amp;dl=0">2025 Phase 3 materials</a>
+          </div>
+        </details>
+        <a class="btn sm" href="https://files.simpler.grants.gov/opportunities/77942f5d-0b5f-4656-bfd7-a6148b1624a4/attachments/55f55944-4b0c-4a90-9e33-75b064598558/PAR-27-055-Full-Announcement.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6M8 13h8M8 17h6"></path></svg>Full NOFO</a>
+        <a class="btn sm" href="https://nigms.nih.gov/Research/DRCB/IDeA/Pages/COBRE-faqs" title="NIGMS answers to common COBRE-E/S (PAR-27-055) questions"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M9.1 9a3 3 0 0 1 5.8 1c0 2-3 3-3 3"></path><path d="M12 17h.01"></path></svg>NIGMS FAQs</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="wrap roll r1 band-g" id="countdown" style="padding: 48px 24px 24px; display: flex; flex-direction: column; gap: 28px; align-items: flex-start;">
+      <div style="display: flex; flex-direction: column; justify-content: center; gap: 10px;">
+        <p class="eyebrow">CNAP Center · Kansas State University</p>
+        <h1 class="h1" style="font-size: 46px;">CNAP Phase S Proposal Hub</h1>
+        <img src="assets/cnap-logo.jpg" alt="CNAP Center — Cognitive &amp; Neurobiological Approaches to Plasticity" style="display: block; align-self: flex-start; flex: none; width: 340px; max-width: 100%; height: auto; aspect-ratio: 2048 / 739; object-fit: contain; border-radius: 8px; margin: 6px 0 8px;">
+        <p class="lede" style="font-size: 20px;">COBRE-S Application · <a href="https://files.simpler.grants.gov/opportunities/77942f5d-0b5f-4656-bfd7-a6148b1624a4/attachments/55f55944-4b0c-4a90-9e33-75b064598558/PAR-27-055-Full-Announcement.html" style="text-decoration: underline; text-underline-offset: 3px;" title="Read the full NOFO">PAR-27-055</a></p>
+        <p class="lede" style="margin-top: 6px;">The front door to the Phase S proposal: Phase S overview and comparison, the team's proposal preparation status, your individualized guidance, internal due dates, working folders, and where to update your progress.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px;">
+          <a class="btn primary" href="#guidance">Find your individualized guidance</a>
+          <a class="btn" href="Timeline.html">View full team timeline</a>
+        </div>
+      </div>
+      <div class="cd-wrap">
+        <div class="cd-box cd-when">
+          <span style="font-size: 12.5px; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 700; opacity: 0.85;">Internal submission · entire application to Central Office</span>
+          <span style="font-family: 'Archivo', 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 34px; font-weight: 600; line-height: 1.1; color: #3B3349;">Friday,<br>January 15, 2027</span>
+          <span class="cd-nih">NIH deadline: Mon, Jan 25, 2027, 5:00 PM local time · submitted by Central Office ({{nihDays}} {{nihLabel}} away). K-State is closed Mon, Jan 18.</span>
+        </div>
+        <div class="cd-box cd-count" aria-live="off">
+         <div class="cd-units">
+          <span style="display: flex; flex-direction: column; line-height: 1;"><span style="font-family: 'Archivo', 'Segoe UI', Helvetica, Arial, sans-serif; font-weight: 700;" class="cd-num">{{days}}</span><span style="font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.8; margin-top: 8px;">{{daysLabel}}</span></span>
+          <span style="display: flex; flex-direction: column; line-height: 1;"><span style="font-family: 'Archivo', 'Segoe UI', Helvetica, Arial, sans-serif; font-weight: 700;" class="cd-num">{{hours}}</span><span style="font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.8; margin-top: 8px;">hours</span></span>
+          <span style="display: flex; flex-direction: column; line-height: 1;"><span style="font-family: 'Archivo', 'Segoe UI', Helvetica, Arial, sans-serif; font-weight: 700;" class="cd-num">{{minutes}}</span><span style="font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.8; margin-top: 8px;">minutes</span></span>
+          <span style="display: flex; flex-direction: column; line-height: 1;"><span style="font-family: 'Archivo', 'Segoe UI', Helvetica, Arial, sans-serif; font-weight: 700;" class="cd-num">{{seconds}}</span><span style="font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.8; margin-top: 8px;">seconds</span></span>
+         </div>
+          <span style="font-size: 18px; opacity: 0.92;">until internal submission</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"><i></i></div>
+
+    <!-- Completion tracker (counts come from Smartsheet via progress.json) -->
+    <section class="wrap sec band-dark" id="completion">
+      <div class="pc-panel">
+      <h2 class="h2 h2-dark">Proposal Preparation: Percent Complete</h2>
+      <div class="pc-head">
+        <span class="pc-num">{{pcPct}}%</span>
+        <span class="pc-of">{{pcDone}} of {{pcTotal}} assignments finalized</span>
+      </div>
+      <div class="pc-track">
+        <span class="pc-tip {{pcTipCls}}" style="left: {{pcPct}}%;">{{pcPct}}%</span>
+        <div class="pc-bar" role="img" aria-label="{{pcAria}}">
+          <i class="s5" style="width: {{w5}}%;"></i><i class="s4" style="width: {{w4}}%;"></i><i class="s3" style="width: {{w3}}%;"></i><i class="s2" style="width: {{w2}}%;"></i><i class="s1" style="width: {{w1}}%;"></i>
+        </div>
+      </div>
+      <p class="pc-note">{{pcNote}}</p>
+      <div class="card scroll" style="padding: 8px 12px; margin-top: 16px;">
+        <table class="tbl pc-tbl">
+          <thead><tr><th>Status</th><th style="width: 120px;"><a href="#guidance" title="Find your individualized guidance" style="color: #FFFFFF; text-decoration: underline; text-decoration-color: rgba(255,255,255,0.55); text-underline-offset: 3px;">Assignments</a></th></tr></thead>
+          <tbody>
+            <tr class="pc-row {{rc}}" data-st="5" tabindex="{{ti}}" aria-expanded="{{x5}}"><td><span class="pc-key s5"></span>Finalized<span class="pc-car" aria-hidden="true"></span></td><td>{{k5}}</td></tr><tr class="pc-list {{h5}}"><td colspan="2">{{l5}}</td></tr>
+            <tr class="pc-row {{rc}}" data-st="4" tabindex="{{ti}}" aria-expanded="{{x4}}"><td><span class="pc-key s4"></span>Applying Reviewer Feedback<span class="pc-car" aria-hidden="true"></span></td><td>{{k4}}</td></tr><tr class="pc-list {{h4}}"><td colspan="2">{{l4}}</td></tr>
+            <tr class="pc-row {{rc}}" data-st="3" tabindex="{{ti}}" aria-expanded="{{x3}}"><td><span class="pc-key s3"></span>Ready for Review<span class="pc-car" aria-hidden="true"></span></td><td>{{k3}}</td></tr><tr class="pc-list {{h3}}"><td colspan="2">{{l3}}</td></tr>
+            <tr class="pc-row {{rc}}" data-st="2" tabindex="{{ti}}" aria-expanded="{{x2}}"><td><span class="pc-key s2"></span>In Progress<span class="pc-car" aria-hidden="true"></span></td><td>{{k2}}</td></tr><tr class="pc-list {{h2}}"><td colspan="2">{{l2}}</td></tr>
+            <tr class="pc-row {{rc}}" data-st="1" tabindex="{{ti}}" aria-expanded="{{x1}}"><td><span class="pc-key s1"></span>Not Started (including rows with no status yet)<span class="pc-car" aria-hidden="true"></span></td><td>{{k1}}</td></tr><tr class="pc-list {{h1}}"><td colspan="2">{{l1}}</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="small muted" style="margin: 12px 0 0;">{{pcHint}}Last updated: {{pcUpdated}}.</p>
+      </div>
+    </section>
+
+    <div class="divider pc-div"><i></i></div>
+
+    <!-- Current cycle -->
+    <section class="wrap sec roll r2 band-w" id="stages">
+      <div class="sec-head">
+        <div>
+          <h2 class="h2">Proposal Preparation Arc: Where we are in the process</h2>
+          <p>Six preparation stages from kickoff to submission.</p>
+          <p style="margin-top: 4px;"><b>Now:</b> {{nowLabel}}</p>
+        </div>
+        <a class="btn" href="Timeline.html">View full team timeline</a>
+      </div>
+      <div class="bar"><i style="width: {{pct}}%;"></i></div>
+      <div class="arc" aria-hidden="true"><svg viewBox="0 0 1200 160" width="100%" preserveAspectRatio="xMidYMid meet"><path class="arc-track" d="M100.0,125 Q600.0,-55 1100.0,125"></path><path class="arc-fill" d="{{arcD}}"></path><g class="arc-pin {{arcPinCls}}"><line x1="{{arcX}}" y1="{{arcPinY1}}" x2="{{arcX}}" y2="{{arcPinY2}}"></line><text x="{{arcX}}" y="{{arcLabY}}" text-anchor="middle">TODAY · {{todayUp}}</text></g><g class="an {{n1}}"><circle class="an-halo" cx="100.0" cy="125.0" r="25"></circle><circle class="an-dot" cx="100.0" cy="125.0" r="17"></circle><text x="100.0" y="130.0" text-anchor="middle">1</text></g><g class="an {{n2}}"><circle class="an-halo" cx="300.0" cy="67.4" r="25"></circle><circle class="an-dot" cx="300.0" cy="67.4" r="17"></circle><text x="300.0" y="72.4" text-anchor="middle">2</text></g><g class="an {{n3}}"><circle class="an-halo" cx="500.0" cy="38.6" r="25"></circle><circle class="an-dot" cx="500.0" cy="38.6" r="17"></circle><text x="500.0" y="43.6" text-anchor="middle">3</text></g><g class="an {{n4}}"><circle class="an-halo" cx="700.0" cy="38.6" r="25"></circle><circle class="an-dot" cx="700.0" cy="38.6" r="17"></circle><text x="700.0" y="43.6" text-anchor="middle">4</text></g><g class="an {{n5}}"><circle class="an-halo" cx="900.0" cy="67.4" r="25"></circle><circle class="an-dot" cx="900.0" cy="67.4" r="17"></circle><text x="900.0" y="72.4" text-anchor="middle">5</text></g><g class="an {{n6}}"><circle class="an-halo" cx="1100.0" cy="125.0" r="25"></circle><circle class="an-dot" cx="1100.0" cy="125.0" r="17"></circle><text x="1100.0" y="130.0" text-anchor="middle">6</text></g><text class="arc-end" x="100.0" y="158" text-anchor="middle">KICKOFF</text><text class="arc-end" x="1100.0" y="158" text-anchor="middle">SUBMISSION</text></svg></div>
+      <div class="stages">
+        <a class="stage {{c1}}" href="Timeline.html">
+          <span class="when">Oct 29 – Nov 13</span>
+          <span class="what">Kickoff&nbsp;+<br>Specific Aims</span>
+          <ul class="who-list"><li>Packets out, Smartsheet live</li><li>Center Aims</li><li>1-page Aims for all five components</li></ul>
+        </a>
+        <a class="stage {{c2}}" href="Timeline.html">
+          <span class="when">Nov 18 – Nov 30</span>
+          <span class="what">Research Strategies</span>
+          <ul class="who-list"><li>Core O&amp;M input</li><li>Reviewer confirmed</li><li>Center Strategy A &amp; B</li><li>All five Strategies (6 pp each)</li></ul>
+        </a>
+        <a class="stage {{c3}}" href="Timeline.html">
+          <span class="when">Dec 2 – Dec 7</span>
+          <span class="what">Research Strategy&nbsp;+<br>Budgets</span>
+          <ul class="who-list"><li>Center Strategy C–E</li><li>Budgets to Roxana</li><li>Institutional Letter</li><li>Aims + Strategies to external reviewer</li></ul>
+        </a>
+        <a class="stage {{c4}}" href="Timeline.html">
+          <span class="when">Dec 14 – Dec 18</span>
+          <span class="what">Supporting Documents&nbsp;+<br>Central Office Reviews</span>
+          <ul class="who-list"><li>Budgets to Tim</li><li>Equipment</li><li>Facilities</li><li>Resource Sharing</li><li>DMS Plan</li><li>Biosketch drafts to Kim</li></ul>
+        </a>
+        <a class="stage {{c5}}" href="Timeline.html">
+          <span class="when">Jan 4 – Jan 15</span>
+          <span class="what">Finish&nbsp;+<br>Revisions</span>
+          <ul class="who-list"><li>Reviewer comments</li><li>Bibliographies</li><li>Must-fix revisions</li><li>Summaries</li><li>Final biosketches and budgets</li><li>Application complete</li></ul>
+        </a>
+        <a class="stage last {{c6}}" href="Timeline.html">
+          <span class="when">Jan 19 – Jan 25</span>
+          <span class="what">Final Assembly&nbsp;+<br>Submission</span>
+          <ul class="who-list"><li>Budgets to Cayuse</li><li>Central Office package review</li><li>Submitted to NIH by 5:00 PM</li></ul>
+        </a>
+      </div>
+      <div class="small muted" style="margin: 14px 0 0; padding-top: 14px; border-top: 1px solid #E4E0EC; display: flex; flex-direction: column; gap: 4px;">
+        <span><b>Thanksgiving:</b> no deadlines Nov 24–27.</span>
+        <span><b>Winter break:</b> Dec 19 to Jan 3 (the external reviewer reads).</span>
+      </div>
+    </section>
+
+    <div class="divider roll r3"><i></i></div>
+    <!-- Universal resources -->
+    <section class="wrap sec roll r3 band-g" id="resources">
+      <div class="sec-head">
+        <div>
+          <h2 class="h2">Resources Universal to All Contributors</h2>
+          <p>Shared by everyone.<br>Each contributor page links back here (instead of repeating).</p>
+        </div>
+      </div>
+      <div class="grid c4">
+        <a class="tile" href="Timeline.html">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="17" rx="2"></rect><path d="M3 10h18M8 2v4M16 2v4"></path></svg></span>
+          <span class="t">Team Timeline</span>
+          <span class="d"><b>Every deadline</b> for the whole team, in date order and grouped by <b>preparation stage</b>, with <b>who's involved</b>.</span>
+          <span class="go">Open timeline →</span>
+        </a>
+        <a class="tile" href="Conventions.html">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7V4h16v3M9 20h6M12 4v16"></path></svg></span>
+          <span class="t">Formatting Conventions</span>
+          <span class="d"><b>Names and terms</b>, <b>NIH format</b>, <b>tables and figures</b>, and <b>references</b>. Follow these in everything you write.</span>
+          <span class="go">Open conventions →</span>
+        </a>
+        <a class="tile" href="PhaseS.html">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg></span>
+          <span class="t">Phase S Overview &amp; NOFO Comparisons</span>
+          <span class="d"><b>What Phase S is</b>, <b>what changed</b> from earlier NOFOs, <b>eligibility</b>, <b>review criteria</b>, and <b>key terms</b>.</span>
+          <span class="go">Open overview →</span>
+        </a>
+        <a class="tile" href="Workflow.html">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><path d="M12 11v6M9 14h6"></path></svg></span>
+          <span class="t">Workflow &amp; File Management</span>
+          <span class="d">How <b>Smartsheet</b>, <b>WORKING DRAFTS</b>, and <b>FINAL VERSIONS</b> work together, what each <b>status</b> means, and how <b>reviews finish</b>.</span>
+          <span class="go">Open workflow →</span>
+        </a>
+      </div>
+    </section>
+
+    <div class="divider roll r4"><i></i></div>
+    <!-- Find your guidance -->
+    <section class="wrap sec roll r4 band-w" id="guidance">
+      <div class="sec-head">
+        <div>
+          <h2 class="h2">Find Your Individualized Guidance</h2>
+          <p>Click your name for your tasks, dates, page limits, plain-language directions, review criteria, and folders.</p>
+        </div>
+      </div>
+      <div class="grid c4">
+        <a class="person" href="HeatherBailey.html">
+          <span class="n">Dr. Heather Bailey</span>
+          <span class="r">Center · CN Core<br>Center Director (PD/PI) · Core Director</span>
+          <span class="go">View guidance →</span>
+        </a>
+        <a class="person" href="Chip.html">
+          <span class="n">Dr. Charles Pickens</span>
+          <span class="r">BN Core<br>Core Director</span>
+          <span class="go">View guidance →</span>
+        </a>
+        <a class="person" href="Doina.html">
+          <span class="n">Dr. Doina Caragea</span>
+          <span class="r">NI Core<br>Core Director</span>
+          <span class="go">View guidance →</span>
+        </a>
+        <a class="person" href="CarlAde.html">
+          <span class="n">Dr. Carl Ade</span>
+          <span class="r">Admin Core<br>Associate Director</span>
+          <span class="go">View guidance →</span>
+        </a>
+        <a class="person" href="Roxana.html">
+          <span class="n">Ms. Roxana Ortiz</span>
+          <span class="r">CNAP · Accountant II<span class="rl">Budget Review</span></span>
+          <span class="go">View guidance →</span>
+        </a>
+        <a class="person" href="Tim.html">
+          <span class="n">Mr. Tim McDaniel</span>
+          <span class="r">Central Office · CPA<span class="rl">Budget Review</span></span>
+          <span class="go">View guidance →</span>
+        </a>
+        <a class="person" href="Kim.html">
+          <span class="n">Ms. Kim Rewinkel</span>
+          <span class="r">Central Office · Senior Grants and Contracts Administrator<span class="rl">Biosketch Review plus Federal Compliance +</span></span>
+          <span class="go">View guidance →</span>
+        </a>
+        <div class="person" style="border-left-color: #D3CDE0; background: #F7F6FA;">
+          <span class="n" style="font-size: 17px;">Questions?</span>
+          <span class="r">Morgan coordinates the full Phase S proposal: <a href="mailto:mkwills@ksu.edu">mkwills@ksu.edu</a>.</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider roll r5"><i></i></div>
+    <!-- Quick access: glow box -->
+    <section class="wrap sec roll r5 band-w" id="quick">
+      <div class="qbox">
+        <div style="max-width: 720px;">
+          <h2 class="h2 h2-dark">Quick access</h2>
+          <p style="margin: 6px 0 0; color: #FFFFFF;">Your own guidance page lists your assignments and due dates, and is where you update your progress. Dropbox holds the drafts and finals.</p>
+          <p style="margin: 6px 0 0; color: #FFFFFF;">The CNAP FAQ answers common questions. The Full NOFO and the NIGMS FAQs are the official sources.</p>
+        </div>
+        <div class="qrow">
+          <a class="qbtn qbtn-solid" href="Progress.html">Update Progress</a>
+          <a class="qbtn" href="FAQ.html">CNAP FAQ</a>
+          <details class="menu qmenu">
+          <summary class="qbtn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>Dropbox: Working Drafts</summary>
+          <div class="pop">
+            <span class="lbl">Dropbox · WORKING DRAFTS</span>
+            <a href="https://www.dropbox.com/scl/fo/qju9wh2rlvj2lpnw3cs33/AJ-L6UNFe6CtRs0QkR6wyt0?rlkey=oxshp9g686dvjig6n4jb9s358&amp;st=hnuinhmv&amp;dl=0">Center</a>
+            <a href="https://www.dropbox.com/scl/fo/xq6r8le84xmx63rq3sq6e/AEidS1yGE9E1UbcrVGc6tZo?rlkey=4mg2rhwg2ivv8kvz168595szc&amp;st=wugxhc1c&amp;dl=0">Admin Core</a>
+            <a href="https://www.dropbox.com/scl/fo/zpmt88ochlovpwp3c0951/AAJqOO_OzLjNeXdBJA5GTbY?rlkey=of1g4dw3btkem995y2i4b1jvh&amp;st=4x6gep0q&amp;dl=0">BN Core</a>
+            <a href="https://www.dropbox.com/scl/fo/pous7ow51nzwt6sxxidi2/AJGSAf5rCishWvX4F0SMBqA?rlkey=6y3f3n46aqkl12xivk674i6yu&amp;st=635vxrrf&amp;dl=0">NI Core</a>
+            <a href="https://www.dropbox.com/scl/fo/9hr9fqyummo503u7cs65z/ALLyiGRXdgQqQNfGZK8cEnM?rlkey=vwi0dpe93b0qkwh1bih8z3pug&amp;st=qneplw7v&amp;dl=0">CN Core</a>
+            <a href="https://www.dropbox.com/scl/fo/q0z7z8mst7nundea8vrw2/AHIWF8JG3PP6xGgcSVuCZR4?rlkey=ivap04502uznsidk7dsdq46ci&amp;st=dr6di1dc&amp;dl=0">SRP Core</a>
+          </div>
+        </details>
+          <details class="menu qmenu">
+          <summary class="qbtn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"></path></svg>Dropbox: Final Versions</summary>
+          <div class="pop">
+            <span class="lbl">Dropbox · FINAL VERSIONS</span>
+            <a href="https://www.dropbox.com/scl/fo/fpohj0efsvmb8gbmfvoqs/AKcFWiEEjHhHZisLLI33jco?rlkey=xgfgfe512tfbxet6p361san1i&amp;st=ml45ntia&amp;dl=0">Center</a>
+            <a href="https://www.dropbox.com/scl/fo/qxgx2e7jukieka7ttrb1y/ADFzgEe35zUkLSQ9buNZeQA?rlkey=0ki8z4elan99epdlddmjmysov&amp;st=dn2buzey&amp;dl=0">Admin Core</a>
+            <a href="https://www.dropbox.com/scl/fo/zlenqnxmkfzo1j9fwnlck/ABIcw_hARWFrw2uasL3QrqE?rlkey=fow89o6rf8f7hkp9acb8csgge&amp;st=2dtcwgn0&amp;dl=0">BN Core</a>
+            <a href="https://www.dropbox.com/scl/fo/kanp193ti0r8eolga1l4x/AP5WKL1oXCR8C6LDu-sNVhc?rlkey=qpcgnfpgxze2xvzlt7gd534rg&amp;st=w1zai1a7&amp;dl=0">NI Core</a>
+            <a href="https://www.dropbox.com/scl/fo/gm2zob8wvfhfr1f1219ae/ANhp8T7ksE7QtwfJKynIp_0?rlkey=gbfxkzjna2hq5yr4nnl1f78j3&amp;st=w0fh8crm&amp;dl=0">CN Core</a>
+            <a href="https://www.dropbox.com/scl/fo/13pm59iuzreewh3wgj12d/AJ2aX4leTE-q1x5qqMqEKLE?rlkey=gq3iooda8ybei9qt5llsgg82z&amp;st=463b0her&amp;dl=0">SRP Core</a>
+          </div>
+        </details>
+          <details class="menu qmenu">
+          <summary class="qbtn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"></path><path d="M3 3v5h5"></path><path d="M12 7v5l3 2"></path></svg>Prior Proposals</summary>
+          <div class="pop">
+            <span class="lbl">Dropbox · PRIOR PROPOSALS</span>
+            <a href="https://www.dropbox.com/scl/fo/6e7p5xvasg17tu30tbuap/ALAsqq_6xoUEM23Qavsmc8A?rlkey=bvluagyz2a3fnk0stzh3rqb65&amp;st=rc344g48&amp;dl=0">2021 Phase 2 materials</a>
+            <a href="https://www.dropbox.com/scl/fo/fo68jlm4h36wmwbqtopx0/AFeDo-1BwnMgspxdrlweV_Q?rlkey=z76y4x9udqbriiayw6f9e7q2e&amp;st=g83ytov9&amp;dl=0">2025 Phase 3 materials</a>
+          </div>
+        </details>
+          <a class="qbtn" href="https://files.simpler.grants.gov/opportunities/77942f5d-0b5f-4656-bfd7-a6148b1624a4/attachments/55f55944-4b0c-4a90-9e33-75b064598558/PAR-27-055-Full-Announcement.html">Full NOFO</a>
+          <a class="qbtn" href="https://nigms.nih.gov/Research/DRCB/IDeA/Pages/COBRE-faqs">NIGMS FAQs</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider roll r5"><i></i></div>
+    <!-- Page limits at a glance -->
+    <section class="wrap sec roll r5 band-g" id="limits">
+      <div class="sec-head">
+        <div>
+          <h2 class="h2">Page limits at a glance</h2>
+        </div>
+      </div>
+      <div class="grid c4">
+        <div class="stat"><span class="k">Center Research Strategy</span><span class="v">12 pages</span><span class="s">Sections A–E combined</span></div>
+        <div class="stat"><span class="k">Each Core's Research Strategy</span><span class="v">6 pages</span><span class="s">Admin, BN, NI, CN, SRP Core</span></div>
+        <div class="stat"><span class="k">Specific Aims</span><span class="v">1 page</span><span class="s">Each component</span></div>
+        <div class="stat"><span class="k">Project Summary</span><span class="v">30 lines</span><span class="s">Each component</span></div>
+      </div>
+      <p class="small muted" style="margin: 12px 0 0;">Biosketches and the Center Director's (PD/PI's) Current &amp; Pending Support in SciENcv only (other Senior/Key C&amp;P only at Just-in-Time). External-review revisions are must-fix only, with no scope or budget changes; after Jan 15, only critical budget edits. Appendix is optional (limited items only) — tell Morgan by Fri, Dec 11 if your component needs one.</p>
+      <p style="margin: 14px 0 0;"><a class="btn sm" href="PhaseS.html#glance">See all page limits and components &rarr;</a></p>
+    </section>
+
+  </main>
+
+  <footer class="foot">
+    <div class="wrap">
+      <img class="logo" src="assets/cnap-logo.jpg" alt="CNAP Center — Cognitive &amp; Neurobiological Approaches to Plasticity">
+      <span>CNAP Center · Phase S (COBRE-S) Application · <a href="https://files.simpler.grants.gov/opportunities/77942f5d-0b5f-4656-bfd7-a6148b1624a4/attachments/55f55944-4b0c-4a90-9e33-75b064598558/PAR-27-055-Full-Announcement.html">PAR-27-055</a></span>
+      <span>Prepared Oct 13, 2026 · Live tracker: <a href="https://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21">Smartsheet</a> · Questions: Morgan, <a href="mailto:mkwills@ksu.edu">mkwills@ksu.edu</a></span>
+    </div>
+  </footer>
+</div>
+</template>
+<script>
+(function(){ window.DCLogic = class { forceUpdate(){ if (window.__dcRender) window.__dcRender(); } }; })();
+
+class Component extends DCLogic {
+  componentDidMount() {
+    this.pcBind();
+
+    if (typeof window !== 'undefined' && !window.__nmSheet) {
+      window.__nmSheet = true;
+      let sheet = null, owner = null;
+      const closeSheet = () => { if (sheet) { sheet.remove(); sheet = null; } owner = null; };
+      const place = () => {
+        if (!sheet || !owner) return;
+        const tb = owner.closest('.topbar'); const r = (tb || owner).getBoundingClientRect();
+        sheet.style.top = Math.max(8, Math.round(r.bottom + 6)) + 'px';
+      };
+      const sync = (d) => {
+        if (!d || !d.matches || !d.matches('details.nm')) return;
+        if (!d.open) { if (owner === d) closeSheet(); return; }
+        if (owner === d && sheet) return;
+        if (window.innerWidth > 1024) return;
+        const pop = d.querySelector('.pop'); if (!pop) return;
+        closeSheet();
+        owner = d;
+        sheet = document.createElement('div');
+        sheet.className = 'nm-sheet';
+        sheet.style.cssText = 'position:fixed;left:12px;right:12px;z-index:1000;background:#FFFFFF;border:1px solid #D9D4E2;border-radius:10px;box-shadow:0 10px 28px rgba(31,27,43,0.18);padding:6px;max-height:70vh;overflow-y:auto;display:flex;flex-direction:column;';
+        sheet.innerHTML = pop.innerHTML;
+        sheet.addEventListener('click', (ev) => {
+          const a = ev.target.closest && ev.target.closest('a');
+          if (a) { const o = owner; setTimeout(() => { if (o) o.removeAttribute('open'); closeSheet(); }, 0); }
+        });
+        sheet.addEventListener('pointerdown', (ev) => ev.stopPropagation());
+        document.body.appendChild(sheet);
+        place();
+      };
+      document.addEventListener('toggle', (e) => sync(e.target), true);
+      document.addEventListener('click', (e) => { const s = e.target && e.target.closest && e.target.closest('details.nm > summary'); if (s) setTimeout(() => sync(s.parentElement), 40); }, true);
+      window.addEventListener('scroll', place, { passive: true });
+      window.addEventListener('resize', () => { if (window.innerWidth > 1024 && owner) { owner.removeAttribute('open'); closeSheet(); } else place(); });
+    }
+
+    if (typeof window !== 'undefined' && !window.__hashOpen) {
+      window.__hashOpen = true;
+      const openHash = () => {
+        const id = (location.hash || '').slice(1); if (!id) return;
+        const el = document.getElementById(id); if (!el) return;
+        const d = el.matches('details') ? el : el.querySelector('details.sx');
+        if (d && !d.open) d.open = true;
+        setTimeout(() => el.scrollIntoView({ block: 'start' }), 60);
+      };
+      setTimeout(openHash, 350);
+      window.addEventListener('hashchange', openHash);
+    }
+
+    if (typeof window !== 'undefined' && !window.__swipePeek) {
+      window.__swipePeek = true;
+      setTimeout(() => {
+        try {
+          if (window.innerWidth > 760 || sessionStorage.getItem('cnapPeek') === '1') return;
+          sessionStorage.setItem('cnapPeek', '1');
+          if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+          const rows = Array.from(document.querySelectorAll('.topbar .nav, .topbar .quick, .topbar .qrow, .topbar .toprow')).filter((r) => r.scrollWidth > r.clientWidth + 4 && r.scrollLeft < 4);
+          rows.forEach((r, i) => setTimeout(() => {
+            r.scrollTo({ left: 56, behavior: 'smooth' });
+            setTimeout(() => r.scrollTo({ left: 0, behavior: 'smooth' }), 650);
+          }, i * 250));
+        } catch (err) {}
+      }, 900);
+    }
+
+    if (typeof window !== 'undefined' && !window.__menuOutsideClose) {
+      window.__menuOutsideClose = true;
+      const sel = 'details.nm[open], details.menu[open], details.qmenu[open]';
+      const closeOutside = (e) => {
+        const path = e.composedPath ? e.composedPath() : [e.target];
+        if (path.some((n) => n && n.classList && n.classList.contains('nm-sheet'))) return;
+        const t = path[0]; const root = (t && t.getRootNode) ? t.getRootNode() : document;
+        [document, root].forEach((r) => { if (r && r.querySelectorAll) r.querySelectorAll(sel).forEach((d) => { if (!path.includes(d)) d.removeAttribute('open'); }); });
+      };
+      document.addEventListener('pointerdown', closeOutside, true);
+      document.addEventListener('keydown', (e) => { if (e.key === 'Escape') document.querySelectorAll(sel).forEach((d) => d.removeAttribute('open')); });
+    }
+
+    if (typeof window !== 'undefined' && !window.__posMem) {
+      window.__posMem = true;
+      const key = 'cnapPos:' + location.pathname.split('/').pop();
+      const roots = () => [document].concat(Array.from(document.querySelectorAll('*')).filter((e) => e.shadowRoot).map((e) => e.shadowRoot));
+      const allDetails = () => roots().flatMap((r) => Array.from(r.querySelectorAll('details'))).filter((d) => !d.closest('.topbar') && !d.classList.contains('qmenu') && !d.classList.contains('menu'));
+      const save = () => {
+        try {
+          const open = []; allDetails().forEach((d, i) => { if (d.open) open.push(i); });
+          sessionStorage.setItem(key, JSON.stringify({ y: window.scrollY, open: open }));
+        } catch (err) {}
+      };
+      document.addEventListener('click', (e) => {
+        const path = e.composedPath ? e.composedPath() : [e.target];
+        const a = path.find((n) => n && n.tagName === 'A' && n.getAttribute('href'));
+        if (a && !(a.getAttribute('href') || '').startsWith('#')) save();
+        if (a && a.getAttribute('data-back') === '1') { try { sessionStorage.setItem('cnapBack', '1'); } catch (err) {} }
+      }, true);
+      window.addEventListener('pagehide', save);
+      let cameBack = false;
+      try {
+        const nav = performance.getEntriesByType && performance.getEntriesByType('navigation')[0];
+        cameBack = (nav && nav.type === 'back_forward') || sessionStorage.getItem('cnapBack') === '1';
+        sessionStorage.removeItem('cnapBack');
+      } catch (err) {}
+      if (cameBack) {
+        try { if ('scrollRestoration' in history) history.scrollRestoration = 'manual'; } catch (err) {}
+        let st = null; try { st = JSON.parse(sessionStorage.getItem(key) || 'null'); } catch (err) {}
+        if (st) {
+          const restore = () => {
+            const ds = allDetails(); (st.open || []).forEach((i) => { if (ds[i]) ds[i].open = true; });
+            window.scrollTo(0, st.y || 0);
+          };
+          [150, 500, 1000].forEach((t) => setTimeout(restore, t));
+        }
+      }
+    }
+    if (typeof window !== 'undefined') setTimeout(() => {
+      const roots = [document].concat(Array.from(document.querySelectorAll('*')).filter((e) => e.shadowRoot).map((e) => e.shadowRoot));
+      roots.forEach((r) => r.querySelectorAll('.topbar .quick').forEach((q) => {
+        const w = q.parentElement; if (!w) return;
+        const upd = () => {
+          const t = q.offsetTop + 'px', h = q.offsetHeight + 'px';
+          if (w.style.getPropertyValue('--qtop') !== t) w.style.setProperty('--qtop', t);
+          if (w.style.getPropertyValue('--qh') !== h) w.style.setProperty('--qh', h);
+          w.classList.toggle('quick-over', q.scrollWidth > q.clientWidth + 4);
+          w.classList.toggle('quick-end', q.scrollLeft + q.clientWidth >= q.scrollWidth - 8);
+        };
+        q.addEventListener('scroll', upd, { passive: true }); window.addEventListener('resize', upd); upd(); setInterval(upd, 400); if (window.MutationObserver) new MutationObserver(upd).observe(w, { attributes: true, attributeFilter: ['class', 'style'] });
+      }));
+    }, 300);
+    if (typeof window !== 'undefined') setTimeout(() => {
+      const roots = [document].concat(Array.from(document.querySelectorAll('*')).filter((e) => e.shadowRoot).map((e) => e.shadowRoot));
+      roots.forEach((r) => r.querySelectorAll('.topbar .nav').forEach((n) => {
+        const on = n.querySelector('.on');
+        if (on && n.scrollWidth > n.clientWidth + 4) n.scrollLeft = Math.max(0, on.offsetLeft - n.offsetLeft - 16);
+        const w = n.parentElement;
+        const upd = () => { if (w) w.classList.toggle('nav-end', n.scrollLeft + n.clientWidth >= n.scrollWidth - 8); };
+        n.addEventListener('scroll', upd, { passive: true }); upd();
+      }));
+    }, 300);
+    if (typeof window !== 'undefined' && typeof fetch === 'function') {
+      const urls = [];
+      const lk = Array.from(document.querySelectorAll('link[href]')).find((l) => /site\.css(\?|$)/.test(l.getAttribute('href') || ''));
+      if (lk && lk.href) { try { urls.push(new URL('progress.json', lk.href).href); } catch (e) {} }
+      urls.push('progress.json', 'project/progress.json');
+      const tryNext = (i) => {
+        if (i >= urls.length) return;
+        fetch(urls[i] + (urls[i].includes('?') ? '&' : '?') + 't=' + Date.now(), { cache: 'no-store' })
+          .then((r) => (r.ok ? r.json() : Promise.reject(r.status)))
+          .then((j) => { if (this.progressLive) return; if (j && j.counts && j.total) { this.progress = j; this.forceUpdate(); } else tryNext(i + 1); })
+          .catch(() => tryNext(i + 1));
+      };
+      tryNext(0);
+      const api = (window.CNAP_API || '').replace(/\/+$/, '');
+      if (api) {
+        fetch(api + '?action=progress', { cache: 'no-store' })
+          .then((r) => (r.ok ? r.json() : Promise.reject(r.status)))
+          .then((j) => { if (j && j.counts && j.total) { this.progressLive = true; this.progress = j; this.forceUpdate(); } })
+          .catch(() => {});
+      }
+    }
+    if (typeof window !== 'undefined') {
+      setTimeout(() => {
+        const h = (window.location.hash || '').slice(1);
+        if (!h || !window.__nmJump) return;
+        const t = document.querySelector('[id="' + h + '"]');
+        if (t) window.__nmJump(t);
+      }, 350);
+    }
+    if (typeof window !== 'undefined') setTimeout(() => { if (window.__xallSync) window.__xallSync(); }, 400);
+    if (typeof window !== 'undefined' && !window.__nmAutoClose13) {
+      window.__nmAutoClose13 = true;
+      const rootOf = (e) => { const t = e.composedPath ? e.composedPath()[0] : e.target; return (t && t.getRootNode) ? t.getRootNode() : document; };
+      document.addEventListener('mousemove', (e) => {
+        const root = rootOf(e); if (!root.querySelectorAll) return;
+        root.querySelectorAll('details.nm[open]').forEach((d) => {
+          if (d.matches(':hover')) { clearTimeout(d.__t); d.__t = null; }
+          else if (!d.__t) { d.__t = setTimeout(() => { d.__t = null; if (!d.matches(':hover')) d.removeAttribute('open'); }, 450); }
+        });
+      }, { passive: true });
+      document.addEventListener('click', (e) => {
+        const root = rootOf(e); if (!root.querySelectorAll) return;
+        const path = e.composedPath ? e.composedPath() : [e.target];
+        root.querySelectorAll('details.nm[open]').forEach((d) => { if (!path.includes(d)) d.removeAttribute('open'); });
+        const a = path.find((n) => n && n.tagName === 'A' && n.getAttribute && (n.getAttribute('href') || '').includes('#'));
+        if (!a) return;
+        const id = (a.getAttribute('href') || '').split('#')[1];
+        if (!id) return;
+        let el = a.parentElement, target = null;
+        while (el && !target) { target = el.querySelector ? el.querySelector('[id="' + id + '"]') : null; el = el.parentElement; }
+        if (!target) return;
+        e.preventDefault();
+        const d = a.closest('details.nm'); if (d) d.removeAttribute('open');
+        window.__nmJump(target);
+      });
+      const xallScope = (n) => (n && n.closest && (n.closest('.xscope') || n.closest('main'))) || document;
+      window.__xallItems = (scope) => Array.from(scope.querySelectorAll('details.sx, details.acc, details.stg, details.fq'));
+      window.__xallSync = (root) => {
+        (root && root.querySelectorAll ? root : document).querySelectorAll('button.xall').forEach((b) => {
+          const list = window.__xallItems(xallScope(b));
+          const anyClosed = list.some((d) => !d.open);
+          const sc = b.closest('.xscope'); b.textContent = anyClosed ? (sc ? 'Expand all stages' : 'Expand all') : (sc ? 'Collapse all stages' : 'Collapse all');
+          b.setAttribute('aria-pressed', anyClosed ? 'false' : 'true');
+        });
+      };
+      document.addEventListener('click', (e) => {
+        const path = e.composedPath ? e.composedPath() : [e.target];
+        const btn = path.find((n) => n && n.classList && n.classList.contains('xall'));
+        if (btn) {
+          e.preventDefault();
+          const scope = xallScope(btn);
+          const list = window.__xallItems(scope);
+          const anyClosed = list.some((d) => !d.open);
+          list.forEach((d) => { if (anyClosed) d.setAttribute('open', ''); else d.removeAttribute('open'); });
+          if (scope.dataset) scope.dataset.xall = anyClosed ? '1' : '';
+          window.__xallSync(btn.getRootNode ? btn.getRootNode() : document);
+          return;
+        }
+      }, true);
+      document.addEventListener('toggle', (e) => { const t = e.composedPath ? e.composedPath()[0] : e.target; window.__xallSync(t && t.getRootNode ? t.getRootNode() : document); }, true);
+      window.__nmJump = (target) => {
+        if (target.tagName === 'DETAILS') target.setAttribute('open', '');
+        const sx = target.querySelector ? target.querySelector(':scope > details.sx') : null; if (sx) sx.setAttribute('open', '');
+        let host = target.parentElement, bar = null;
+        while (host && !bar) { bar = host.querySelector ? host.querySelector('.topbar') : null; host = host.parentElement; }
+        const offset = (bar ? (bar.querySelector('.nav') || bar).getBoundingClientRect().height : 0) + 20;
+        let sc = target.parentElement;
+        while (sc && sc !== document.body && sc !== document.documentElement) {
+          const oy = getComputedStyle(sc).overflowY;
+          if ((oy === 'auto' || oy === 'scroll') && sc.scrollHeight > sc.clientHeight) break;
+          sc = sc.parentElement;
+        }
+        const useWin = !sc || sc === document.body || sc === document.documentElement;
+        const top = target.getBoundingClientRect().top - (useWin ? 0 : sc.getBoundingClientRect().top) - offset;
+        (useWin ? window : sc).scrollBy({ top: top, behavior: 'smooth' });
+      };
+    }
+    this.timer = setInterval(() => this.forceUpdate(), 1000);
+  }
+  componentWillUnmount() {
+    if (this.timer) clearInterval(this.timer);
+  }
+  // Clicking a status row in the Percent Complete table lists the assignments with that status.
+  pcListVals() {
+    const api = typeof window !== 'undefined' && window.CNAP_API;
+    const out = { rc: api ? 'on' : '', ti: api ? '0' : '-1', pcHint: api ? 'Click a status to see its assignments. ' : '' };
+    const names = { 5: 'Finalized', 4: 'Applying Reviewer Feedback', 3: 'Ready for Review', 2: 'In Progress', 1: '' };
+    const esc = (t) => String(t).replace(/[&<>"]/g, (ch) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[ch]));
+    for (let n = 1; n <= 5; n++) {
+      const open = !!api && this.pcOpen === n;
+      out['x' + n] = open ? 'true' : 'false';
+      out['h' + n] = open ? '' : 'off';
+      if (!open) { out['l' + n] = ''; continue; }
+      let body;
+      if (this.pcErr) {
+        body = '<p class="pc-msg">' + esc(this.pcErr) + '</p>';
+      } else if (!this.pcTasks) {
+        body = '<p class="pc-msg">Loading…</p>';
+      } else {
+        const fmt = (d) => { const dt = new Date(d + 'T12:00:00'); return isNaN(dt) ? d : dt.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' }); };
+        const rows = this.pcTasks.filter((r) => (n === 1 ? (!r.progress || r.progress === 'Not Started') : r.progress === names[n]))
+          .sort((a, b) => (a.due || '9999').localeCompare(b.due || '9999'));
+        body = rows.length ? rows.map((r) => '<div class="pc-li"><span>' + esc(r.assignment) + '</span><span class="d">' + (r.due ? 'Due ' + esc(fmt(r.due)) : '') + '</span><span class="m">' +
+          esc([r.responsible, r.section].filter(Boolean).join(' · ')) + '</span></div>').join('') : '<p class="pc-msg">No assignments have this status right now.</p>';
+      }
+      out['l' + n] = body;
+    }
+    return out;
+  }
+  pcLoad() {
+    this.pcErr = ''; this.forceUpdate();
+    fetch(window.CNAP_API, { method: 'POST', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify({ action: 'tasks' }) })
+      .then((r) => r.json())
+      .then((j) => {
+        if (j.error) this.pcErr = 'Couldn’t load assignments: ' + j.error;
+        else { this.pcTasks = j.rows; this.pcErr = ''; }
+        this.forceUpdate();
+      })
+      .catch(() => { this.pcErr = 'Couldn’t load assignments. Refresh to try again.'; this.forceUpdate(); });
+  }
+  pcBind() {
+    if (typeof window === 'undefined' || !window.CNAP_API || window.__pcBound) return;
+    window.__pcBound = true;
+    const toggle = (row) => {
+      const n = Number(row.dataset.st);
+      this.pcOpen = this.pcOpen === n ? 0 : n;
+      if (this.pcOpen && !this.pcTasks) this.pcLoad(); else this.forceUpdate();
+    };
+    document.addEventListener('click', (e) => { const row = e.target.closest && e.target.closest('.pc-row.on'); if (row) toggle(row); });
+    document.addEventListener('keydown', (e) => {
+      const row = e.target.closest && e.target.closest('.pc-row.on');
+      if (row && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); toggle(row); }
+    });
+  }
+  renderVals() {
+    const now = new Date();
+    const nih = new Date(2027, 0, 25, 17, 0, 0);
+    const internal = new Date(2027, 0, 15, 17, 0, 0);
+    const day = 86400000;
+    const left = Math.max(0, internal - now);
+    const days = Math.floor(left / day);
+    const hours = Math.floor((left % day) / 3600000);
+    const minutes = Math.floor((left % 3600000) / 60000);
+    const seconds = Math.floor((left % 60000) / 1000);
+    const two = (n) => (n < 10 ? '0' + n : String(n));
+    const nihDays = Math.max(0, Math.ceil((nih - now) / day));
+    const starts = [
+      new Date(2026, 9, 29), new Date(2026, 10, 18), new Date(2026, 11, 2),
+      new Date(2026, 11, 14), new Date(2027, 0, 4), new Date(2027, 0, 19)
+    ];
+    const names = [
+      'Preparation Stage 1 · Kickoff + Specific Aims',
+      'Preparation Stage 2 · Research Strategies',
+      'Preparation Stage 3 · Research Strategy + Budgets',
+      'Preparation Stage 4 · Supporting documents + Central Office reviews',
+      'Preparation Stage 5 · Finish + revisions',
+      'Preparation Stage 6 · Central Office review + NIH submission'
+    ];
+    let idx = -1;
+    for (let i = 0; i < starts.length; i++) { if (now >= starts[i]) idx = i; }
+    let nowLabel = 'Before kickoff — assignment packets go out and Smartsheet goes live Thu, Oct 29.';
+    if (now > nih) nowLabel = 'Submitted — the NIH deadline has passed.';
+    else if (idx >= 0) nowLabel = names[idx];
+    const kick = new Date(2026, 9, 29);
+    const pct = Math.min(100, Math.max(0, Math.round(((now - kick) / (nih - kick)) * 100)));
+    const c = (i) => (idx === i ? 'now' : (idx < 0 && i === 0 && now <= nih ? 'next' : ''));
+    // Timeline rail: each cell's line runs from its own left edge to the next cell; the node sits 28px in.
+    const ends = starts.slice(1).concat([nih]);
+    const fill = [];
+    const node = [];
+    let pinCell = 0;
+    let pinLeft = '10px';
+    for (let i = 0; i < 6; i++) {
+      let f = '0%';
+      if (now > nih || idx > i) f = '100%';
+      else if (idx === i) {
+        const frac = Math.min(1, Math.max(0, (now - starts[i]) / (ends[i] - starts[i])));
+        f = 'calc(28px + (100% - 28px) * ' + frac.toFixed(3) + ')';
+        pinCell = i;
+        pinLeft = f;
+      } else if (idx < 0 && i === 0) {
+        f = '12px';
+      }
+      fill.push(f);
+      node.push(now > nih || idx > i ? 'done' : (idx === i ? 'cur' : 'fut'));
+    }
+    const showPin = now <= nih;
+    // Arc: quadratic curve through the six stage nodes; t runs 0 (stage 1) to 1 (stage 6).
+    let at = 0;
+    if (now > nih) at = 1;
+    else if (idx >= 5) at = 1;
+    else if (idx >= 0) at = (idx + Math.min(1, Math.max(0, (now - starts[idx]) / (ends[idx] - starts[idx])))) / 5;
+    const AX0 = 100, AX5 = 1100, AY0 = 125, AXC = 600, AYC = -55;
+    const bx = (t) => AX0 + t * (AX5 - AX0);
+    const by = (t) => (1 - t) * (1 - t) * AY0 + 2 * t * (1 - t) * AYC + t * t * AY0;
+    const qx = AX0 + at * (AXC - AX0), qy = AY0 + at * (AYC - AY0);
+    const arcD = at > 0 ? 'M' + AX0 + ',' + AY0 + ' Q' + qx.toFixed(1) + ',' + qy.toFixed(1) + ' ' + bx(at).toFixed(1) + ',' + by(at).toFixed(1) : 'M' + AX0 + ',' + AY0;
+    const arcX = bx(at).toFixed(1), arcY = by(at);
+    const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    const P = this.progress || { updatedLabel: 'Wed, Oct 14, 2026, 12:54 PM CT', total: 92, counts: { 'No status yet': 92 } };
+    const C = P.counts || {};
+    const cnt = (k) => Number(C[k] || 0);
+    const tot = Number(P.total) || 0;
+    const k5 = cnt('Finalized'), k4 = cnt('Applying Reviewer Feedback'), k3 = cnt('Ready for Review'), k2 = cnt('In Progress');
+    const k1 = Math.max(0, tot - k5 - k4 - k3 - k2);
+    const pw = (n) => (tot ? ((n / tot) * 100).toFixed(2) : '0');
+    const pcPct = tot ? Math.floor((k5 / tot) * 100) : 0;
+    return {
+      pcPct: String(pcPct), pcDone: String(k5), pcTotal: String(tot), pcUpdated: P.updatedLabel || '',
+      pcTipCls: pcPct < 4 ? 'start' : (pcPct > 96 ? 'end' : ''),
+      pcNote: pcPct >= 100 ? 'All assignments finalized. Thank you, team!' : (pcPct >= 75 ? '75% milestone reached! Next milestone: 100% finalized by Friday, January 15.' : (pcPct >= 50 ? 'Halfway there! Next milestone: 75% finalized by Monday, January 11.' : (pcPct >= 25 ? '25% milestone reached! Next milestone: 50% finalized by Thursday, December 17.' : 'Next milestone: 25% finalized by Friday, December 4.'))),
+      pcAria: k5 + ' of ' + tot + ' assignments finalized',
+      w1: pw(k1), w2: pw(k2), w3: pw(k3), w4: pw(k4), w5: pw(k5),
+      k1: String(k1), k2: String(k2), k3: String(k3), k4: String(k4), k5: String(k5),
+      ...this.pcListVals(),
+      f1: fill[0], f2: fill[1], f3: fill[2], f4: fill[3], f5: fill[4], f6: fill[5],
+      n1: node[0], n2: node[1], n3: node[2], n4: node[3], n5: node[4], n6: node[5],
+      p1: showPin && pinCell === 0, p2: showPin && pinCell === 1, p3: showPin && pinCell === 2,
+      p4: showPin && pinCell === 3, p5: showPin && pinCell === 4, p6: showPin && pinCell === 5,
+      pinLeft: pinLeft,
+      arcD: arcD, arcX: arcX, arcPinY1: (arcY - 30).toFixed(1), arcPinY2: (arcY + 22).toFixed(1), arcLabY: (arcY - 36).toFixed(1),
+      arcPinCls: showPin ? '' : 'off', todayUp: (months[now.getMonth()] + ' ' + now.getDate()).toUpperCase(),
+      endCls: now > nih ? 'done' : '',
+      today: months[now.getMonth()] + ' ' + now.getDate(),
+      days: String(days),
+      hours: two(hours),
+      minutes: two(minutes),
+      seconds: two(seconds),
+      daysLabel: days === 1 ? 'day' : 'days',
+      nihDays: String(nihDays),
+      nihLabel: nihDays === 1 ? 'day' : 'days',
+      nowLabel: nowLabel,
+      pct: String(pct),
+      c1: c(0), c2: c(1), c3: c(2), c4: c(3), c5: c(4), c6: c(5)
+    };
+  }
+}
+
+(function(){
+  const fill = (tpl, vals) => tpl
+    .replace(/\{\{\s*([A-Za-z0-9_]+)\s*\}\}/g, (m, k) => (vals[k] === undefined || vals[k] === null) ? '' : String(vals[k]))
+    .replace(/<sc-if value="([^"]*)"[^>]*>([\s\S]*?)<\/sc-if>/g, (m, v, inner) => (v === 'true' ? inner : ''));
+  const morph = (a, b) => {
+    if (a.nodeType !== b.nodeType || a.nodeName !== b.nodeName) { a.replaceWith(b.cloneNode(true)); return; }
+    if (a.nodeType === 3) { if (a.data !== b.data) a.data = b.data; return; }
+    if (a.nodeType !== 1) return;
+    for (const at of Array.from(b.attributes)) { if (at.name !== 'open' && a.getAttribute(at.name) !== at.value) a.setAttribute(at.name, at.value); }
+    for (const at of Array.from(a.attributes)) { if (at.name !== 'open' && !b.hasAttribute(at.name)) a.removeAttribute(at.name); }
+    const ac = Array.from(a.childNodes), bc = Array.from(b.childNodes);
+    if (ac.length !== bc.length) { a.replaceChildren(...bc.map((n) => n.cloneNode(true))); return; }
+    for (let i = 0; i < ac.length; i++) morph(ac[i], bc[i]);
+  };
+  const start = () => {
+    const tpl = document.getElementById('dc-tpl').innerHTML;
+    const root = document.getElementById('dc-root');
+    const c = new Component(); window.__dcComp = c;
+    let first = true;
+    window.__dcRender = () => {
+      const html = fill(tpl, c.renderVals ? c.renderVals() : {});
+      if (first) { root.innerHTML = html; first = false; return; }
+      const tmp = document.createElement('div'); tmp.innerHTML = html;
+      const ac = Array.from(root.childNodes), bc = Array.from(tmp.childNodes);
+      if (ac.length !== bc.length) { root.innerHTML = html; return; }
+      for (let i = 0; i < ac.length; i++) morph(ac[i], bc[i]);
+    };
+    window.__dcRender();
+    if (c.componentDidMount) c.componentDidMount();
+  };
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start); else start();
+})();
+</script>
+<script src="sidebar-preview.js"></script>
+</body>
+</html>
