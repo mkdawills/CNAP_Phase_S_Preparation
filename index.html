@@ -367,7 +367,7 @@ section.sec.band-w,section.sec.band-g{padding-top:40px;padding-bottom:40px}
       <h2 class="h2 h2-dark">Proposal Preparation: Percent Complete</h2>
       <div class="pc-head">
         <span class="pc-num">{{pcPct}}%</span>
-        <span class="pc-of">{{pcDone}} of {{pcTotal}} assignments finalized</span>
+        <span class="pc-of">{{pcDone}} of {{pcTotal}} assignments finalized · <span title="In Progress ¼, Ready for Review ½, Applying Reviewer Feedback ¾, Finalized full">work underway earns partial credit</span></span>
       </div>
       <div class="pc-track">
         <span class="pc-tip {{pcTipCls}}" style="left: {{pcPct}}%;">{{pcPct}}%</span>
@@ -982,12 +982,13 @@ class Component extends DCLogic {
     const k5 = cnt('Finalized'), k4 = cnt('Applying Reviewer Feedback'), k3 = cnt('Ready for Review'), k2 = cnt('In Progress');
     const k1 = Math.max(0, tot - k5 - k4 - k3 - k2);
     const pw = (n) => (tot ? ((n / tot) * 100).toFixed(2) : '0');
-    const pcPct = tot ? Math.floor((k5 / tot) * 100) : 0;
+    // Weighted progress: each status earns partial credit toward "complete".
+    const pcPct = tot ? Math.floor(((k2 * 0.25 + k3 * 0.5 + k4 * 0.75 + k5) / tot) * 100) : 0;
     return {
       pcPct: String(pcPct), pcDone: String(k5), pcTotal: String(tot), pcUpdated: P.updatedLabel || '',
       pcTipCls: pcPct < 4 ? 'start' : (pcPct > 96 ? 'end' : ''),
-      pcNote: pcPct >= 100 ? 'All assignments finalized. Thank you, team!' : (pcPct >= 75 ? '75% milestone reached! Next milestone: 100% finalized by Friday, January 15.' : (pcPct >= 50 ? 'Halfway there! Next milestone: 75% finalized by Monday, January 11.' : (pcPct >= 25 ? '25% milestone reached! Next milestone: 50% finalized by Thursday, December 17.' : 'Next milestone: 25% finalized by Friday, December 4.'))),
-      pcAria: k5 + ' of ' + tot + ' assignments finalized',
+      pcNote: pcPct >= 100 ? 'All assignments finalized. Thank you, team!' : (pcPct >= 75 ? '75% milestone reached! Next milestone: 100% complete by Friday, January 15.' : (pcPct >= 50 ? 'Halfway there! Next milestone: 75% complete by Monday, January 11.' : (pcPct >= 25 ? '25% milestone reached! Next milestone: 50% complete by Thursday, December 17.' : 'Next milestone: 25% complete by Friday, December 4.'))),
+      pcAria: pcPct + '% complete; ' + k5 + ' of ' + tot + ' assignments finalized',
       w1: pw(k1), w2: pw(k2), w3: pw(k3), w4: pw(k4), w5: pw(k5),
       k1: String(k1), k2: String(k2), k3: String(k3), k4: String(k4), k5: String(k5),
       ...this.pcListVals(),
