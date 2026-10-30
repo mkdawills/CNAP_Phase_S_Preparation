@@ -366,8 +366,8 @@ section.sec.band-w,section.sec.band-g{padding-top:40px;padding-bottom:40px}
       <div class="pc-panel">
       <h2 class="h2 h2-dark">Proposal Preparation: Percent Complete</h2>
       <div class="pc-head">
-        <span class="pc-num">{{pcPct}}%</span>
-        <span class="pc-of">{{pcDone}} of {{pcTotal}} assignments finalized · <span title="In Progress ¼, Ready for Review ½, Applying Reviewer Feedback ¾, Finalized full">work underway earns partial credit</span></span>
+        <span class="pc-num" title="Partial credit for work underway: In Progress ¼, Ready for Review ½, Applying Reviewer Feedback ¾, Finalized counts in full">{{pcPct}}%</span>
+        <span class="pc-of">{{pcOf}}</span>
       </div>
       <div class="pc-track">
         <span class="pc-tip {{pcTipCls}}" style="left: {{pcPct}}%;">{{pcPct}}%</span>
@@ -987,7 +987,8 @@ class Component extends DCLogic {
     return {
       pcPct: String(pcPct), pcDone: String(k5), pcTotal: String(tot), pcUpdated: P.updatedLabel || '',
       pcTipCls: pcPct < 4 ? 'start' : (pcPct > 96 ? 'end' : ''),
-      pcNote: pcPct >= 100 ? 'All assignments finalized. Thank you, team!' : (pcPct >= 75 ? '75% milestone reached! Next milestone: 100% complete by Friday, January 15.' : (pcPct >= 50 ? 'Halfway there! Next milestone: 75% complete by Monday, January 11.' : (pcPct >= 25 ? '25% milestone reached! Next milestone: 50% complete by Thursday, December 17.' : 'Next milestone: 25% complete by Friday, December 4.'))),
+      pcOf: k5 ? k5 + ' of ' + tot + ' assignments finalized, and every status update moves this bar.' : 'Every status update moves this bar. Nice start, team!',
+      pcNote: pcPct >= 100 ? 'All assignments finalized. Thank you, team!' : (pcPct >= 75 ? '75% reached, the finish line is in sight! Next stop: 100% by Friday, January 15.' : (pcPct >= 50 ? 'Halfway there, great work! Next stop: 75% by Monday, January 11.' : (pcPct >= 25 ? '25% reached, great work! Next stop: 50% by Thursday, December 17.' : 'Next stop: 25% by Friday, December 4. Every draft you start gets us closer!'))),
       pcAria: pcPct + '% complete; ' + k5 + ' of ' + tot + ' assignments finalized',
       w1: pw(k1), w2: pw(k2), w3: pw(k3), w4: pw(k4), w5: pw(k5),
       k1: String(k1), k2: String(k2), k3: String(k3), k4: String(k4), k5: String(k5),
