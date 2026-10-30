@@ -69,6 +69,31 @@ details.intro-sx{border-top:1px solid #E4E0EC;padding:12px 0}
 .dp-l{display:none}
 .dp-cap{margin-top:14px;font-size:13px;color:#6B6480;font-style:italic}
 @media (max-width:640px){.dp-fig{padding:14px 14px 12px}.dp-row{grid-template-columns:minmax(0,1fr)}.dp-br{display:none}.dp-q{min-height:0;margin-bottom:10px}.dp-ans{gap:8px}.dp-a{justify-content:flex-start;text-align:left;gap:10px}.dp-l{display:inline-block;flex:0 0 auto;font-size:11px;letter-spacing:.06em;text-transform:uppercase;padding:2px 7px;border-radius:3px;background:#512888;color:#fff}.dp-yes .dp-l{background:#4A4458}}
+/* Kickoff slide viewer: 1920x1080 slides scaled to fit */
+.deck{outline:none}
+.deck-frame{position:relative;width:100%;aspect-ratio:16/9;overflow:hidden;border-radius:12px;border:1px solid #D3CDE0;background:#F7F6FA;box-shadow:0 6px 24px rgba(31,27,43,0.10)}
+.deck-stage{position:absolute;left:0;top:0;width:1920px;height:1080px;transform-origin:0 0}
+.deck-slide,.deck-slide > section{position:absolute;inset:0;width:1920px;height:1080px}
+.deck-slide > section{box-sizing:border-box;overflow:hidden;font-family:'Source Sans 3',Arial,sans-serif;line-height:1.3}
+.deck-slide *{margin:0;box-sizing:border-box}
+.deck-slide ul{padding-left:1.1em;display:flex;flex-direction:column;gap:10px}
+.deck-slide table{border-collapse:collapse;width:100%}
+.deck-slide th,.deck-slide td{padding:14px 20px;text-align:left;vertical-align:top;border-bottom:1px solid #E4E0EC}
+.deck-slide a{color:inherit;text-decoration:underline}
+.deck-bar{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:12px}
+.deck-btn{font:inherit;font-size:14px;font-weight:700;color:#512888;background:#fff;border:1.5px solid #C9B6E4;border-radius:999px;padding:8px 16px;cursor:pointer}
+.deck-btn:hover{background:#F7F4FC}
+.deck-btn:disabled{opacity:.4;cursor:default}
+.deck-full{margin-left:auto}
+.deck-count{font-weight:700;color:#4A4458;min-width:64px;text-align:center}
+.deck-notes{margin-top:12px;background:#fff;border:1px solid #E4E0EC;border-radius:10px;padding:10px 14px}
+.deck-notes summary{cursor:pointer;font-weight:700;color:#512888;font-size:14px}
+.deck-notes p{margin:8px 0 0;font-size:14.5px;line-height:1.55;color:#4A4458}
+.deck:fullscreen{background:#1F1B2B;display:flex;flex-direction:column;justify-content:center;padding:24px}
+.deck:fullscreen .deck-frame{max-width:calc((100vh - 120px) * 16 / 9);margin:0 auto;border:none}
+.deck:fullscreen .deck-notes{display:none}
+.deck:fullscreen .deck-bar{max-width:calc((100vh - 120px) * 16 / 9);width:100%;margin:12px auto 0}
+.deck:fullscreen .deck-count{color:#fff}
 </style>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -115,6 +140,7 @@ details.intro-sx{border-top:1px solid #E4E0EC;padding:12px 0}
         <details class="nm on"><summary><a href="PhaseS.html">Phase S Overview &amp; Comparisons</a><span class="car"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
           <div class="pop">
             <a class="hd" href="PhaseS.html">Phase S Overview &amp; NOFO Comparisons</a>
+            <a href="PhaseS.html#kickoff">Kickoff meeting slides (Oct 29)</a>
             <a href="PhaseS.html#glance">Proposal components at a glance</a>
             <a href="PhaseS.html#evs">COBRE-E vs. COBRE-S</a>
             <a href="PhaseS.html#changes">Differences from previous NOFOs</a>
@@ -205,6 +231,589 @@ details.intro-sx{border-top:1px solid #E4E0EC;padding:12px 0}
         <div class="stat"><span class="k">Next due date</span><span class="v">Jan 25, 2027</span></div>
       </div>
       <div class="xall-bar"><button type="button" class="xall" aria-pressed="false">Expand all</button></div>
+    </section>
+
+    <section class="wrap sec band-g" id="kickoff">
+      <details class="sx" open>
+      <summary><h2 class="h2">Kickoff Meeting Slides</h2><span class="sx-car" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
+      <p class="muted" style="margin: 0 0 14px;"><b>PAR-27-055 NOFO Briefing: What NIH Wants from Phase S</b> · presented at the kickoff meeting, Thu, Oct 29, 2026 · 15 slides. Use the arrows (or your keyboard&rsquo;s arrow keys) to move through them.</p>
+      <div class="deck" tabindex="0" aria-roledescription="slide deck" aria-label="Kickoff meeting slides">
+        <div class="deck-frame"><div class="deck-stage">
+<div class="deck-slide" aria-label="Slide 1 of 15"><section data-slide="cover" data-transition="fade" style="display:flex; flex-direction:column; gap:40px; justify-content:center; padding:128px; background:#2a1747">
+  <p style="font-family:Archivo, Arial, sans-serif; font-size:28px; font-weight:700; letter-spacing:4px; text-transform:uppercase; color:#c9b8e6">CNAP COBRE Phase S · Kickoff</p>
+  <h1 style="font-family:Archivo, Arial, sans-serif; font-size:120px; font-weight:800; line-height:1.05; color:#f7f6fa">What NIH Wants<br>from Phase S</h1>
+  <p style="max-width:1300px; font-family:'Source Sans 3', Arial, sans-serif; font-size:40px; line-height:1.35; color:#d3cde0">A briefing on PAR-27-055: the award, what changed, how we’ll be judged, discussion (our edge, precautions, plans)&nbsp;</p>
+  <div style="position:absolute; top:128px; left:128px; width:160px; height:12px; display:flex; flex-direction:column; background:#c9b8e6; border-radius:6px">
+  </div>
+  <p style="position:absolute;right:128px;bottom:64px;width:240px;font-size:24px;text-align:right;color:#C9B8E6">1 of 15</p>
+</section></div>
+<div class="deck-slide" hidden aria-label="Slide 2 of 15"><section data-slide="award" data-transition="fade" style="background:#F7F6FA;color:#1F1B2B;font-family:'Source Sans 3', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:56px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-family:'Archivo', Arial, sans-serif;font-size:26px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#512888">NOFO specs</p>
+<h2 style="font-family:'Archivo', Arial, sans-serif;font-size:72px;font-weight:800;line-height:1.1;color:#2A1747">The award: smaller, same length</h2>
+</div>
+<div style="display:flex;gap:32px;flex:1">
+<div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:20px;background:#2A1747;padding:48px;border-radius:20px">
+<p style="font-family:'Archivo', Arial, sans-serif;font-size:96px;font-weight:800;line-height:1;color:#F7F6FA">$1.5M</p>
+<p style="font-size:32px;line-height:1.35;color:#D3CDE0">a year in direct costs, at most</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:20px;background:#FFFFFF;padding:48px;border-radius:20px;border:2px solid #D3CDE0">
+<p style="font-family:'Archivo', Arial, sans-serif;font-size:96px;font-weight:800;line-height:1;color:#2A1747">5 years</p>
+<p style="font-size:32px;line-height:1.35;color:#4A4458">project period</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:20px;background:#FFFFFF;padding:48px;border-radius:20px;border:2px solid #D3CDE0">
+<p style="font-family:'Archivo', Arial, sans-serif;font-size:96px;font-weight:800;line-height:1;color:#8A8299;text-decoration:line-through #8A8299">$2.25M</p>
+<p style="font-size:32px;line-height:1.35;color:#4A4458">the old level: <b>$750K less</b> each year</p>
+</div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#6B6480">PAR-27-055, Section II (Award Information). The $2.25M comparison is ours, not the NOFO’s.</p>
+<p style="position:absolute;right:128px;bottom:64px;width:240px;font-size:24px;text-align:right;color:#6B6480">2 of 15</p>
+</section></div>
+<div class="deck-slide" hidden aria-label="Slide 3 of 15"><section data-slide="components" data-transition="fade" style="background:#F7F6FA;color:#1F1B2B;font-family:'Source Sans 3', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:56px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-family:'Archivo', Arial, sans-serif;font-size:26px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#512888">NOFO specs</p>
+<h2 style="font-family:'Archivo', Arial, sans-serif;font-size:72px;font-weight:800;line-height:1.1;color:#2A1747">Four components</h2>
+</div>
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:28px;flex:1">
+<div style="display:flex;flex-direction:column;gap:20px;background:#FFFFFF;padding:44px;border-radius:20px;border-top:8px solid #2A1747">
+<h3 style="font-family:'Archivo', Arial, sans-serif;font-size:44px;font-weight:800;line-height:1.15;color:#2A1747">Overall</h3>
+<p style="font-size:30px;line-height:1.4;color:#4A4458">The Center’s plan, leadership, Advisory Committee and sustainability case</p>
+<div style="flex:1"></div>
+<p style="font-size:26px;font-weight:700;color:#512888">12 pages · Required</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:20px;background:#FFFFFF;padding:44px;border-radius:20px;border-top:8px solid #2A1747">
+<h3 style="font-family:'Archivo', Arial, sans-serif;font-size:44px;font-weight:800;line-height:1.15;color:#2A1747">Admin Core</h3>
+<p style="font-size:30px;line-height:1.4;color:#4A4458">Runs the Center: reporting, budget, compliance, recruitment, evaluation</p>
+<div style="flex:1"></div>
+<p style="font-size:26px;font-weight:700;color:#512888">6 pages · Required</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:20px;background:#FFFFFF;padding:44px;border-radius:20px;border-top:8px solid #2A1747">
+<h3 style="font-family:'Archivo', Arial, sans-serif;font-size:44px;font-weight:800;line-height:1.15;color:#2A1747">SRP Core</h3>
+<p style="font-size:30px;line-height:1.4;color:#4A4458">Manages the research projects, the SIs, mentoring and career development</p>
+<div style="flex:1"></div>
+<p style="font-size:26px;font-weight:700;color:#512888">6 pages · Required</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:20px;background:#FFFFFF;padding:44px;border-radius:20px;border-top:8px dashed #8A8299">
+<h3 style="font-family:'Archivo', Arial, sans-serif;font-size:44px;font-weight:800;line-height:1.15;color:#2A1747">Research Cores</h3>
+<p style="font-size:30px;line-height:1.4;color:#4A4458">Shared facilities that support the Center’s research</p>
+<div style="flex:1"></div>
+<p style="font-size:26px;font-weight:700;color:#512888">6 pages each · Optional, up to 3</p>
+</div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#6B6480">PAR-27-055, Section I and Section IV (Page Limitations). The NOFO calls the SRP Core the “Scientific Research Program.”</p>
+<p style="position:absolute;right:128px;bottom:64px;width:240px;font-size:24px;text-align:right;color:#6B6480">3 of 15</p>
+</section></div>
+<div class="deck-slide" hidden aria-label="Slide 4 of 15"><section data-slide="changes" data-transition="fade" style="background:#F7F6FA;color:#1F1B2B;font-family:'Source Sans 3', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:48px">
+<div style="display:flex;flex-direction:column;gap:16px">
+<p style="font-family:'Archivo', Arial, sans-serif;font-size:26px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#512888">NOFO specs</p>
+<h2 style="font-family:'Archivo', Arial, sans-serif;font-size:72px;font-weight:800;line-height:1.1;color:#2A1747">The biggest changes</h2>
+</div>
+<div style="display:flex;flex-direction:column;flex:1;justify-content:space-between">
+<div style="display:flex;gap:40px;align-items:start;padding:32px 0;border-top:2px solid #D3CDE0">
+<p style="font-family:'Archivo', Arial, sans-serif;font-size:72px;font-weight:800;line-height:1;color:#512888;min-width:max-content">01</p>
+<div style="display:flex;flex-direction:column;gap:8px">
+<h3 style="font-family:'Archivo', Arial, sans-serif;font-size:44px;font-weight:700;line-height:1.2;color:#2A1747">No new cores allowed</h3>
+<p style="font-size:30px;line-height:1.4;color:#4A4458">New research cores can’t be established in the Sustainability phase.</p>
+</div>
+</div>
+<div style="display:flex;gap:40px;align-items:start;padding:32px 0;border-top:2px solid #D3CDE0">
+<p style="font-family:'Archivo', Arial, sans-serif;font-size:72px;font-weight:800;line-height:1;color:#512888;min-width:max-content">02</p>
+<div style="display:flex;flex-direction:column;gap:8px">
+<h3 style="font-family:'Archivo', Arial, sans-serif;font-size:44px;font-weight:700;line-height:1.2;color:#2A1747">Consolidating cores is encouraged</h3>
+<p style="font-size:30px;line-height:1.4;color:#4A4458">NIH “strongly encourages” merging cores and sharing IDeA facilities.</p>
+</div>
+</div>
+<div style="display:flex;gap:40px;align-items:start;padding:32px 0;border-top:2px solid #D3CDE0;border-bottom:2px solid #D3CDE0">
+<p style="font-family:'Archivo', Arial, sans-serif;font-size:72px;font-weight:800;line-height:1;color:#512888;min-width:max-content">03</p>
+<div style="display:flex;flex-direction:column;gap:8px">
+<h3 style="font-family:'Archivo', Arial, sans-serif;font-size:44px;font-weight:700;line-height:1.2;color:#2A1747">Our grant award process moves into the new SRP Core</h3>
+<p style="font-size:30px;line-height:1.4;color:#4A4458">NIH’s newly named Scientific Research Program now runs our awards. Awardees become SRP Investigators (“SIs”), and the SRP Core manages their mentoring and professional development.</p>
+</div>
+</div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#6B6480">PAR-27-055, Section I (Research Cores; Scientific Research Program)</p>
+<p style="position:absolute;right:128px;bottom:64px;width:240px;font-size:24px;text-align:right;color:#6B6480">4 of 15</p>
+</section></div>
+<div class="deck-slide" hidden aria-label="Slide 5 of 15"><section data-slide="sustain" data-transition="fade" style="background:#2A1747;color:#F7F6FA;font-family:'Source Sans 3', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:56px">
+<div style="display:flex;flex-direction:column;gap:20px">
+<p style="font-family:'Archivo', Arial, sans-serif;font-size:26px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#C9B8E6">What the NOFO is looking for</p>
+<h2 style="font-family:'Archivo', Arial, sans-serif;font-size:72px;font-weight:800;line-height:1.1;color:#F7F6FA">Sustainability: proof the Center will thrive after COBRE funding ends</h2>
+</div>
+<div style="display:flex;gap:32px;flex:1">
+<div style="flex:1;display:flex;flex-direction:column;gap:16px;background:#3B1C66;padding:48px;border-radius:20px">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:#C9B8E6;width:56px;height:56px;flex:none"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.4-.6-.6-2.4z"/></svg>
+<h3 style="font-family:'Archivo', Arial, sans-serif;font-size:44px;font-weight:700;line-height:1.2;color:#F7F6FA">Infrastructure</h3>
+<p style="font-size:32px;line-height:1.4;color:#D3CDE0">Core sustainability</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:16px;background:#3B1C66;padding:48px;border-radius:20px">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:#C9B8E6;width:56px;height:56px;flex:none"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><path d="M16 4.6a3.5 3.5 0 0 1 0 6.8M18 14.2a6.5 6.5 0 0 1 3.5 5.8"/></svg>
+<h3 style="font-family:'Archivo', Arial, sans-serif;font-size:44px;font-weight:700;line-height:1.2;color:#F7F6FA">People</h3>
+<p style="font-size:32px;line-height:1.4;color:#D3CDE0">SRP and SI program sustainability</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:16px;background:#3B1C66;padding:48px;border-radius:20px">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:#C9B8E6;width:56px;height:56px;flex:none"><path d="M3 10.5L12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg>
+<h3 style="font-family:'Archivo', Arial, sans-serif;font-size:44px;font-weight:700;line-height:1.2;color:#F7F6FA">Institution</h3>
+<p style="font-size:32px;line-height:1.4;color:#D3CDE0">Institutional support and a place in K-State’s strategic plan</p>
+</div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#C9B8E6">PAR-27-055, Section I (COBRE-E and COBRE-S Program Requirements)</p>
+<p style="position:absolute;right:128px;bottom:64px;width:240px;font-size:24px;text-align:right;color:#C9B8E6">5 of 15</p>
+</section></div>
+<div class="deck-slide" hidden aria-label="Slide 6 of 15"><section data-slide="shift" data-transition="fade" style="display:flex; flex-direction:column; gap:56px; padding:128px 128px 160px; background:#f7f6fa">
+  <div style="display:flex; flex-direction:column; gap:16px">
+    <p style="font-family:Archivo, Arial, sans-serif; font-size:26px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:#512888">What the NOFO is looking for</p>
+    <h2 style="font-family:Archivo, Arial, sans-serif; font-size:72px; font-weight:800; line-height:1.1; color:#2a1747">Less history. More plan.</h2>
+  </div>
+  <div style="display:flex; flex-direction:row; gap:32px; flex:1">
+    <div style="display:flex; flex-direction:column; gap:24px; flex:3; padding:56px; background:#2a1747; border-radius:20px">
+      <p style="font-family:Archivo, Arial, sans-serif; font-size:24px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:#c9b8e6">More emphasis</p>
+      <h3 style="font-family:Archivo, Arial, sans-serif; font-size:44px; font-weight:700; line-height:1.2; color:#f7f6fa">A coherent, well-thought-through operating plan</h3>
+      <div style="height:2px; flex:0 0 auto; background:#5a3d86"></div>
+      <div style="display:flex; flex-direction:row; gap:40px; align-items:center; flex:1">
+        <p style="min-width:max-content; font-family:Archivo, Arial, sans-serif; font-size:160px; font-weight:800; line-height:1; color:#f7f6fa">63</p>
+        <p style="font-family:'Source Sans 3', Arial, sans-serif; font-size:32px; line-height:1.4; color:#d3cde0">mentions of <b>plans and strategies</b>: management, sustainability, career development, business</p>
+      </div>
+      <p style="font-family:'Source Sans 3', Arial, sans-serif; font-size:24px; line-height:1.35; color:#c9b8e6">Counts every mention of a plan or strategy for the Center, not counting standard NIH paperwork plans.</p>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:24px; flex:2; padding:56px; background:#ffffff; border:2px solid #d3cde0; border-radius:20px">
+      <p style="font-family:Archivo, Arial, sans-serif; font-size:24px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:#6b6480">Less emphasis</p>
+      <h3 style="font-family:Archivo, Arial, sans-serif; font-size:44px; font-weight:700; line-height:1.2; color:#2a1747">Historical performance</h3>
+      <div style="height:2px; flex:0 0 auto; background:#d3cde0"></div>
+      <div style="display:flex; flex-direction:row; gap:32px; align-items:center; justify-content:space-evenly; flex:1">
+        <div style="display:flex; flex-direction:column; gap:16px; align-items:center; flex:1">
+          <div style="width:170px; height:170px; display:flex; flex-direction:row; align-items:center; justify-content:center; background:#edeaf3; border:3px solid #b5aec4; border-radius:256px">
+            <p style="font-family:Archivo, Arial, sans-serif; font-size:96px; font-weight:800; line-height:1; text-align:center; color:#6b6480">3</p>
+          </div>
+          <p style="font-family:'Source Sans 3', Arial, sans-serif; font-size:28px; line-height:1.3; text-align:center; color:#4a4458">places it asks us<br>to show our record</p>
+        </div>
+        <div style="width:2px; height:240px; display:flex; flex-direction:column; background:#d3cde0">
+        </div>
+        <div style="display:flex; flex-direction:column; gap:16px; align-items:center; flex:1">
+          <div style="width:170px; height:170px; display:flex; flex-direction:row; align-items:center; justify-content:center; background:#edeaf3; border:3px solid #b5aec4; border-radius:256px">
+            <p style="font-family:Archivo, Arial, sans-serif; font-size:96px; font-weight:800; line-height:1; text-align:center; color:#6b6480">1</p>
+          </div>
+          <p style="font-family:'Source Sans 3', Arial, sans-serif; font-size:28px; line-height:1.3; text-align:center; color:#4a4458">of those is<br>a scored question</p>
+        </div>
+      </div>
+      <p style="font-family:'Source Sans 3', Arial, sans-serif; font-size:24px; line-height:1.35; color:#6b6480">Counts every place the NOFO asks us to show past results.</p>
+    </div>
+  </div>
+  <p style="position:absolute;right:128px;bottom:64px;width:240px;font-size:24px;text-align:right;color:#6B6480">6 of 15</p>
+</section></div>
+<div class="deck-slide" hidden aria-label="Slide 7 of 15"><section data-slide="frequency" data-transition="fade" style="background:#F7F6FA;color:#1F1B2B;font-family:'Source Sans 3', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:24px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-family:'Archivo', Arial, sans-serif;font-size:26px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#512888">By the numbers</p>
+<h2 style="font-family:'Archivo', Arial, sans-serif;font-size:60px;font-weight:800;line-height:1.1;color:#2A1747">What the NOFO keeps repeating</h2>
+</div>
+<div style="display:flex;flex-direction:column;border-top:2px solid #D3CDE0">
+<div style="display:flex;flex-direction:column;gap:4px;background:#FFFFFF;padding:7px 16px;border-bottom:2px solid #D3CDE0">
+<div style="display:flex;align-items:center;gap:16px;height:40px">
+<p style="width:244px;font-size:24px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#512888;white-space:nowrap">The plan</p>
+<p style="width:360px;font-size:26px;color:#1F1B2B;white-space:nowrap">Plans &amp; strategies</p>
+<div style="width:493px;height:32px;background:#512888;border-radius:4px"></div>
+<p style="font-size:26px;font-weight:700;color:#2A1747">63</p>
+</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:4px;background:#EBEBEE;padding:7px 16px;border-bottom:2px solid #D3CDE0">
+<div style="display:flex;align-items:center;gap:16px;height:40px">
+<p style="width:244px;font-size:24px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#512888;white-space:nowrap">Institution</p>
+<p style="width:360px;font-size:26px;color:#1F1B2B;white-space:nowrap">Institution</p>
+<div style="width:485px;height:32px;background:#512888;border-radius:4px"></div>
+<p style="font-size:26px;font-weight:700;color:#2A1747">62</p>
+</div>
+<div style="display:flex;align-items:center;gap:16px;height:40px">
+<div style="width:244px"></div>
+<p style="width:360px;font-size:26px;color:#1F1B2B;white-space:nowrap">Strategic fit / align</p>
+<div style="width:102px;height:32px;background:#512888;border-radius:4px"></div>
+<p style="font-size:26px;font-weight:700;color:#2A1747">13</p>
+</div></div>
+<div style="display:flex;flex-direction:column;gap:4px;background:#FFFFFF;padding:7px 16px;border-bottom:2px solid #D3CDE0">
+<div style="display:flex;align-items:center;gap:16px;height:40px">
+<p style="width:244px;font-size:24px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#512888;white-space:nowrap">Science</p>
+<p style="width:360px;font-size:26px;color:#1F1B2B;white-space:nowrap">Breadth &amp; scope</p>
+<div style="width:195px;height:32px;background:#512888;border-radius:4px"></div>
+<p style="font-size:26px;font-weight:700;color:#2A1747">25</p>
+</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:4px;background:#EBEBEE;padding:7px 16px;border-bottom:2px solid #D3CDE0">
+<div style="display:flex;align-items:center;gap:16px;height:40px">
+<p style="width:244px;font-size:24px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#512888;white-space:nowrap">People</p>
+<p style="width:360px;font-size:26px;color:#1F1B2B;white-space:nowrap">Investigators &amp; SIs</p>
+<div style="width:860px;height:32px;background:#512888;border-radius:4px"></div>
+<p style="font-size:26px;font-weight:700;color:#2A1747">110</p>
+</div>
+<div style="display:flex;align-items:center;gap:16px;height:40px">
+<div style="width:244px"></div>
+<p style="width:360px;font-size:26px;color:#1F1B2B;white-space:nowrap">Mentoring &amp; guidance</p>
+<div style="width:227px;height:32px;background:#512888;border-radius:4px"></div>
+<p style="font-size:26px;font-weight:700;color:#2A1747">29</p>
+</div>
+<div style="display:flex;align-items:center;gap:16px;height:40px">
+<div style="width:244px"></div>
+<p style="width:360px;font-size:26px;color:#1F1B2B;white-space:nowrap">Career development</p>
+<div style="width:172px;height:32px;background:#512888;border-radius:4px"></div>
+<p style="font-size:26px;font-weight:700;color:#2A1747">22</p>
+</div>
+<div style="display:flex;align-items:center;gap:16px;height:40px">
+<div style="width:244px"></div>
+<p style="width:360px;font-size:26px;color:#1F1B2B;white-space:nowrap">Independence</p>
+<div style="width:109px;height:32px;background:#512888;border-radius:4px"></div>
+<p style="font-size:26px;font-weight:700;color:#2A1747">14</p>
+</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:4px;background:#FFFFFF;padding:7px 16px;border-bottom:2px solid #D3CDE0">
+<div style="display:flex;align-items:center;gap:16px;height:40px">
+<p style="width:244px;font-size:24px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#512888;white-space:nowrap">Infrastructure</p>
+<p style="width:360px;font-size:26px;color:#1F1B2B;white-space:nowrap">Growth &amp; expansion</p>
+<div style="width:454px;height:32px;background:#512888;border-radius:4px"></div>
+<p style="font-size:26px;font-weight:700;color:#2A1747">58</p>
+</div>
+<div style="display:flex;align-items:center;gap:16px;height:40px">
+<div style="width:244px"></div>
+<p style="width:360px;font-size:26px;color:#1F1B2B;white-space:nowrap">Capacity</p>
+<div style="width:360px;height:32px;background:#512888;border-radius:4px"></div>
+<p style="font-size:26px;font-weight:700;color:#2A1747">46</p>
+</div>
+<div style="display:flex;align-items:center;gap:16px;height:40px">
+<div style="width:244px"></div>
+<p style="width:360px;font-size:26px;color:#1F1B2B;white-space:nowrap">Sustainability</p>
+<div style="width:336px;height:32px;background:#512888;border-radius:4px"></div>
+<p style="font-size:26px;font-weight:700;color:#2A1747">43</p>
+</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:4px;background:#EBEBEE;padding:7px 16px;border-bottom:2px solid #D3CDE0">
+<div style="display:flex;align-items:center;gap:16px;height:40px">
+<p style="width:244px;font-size:24px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#5E5770;white-space:nowrap">Past record</p>
+<p style="width:360px;font-size:26px;color:#4A4458;white-space:nowrap">Asks for our record</p>
+<div style="width:23px;height:32px;background:#A69FB6;border-radius:4px"></div>
+<p style="font-size:26px;font-weight:700;color:#4A4458">3</p>
+</div>
+</div>
+</div>
+<p style="position:absolute;left:128px;bottom:40px;width:1400px;font-size:24px;line-height:1.35;color:#6B6480">Each bar counts mentions of the idea in the NOFO, synonyms included, used only in that sense. Words counted are in the speaker notes. <a href="https://claude.ai/artifact/UAVwAEcQYQqTLfFMKy7Usz">See every mention</a></p>
+<p style="position:absolute;right:128px;bottom:64px;width:240px;font-size:24px;text-align:right;color:#6B6480">7 of 15</p>
+</section></div>
+<div class="deck-slide" hidden aria-label="Slide 8 of 15"><section data-slide="ranking" data-transition="fade" style="background:#F7F6FA;color:#1F1B2B;font-family:'Source Sans 3', Arial, sans-serif;padding:120px 128px 160px;display:flex;flex-direction:column;gap:20px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-family:'Archivo', Arial, sans-serif;font-size:26px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#512888">By the numbers</p>
+<h2 style="font-family:'Archivo', Arial, sans-serif;font-size:60px;font-weight:800;line-height:1.1;color:#2A1747">Ranked: what the NOFO mentions most</h2>
+</div>
+<div style="display:flex;flex-direction:column;border-top:2px solid #D3CDE0">
+<div style="display:flex;align-items:center;gap:16px;height:50px;padding:0 16px;background:#FFFFFF;border-bottom:1px solid #D3CDE0">
+<p style="width:56px;font-family:'Archivo', Arial, sans-serif;font-size:26px;font-weight:800;color:#512888">1</p>
+<p style="width:380px;font-size:28px;font-weight:700;color:#1F1B2B;white-space:nowrap">Infrastructure</p>
+<div style="width:1000px;height:34px;background:#2A1747;border-radius:4px"></div>
+<p style="font-size:26px;font-weight:700;color:#2A1747">111</p>
+</div>
+<div style="display:flex;align-items:center;gap:16px;height:50px;padding:0 16px;background:#EBEBEE;border-bottom:1px solid #D3CDE0">
+<p style="width:56px;font-family:'Archivo', Arial, sans-serif;font-size:26px;font-weight:800;color:#512888">2</p>
+<p style="width:380px;font-size:28px;font-weight:700;color:#1F1B2B;white-space:nowrap">Investigators &amp; SIs</p>
+<div style="width:991px;height:34px;background:#2A1747;border-radius:4px"></div>
+<p style="font-size:26px;font-weight:700;color:#2A1747">110</p>
+</div>
+<div style="display:flex;align-items:center;gap:16px;height:50px;padding:0 16px;background:#FFFFFF;border-bottom:1px solid #D3CDE0">
+<p style="width:56px;font-family:'Archivo', Arial, sans-serif;font-size:26px;font-weight:800;color:#512888">3</p>
+<p style="width:380px;font-size:28px;font-weight:700;color:#1F1B2B;white-space:nowrap">Plans &amp; strategies</p>
+<div style="width:568px;height:34px;background:#2A1747;border-radius:4px"></div>
+<p style="font-size:26px;font-weight:700;color:#2A1747">63</p>
+</div>
+<div style="display:flex;align-items:center;gap:16px;height:50px;padding:0 16px;background:#EBEBEE;border-bottom:1px solid #D3CDE0">
+<p style="width:56px;font-family:'Archivo', Arial, sans-serif;font-size:26px;font-weight:800;color:#512888">4</p>
+<p style="width:380px;font-size:28px;color:#1F1B2B;white-space:nowrap">Institution</p>
+<div style="width:559px;height:34px;background:#512888;border-radius:4px"></div>
+<p style="font-size:26px;font-weight:700;color:#2A1747">62</p>
+</div>
+<div style="display:flex;align-items:center;gap:16px;height:50px;padding:0 16px;background:#FFFFFF;border-bottom:1px solid #D3CDE0">
+<p style="width:56px;font-family:'Archivo', Arial, sans-serif;font-size:26px;font-weight:800;color:#512888">5</p>
+<p style="width:380px;font-size:28px;color:#1F1B2B;white-space:nowrap">Mentoring &amp; guidance</p>
+<div style="width:261px;height:34px;background:#512888;border-radius:4px"></div>
+<p style="font-size:26px;font-weight:700;color:#2A1747">29</p>
+</div>
+<div style="display:flex;align-items:center;gap:16px;height:50px;padding:0 16px;background:#EBEBEE;border-bottom:1px solid #D3CDE0">
+<p style="width:56px;font-family:'Archivo', Arial, sans-serif;font-size:26px;font-weight:800;color:#512888">6</p>
+<p style="width:380px;font-size:28px;color:#1F1B2B;white-space:nowrap">Breadth &amp; scope</p>
+<div style="width:225px;height:34px;background:#512888;border-radius:4px"></div>
+<p style="font-size:26px;font-weight:700;color:#2A1747">25</p>
+</div>
+<div style="display:flex;align-items:center;gap:16px;height:50px;padding:0 16px;background:#FFFFFF;border-bottom:1px solid #D3CDE0">
+<p style="width:56px;font-family:'Archivo', Arial, sans-serif;font-size:26px;font-weight:800;color:#512888">7</p>
+<p style="width:380px;font-size:28px;color:#1F1B2B;white-space:nowrap">Career development</p>
+<div style="width:198px;height:34px;background:#512888;border-radius:4px"></div>
+<p style="font-size:26px;font-weight:700;color:#2A1747">22</p>
+</div>
+<div style="display:flex;align-items:center;gap:16px;height:50px;padding:0 16px;background:#EBEBEE;border-bottom:1px solid #D3CDE0">
+<p style="width:56px;font-family:'Archivo', Arial, sans-serif;font-size:26px;font-weight:800;color:#512888">8</p>
+<p style="width:380px;font-size:28px;color:#1F1B2B;white-space:nowrap">Independence</p>
+<div style="width:126px;height:34px;background:#512888;border-radius:4px"></div>
+<p style="font-size:26px;font-weight:700;color:#2A1747">14</p>
+</div>
+<div style="display:flex;align-items:center;gap:16px;height:50px;padding:0 16px;background:#FFFFFF;border-bottom:1px solid #D3CDE0">
+<p style="width:56px;font-family:'Archivo', Arial, sans-serif;font-size:26px;font-weight:800;color:#512888">9</p>
+<p style="width:380px;font-size:28px;color:#1F1B2B;white-space:nowrap">Strategic fit / align</p>
+<div style="width:117px;height:34px;background:#512888;border-radius:4px"></div>
+<p style="font-size:26px;font-weight:700;color:#2A1747">13</p>
+</div>
+<div style="display:flex;align-items:center;gap:16px;height:50px;padding:0 16px;background:#EBEBEE;border-bottom:2px solid #D3CDE0">
+<p style="width:56px;font-family:'Archivo', Arial, sans-serif;font-size:26px;font-weight:800;color:#6B6480">10</p>
+<p style="width:380px;font-size:28px;color:#4A4458;white-space:nowrap">Asks for our record</p>
+<div style="width:27px;height:34px;background:#A69FB6;border-radius:4px"></div>
+<p style="font-size:26px;font-weight:700;color:#4A4458">3</p>
+</div>
+</div>
+<p style="font-size:28px;line-height:1.35;color:#F7F6FA;background:#2A1747;padding:20px 48px;border-radius:64px"><b style="color:#C9B8E6">Takeaway:</b> NIH wants a credible, institution-backed plan to sustain our infrastructure and grow our people, not a history lesson. Our past performance should be framed as evidence that the plan will succeed.</p>
+<p style="position:absolute;left:128px;bottom:40px;width:1400px;font-size:24px;line-height:1.35;color:#6B6480">Infrastructure combines growth, capacity and sustainability, counting each passage once. Other counts match the previous slide. <a href="https://claude.ai/artifact/UAVwAEcQYQqTLfFMKy7Usz">See every mention</a></p>
+<p style="position:absolute;right:128px;bottom:64px;width:240px;font-size:24px;text-align:right;color:#6B6480">8 of 15</p>
+</section></div>
+<div class="deck-slide" hidden aria-label="Slide 9 of 15"><section data-slide="review-overall" data-transition="fade" style="background:#F7F6FA;color:#1F1B2B;font-family:'Source Sans 3', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:40px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-family:'Archivo', Arial, sans-serif;font-size:26px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#512888">Peer review</p>
+<h2 style="font-family:'Archivo', Arial, sans-serif;font-size:60px;font-weight:800;line-height:1.1;color:#2A1747">How reviewers will score the application as a whole</h2>
+</div>
+<table style="font-family:'Source Sans 3', Arial, sans-serif;font-size:26px;color:#1F1B2B">
+<tr style="background:#2A1747"><th style="width:22%;color:#F7F6FA;padding:14px 20px">Criterion</th><th style="width:78%;color:#F7F6FA">What reviewers ask</th></tr>
+<tr style="background:#FFFFFF"><td><b>Significance</b></td><td>Is the Center broad and cohesive, aligned with K-State’s strategic priorities, and backed by a strong institutional case for sustaining it?</td></tr>
+<tr style="background:#F7F6FA"><td><b>Investigators</b></td><td>Do the PD/PIs have the expertise to lead, a commitment to mentoring investigators toward independence, and a sustainable leadership structure?</td></tr>
+<tr style="background:#FFFFFF"><td><b>Innovation</b></td><td>Will the science grow with the field and make creative use of the investigators and resources we already have?</td></tr>
+<tr style="background:#F7F6FA"><td><b>Approach</b></td><td>Do the management plan, Sustainability Plan, Advisory Committee, Career Development Plan and SI evaluations add up to a credible plan?</td></tr>
+<tr style="background:#FFFFFF"><td><b>Environment</b></td><td>Is the institutional commitment real, is the SI pool broad and well integrated, and is the case for sustaining existing resources clear?</td></tr>
+</table>
+<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#6B6480">PAR-27-055, Section V (Scored Review Criteria – Overall), paraphrased</p>
+<p style="position:absolute;right:128px;bottom:64px;width:240px;font-size:24px;text-align:right;color:#6B6480">9 of 15</p>
+</section></div>
+<div class="deck-slide" hidden aria-label="Slide 10 of 15"><section data-slide="review-components" data-transition="fade" style="background:#F7F6FA;color:#1F1B2B;font-family:'Source Sans 3', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:40px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-family:'Archivo', Arial, sans-serif;font-size:26px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#512888">Peer review</p>
+<h2 style="font-family:'Archivo', Arial, sans-serif;font-size:60px;font-weight:800;line-height:1.1;color:#2A1747">How reviewers will score each core</h2>
+</div>
+<div style="display:flex;gap:28px;flex:1">
+<div style="flex:1;display:flex;flex-direction:column;gap:20px;background:#FFFFFF;padding:44px;border-radius:20px;border-top:8px solid #2A1747">
+<h3 style="font-family:'Archivo', Arial, sans-serif;font-size:40px;font-weight:700;line-height:1.2;color:#2A1747">Admin Core</h3>
+<ul style="font-size:28px;line-height:1.4;color:#4A4458">
+<li>One integrated plan to manage the components, Advisory Committee and mentors</li>
+<li>Recruitment plans and a viable pool of investigators</li>
+<li>Annual evaluations, and acting on Advisory Committee advice</li>
+</ul>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:20px;background:#FFFFFF;padding:44px;border-radius:20px;border-top:8px solid #2A1747">
+<h3 style="font-family:'Archivo', Arial, sans-serif;font-size:40px;font-weight:700;line-height:1.2;color:#2A1747">SRP Core</h3>
+<ul style="font-size:28px;line-height:1.4;color:#4A4458">
+<li>Plans aligned with K-State’s strategic priorities</li>
+<li>Future hires that complement the current pool</li>
+<li>Fair, transparent SI selection</li>
+<li>A feasible Career Development Plan</li>
+</ul>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:20px;background:#FFFFFF;padding:44px;border-radius:20px;border-top:8px solid #2A1747">
+<h3 style="font-family:'Archivo', Arial, sans-serif;font-size:40px;font-weight:700;line-height:1.2;color:#2A1747">Research Cores</h3>
+<ul style="font-size:28px;line-height:1.4;color:#4A4458">
+<li>A well-justified request</li>
+<li>A business plan for a growing user base and sustainability</li>
+<li>A qualified Core Director</li>
+<li>Institutional commitments that keep the Core running</li>
+</ul>
+</div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#6B6480">PAR-27-055, Section V (Review Criteria for Cores), paraphrased</p>
+<p style="position:absolute;right:128px;bottom:64px;width:240px;font-size:24px;text-align:right;color:#6B6480">10 of 15</p>
+</section></div>
+<div class="deck-slide" hidden aria-label="Slide 11 of 15"><section data-slide="funding" data-transition="fade" style="background:#F7F6FA;color:#1F1B2B;font-family:'Source Sans 3', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:40px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-family:'Archivo', Arial, sans-serif;font-size:26px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#512888">After peer review</p>
+<h2 style="font-family:'Archivo', Arial, sans-serif;font-size:60px;font-weight:800;line-height:1.1;color:#2A1747">NIGMS weighs the scores against its priorities</h2>
+</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:24px">
+<div style="display:flex;gap:24px;align-items:start;background:#FFFFFF;padding:36px;border-radius:16px;border:2px solid #D3CDE0">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:#512888;width:48px;height:48px;flex:none"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>
+<p style="font-size:30px;line-height:1.35;color:#1F1B2B">The Center’s <b>scientific breadth</b> and tie to institutional goals</p>
+</div>
+<div style="display:flex;gap:24px;align-items:start;background:#FFFFFF;padding:36px;border-radius:16px;border:2px solid #D3CDE0">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:#512888;width:48px;height:48px;flex:none"><path d="M4 20V10M10 20V4M16 20v-7M2 20h20"/></svg>
+<p style="font-size:30px;line-height:1.35;color:#1F1B2B">The institution’s <b>need for capacity growth</b> in our research area</p>
+</div>
+<div style="display:flex;gap:24px;align-items:start;background:#FFFFFF;padding:36px;border-radius:16px;border:2px solid #D3CDE0">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:#512888;width:48px;height:48px;flex:none"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c3 2.5 9 2.5 12 0v-5M22 9v6"/></svg>
+<p style="font-size:30px;line-height:1.35;color:#1F1B2B">The need to <b>keep developing investigators</b> in our area</p>
+</div>
+<div style="display:flex;gap:24px;align-items:start;background:#2A1747;padding:36px;border-radius:16px">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:#C9B8E6;width:48px;height:48px;flex:none"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><path d="M16 4.6a3.5 3.5 0 0 1 0 6.8M18 14.2a6.5 6.5 0 0 1 3.5 5.8"/></svg>
+<p style="font-size:30px;line-height:1.35;color:#F7F6FA"><b>ESIs and NIs as SIs</b>, so we should recruit them into the SI pool deliberately</p>
+</div>
+</div>
+<p style="font-size:28px;line-height:1.4;color:#4A4458">Also weighed: scientific merit from peer review, available funds, portfolio balance, and geographic and institutional distribution.</p>
+<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#6B6480">PAR-27-055, Section V.2 (Review and Selection Process). ESI = Early Stage Investigator; NI = New Investigator.</p>
+<p style="position:absolute;right:128px;bottom:64px;width:240px;font-size:24px;text-align:right;color:#6B6480">11 of 15</p>
+</section></div>
+<div class="deck-slide" hidden aria-label="Slide 12 of 15"><section data-slide="interplay" data-transition="fade" style="display:flex; flex-direction:column; gap:24px; padding:120px 128px 160px; background:#f7f6fa">
+  <div style="display:flex; flex-direction:column; gap:12px">
+    <p style="font-family:Archivo, Arial, sans-serif; font-size:26px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:#512888">Putting it together</p>
+    <h2 style="font-family:Archivo, Arial, sans-serif; font-size:60px; font-weight:800; line-height:1.1; color:#2a1747">Repeated vs. scored: where to focus</h2>
+  </div>
+  <div style="display:flex; flex-direction:column; gap:8px">
+    <div style="display:flex; flex-direction:row; gap:20px; align-items:center; padding:0 24px">
+      <p style="width:470px; font-family:'Source Sans 3', Arial, sans-serif; font-size:24px; font-weight:700; letter-spacing:1px; text-transform:uppercase; color:#6b6480">What the NOFO repeats</p>
+      <div style="flex:0 1 48px"></div>
+      <p style="width:600px; font-family:'Source Sans 3', Arial, sans-serif; font-size:24px; font-weight:700; letter-spacing:1px; text-transform:uppercase; color:#6b6480">Where reviewers score it</p>
+      <p style="flex:1; font-family:'Source Sans 3', Arial, sans-serif; font-size:24px; font-weight:700; letter-spacing:1px; text-transform:uppercase; color:#6b6480">NIGMS funding priority</p>
+    </div>
+    <div style="height:68px; display:flex; flex-direction:row; gap:20px; align-items:center; padding:0 24px; background:#ffffff; border:2px solid #d3cde0; border-radius:14px">
+      <p style="width:470px; font-family:'Source Sans 3', Arial, sans-serif; font-size:30px; white-space:nowrap; color:#1f1b2b"><b>Infrastructure</b> <span style="color:#6b6480">· 111</span></p>
+      <svg viewBox="0 0 48 24" aria-hidden="true" style="width:48px; height:24px;flex:none"><path d="M0 9h34V2l14 10-14 10v-7H0z" fill="#512888"/></svg>
+      <p style="width:600px; font-family:'Source Sans 3', Arial, sans-serif; font-size:28px; color:#1f1b2b">Significance · Environment · Research Cores</p>
+      <div style="display:flex; flex-direction:row; gap:10px; align-items:center; flex:1">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:30px; height:30px; color:#512888;flex:none"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>
+        <p style="font-family:'Source Sans 3', Arial, sans-serif; font-size:26px; color:#1f1b2b">Capacity growth</p>
+      </div>
+    </div>
+    <div style="height:68px; display:flex; flex-direction:row; gap:20px; align-items:center; padding:0 24px; background:#ffffff; border:2px solid #d3cde0; border-radius:14px">
+      <p style="width:470px; font-family:'Source Sans 3', Arial, sans-serif; font-size:30px; white-space:nowrap; color:#1f1b2b"><b>Investigators &amp; SIs</b> <span style="color:#6b6480">· 110</span></p>
+      <svg viewBox="0 0 48 24" aria-hidden="true" style="width:48px; height:24px;flex:none"><path d="M0 9h34V2l14 10-14 10v-7H0z" fill="#512888"/></svg>
+      <p style="width:600px; font-family:'Source Sans 3', Arial, sans-serif; font-size:28px; color:#1f1b2b">Investigators · Approach · SRP Core</p>
+      <div style="display:flex; flex-direction:row; gap:10px; align-items:center; flex:1">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:30px; height:30px; color:#512888;flex:none"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>
+        <p style="font-family:'Source Sans 3', Arial, sans-serif; font-size:26px; color:#1f1b2b">Developing investigators</p>
+      </div>
+    </div>
+    <div style="height:68px; display:flex; flex-direction:row; gap:20px; align-items:center; padding:0 24px; background:#ffffff; border:2px solid #d3cde0; border-radius:14px">
+      <p style="width:470px; font-family:'Source Sans 3', Arial, sans-serif; font-size:30px; white-space:nowrap; color:#1f1b2b"><b>Plans &amp; strategies</b> <span style="color:#6b6480">· 63</span></p>
+      <svg viewBox="0 0 48 24" aria-hidden="true" style="width:48px; height:24px;flex:none"><path d="M0 9h34V2l14 10-14 10v-7H0z" fill="#512888"/></svg>
+      <p style="width:600px; font-family:'Source Sans 3', Arial, sans-serif; font-size:28px; color:#1f1b2b">Approach · Admin Core</p>
+      <p style="flex:1; font-family:'Source Sans 3', Arial, sans-serif; font-size:26px; color:#6b6480">Not listed</p>
+    </div>
+    <div style="height:68px; display:flex; flex-direction:row; gap:20px; align-items:center; padding:0 24px; background:#ffffff; border:2px solid #d3cde0; border-radius:14px">
+      <p style="width:470px; font-family:'Source Sans 3', Arial, sans-serif; font-size:30px; white-space:nowrap; color:#1f1b2b"><b>Institution</b> <span style="color:#6b6480">· 62</span></p>
+      <svg viewBox="0 0 48 24" aria-hidden="true" style="width:48px; height:24px;flex:none"><path d="M0 9h34V2l14 10-14 10v-7H0z" fill="#512888"/></svg>
+      <p style="width:600px; font-family:'Source Sans 3', Arial, sans-serif; font-size:28px; color:#1f1b2b">Significance · Environment</p>
+      <div style="display:flex; flex-direction:row; gap:10px; align-items:center; flex:1">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:30px; height:30px; color:#512888;flex:none"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>
+        <p style="font-family:'Source Sans 3', Arial, sans-serif; font-size:26px; color:#1f1b2b">Tie to institutional goals</p>
+      </div>
+    </div>
+  </div>
+  <div style="display:flex; flex-direction:row; gap:24px">
+    <div style="display:flex; flex-direction:column; gap:8px; flex:1; padding:28px 32px; background:#ffffff; border:2px solid #d3cde0; border-radius:16px">
+      <h3 style="font-family:Archivo, Arial, sans-serif; font-size:30px; font-weight:700; line-height:1.2; color:#4a4458">Repeated often, earns no points</h3>
+      <p style="font-family:'Source Sans 3', Arial, sans-serif; font-size:26px; line-height:1.35; color:#4a4458">Procedural rules about SIs: approvals, effort, departures. Follow them, but don’t spend pages on them.</p>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:8px; flex:1; padding:28px 32px; background:#edeaf3; border:2px solid #512888; border-radius:16px">
+      <h3 style="font-family:Archivo, Arial, sans-serif; font-size:30px; font-weight:700; line-height:1.2; color:#2a1747">Rarely repeated, still scored</h3>
+      <p style="font-family:'Source Sans 3', Arial, sans-serif; font-size:26px; line-height:1.35; color:#1f1b2b">Innovation (4 mentions), strategic fit (13), and a sustainable leadership structure (asked once). Easy to underwrite.</p>
+    </div>
+  </div>
+  <p style="padding:18px 48px; font-family:'Source Sans 3', Arial, sans-serif; font-size:30px; line-height:1.35; text-align:center; color:#f7f6fa; background:#2a1747; border-radius:64px"><span style="color:#c9b8e6"><b>Use the review criteria as your checklist.</b></span>&nbsp;<br>Use the repeated themes as your story.</p>
+  <p style="position:absolute; bottom:64px; left:128px; width:1400px; font-family:'Source Sans 3', Arial, sans-serif; font-size:24px; color:#6b6480">Themes and counts from our word analysis; criteria from PAR-27-055 Section V; funding priorities from Section V.2</p>
+  <p style="position:absolute; right:128px; bottom:64px; width:240px; font-family:'Source Sans 3', Arial, sans-serif; font-size:24px; text-align:right; color:#6b6480">12 of 15</p>
+</section></div>
+<div class="deck-slide" hidden aria-label="Slide 13 of 15"><section data-slide="edge" data-transition="fade" style="background:#2A1747;color:#F7F6FA;font-family:'Source Sans 3', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:48px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-family:'Archivo', Arial, sans-serif;font-size:26px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#C9B8E6">Discussion</p>
+<h2 style="font-family:'Archivo', Arial, sans-serif;font-size:72px;font-weight:800;line-height:1.1;color:#F7F6FA">What’s our edge?</h2>
+</div>
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px;flex:1">
+<div style="display:flex;flex-direction:column;gap:12px;background:#3B1C66;padding:36px;border-radius:16px">
+<p style="font-family:'Archivo', Arial, sans-serif;font-size:24px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#C9B8E6">Institution</p>
+<p style="font-size:30px;line-height:1.35;color:#F7F6FA">Where does CNAP sit in K-State’s strategic plan, and what commitments can we get in writing?</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px;background:#3B1C66;padding:36px;border-radius:16px">
+<p style="font-family:'Archivo', Arial, sans-serif;font-size:24px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#C9B8E6">Infrastructure</p>
+<p style="font-size:30px;line-height:1.35;color:#F7F6FA">How can our cores grow their user base and partner across IDeA programs to thrive after COBRE?</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px;background:#3B1C66;padding:36px;border-radius:16px">
+<p style="font-family:'Archivo', Arial, sans-serif;font-size:24px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#C9B8E6">People</p>
+<p style="font-size:30px;line-height:1.35;color:#F7F6FA">Who’s in our SI pool now, how many are ESIs or NIs, and who should we recruit?</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px;background:#3B1C66;padding:36px;border-radius:16px">
+<p style="font-family:'Archivo', Arial, sans-serif;font-size:24px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#C9B8E6">Proof</p>
+<p style="font-size:30px;line-height:1.35;color:#F7F6FA">What milestones and data will convince reviewers our SRP turns SIs into independent investigators?</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px;background:#3B1C66;padding:36px;border-radius:16px">
+<p style="font-family:'Archivo', Arial, sans-serif;font-size:24px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#C9B8E6">Leadership</p>
+<p style="font-size:30px;line-height:1.35;color:#F7F6FA">How do we show reviewers a leadership team built to last, with a deep bench across our cores?</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px;background:#F7F6FA;padding:36px;border-radius:16px">
+<p style="font-family:'Archivo', Arial, sans-serif;font-size:24px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#512888">The big one</p>
+<p style="font-size:30px;line-height:1.35;color:#1F1B2B">How is our plan built around K-State’s priorities and needs, and what evidence can we incorporate to prove it?</p>
+</div>
+</div>
+<p style="position:absolute;right:128px;bottom:64px;width:240px;font-size:24px;text-align:right;color:#C9B8E6">13 of 15</p>
+</section></div>
+<div class="deck-slide" hidden aria-label="Slide 14 of 15"><section data-slide="more-questions" data-transition="fade" style="background:#2A1747;color:#F7F6FA;font-family:'Source Sans 3', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:48px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-family:'Archivo', Arial, sans-serif;font-size:26px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#C9B8E6">Discussion</p>
+<h2 style="font-family:'Archivo', Arial, sans-serif;font-size:72px;font-weight:800;line-height:1.1;color:#F7F6FA">More to work out</h2>
+</div>
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px;flex:1">
+<div style="display:flex;flex-direction:column;gap:12px;background:#3B1C66;padding:36px;border-radius:16px">
+<p style="font-family:'Archivo', Arial, sans-serif;font-size:24px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#C9B8E6">Budget</p>
+<p style="font-size:30px;line-height:1.35;color:#F7F6FA">With $750K less a year, what do we scale back, share, or move to institutional support?</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px;background:#3B1C66;padding:36px;border-radius:16px">
+<p style="font-family:'Archivo', Arial, sans-serif;font-size:24px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#C9B8E6">Science</p>
+<p style="font-size:30px;line-height:1.35;color:#F7F6FA">Where is our field heading in the next five years, and how do we grow with it?</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px;background:#3B1C66;padding:36px;border-radius:16px">
+<p style="font-family:'Archivo', Arial, sans-serif;font-size:24px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#C9B8E6">SRP design</p>
+<p style="font-size:30px;line-height:1.35;color:#F7F6FA">Which future hires would best round out our current SI pool?</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px;background:#3B1C66;padding:36px;border-radius:16px">
+<p style="font-family:'Archivo', Arial, sans-serif;font-size:24px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#C9B8E6">Advisory Committee</p>
+<p style="font-size:30px;line-height:1.35;color:#F7F6FA">Who should serve, and what do we need them to tell us that we can’t see ourselves?</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px;background:#3B1C66;padding:36px;border-radius:16px">
+<p style="font-family:'Archivo', Arial, sans-serif;font-size:24px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#C9B8E6">Our track record</p>
+<p style="font-size:30px;line-height:1.35;color:#F7F6FA">Which of our results best prove we can deliver this plan?</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px;background:#3B1C66;padding:36px;border-radius:16px">
+<p style="font-family:'Archivo', Arial, sans-serif;font-size:24px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#C9B8E6">Process</p>
+<p style="font-size:30px;line-height:1.35;color:#F7F6FA">Who owns each component, and what do we need from K-State leadership, by when?</p>
+</div>
+</div>
+<p style="position:absolute;right:128px;bottom:64px;width:240px;font-size:24px;text-align:right;color:#C9B8E6">14 of 15</p>
+</section></div>
+<div class="deck-slide" hidden aria-label="Slide 15 of 15"><section data-slide="pitfalls" data-transition="fade" style="background:#F7F6FA;color:#1F1B2B;font-family:'Source Sans 3', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:36px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-family:'Archivo', Arial, sans-serif;font-size:26px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#512888">Discussion</p>
+<h2 style="font-family:'Archivo', Arial, sans-serif;font-size:72px;font-weight:800;line-height:1.1;color:#2A1747">Where could we fall short?</h2>
+</div>
+<p style="font-size:40px;line-height:1.3;color:#1F1B2B">What could hurt us if it isn’t well addressed and fleshed out in our writing?</p>
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px">
+<div style="display:flex;flex-direction:column;gap:8px;background:#FFFFFF;padding:32px;border-radius:16px;border:2px solid #D3CDE0">
+<h3 style="font-family:'Archivo', Arial, sans-serif;font-size:32px;font-weight:700;line-height:1.2;color:#2A1747">Institutional commitment</h3>
+<p style="font-size:26px;line-height:1.4;color:#4A4458">Support described in words, without letters, positions or dollars behind it</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:8px;background:#FFFFFF;padding:32px;border-radius:16px;border:2px solid #D3CDE0">
+<h3 style="font-family:'Archivo', Arial, sans-serif;font-size:32px;font-weight:700;line-height:1.2;color:#2A1747">Sustainability Plan</h3>
+<p style="font-size:26px;line-height:1.4;color:#4A4458">No clear path for the cores and the SRP to continue after COBRE funding</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:8px;background:#FFFFFF;padding:32px;border-radius:16px;border:2px solid #D3CDE0">
+<h3 style="font-family:'Archivo', Arial, sans-serif;font-size:32px;font-weight:700;line-height:1.2;color:#2A1747">SI selection</h3>
+<p style="font-size:26px;line-height:1.4;color:#4A4458">A process that doesn’t read as clearly fair and transparent</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:8px;background:#FFFFFF;padding:32px;border-radius:16px;border:2px solid #D3CDE0">
+<h3 style="font-family:'Archivo', Arial, sans-serif;font-size:32px;font-weight:700;line-height:1.2;color:#2A1747">Mentoring</h3>
+<p style="font-size:26px;line-height:1.4;color:#4A4458">No plan to train and evaluate mentors, or to resolve mentor–SI conflicts</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:8px;background:#FFFFFF;padding:32px;border-radius:16px;border:2px solid #D3CDE0">
+<h3 style="font-family:'Archivo', Arial, sans-serif;font-size:32px;font-weight:700;line-height:1.2;color:#2A1747">Core business plans</h3>
+<p style="font-size:26px;line-height:1.4;color:#4A4458">No realistic picture of a growing user base</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:8px;background:#FFFFFF;padding:32px;border-radius:16px;border:2px solid #D3CDE0">
+<h3 style="font-family:'Archivo', Arial, sans-serif;font-size:32px;font-weight:700;line-height:1.2;color:#2A1747">Scientific focus</h3>
+<p style="font-size:26px;line-height:1.4;color:#4A4458">An area that reads as too close to a past COBRE, which NIGMS calls low priority</p>
+</div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1400px;font-size:24px;color:#6B6480">Prompts drawn from what PAR-27-055 asks reviewers to check (Sections I and V)</p>
+<p style="position:absolute;right:128px;bottom:64px;width:240px;font-size:24px;text-align:right;color:#6B6480">15 of 15</p>
+</section></div>
+        </div></div>
+        <div class="deck-bar">
+          <button type="button" class="deck-btn deck-prev" aria-label="Previous slide">&lsaquo; Previous</button>
+          <span class="deck-count" aria-live="polite">1 / 15</span>
+          <button type="button" class="deck-btn deck-next" aria-label="Next slide">Next &rsaquo;</button>
+          <button type="button" class="deck-btn deck-full">Full screen</button>
+        </div>
+        <details class="deck-notes"><summary>Speaker notes for this slide</summary><p></p></details>
+      </div>
+      </details>
     </section>
 
     <section class="wrap sec band-g" id="brief">
@@ -638,5 +1247,36 @@ class Component extends DCLogic {
 })();
 </script>
 <script src="sidebar.js?v=7"></script>
+<script>
+// Kickoff slide viewer
+(function () {
+  const deck = document.querySelector('#kickoff .deck'); if (!deck) return;
+  const NOTES = ["Everything in this deck comes from PAR-27-055 (posted June 18, 2026) unless marked otherwise. The word counts later in the deck were run on the full 29-page NOFO.", "The $1.5M cap is annual direct costs, excluding consortium facilities and administrative costs (Section II). Five years is the project period. The $2.25M comparison is ours; the NOFO doesn’t state it.", "Page limits come from the NOFO’s page-limit table in Section IV. Research Cores are optional, from zero to three. In the NOFO, the SRP is called the Scientific Research Program; we call it the SRP Core.", "Exact wording, Section I: “No new cores may be established in the COBRE-S phase. The consolidation of existing Cores for technology advancement and/or administrative efficiency and the sharing of research facilities supported by other IDeA programs (e.g., INBRE, CTR, and other COBREs) is strongly encouraged.” The SRP will also “Coordinate the mentoring and professional development activities of the Center” and “Implement the Career Development Plan.”", "Section I: “The focus of the COBRE-S award is to solidify the research base built in previous COBRE Phases and to implement a Sustainability Plan to continue research excellence beyond COBRE funding.” Submissions should show how we’ll guide early career investigators toward independence and modernize and consolidate core facilities. The three-part framing (infrastructure, people, institution) is ours.", "How the 63 was counted: every mention of plan, planning, strategy or strategies in the NOFO that refers to a plan for the Center. Left out: data-sharing, resource-sharing, cybersecurity and other standard NIH plans; form section titles like “Research Strategy”; and SIs’ individual research plans. Each mention is listed, with a link, on the PAR-27-055 Word Index page. For the three record requests, Ctrl+F “mentoring experience in the Personal Statement,” “accomplishments over the past five years,” and “record of sustained leadership” (the scored one). The right side counts only the places where the NOFO asks us to show our past performance. There are three. (1) PD/PI biosketch: describe “administrative and mentoring experience” and give evidence of leadership, mentoring and administration, “including directing and managing a previous phase of a COBRE award.” (2) SI pool: “Recent Progress: Summarize the investigator’s research accomplishments over the past five years.” (3) The only scored review question that looks back: whether the PD/PI has “a record of sustained leadership of a productive research group within the scientific area of the Center.” Words like “track record” (0 times) and “publication” (twice, neither about our past) don’t change that picture. The NOFO covers both COBRE-E and COBRE-S.", "How we counted: for each idea we searched all 29 pages of PAR-27-055 for the word and its synonyms, then read every hit and kept only the ones used in that sense. Standard NIH language found in every NOFO, page titles, and text about the COBRE-D phase are left out, and words in the same short phrase count once (“strategic priorities” is one mention). Words counted, by row: Plans &amp; strategies: plan, planning, strategy, strategies (not data-sharing plans, form section titles, or SIs’ individual research plans). Institution: institution, institutional, and organization when it means K-State as the applicant (not eligibility and registration text). This includes every mention of institutional commitment and the Letter of Institutional Support, since each one already uses the word “institutional.” Strategic fit / align: strategic, align, alignment, priorities, fits within, when tied to the institution’s strategy. Breadth &amp; scope: broad, broaden, breadth, scope, cohesive, comprehensive. Investigators &amp; SIs: investigator, faculty, SI, scientists (not PD/PI eligibility or Advisory Committee members). Mentoring &amp; guidance: mentor, mentoring, guide, guidance, advice to SIs. Career development: career development, professional development, leadership training, seminars, workshops, retreats, grantsmanship. Independence: independence, independent funding, external funding, R01. Growth &amp; expansion: growth, grow, expand, enhance, strengthen, build, increase. Capacity: capacity, infrastructure, research base, facilities. Sustainability: sustain, sustainability, maintain, maintenance, long-term, beyond COBRE, continue, continuity, solidify, endure, retain, retention (not “maintain your SAM registration” and the like). Past record: the three places the NOFO asks us to show past results. Every mention, with a link to its spot in the NOFO, is on the PAR-27-055 Word Index page. The NOFO covers both COBRE-E and COBRE-S, so some mentions refer to the Expansion phase. Takeaway: the NOFO talks about people, plans, the institution and growth far more than about our past record.", "The previous slide’s counts, ranked, with growth (58), capacity (46) and sustainability (43) combined into one idea: infrastructure. Many passages use two of those words together, like “sustain research capacity” or “expand research capacity,” so each passage counts once and the total is 111, not 147. The top three (infrastructure, investigators and plans) are darker. What stands out: building and sustaining infrastructure and developing people come first, nearly tied, then the plan and the institution. Asking about our past record comes last. Institution includes every mention of institutional commitment and support. A word that appears less often isn’t automatically less important: strategic fit appears fewer times, but it sits inside the scored Significance question. How we counted is in the previous slide’s notes. A caution when presenting: these counts show what the NOFO talks about most, not how many points each idea is worth. The investigator count is boosted by procedural rules about SIs (approvals, effort, departures). Framing for our writing: lead with the plan for sustaining infrastructure and developing people, show K-State’s commitment, and use Phase 2 results (SIs who won independent funding, growth in core use) as proof the plan will work rather than as the argument itself.", "These are the NOFO’s “Scored Review Criteria – Overall.” Reviewers use them to give the whole Center its overall impact score, applying them mainly to the Overall section; the cores get their own criteria on the next slide. Each criterion gets its own score, plus an overall impact score. These are condensed from Section V. Reviewers also look at whether the Advisory Committee has the right expertise, whether mentors are trained and evaluated, how mentor–SI conflicts get resolved, and how we’ll track SIs’ data, publications and independent funding.", "Each core gets its own overall impact score. The Admin Core is also judged on progress reporting, compliance, budget management and any alterations and renovations. For the SRP, reviewers ask how well its plans raise research capacity across the institution.", "Exact wording, Section V.2, under relevance to NIH and NIGMS programmatic priorities: “Scientific breadth of the Center and its relationship to institutional strategic goals; Institutional need for biomedical research capacity growth in the proposed area of research; Need for continued development of investigators in the Center’s scientific area; and Inclusion of Early Stage Investigators and New Investigators as SIs.” The point about recruiting deliberately is our takeaway.", "The NOFO is really two documents in one. What it keeps repeating tells us what NIGMS cares about and what the application has to contain. The scored criteria tell us how reviewers turn that into a score. Where the two line up is our center of gravity: infrastructure, people, the plan and the institution all map onto scored criteria, and three of the four show up again in NIGMS’s funding priorities after peer review (need for capacity growth, continued development of investigators including ESIs and NIs, and the Center’s tie to institutional strategic goals). So those themes count twice: once in the score and again in the funding decision. Two cautions. First, some things are repeated often but earn no points: the investigator count is boosted by procedural rules about SIs, which we must follow but shouldn’t spend pages on. Second, some things are mentioned rarely but carry a full scored question: Innovation is its own criterion but the word appears only 4 times; strategic fit appears 13 times but sits inside Significance; and “a strong and sustainable leadership structure” is asked once, under Investigators. Those are the easiest to underwrite. How to use this: make sure every scored question has a clear, findable answer (the checklist), and carry the repeated themes through every section (the story).", "Use these to brainstorm. Each maps to something the NOFO scores: institutional commitment and strategic-plan alignment (Significance, Environment), core business plans (Research Cores), the SI pool and ESI/NI inclusion (Environment, NIGMS priorities), SI evaluation (Approach), and a sustainable leadership structure (Investigators). Capture answers on sticky notes, then sort them by the three pillars: infrastructure, people, institution.", "Where these come from: Budget follows the drop from $2.25M to the $1.5M cap (Section II). Science ties to the Innovation criterion, which asks whether the Center’s area will “enable future growth on pace with advances in the field.” SRP design ties to the SRP criterion on whether future hires complement the existing pool; the NOFO also allows mid-career and “at-risk” investigators in the pool. The Advisory Committee must include external experts and a senior institutional official (Section IV). Track record: past performance carries less weight, but results such as SIs who won independent funding or growth in core use are still the best evidence the plan will work. Process is ours: who writes the Overall, Admin Core, SRP Core and Research Core sections, and what we need from leadership.", "Open with the question and let the group answer first; use the six cards as prompts if the conversation stalls. Where each comes from: institutional commitment (Environment; Research Cores), Sustainability Plan (Approach), fair and transparent SI selection (SRP Core), mentor training, evaluation and conflict resolution (Approach), core business plans for a growing user base (Research Cores), and the low-priority rule for Centers closely related to a past COBRE at the institution (Section I)."];
+  const slides = Array.from(deck.querySelectorAll('.deck-slide')), frame = deck.querySelector('.deck-frame'), stage = deck.querySelector('.deck-stage');
+  const count = deck.querySelector('.deck-count'), prev = deck.querySelector('.deck-prev'), next = deck.querySelector('.deck-next'), notes = deck.querySelector('.deck-notes');
+  let i = 0;
+  const fit = () => { stage.style.transform = 'scale(' + (frame.clientWidth / 1920) + ')'; };
+  const show = (n) => {
+    i = Math.max(0, Math.min(slides.length - 1, n));
+    slides.forEach((s, k) => { s.hidden = k !== i; });
+    count.textContent = (i + 1) + ' / ' + slides.length;
+    prev.disabled = i === 0; next.disabled = i === slides.length - 1;
+    notes.hidden = !NOTES[i]; notes.querySelector('p').textContent = NOTES[i];
+  };
+  prev.addEventListener('click', () => show(i - 1));
+  next.addEventListener('click', () => show(i + 1));
+  deck.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight' || e.key === 'PageDown') { e.preventDefault(); show(i + 1); }
+    if (e.key === 'ArrowLeft' || e.key === 'PageUp') { e.preventDefault(); show(i - 1); }
+  });
+  frame.addEventListener('click', (e) => { if (!e.target.closest('a')) { deck.focus(); show(e.offsetX < frame.clientWidth / 3 ? i - 1 : i + 1); } });
+  const full = deck.querySelector('.deck-full');
+  if (!deck.requestFullscreen) full.hidden = true;
+  full.addEventListener('click', () => { if (document.fullscreenElement) document.exitFullscreen(); else deck.requestFullscreen().then(() => deck.focus()); });
+  document.addEventListener('fullscreenchange', () => { full.textContent = document.fullscreenElement ? 'Exit full screen' : 'Full screen'; setTimeout(fit, 50); });
+  if (window.ResizeObserver) new ResizeObserver(fit).observe(frame); else window.addEventListener('resize', fit);
+  fit(); show(0);
+})();
+</script>
 </body>
 </html>
