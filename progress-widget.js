@@ -13,7 +13,7 @@
   const SHEET = 'https://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21';
   const PASSED = 'Passed to a contributor';
   const CSS = `
-.cnap-progress .up-sel,.st-ctl select,.st-pass select,.st-pass textarea{font:inherit;font-size:14.5px;padding:7px 9px;border:1.5px solid #C9C1D9;border-radius:8px;background:#fff;color:#1F1B2B}
+.cnap-progress .up-sel,.st-ctl select,.st-pass select,.st-pass textarea{font:inherit;font-size:14.5px;padding:7px 9px;border:1.5px solid #C9C1D9;border-radius:5px;background:#fff;color:#1F1B2B}
 .cnap-progress .up-sel:focus,.st-ctl select:focus,.st-pass select:focus,.st-pass textarea:focus{outline:2px solid #512888;outline-offset:1px;border-color:#512888}
 .cnap-progress .up-err,.st-err{color:#A1262C;font-size:14px;margin:0}
 .cnap-progress .up-bar{display:flex;flex-wrap:wrap;gap:12px 20px;align-items:center;margin:0 0 18px}
@@ -26,7 +26,7 @@
 .up-meta{display:block;font-size:13px;color:#6B6579;margin-top:2px}
 .up-meta a{color:#512888}
 .up-item.done .up-t{color:#6B6579}
-.up-list-card{background:#fff;border:1px solid #E4E0EC;border-radius:12px;padding:4px 18px}
+.up-list-card{background:#fff;border:1px solid #E4E0EC;border-radius:6px;padding:4px 18px}
 @media (max-width:640px){.up-item{grid-template-columns:minmax(0,1fr)}}
 .st-pill{display:inline-flex;align-items:center;gap:6px;white-space:nowrap;font-size:12px;font-weight:700;line-height:1;padding:5px 9px;border-radius:999px;border:1px solid transparent}
 .st-pill::before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor;opacity:.75}
@@ -38,7 +38,7 @@
 .st-pill.s4{background:#E3EEF9;color:#2B5C8F}
 .st-pill.s5{background:#512888;color:#fff}
 .st-pill.loading{background:#F3F2F6;color:#B2ADBD}
-.st-box{display:flex;flex-direction:column;gap:12px;margin:0 0 16px;padding:12px 14px;background:#F7F4FC;border:1px solid #E1D8F0;border-radius:10px}
+.st-box{display:flex;flex-direction:column;gap:12px;margin:0 0 16px;padding:12px 14px;background:#F7F4FC;border:1px solid #E1D8F0;border-radius:6px}
 .st-box .st-h{font-size:12px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#512888}
 .st-ctl{display:flex;flex-direction:column;gap:6px}
 .st-ctl .st-row{display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px}
@@ -47,16 +47,16 @@
 .st-msg.ok{color:#2F6B3F}.st-msg.bad{color:#A1262C}
 .st-info{font-size:13px;color:#4A4458;margin:0;line-height:1.45}
 .st-info b{color:#1F6B5E}
-.st-pass{display:flex;flex-direction:column;gap:8px;padding:10px 12px;background:#fff;border:1.5px solid #9FD3C7;border-radius:10px}
+.st-pass{display:flex;flex-direction:column;gap:8px;padding:10px 12px;background:#fff;border:1.5px solid #9FD3C7;border-radius:5px}
 .st-pass[hidden]{display:none}
 .st-pass label{font-size:13.5px;font-weight:600;color:#1F6B5E;display:flex;flex-wrap:wrap;gap:6px 8px;align-items:center}
 .st-pass textarea{width:100%;min-height:58px;box-sizing:border-box;resize:vertical}
 .st-pass .st-btns{display:flex;gap:8px;flex-wrap:wrap}
-.st-pass button{font:inherit;font-size:13.5px;font-weight:700;border-radius:999px;padding:7px 14px;cursor:pointer;border:1.5px solid #1F6B5E}
+.st-pass button{font:inherit;font-size:13.5px;font-weight:700;border-radius:5px;padding:7px 14px;cursor:pointer;border:1.5px solid #1F6B5E}
 .st-pass .st-go{background:#1F6B5E;color:#fff}
 .st-pass .st-cancel{background:#fff;color:#1F6B5E}
 .st-pass .st-hint{font-size:12px;color:#6B6579;margin:0}
-.passed-note{display:block;margin-top:6px;padding:8px 10px;background:#F2FAF8;border-left:3px solid #1F6B5E;border-radius:6px;font-size:14px;color:#1F1B2B}`;
+.passed-note{display:block;margin-top:6px;padding:8px 10px;background:#F2FAF8;border-left:3px solid #1F6B5E;border-radius:3px;font-size:14px;color:#1F1B2B}`;
 
   const store = {
     get: (k) => { try { return localStorage.getItem(k) || ''; } catch (e) { return ''; } },
