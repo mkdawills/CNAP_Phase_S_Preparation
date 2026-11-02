@@ -9,7 +9,7 @@ from datetime import datetime
 from zoneinfo import ZoneInfo
 
 SHEET_ID = 4867656760119172
-STATUSES = ["Not Started", "In Progress", "Ready for Review", "Applying Reviewer Feedback", "Finalized"]
+STATUSES = ["Not Started", "In Progress", "Passed to a contributor", "Ready for Review", "Applying Reviewer Feedback", "Finalized"]
 
 token = os.environ.get("SMARTSHEET_TOKEN", "").strip()
 if not token:

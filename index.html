@@ -111,6 +111,8 @@ a{color:#512888}a:hover{color:#3B1C66}
 #completion .pc-bar .s4,#completion .pc-key.s4{background:#6A45A0}
 #completion .pc-bar .s3,#completion .pc-key.s3{background:#A68BCB}
 #completion .pc-bar .s2,#completion .pc-key.s2{background:#D9C8F5}
+#completion .pc-bar .s6,#completion .pc-key.s6{background:#7FCDBB}
+.pc-li a{color:#fff;text-decoration:underline;text-decoration-color:rgba(255,255,255,0.5);text-underline-offset:2px}.pc-li .pass{grid-column:1 / -1;font-size:12.5px;color:#BFE9DF}
 #completion .pc-bar .s1,#completion .pc-key.s1{background:#FFFFFF}
 #completion p.muted,#completion .small.muted{color:rgba(255,255,255,0.86) !important}
 #completion .pc-num{color:#FFFFFF}
@@ -204,7 +206,7 @@ section.sec.band-w,section.sec.band-g{padding-top:40px;padding-bottom:40px}
             <a href="Workflow.html#summary">Start here: the short version</a>
             <a href="Workflow.html#moves">From start to submission: the 5 steps</a>
             <a href="Workflow.html#smartsheet">Updating your progress</a>
-            <a href="Workflow.html#statuses">Progress status definitions (5 total)</a>
+            <a href="Workflow.html#statuses">Progress status definitions (6 total)</a>
             <a href="Workflow.html#folders">Folder organization: saving your documents (Dropbox)</a>
             <a href="Workflow.html#reference">Prior proposals for your reference</a>
             <a href="Progress.html">Update progress: everyone's assignments</a>
@@ -220,6 +222,7 @@ section.sec.band-w,section.sec.band-g{padding-top:40px;padding-bottom:40px}
             <a href="Roxana.html">Ms. Roxana Ortiz · CNAP Accountant II, Budget Review</a>
             <a href="Tim.html">Mr. Tim McDaniel · Central Office CPA, Budget Review</a>
             <a href="Kim.html">Ms. Kim Rewinkel · Central Office, Biosketch Review plus Federal Compliance</a>
+            <a href="Morgan.html">Ms. Morgan Wills · Proposal Coordinator</a>
           </div>
         </details>
         <details class="nm"><summary><a href="PhaseS.html">Phase S Overview &amp; Comparisons</a><span class="car"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span></summary>
@@ -367,13 +370,13 @@ section.sec.band-w,section.sec.band-g{padding-top:40px;padding-bottom:40px}
       <div class="pc-panel">
       <h2 class="h2 h2-dark">Proposal Preparation: Percent Complete</h2>
       <div class="pc-head">
-        <span class="pc-num" title="Partial credit for work underway: In Progress ¼, Ready for Review ½, Applying Reviewer Feedback ¾, Finalized counts in full">{{pcPct}}%</span>
+        <span class="pc-num" title="Partial credit for work underway: In Progress and Passed to a contributor ¼, Ready for Review ½, Applying Reviewer Feedback ¾, Finalized counts in full">{{pcPct}}%</span>
         <span class="pc-of">{{pcOf}}</span>
       </div>
       <div class="pc-track">
         <span class="pc-tip {{pcTipCls}}" style="left: {{pcPct}}%;">{{pcPct}}%</span>
         <div class="pc-bar" role="img" aria-label="{{pcAria}}">
-          <i class="s5" style="width: {{w5}}%;"></i><i class="s4" style="width: {{w4}}%;"></i><i class="s3" style="width: {{w3}}%;"></i><i class="s2" style="width: {{w2}}%;"></i><i class="s1" style="width: {{w1}}%;"></i>
+          <i class="s5" style="width: {{w5}}%;"></i><i class="s4" style="width: {{w4}}%;"></i><i class="s3" style="width: {{w3}}%;"></i><i class="s6" style="width: {{w6}}%;"></i><i class="s2" style="width: {{w2}}%;"></i><i class="s1" style="width: {{w1}}%;"></i>
         </div>
       </div>
       <p class="pc-note">{{pcNote}}</p>
@@ -384,6 +387,7 @@ section.sec.band-w,section.sec.band-g{padding-top:40px;padding-bottom:40px}
             <tr class="pc-row {{rc}}" data-st="5" tabindex="{{ti}}" aria-expanded="{{x5}}"><td><span class="pc-key s5"></span>Finalized<span class="pc-car" aria-hidden="true"></span></td><td>{{k5}}</td></tr><tr class="pc-list {{h5}}"><td colspan="2">{{l5}}</td></tr>
             <tr class="pc-row {{rc}}" data-st="4" tabindex="{{ti}}" aria-expanded="{{x4}}"><td><span class="pc-key s4"></span>Applying Reviewer Feedback<span class="pc-car" aria-hidden="true"></span></td><td>{{k4}}</td></tr><tr class="pc-list {{h4}}"><td colspan="2">{{l4}}</td></tr>
             <tr class="pc-row {{rc}}" data-st="3" tabindex="{{ti}}" aria-expanded="{{x3}}"><td><span class="pc-key s3"></span>Ready for Review<span class="pc-car" aria-hidden="true"></span></td><td>{{k3}}</td></tr><tr class="pc-list {{h3}}"><td colspan="2">{{l3}}</td></tr>
+            <tr class="pc-row {{rc}}" data-st="6" tabindex="{{ti}}" aria-expanded="{{x6}}"><td><span class="pc-key s6"></span>Passed to a contributor<span class="pc-car" aria-hidden="true"></span></td><td>{{k6}}</td></tr><tr class="pc-list {{h6}}"><td colspan="2">{{l6}}</td></tr>
             <tr class="pc-row {{rc}}" data-st="2" tabindex="{{ti}}" aria-expanded="{{x2}}"><td><span class="pc-key s2"></span>In Progress<span class="pc-car" aria-hidden="true"></span></td><td>{{k2}}</td></tr><tr class="pc-list {{h2}}"><td colspan="2">{{l2}}</td></tr>
             <tr class="pc-row {{rc}}" data-st="1" tabindex="{{ti}}" aria-expanded="{{x1}}"><td><span class="pc-key s1"></span>Not Started (including rows with no status yet)<span class="pc-car" aria-hidden="true"></span></td><td>{{k1}}</td></tr><tr class="pc-list {{h1}}"><td colspan="2">{{l1}}</td></tr>
           </tbody>
@@ -863,9 +867,12 @@ class Component extends DCLogic {
   pcListVals() {
     const api = typeof window !== 'undefined' && window.CNAP_API;
     const out = { rc: api ? 'on' : '', ti: api ? '0' : '-1', pcHint: api ? 'Click a status to see its assignments. ' : '' };
-    const names = { 5: 'Finalized', 4: 'Applying Reviewer Feedback', 3: 'Ready for Review', 2: 'In Progress', 1: '' };
+    const names = { 6: 'Passed to a contributor', 5: 'Finalized', 4: 'Applying Reviewer Feedback', 3: 'Ready for Review', 2: 'In Progress', 1: '' };
+    // Each list item links to its Dropbox folder and to the responsible person's guidance page.
+    const PAGES = { Heather: 'HeatherBailey.html', Morgan: 'Morgan.html', Chip: 'Chip.html', Doina: 'Doina.html', Carl: 'CarlAde.html', Roxana: 'Roxana.html', Tim: 'Tim.html', Kim: 'Kim.html' };
+    const page = (resp) => { const n = String(resp || '').split('/')[0].replace(/\(.*?\)/g, '').trim().split(' ')[0]; return PAGES[n] || ''; };
     const esc = (t) => String(t).replace(/[&<>"]/g, (ch) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[ch]));
-    for (let n = 1; n <= 5; n++) {
+    for (let n = 1; n <= 6; n++) {
       const open = !!api && this.pcOpen === n;
       out['x' + n] = open ? 'true' : 'false';
       out['h' + n] = open ? '' : 'off';
@@ -880,7 +887,9 @@ class Component extends DCLogic {
         const rows = this.pcTasks.filter((r) => (n === 1 ? (!r.progress || r.progress === 'Not Started') : r.progress === names[n]))
           .sort((a, b) => (a.due || '9999').localeCompare(b.due || '9999'));
         body = rows.length ? rows.map((r) => '<div class="pc-li"><span>' + esc(r.assignment) + '</span><span class="d">' + (r.due ? 'Due ' + esc(fmt(r.due)) : '') + '</span><span class="m">' +
-          esc([r.responsible, r.section].filter(Boolean).join(' · ')) + '</span></div>').join('') : '<p class="pc-msg">No assignments have this status right now.</p>';
+          [page(r.responsible) ? '<a href="' + page(r.responsible) + '">' + esc(r.responsible) + '</a>' : esc(r.responsible || ''), esc(r.section || ''),
+           r.folder ? '<a href="' + esc(r.folder) + '" target="_blank" rel="noopener">Dropbox folder</a>' : ''].filter(Boolean).join(' · ') + '</span>' +
+          (n === 6 && r.passedTo ? '<span class="pass">Passed to ' + esc(r.passedTo) + (r.note ? ': \u201c' + esc(r.note) + '\u201d' : '') + '</span>' : '') + '</div>').join('') : '<p class="pc-msg">No assignments have this status right now.</p>';
       }
       out['l' + n] = body;
     }
@@ -980,19 +989,19 @@ class Component extends DCLogic {
     const C = P.counts || {};
     const cnt = (k) => Number(C[k] || 0);
     const tot = Number(P.total) || 0;
-    const k5 = cnt('Finalized'), k4 = cnt('Applying Reviewer Feedback'), k3 = cnt('Ready for Review'), k2 = cnt('In Progress');
-    const k1 = Math.max(0, tot - k5 - k4 - k3 - k2);
+    const k5 = cnt('Finalized'), k4 = cnt('Applying Reviewer Feedback'), k3 = cnt('Ready for Review'), k6 = cnt('Passed to a contributor'), k2 = cnt('In Progress');
+    const k1 = Math.max(0, tot - k5 - k4 - k3 - k6 - k2);
     const pw = (n) => (tot ? ((n / tot) * 100).toFixed(2) : '0');
     // Weighted progress: each status earns partial credit toward "complete".
-    const pcPct = tot ? Math.floor(((k2 * 0.25 + k3 * 0.5 + k4 * 0.75 + k5) / tot) * 100) : 0;
+    const pcPct = tot ? Math.floor((((k2 + k6) * 0.25 + k3 * 0.5 + k4 * 0.75 + k5) / tot) * 100) : 0;
     return {
       pcPct: String(pcPct), pcDone: String(k5), pcTotal: String(tot), pcUpdated: P.updatedLabel || '',
       pcTipCls: pcPct < 4 ? 'start' : (pcPct > 96 ? 'end' : ''),
       pcOf: k5 ? k5 + ' of ' + tot + ' assignments finalized, and every status update moves this bar.' : 'Every status update moves this bar. Nice start, team!',
       pcNote: pcPct >= 100 ? 'All assignments finalized. Thank you, team!' : (pcPct >= 75 ? '75% reached, the finish line is in sight! Next stop: 100% by Friday, January 15.' : (pcPct >= 50 ? 'Halfway there, great work! Next stop: 75% by Monday, January 11.' : (pcPct >= 25 ? '25% reached, great work! Next stop: 50% by Thursday, December 17.' : 'Next stop: 25% by Friday, December 4. Every draft you start gets us closer!'))),
       pcAria: pcPct + '% complete; ' + k5 + ' of ' + tot + ' assignments finalized',
-      w1: pw(k1), w2: pw(k2), w3: pw(k3), w4: pw(k4), w5: pw(k5),
-      k1: String(k1), k2: String(k2), k3: String(k3), k4: String(k4), k5: String(k5),
+      w1: pw(k1), w2: pw(k2), w3: pw(k3), w4: pw(k4), w5: pw(k5), w6: pw(k6),
+      k1: String(k1), k2: String(k2), k3: String(k3), k4: String(k4), k5: String(k5), k6: String(k6),
       ...this.pcListVals(),
       f1: fill[0], f2: fill[1], f3: fill[2], f4: fill[3], f5: fill[4], f6: fill[5],
       n1: node[0], n2: node[1], n3: node[2], n4: node[3], n5: node[4], n6: node[5],
