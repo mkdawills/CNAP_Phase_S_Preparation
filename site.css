@@ -441,3 +441,6 @@ details.sx.sx-key:not([open]) > summary:hover{background:#ECE4F7}
 details.sx.sx-key[open] > summary{background:transparent;border-color:transparent;padding:0}
 /* Room for the K-State Strategic Plan menu item: slightly tighter menu spacing */
 @media (min-width:761px){.topbar .nm summary .car{width:13px !important}.topbar .nm summary a{padding-left:4px !important}.topbar .nav > a.navlink{padding-left:5px;padding-right:5px}}
+/* Assignment rows: when space is tight, the labels drop below the title instead of crushing it */
+.acc summary > .meta{max-width:480px}
+@media (max-width:1180px){.acc summary > .meta{grid-column:2 / -1;max-width:none;justify-content:flex-start}}

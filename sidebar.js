@@ -116,9 +116,10 @@
     if (!tb) return;
     const root = document.documentElement.style, q = tb.querySelector('.quick');
     root.setProperty('--tb-h', tb.getBoundingClientRect().bottom + 'px');
-    if (q) { const r = q.getBoundingClientRect(); root.setProperty('--q-mid', (r.top + r.height / 2) + 'px'); }
+    if (q) { const r = q.getBoundingClientRect(); root.setProperty('--q-mid', Math.max(32, r.top + r.height / 2) + 'px'); }
   };
   window.addEventListener('resize', syncHeight);
+  window.addEventListener('scroll', syncHeight, { passive: true });
   const start = () => {
     const nav = document.querySelector('.topbar .nav');
     if (!nav) return setTimeout(start, 50);
