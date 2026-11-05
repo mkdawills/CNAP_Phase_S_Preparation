@@ -82,12 +82,13 @@ UID:cnap-phase-s-carlade-your-biosketch-review-draft-20261217@cnap-hub
 DTSTAMP:20261016T151957Z
 DTSTART;VALUE=DATE:20261217
 DTEND;VALUE=DATE:20261218
-SUMMARY:CNAP Phase S: Your biosketch: review draft
-DESCRIPTION:The PDF from SciENcv\, in WORKING DRAFTS with Progress set to R
- eady for Review in your Smartsheet row. Morgan checks the formatting.\n\nI
- nternal due date for the CNAP Phase S proposal.\nSmartsheet: https://app.s
- martsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21\nYour guidan
- ce page: https://mkdawills.github.io/CNAP_Phase_S_Preparation/CarlAde.html
+SUMMARY:CNAP Phase S: Your biosketch (SRP Core Director): review draft
+DESCRIPTION:The PDF from SciENcv\, in WORKING DRAFTS › SRP Core with Prog
+ ress set to Ready for Review in your Smartsheet row. Morgan checks the for
+ matting.\n\nInternal due date for the CNAP Phase S proposal.\nSmartsheet: 
+ https://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21
+ \nYour guidance page: https://mkdawills.github.io/CNAP_Phase_S_Preparation
+ /CarlAde.html
 URL:https://mkdawills.github.io/CNAP_Phase_S_Preparation/CarlAde.html
 TRANSP:TRANSPARENT
 END:VEVENT
@@ -172,7 +173,7 @@ UID:cnap-phase-s-carlade-your-biosketch-final-20270113@cnap-hub
 DTSTAMP:20261016T151957Z
 DTSTART;VALUE=DATE:20270113
 DTEND;VALUE=DATE:20270114
-SUMMARY:CNAP Phase S: Your biosketch: final
+SUMMARY:CNAP Phase S: Your biosketch (SRP Core Director): final
 DESCRIPTION:Final version with Kim's fixes plus anything new since Dec 17.\
  n\nInternal due date for the CNAP Phase S proposal.\nSmartsheet: https://a
  pp.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21\nYour gu

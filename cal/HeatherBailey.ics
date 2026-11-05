@@ -358,23 +358,6 @@ URL:https://mkdawills.github.io/CNAP_Phase_S_Preparation/HeatherBailey.html
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:cnap-phase-s-heatherbailey-your-biosketch-review-draft-the-same-one-as-
- in-you-20261217@cnap-hub
-DTSTAMP:20261016T151957Z
-DTSTART;VALUE=DATE:20261217
-DTEND;VALUE=DATE:20261218
-SUMMARY:CNAP Phase S: Your biosketch: review draft (the same one as in your
-  Center Director packet)
-DESCRIPTION:Your one biosketch covers both your Center Director (PD/PI) rol
- e and this CN Core role. Upload it once\, in the Center (Overall).\n\nInte
- rnal due date for the CNAP Phase S proposal.\nSmartsheet: https://app.smar
- tsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21\nYour guidance 
- page: https://mkdawills.github.io/CNAP_Phase_S_Preparation/HeatherBailey.h
- tml
-URL:https://mkdawills.github.io/CNAP_Phase_S_Preparation/HeatherBailey.html
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
 UID:cnap-phase-s-heatherbailey-bibliography-references-cited-center-admin-c
  ore-sr-20270106@cnap-hub
 DTSTAMP:20261016T151957Z
@@ -513,23 +496,6 @@ URL:https://mkdawills.github.io/CNAP_Phase_S_Preparation/HeatherBailey.html
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:cnap-phase-s-heatherbailey-your-biosketch-final-the-same-one-as-in-your
- -cente-20270113@cnap-hub
-DTSTAMP:20261016T151957Z
-DTSTART;VALUE=DATE:20270113
-DTEND;VALUE=DATE:20270114
-SUMMARY:CNAP Phase S: Your biosketch: final (the same one as in your Center
-  Director packet)
-DESCRIPTION:Your one biosketch covers both your Center Director (PD/PI) rol
- e and this CN Core role. Upload it once\, in the Center (Overall).\n\nInte
- rnal due date for the CNAP Phase S proposal.\nSmartsheet: https://app.smar
- tsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21\nYour guidance 
- page: https://mkdawills.github.io/CNAP_Phase_S_Preparation/HeatherBailey.h
- tml
-URL:https://mkdawills.github.io/CNAP_Phase_S_Preparation/HeatherBailey.html
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
 UID:cnap-phase-s-heatherbailey-revised-final-budget-budget-justification-ad
  min-co-20270115@cnap-hub
 DTSTAMP:20261016T151957Z
@@ -562,5 +528,4 @@ DESCRIPTION:Morning. Roxana checks it and sends the final budgets to Tim th
 URL:https://mkdawills.github.io/CNAP_Phase_S_Preparation/HeatherBailey.html
 TRANSP:TRANSPARENT
 END:VEVENT
-
 END:VCALENDAR
