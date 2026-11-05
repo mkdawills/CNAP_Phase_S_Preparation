@@ -5,7 +5,8 @@
 // POST {"action":"tasks"}                        every assignment row
 // POST {"action":"set","rowId":"…","progress":"…"}   sets one row's Progress
 // POST {"action":"set","rowId":"…","progress":"Passed to a contributor","passedTo":"Name","note":"…"}
-//      passes it to a teammate: also fills "Passed to" (Smartsheet emails them) and "Handoff note"
+//      passes it to a teammate: also fills "Passed to", "Handoff note", and "Last passed" (a time stamp).
+//      Smartsheet emails the person whenever "Last passed" changes, so passing it again sends a new email.
 // The allowed statuses are read from the Progress column's dropdown, so adding one in Smartsheet needs no code change.
 //
 // Script Properties (Project Settings > Script Properties): SMARTSHEET_TOKEN
@@ -13,17 +14,15 @@
 
 var SHEET_ID = '4867656760119172';
 var PASSED = 'Passed to a contributor';
-// People an assignment can be passed to. Add an email when you have it; without one the name
-// is still saved, but Smartsheet can't email that person.
+// People an assignment can be passed to (writers and Roxana; Tim and Kim review through the formal
+// Central Office process instead). Each needs an email so Smartsheet can tell them.
 var CONTACTS = {
   'Morgan Wills': 'mkwills@ksu.edu',
   'Heather Bailey': 'hbailey@ksu.edu',
   'Chip Pickens': 'pickens@ksu.edu',
   'Doina Caragea': 'dcaragea@ksu.edu',
   'Carl Ade': 'cade@ksu.edu',
-  'Roxana Ortiz': 'roxana@ksu.edu',
-  'Tim McDaniel': '',
-  'Kim Rewinkel': ''
+  'Roxana Ortiz': 'roxana@ksu.edu'
 };
 var COLS = {
   progress: 'Progress',
@@ -34,6 +33,7 @@ var COLS = {
   due: 'Internal Due Date',
   passedTo: 'Passed to',
   note: 'Handoff note',
+  lastPassed: 'Last passed',
   folder: '1. Working Draft Folder (save working draft here)'
 };
 
@@ -149,6 +149,8 @@ function setProgress_(rowId, value, passedTo, note) {
       ? '"objectValue":' + JSON.stringify({ objectType: 'CONTACT', name: passedTo, email: email })
       : '"value":' + JSON.stringify(passedTo) + ',"strict":false'));
     if (ids.note) cells.push(cell(ids.note, '"value":' + JSON.stringify(String(note || '').trim().slice(0, 1000))));
+    if (ids.lastPassed) cells.push(cell(ids.lastPassed, '"value":' + JSON.stringify(
+      Utilities.formatDate(new Date(), 'America/Chicago', 'EEE, MMM d, yyyy, h:mm:ss a') + ' CT')));
   } else if (ids.passedTo) {
     // Any other status ends the handoff; the last note stays for reference.
     cells.push(cell(ids.passedTo, '"value":""'));

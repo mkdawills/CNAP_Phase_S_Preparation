@@ -84,7 +84,7 @@
   const getTasks = () => (tasksPromise = tasksPromise || call({ action: 'tasks' }).then((j) => {
     data = j; byId = {};
     j.rows.forEach((r) => { byId[r.id] = r; });
-    if (!j.people) j.people = ['Morgan Wills', 'Heather Bailey', 'Chip Pickens', 'Doina Caragea', 'Carl Ade', 'Roxana Ortiz', 'Tim McDaniel', 'Kim Rewinkel'];
+    if (!j.people) j.people = ['Morgan Wills', 'Heather Bailey', 'Chip Pickens', 'Doina Caragea', 'Carl Ade', 'Roxana Ortiz'];
     return j;
   }));
   const redraw = () => views.forEach((v) => v());
