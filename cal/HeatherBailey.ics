@@ -5,32 +5,34 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:CNAP Phase S due dates
 BEGIN:VEVENT
-UID:cnap-phase-s-heatherbailey-center-specific-aims-draft-goes-to-the-core-direct-20261106@cnap-hub
+UID:cnap-phase-s-heatherbailey-center-specific-aims-draft-goes-to-the-core-
+ direct-20261106@cnap-hub
 DTSTAMP:20261016T151957Z
 DTSTART;VALUE=DATE:20261106
 DTEND;VALUE=DATE:20261107
-SUMMARY:CNAP Phase S: Center Specific Aims (draft goes to the Core Direct
- ors)
-DESCRIPTION:One page of aims for the Center as a whole. The Core Director
- s write their own Aims toward it. Save: WORKING DRAFTS › Center.\n\nInt
- ernal due date for the CNAP Phase S proposal.\nSmartsheet: https://app.sm
- artsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21\nYour guidan
- ce page: https://mkdawills.github.io/CNAP_Phase_S_Preparation/HeatherBail
- ey.html
+SUMMARY:CNAP Phase S: Center Specific Aims (draft goes to the Core Director
+ s)
+DESCRIPTION:One page of aims for the Center as a whole. The Core Directors 
+ write their own Aims toward it. Save: WORKING DRAFTS › Center.\n\nIntern
+ al due date for the CNAP Phase S proposal.\nSmartsheet: https://app.smarts
+ heet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21\nYour guidance pa
+ ge: https://mkdawills.github.io/CNAP_Phase_S_Preparation/HeatherBailey.htm
+ l
 URL:https://mkdawills.github.io/CNAP_Phase_S_Preparation/HeatherBailey.html
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:cnap-phase-s-heatherbailey-specific-aims-admin-core-srp-core--20261113@cnap-hub
+UID:cnap-phase-s-heatherbailey-specific-aims-admin-core-srp-core--20261113@
+ cnap-hub
 DTSTAMP:20261016T151957Z
 DTSTART;VALUE=DATE:20261113
 DTEND;VALUE=DATE:20261114
-SUMMARY:CNAP Phase S: Specific Aims (Admin Core\, SRP Core)
-DESCRIPTION:One page of aims for each component. Save: WORKING DRAFTS ›
-  Admin Core / › SRP Core.\n\nInternal due date for the CNAP Phase S pro
- posal.\nSmartsheet: https://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJ
- G6rGwWh8RR265M7GRwx21\nYour guidance page: https://mkdawills.github.io/CN
- AP_Phase_S_Preparation/HeatherBailey.html
+SUMMARY:CNAP Phase S: Specific Aims (Admin Core)
+DESCRIPTION:One page of aims for each component. Save: WORKING DRAFTS › A
+ dmin Core.\n\nInternal due date for the CNAP Phase S proposal.\nSmartsheet
+ : https://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx
+ 21\nYour guidance page: https://mkdawills.github.io/CNAP_Phase_S_Preparati
+ on/HeatherBailey.html
 URL:https://mkdawills.github.io/CNAP_Phase_S_Preparation/HeatherBailey.html
 TRANSP:TRANSPARENT
 END:VEVENT
@@ -40,74 +42,78 @@ DTSTAMP:20261016T151957Z
 DTSTART;VALUE=DATE:20261113
 DTEND;VALUE=DATE:20261114
 SUMMARY:CNAP Phase S: CN Core Specific Aims
-DESCRIPTION:One page stating what the CN Core will do over the five years
- .\n\nInternal due date for the CNAP Phase S proposal.\nSmartsheet: https:
- //app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21\nYou
- r guidance page: https://mkdawills.github.io/CNAP_Phase_S_Preparation/Hea
- therBailey.html
+DESCRIPTION:One page stating what the CN Core will do over the five years.\
+ n\nInternal due date for the CNAP Phase S proposal.\nSmartsheet: https://a
+ pp.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21\nYour gu
+ idance page: https://mkdawills.github.io/CNAP_Phase_S_Preparation/HeatherB
+ ailey.html
 URL:https://mkdawills.github.io/CNAP_Phase_S_Preparation/HeatherBailey.html
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:cnap-phase-s-heatherbailey-cn-core-input-to-the-center-s-o-m-plan-20261118@cnap-hub
+UID:cnap-phase-s-heatherbailey-cn-core-input-to-the-center-s-o-m-plan-20261
+ 118@cnap-hub
 DTSTAMP:20261016T151957Z
 DTSTART;VALUE=DATE:20261118
 DTEND;VALUE=DATE:20261119
 SUMMARY:CNAP Phase S: CN Core input to the Center's O&M Plan
-DESCRIPTION:A short write-up of how your core fits with K-State's existin
- g resources. You and Morgan fold it into the final Organization and Manag
- ement (O&M) Plan\, Section B of the Center Research Strategy (final due M
- on\, Nov 30).\n\nInternal due date for the CNAP Phase S proposal.\nSmarts
- heet: https://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M
- 7GRwx21\nYour guidance page: https://mkdawills.github.io/CNAP_Phase_S_Pre
- paration/HeatherBailey.html
+DESCRIPTION:A short write-up of how your core fits with K-State's existing 
+ resources. You and Morgan fold it into the final Organization and Manageme
+ nt (O&M) Plan\, Section B of the Center Research Strategy (final due Mon\,
+  Nov 30).\n\nInternal due date for the CNAP Phase S proposal.\nSmartsheet:
+  https://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx2
+ 1\nYour guidance page: https://mkdawills.github.io/CNAP_Phase_S_Preparatio
+ n/HeatherBailey.html
 URL:https://mkdawills.github.io/CNAP_Phase_S_Preparation/HeatherBailey.html
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:cnap-phase-s-heatherbailey-center-research-strategy-a-justification-for-the-c-20261123@cnap-hub
+UID:cnap-phase-s-heatherbailey-center-research-strategy-a-justification-for
+ -the-c-20261123@cnap-hub
 DTSTAMP:20261016T151957Z
 DTSTART;VALUE=DATE:20261123
 DTEND;VALUE=DATE:20261124
-SUMMARY:CNAP Phase S: Center Research Strategy A: Justification for the C
- enter
-DESCRIPTION:The Center's main narrative. Five sections share 12 pages\; e
- ach has its own due date. A: Mon\, Nov 23 · B: Mon\, Nov 30 · C: Wed\, 
- Dec 2 · D: Thu\, Dec 3 · E: Fri\, Dec 4. Save: WORKING DRAFTS › Cente
- r.\n\nInternal due date for the CNAP Phase S proposal.\nSmartsheet: https
- ://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21\nYo
- ur guidance page: https://mkdawills.github.io/CNAP_Phase_S_Preparation/He
- atherBailey.html
+SUMMARY:CNAP Phase S: Center Research Strategy A: Justification for the Cen
+ ter
+DESCRIPTION:The Center's main narrative. Five sections share 12 pages\; eac
+ h has its own due date. A: Mon\, Nov 23 · B: Mon\, Nov 30 · C: Wed\, Dec
+  2 · D: Thu\, Dec 3 · E: Fri\, Dec 4. Save: WORKING DRAFTS › Center.\n
+ \nInternal due date for the CNAP Phase S proposal.\nSmartsheet: https://ap
+ p.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21\nYour gui
+ dance page: https://mkdawills.github.io/CNAP_Phase_S_Preparation/HeatherBa
+ iley.html
 URL:https://mkdawills.github.io/CNAP_Phase_S_Preparation/HeatherBailey.html
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:cnap-phase-s-heatherbailey-center-research-strategy-b-o-m-plan-final--20261130@cnap-hub
+UID:cnap-phase-s-heatherbailey-center-research-strategy-b-o-m-plan-final--2
+ 0261130@cnap-hub
 DTSTAMP:20261016T151957Z
 DTSTART;VALUE=DATE:20261130
 DTEND;VALUE=DATE:20261201
 SUMMARY:CNAP Phase S: Center Research Strategy B: O&M Plan (final)
-DESCRIPTION:The Center's main narrative. Five sections share 12 pages\; e
- ach has its own due date. A: Mon\, Nov 23 · B: Mon\, Nov 30 · C: Wed\, 
- Dec 2 · D: Thu\, Dec 3 · E: Fri\, Dec 4. Save: WORKING DRAFTS › Cente
- r.\n\nInternal due date for the CNAP Phase S proposal.\nSmartsheet: https
- ://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21\nYo
- ur guidance page: https://mkdawills.github.io/CNAP_Phase_S_Preparation/He
- atherBailey.html
+DESCRIPTION:The Center's main narrative. Five sections share 12 pages\; eac
+ h has its own due date. A: Mon\, Nov 23 · B: Mon\, Nov 30 · C: Wed\, Dec
+  2 · D: Thu\, Dec 3 · E: Fri\, Dec 4. Save: WORKING DRAFTS › Center.\n
+ \nInternal due date for the CNAP Phase S proposal.\nSmartsheet: https://ap
+ p.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21\nYour gui
+ dance page: https://mkdawills.github.io/CNAP_Phase_S_Preparation/HeatherBa
+ iley.html
 URL:https://mkdawills.github.io/CNAP_Phase_S_Preparation/HeatherBailey.html
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:cnap-phase-s-heatherbailey-research-strategy-admin-core-srp-core--20261130@cnap-hub
+UID:cnap-phase-s-heatherbailey-research-strategy-admin-core-srp-core--20261
+ 130@cnap-hub
 DTSTAMP:20261016T151957Z
 DTSTART;VALUE=DATE:20261130
 DTEND;VALUE=DATE:20261201
-SUMMARY:CNAP Phase S: Research Strategy (Admin Core\, SRP Core)
-DESCRIPTION:How the Administrative Core will run the Center. Save: WORKIN
- G DRAFTS › Admin Core.\n\nInternal due date for the CNAP Phase S propos
- al.\nSmartsheet: https://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6r
- GwWh8RR265M7GRwx21\nYour guidance page: https://mkdawills.github.io/CNAP_
- Phase_S_Preparation/HeatherBailey.html
+SUMMARY:CNAP Phase S: Research Strategy (Admin Core)
+DESCRIPTION:How the Administrative Core will run the Center. Save: WORKING 
+ DRAFTS › Admin Core.\n\nInternal due date for the CNAP Phase S proposal.
+ \nSmartsheet: https://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh
+ 8RR265M7GRwx21\nYour guidance page: https://mkdawills.github.io/CNAP_Phase
+ _S_Preparation/HeatherBailey.html
 URL:https://mkdawills.github.io/CNAP_Phase_S_Preparation/HeatherBailey.html
 TRANSP:TRANSPARENT
 END:VEVENT
@@ -117,120 +123,126 @@ DTSTAMP:20261016T151957Z
 DTSTART;VALUE=DATE:20261130
 DTEND;VALUE=DATE:20261201
 SUMMARY:CNAP Phase S: CN Core Research Strategy
-DESCRIPTION:The main description of the CN Core: what it provides\, who u
- ses it\, and how it will be sustained.\n\nInternal due date for the CNAP 
- Phase S proposal.\nSmartsheet: https://app.smartsheet.com/sheets/R9cphxw5
- McqvH7RWRVJG6rGwWh8RR265M7GRwx21\nYour guidance page: https://mkdawills.g
- ithub.io/CNAP_Phase_S_Preparation/HeatherBailey.html
+DESCRIPTION:The main description of the CN Core: what it provides\, who use
+ s it\, and how it will be sustained.\n\nInternal due date for the CNAP Pha
+ se S proposal.\nSmartsheet: https://app.smartsheet.com/sheets/R9cphxw5Mcqv
+ H7RWRVJG6rGwWh8RR265M7GRwx21\nYour guidance page: https://mkdawills.github
+ .io/CNAP_Phase_S_Preparation/HeatherBailey.html
 URL:https://mkdawills.github.io/CNAP_Phase_S_Preparation/HeatherBailey.html
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:cnap-phase-s-heatherbailey-center-research-strategy-c-sustainability-plan-20261202@cnap-hub
+UID:cnap-phase-s-heatherbailey-center-research-strategy-c-sustainability-pl
+ an-20261202@cnap-hub
 DTSTAMP:20261016T151957Z
 DTSTART;VALUE=DATE:20261202
 DTEND;VALUE=DATE:20261203
 SUMMARY:CNAP Phase S: Center Research Strategy C: Sustainability Plan
-DESCRIPTION:The Center's main narrative. Five sections share 12 pages\; e
- ach has its own due date. A: Mon\, Nov 23 · B: Mon\, Nov 30 · C: Wed\, 
- Dec 2 · D: Thu\, Dec 3 · E: Fri\, Dec 4. Save: WORKING DRAFTS › Cente
- r.\n\nInternal due date for the CNAP Phase S proposal.\nSmartsheet: https
- ://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21\nYo
- ur guidance page: https://mkdawills.github.io/CNAP_Phase_S_Preparation/He
- atherBailey.html
+DESCRIPTION:The Center's main narrative. Five sections share 12 pages\; eac
+ h has its own due date. A: Mon\, Nov 23 · B: Mon\, Nov 30 · C: Wed\, Dec
+  2 · D: Thu\, Dec 3 · E: Fri\, Dec 4. Save: WORKING DRAFTS › Center.\n
+ \nInternal due date for the CNAP Phase S proposal.\nSmartsheet: https://ap
+ p.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21\nYour gui
+ dance page: https://mkdawills.github.io/CNAP_Phase_S_Preparation/HeatherBa
+ iley.html
 URL:https://mkdawills.github.io/CNAP_Phase_S_Preparation/HeatherBailey.html
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:cnap-phase-s-heatherbailey-center-research-strategy-d-plan-for-an-advisory-co-20261203@cnap-hub
+UID:cnap-phase-s-heatherbailey-center-research-strategy-d-plan-for-an-advis
+ ory-co-20261203@cnap-hub
 DTSTAMP:20261016T151957Z
 DTSTART;VALUE=DATE:20261203
 DTEND;VALUE=DATE:20261204
-SUMMARY:CNAP Phase S: Center Research Strategy D: Plan for an Advisory Co
- mmittee
-DESCRIPTION:The Center's main narrative. Five sections share 12 pages\; e
- ach has its own due date. A: Mon\, Nov 23 · B: Mon\, Nov 30 · C: Wed\, 
- Dec 2 · D: Thu\, Dec 3 · E: Fri\, Dec 4. Save: WORKING DRAFTS › Cente
- r.\n\nInternal due date for the CNAP Phase S proposal.\nSmartsheet: https
- ://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21\nYo
- ur guidance page: https://mkdawills.github.io/CNAP_Phase_S_Preparation/He
- atherBailey.html
+SUMMARY:CNAP Phase S: Center Research Strategy D: Plan for an Advisory Comm
+ ittee
+DESCRIPTION:The Center's main narrative. Five sections share 12 pages\; eac
+ h has its own due date. A: Mon\, Nov 23 · B: Mon\, Nov 30 · C: Wed\, Dec
+  2 · D: Thu\, Dec 3 · E: Fri\, Dec 4. Save: WORKING DRAFTS › Center.\n
+ \nInternal due date for the CNAP Phase S proposal.\nSmartsheet: https://ap
+ p.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21\nYour gui
+ dance page: https://mkdawills.github.io/CNAP_Phase_S_Preparation/HeatherBa
+ iley.html
 URL:https://mkdawills.github.io/CNAP_Phase_S_Preparation/HeatherBailey.html
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:cnap-phase-s-heatherbailey-center-research-strategy-e-career-development-plan-20261204@cnap-hub
+UID:cnap-phase-s-heatherbailey-center-research-strategy-e-career-developmen
+ t-plan-20261204@cnap-hub
 DTSTAMP:20261016T151957Z
 DTSTART;VALUE=DATE:20261204
 DTEND;VALUE=DATE:20261205
 SUMMARY:CNAP Phase S: Center Research Strategy E: Career Development Plan
-DESCRIPTION:The Center's main narrative. Five sections share 12 pages\; e
- ach has its own due date. A: Mon\, Nov 23 · B: Mon\, Nov 30 · C: Wed\, 
- Dec 2 · D: Thu\, Dec 3 · E: Fri\, Dec 4. Save: WORKING DRAFTS › Cente
- r.\n\nInternal due date for the CNAP Phase S proposal.\nSmartsheet: https
- ://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21\nYo
- ur guidance page: https://mkdawills.github.io/CNAP_Phase_S_Preparation/He
- atherBailey.html
+DESCRIPTION:The Center's main narrative. Five sections share 12 pages\; eac
+ h has its own due date. A: Mon\, Nov 23 · B: Mon\, Nov 30 · C: Wed\, Dec
+  2 · D: Thu\, Dec 3 · E: Fri\, Dec 4. Save: WORKING DRAFTS › Center.\n
+ \nInternal due date for the CNAP Phase S proposal.\nSmartsheet: https://ap
+ p.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21\nYour gui
+ dance page: https://mkdawills.github.io/CNAP_Phase_S_Preparation/HeatherBa
+ iley.html
 URL:https://mkdawills.github.io/CNAP_Phase_S_Preparation/HeatherBailey.html
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:cnap-phase-s-heatherbailey-budget-budget-justification-admin-core-srp-core--20261204@cnap-hub
+UID:cnap-phase-s-heatherbailey-budget-budget-justification-admin-core-srp-c
+ ore--20261204@cnap-hub
 DTSTAMP:20261016T151957Z
 DTSTART;VALUE=DATE:20261204
 DTEND;VALUE=DATE:20261205
-SUMMARY:CNAP Phase S: Budget + Budget Justification (Admin Core\, SRP Cor
- e)
-DESCRIPTION:The Admin Core's five-year budget (entered as forms) and the 
- written justification for each cost. Revised (final) version Fri\, Jan 15
- . Save: WORKING DRAFTS › Admin Core.\n\nInternal due date for the CNAP 
- Phase S proposal.\nSmartsheet: https://app.smartsheet.com/sheets/R9cphxw5
- McqvH7RWRVJG6rGwWh8RR265M7GRwx21\nYour guidance page: https://mkdawills.g
- ithub.io/CNAP_Phase_S_Preparation/HeatherBailey.html
+SUMMARY:CNAP Phase S: Budget + Budget Justification (Admin Core)
+DESCRIPTION:The Admin Core's five-year budget (entered as forms) and the wr
+ itten justification for each cost. Revised (final) version Fri\, Jan 15. S
+ ave: WORKING DRAFTS › Admin Core.\n\nInternal due date for the CNAP Phas
+ e S proposal.\nSmartsheet: https://app.smartsheet.com/sheets/R9cphxw5McqvH
+ 7RWRVJG6rGwWh8RR265M7GRwx21\nYour guidance page: https://mkdawills.github.
+ io/CNAP_Phase_S_Preparation/HeatherBailey.html
 URL:https://mkdawills.github.io/CNAP_Phase_S_Preparation/HeatherBailey.html
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:cnap-phase-s-heatherbailey-cn-core-budget-budget-justification-20261204@cnap-hub
+UID:cnap-phase-s-heatherbailey-cn-core-budget-budget-justification-20261204
+ @cnap-hub
 DTSTAMP:20261016T151957Z
 DTSTART;VALUE=DATE:20261204
 DTEND;VALUE=DATE:20261205
 SUMMARY:CNAP Phase S: CN Core Budget + Budget Justification
-DESCRIPTION:The CN Core's five-year budget (entered as forms) and the wri
- tten justification for each cost. Revised (final) version Fri\, Jan 15.\n
- \nInternal due date for the CNAP Phase S proposal.\nSmartsheet: https://a
- pp.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21\nYour g
- uidance page: https://mkdawills.github.io/CNAP_Phase_S_Preparation/Heathe
- rBailey.html
+DESCRIPTION:The CN Core's five-year budget (entered as forms) and the writt
+ en justification for each cost. Revised (final) version Fri\, Jan 15.\n\nI
+ nternal due date for the CNAP Phase S proposal.\nSmartsheet: https://app.s
+ martsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21\nYour guidan
+ ce page: https://mkdawills.github.io/CNAP_Phase_S_Preparation/HeatherBaile
+ y.html
 URL:https://mkdawills.github.io/CNAP_Phase_S_Preparation/HeatherBailey.html
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:cnap-phase-s-heatherbailey-institutional-letter-of-support-20261207@cnap-hub
+UID:cnap-phase-s-heatherbailey-institutional-letter-of-support-20261207@cna
+ p-hub
 DTSTAMP:20261016T151957Z
 DTSTART;VALUE=DATE:20261207
 DTEND;VALUE=DATE:20261208
 SUMMARY:CNAP Phase S: Institutional Letter of Support
-DESCRIPTION:The single letter from a senior K-State official. It is the o
- nly letter of support allowed anywhere in the application. Save: WORKING 
- DRAFTS › Center.\n\nInternal due date for the CNAP Phase S proposal.\nS
- martsheet: https://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8R
- R265M7GRwx21\nYour guidance page: https://mkdawills.github.io/CNAP_Phase_
- S_Preparation/HeatherBailey.html
+DESCRIPTION:The single letter from a senior K-State official. It is the onl
+ y letter of support allowed anywhere in the application. Save: WORKING DRA
+ FTS › Center.\n\nInternal due date for the CNAP Phase S proposal.\nSmart
+ sheet: https://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M
+ 7GRwx21\nYour guidance page: https://mkdawills.github.io/CNAP_Phase_S_Prep
+ aration/HeatherBailey.html
 URL:https://mkdawills.github.io/CNAP_Phase_S_Preparation/HeatherBailey.html
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:cnap-phase-s-heatherbailey-equipment-center-admin-core-srp-core--20261214@cnap-hub
+UID:cnap-phase-s-heatherbailey-equipment-center-admin-core-srp-core--202612
+ 14@cnap-hub
 DTSTAMP:20261016T151957Z
 DTSTART;VALUE=DATE:20261214
 DTEND;VALUE=DATE:20261215
-SUMMARY:CNAP Phase S: Equipment (Center\, Admin Core\, SRP Core)
-DESCRIPTION:A list of the major equipment already available for this work
- . Save in each component's WORKING DRAFTS folder.\n\nInternal due date fo
- r the CNAP Phase S proposal.\nSmartsheet: https://app.smartsheet.com/shee
- ts/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21\nYour guidance page: https://
- mkdawills.github.io/CNAP_Phase_S_Preparation/HeatherBailey.html
+SUMMARY:CNAP Phase S: Equipment (Center\, Admin Core)
+DESCRIPTION:A list of the major equipment already available for this work. 
+ Save in each component's WORKING DRAFTS folder.\n\nInternal due date for t
+ he CNAP Phase S proposal.\nSmartsheet: https://app.smartsheet.com/sheets/R
+ 9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21\nYour guidance page: https://mkdaw
+ ills.github.io/CNAP_Phase_S_Preparation/HeatherBailey.html
 URL:https://mkdawills.github.io/CNAP_Phase_S_Preparation/HeatherBailey.html
 TRANSP:TRANSPARENT
 END:VEVENT
@@ -240,225 +252,186 @@ DTSTAMP:20261016T151957Z
 DTSTART;VALUE=DATE:20261214
 DTEND;VALUE=DATE:20261215
 SUMMARY:CNAP Phase S: CN Core Equipment
-DESCRIPTION:Equipment Mon\, Dec 14 · Facilities & Other Resources Wed\, 
- Dec 16 · Resource Sharing Plan Thu\, Dec 17. No page limits.\n\nInternal
-  due date for the CNAP Phase S proposal.\nSmartsheet: https://app.smartsh
- eet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21\nYour guidance pa
- ge: https://mkdawills.github.io/CNAP_Phase_S_Preparation/HeatherBailey.ht
- ml
+DESCRIPTION:Equipment Mon\, Dec 14 · Facilities & Other Resources Wed\, De
+ c 16 · Resource Sharing Plan Thu\, Dec 17. No page limits.\n\nInternal du
+ e date for the CNAP Phase S proposal.\nSmartsheet: https://app.smartsheet.
+ com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21\nYour guidance page: h
+ ttps://mkdawills.github.io/CNAP_Phase_S_Preparation/HeatherBailey.html
 URL:https://mkdawills.github.io/CNAP_Phase_S_Preparation/HeatherBailey.html
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:cnap-phase-s-heatherbailey-facilities-other-resources-center-admin-core-srp-c-20261216@cnap-hub
+UID:cnap-phase-s-heatherbailey-facilities-other-resources-center-admin-core
+ -srp-c-20261216@cnap-hub
 DTSTAMP:20261016T151957Z
 DTSTART;VALUE=DATE:20261216
 DTEND;VALUE=DATE:20261217
-SUMMARY:CNAP Phase S: Facilities & Other Resources (Center\, Admin Core\,
-  SRP Core)
-DESCRIPTION:A description of the space\, resources\, and institutional su
- pport behind this work. Save in each component's WORKING DRAFTS folder.\n
- \nInternal due date for the CNAP Phase S proposal.\nSmartsheet: https://a
- pp.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21\nYour g
- uidance page: https://mkdawills.github.io/CNAP_Phase_S_Preparation/Heathe
- rBailey.html
+SUMMARY:CNAP Phase S: Facilities & Other Resources (Center\, Admin Core)
+DESCRIPTION:A description of the space\, resources\, and institutional supp
+ ort behind this work. Save in each component's WORKING DRAFTS folder.\n\nI
+ nternal due date for the CNAP Phase S proposal.\nSmartsheet: https://app.s
+ martsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21\nYour guidan
+ ce page: https://mkdawills.github.io/CNAP_Phase_S_Preparation/HeatherBaile
+ y.html
 URL:https://mkdawills.github.io/CNAP_Phase_S_Preparation/HeatherBailey.html
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:cnap-phase-s-heatherbailey-cn-core-facilities-other-resources-20261216@cnap-hub
+UID:cnap-phase-s-heatherbailey-cn-core-facilities-other-resources-20261216@
+ cnap-hub
 DTSTAMP:20261016T151957Z
 DTSTART;VALUE=DATE:20261216
 DTEND;VALUE=DATE:20261217
 SUMMARY:CNAP Phase S: CN Core Facilities & Other Resources
-DESCRIPTION:Equipment Mon\, Dec 14 · Facilities & Other Resources Wed\, 
- Dec 16 · Resource Sharing Plan Thu\, Dec 17. No page limits.\n\nInternal
-  due date for the CNAP Phase S proposal.\nSmartsheet: https://app.smartsh
- eet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21\nYour guidance pa
- ge: https://mkdawills.github.io/CNAP_Phase_S_Preparation/HeatherBailey.ht
- ml
+DESCRIPTION:Equipment Mon\, Dec 14 · Facilities & Other Resources Wed\, De
+ c 16 · Resource Sharing Plan Thu\, Dec 17. No page limits.\n\nInternal du
+ e date for the CNAP Phase S proposal.\nSmartsheet: https://app.smartsheet.
+ com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21\nYour guidance page: h
+ ttps://mkdawills.github.io/CNAP_Phase_S_Preparation/HeatherBailey.html
 URL:https://mkdawills.github.io/CNAP_Phase_S_Preparation/HeatherBailey.html
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:cnap-phase-s-heatherbailey-your-biosketch-current-pending-support-review-draf-20261217@cnap-hub
+UID:cnap-phase-s-heatherbailey-your-biosketch-current-pending-support-revie
+ w-draf-20261217@cnap-hub
 DTSTAMP:20261016T151957Z
 DTSTART;VALUE=DATE:20261217
 DTEND;VALUE=DATE:20261218
-SUMMARY:CNAP Phase S: Your biosketch + Current & Pending Support: review 
- draft
-DESCRIPTION:Your one biosketch (covering both your Center Director (PD/PI
- ) and CN Core Director roles) and your Current and Pending (Other) Suppor
- t. Review draft Thu\, Dec 17\; final Wed\, Jan 13. Save: WORKING DRAFTS 
- › Center.\n\nInternal due date for the CNAP Phase S proposal.\nSmartshe
- et: https://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7G
- Rwx21\nYour guidance page: https://mkdawills.github.io/CNAP_Phase_S_Prepa
- ration/HeatherBailey.html
+SUMMARY:CNAP Phase S: Your biosketch + Current & Pending Support: review dr
+ aft
+DESCRIPTION:Your one biosketch (covering both your Center Director (PD/PI) 
+ and CN Core Director roles) and your Current and Pending (Other) Support. 
+ Review draft Thu\, Dec 17\; final Wed\, Jan 13. Save: WORKING DRAFTS › C
+ enter.\n\nInternal due date for the CNAP Phase S proposal.\nSmartsheet: ht
+ tps://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21\n
+ Your guidance page: https://mkdawills.github.io/CNAP_Phase_S_Preparation/H
+ eatherBailey.html
 URL:https://mkdawills.github.io/CNAP_Phase_S_Preparation/HeatherBailey.html
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:cnap-phase-s-heatherbailey-srp-investigator-pool-biosketches-review-drafts-20261217@cnap-hub
+UID:cnap-phase-s-heatherbailey-other-admin-core-senior-key-biosketches-if-a
+ ny-rev-20261217@cnap-hub
 DTSTAMP:20261016T151957Z
 DTSTART;VALUE=DATE:20261217
 DTEND;VALUE=DATE:20261218
-SUMMARY:CNAP Phase S: SRP Investigator Pool biosketches: review drafts
-DESCRIPTION:The SRP Investigator Pool biosketches\, the SRP Core Director
- 's biosketch\, and any other Admin Core Senior/Key biosketches. Review dr
- afts Thu\, Dec 17\; finals Wed\, Jan 13.\n\nInternal due date for the CNA
- P Phase S proposal.\nSmartsheet: https://app.smartsheet.com/sheets/R9cphx
- w5McqvH7RWRVJG6rGwWh8RR265M7GRwx21\nYour guidance page: https://mkdawills
- .github.io/CNAP_Phase_S_Preparation/HeatherBailey.html
+SUMMARY:CNAP Phase S: Other Admin Core Senior/Key biosketches\, if any: rev
+ iew drafts
+DESCRIPTION:The SRP Investigator Pool biosketches\, the SRP Core Director's
+  biosketch\, and any other Admin Core Senior/Key biosketches. Review draft
+ s Thu\, Dec 17\; finals Wed\, Jan 13.\n\nInternal due date for the CNAP Ph
+ ase S proposal.\nSmartsheet: https://app.smartsheet.com/sheets/R9cphxw5Mcq
+ vH7RWRVJG6rGwWh8RR265M7GRwx21\nYour guidance page: https://mkdawills.githu
+ b.io/CNAP_Phase_S_Preparation/HeatherBailey.html
 URL:https://mkdawills.github.io/CNAP_Phase_S_Preparation/HeatherBailey.html
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:cnap-phase-s-heatherbailey-other-admin-core-senior-key-biosketches-if-any-rev-20261217@cnap-hub
-DTSTAMP:20261016T151957Z
-DTSTART;VALUE=DATE:20261217
-DTEND;VALUE=DATE:20261218
-SUMMARY:CNAP Phase S: Other Admin Core Senior/Key biosketches\, if any: r
- eview drafts
-DESCRIPTION:The SRP Investigator Pool biosketches\, the SRP Core Director
- 's biosketch\, and any other Admin Core Senior/Key biosketches. Review dr
- afts Thu\, Dec 17\; finals Wed\, Jan 13.\n\nInternal due date for the CNA
- P Phase S proposal.\nSmartsheet: https://app.smartsheet.com/sheets/R9cphx
- w5McqvH7RWRVJG6rGwWh8RR265M7GRwx21\nYour guidance page: https://mkdawills
- .github.io/CNAP_Phase_S_Preparation/HeatherBailey.html
-URL:https://mkdawills.github.io/CNAP_Phase_S_Preparation/HeatherBailey.html
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:cnap-phase-s-heatherbailey-srp-core-resource-sharing-plan-20261217@cnap-hub
-DTSTAMP:20261016T151957Z
-DTSTART;VALUE=DATE:20261217
-DTEND;VALUE=DATE:20261218
-SUMMARY:CNAP Phase S: SRP Core Resource Sharing Plan
-DESCRIPTION:A short plan for sharing research resources produced by the S
- RP Core\, or the reason for not sharing them. Save: WORKING DRAFTS › SR
- P Core.\n\nInternal due date for the CNAP Phase S proposal.\nSmartsheet: 
- https://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx2
- 1\nYour guidance page: https://mkdawills.github.io/CNAP_Phase_S_Preparati
- on/HeatherBailey.html
-URL:https://mkdawills.github.io/CNAP_Phase_S_Preparation/HeatherBailey.html
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:cnap-phase-s-heatherbailey-data-management-and-sharing-plan-20261217@cnap-hub
+UID:cnap-phase-s-heatherbailey-data-management-and-sharing-plan-20261217@cn
+ ap-hub
 DTSTAMP:20261016T151957Z
 DTSTART;VALUE=DATE:20261217
 DTEND;VALUE=DATE:20261218
 SUMMARY:CNAP Phase S: Data Management and Sharing Plan
-DESCRIPTION:The Center's plan for managing and sharing the scientific dat
- a its research generates. Goes in the Center (Overall) component only. Sa
- ve: WORKING DRAFTS › Center.\n\nInternal due date for the CNAP Phase S 
- proposal.\nSmartsheet: https://app.smartsheet.com/sheets/R9cphxw5McqvH7RW
- RVJG6rGwWh8RR265M7GRwx21\nYour guidance page: https://mkdawills.github.io
- /CNAP_Phase_S_Preparation/HeatherBailey.html
+DESCRIPTION:The Center's plan for managing and sharing the scientific data 
+ its research generates. Goes in the Center (Overall) component only. Save:
+  WORKING DRAFTS › Center.\n\nInternal due date for the CNAP Phase S prop
+ osal.\nSmartsheet: https://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6
+ rGwWh8RR265M7GRwx21\nYour guidance page: https://mkdawills.github.io/CNAP_
+ Phase_S_Preparation/HeatherBailey.html
 URL:https://mkdawills.github.io/CNAP_Phase_S_Preparation/HeatherBailey.html
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:cnap-phase-s-heatherbailey-srp-core-director-biosketch-review-draft-20261217@cnap-hub
-DTSTAMP:20261016T151957Z
-DTSTART;VALUE=DATE:20261217
-DTEND;VALUE=DATE:20261218
-SUMMARY:CNAP Phase S: SRP Core Director biosketch: review draft
-DESCRIPTION:The SRP Investigator Pool biosketches\, the SRP Core Director
- 's biosketch\, and any other Admin Core Senior/Key biosketches. Review dr
- afts Thu\, Dec 17\; finals Wed\, Jan 13.\n\nInternal due date for the CNA
- P Phase S proposal.\nSmartsheet: https://app.smartsheet.com/sheets/R9cphx
- w5McqvH7RWRVJG6rGwWh8RR265M7GRwx21\nYour guidance page: https://mkdawills
- .github.io/CNAP_Phase_S_Preparation/HeatherBailey.html
-URL:https://mkdawills.github.io/CNAP_Phase_S_Preparation/HeatherBailey.html
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:cnap-phase-s-heatherbailey-cn-core-resource-sharing-plan-20261217@cnap-hub
+UID:cnap-phase-s-heatherbailey-cn-core-resource-sharing-plan-20261217@cnap-
+ hub
 DTSTAMP:20261016T151957Z
 DTSTART;VALUE=DATE:20261217
 DTEND;VALUE=DATE:20261218
 SUMMARY:CNAP Phase S: CN Core Resource Sharing Plan
-DESCRIPTION:Equipment Mon\, Dec 14 · Facilities & Other Resources Wed\, 
- Dec 16 · Resource Sharing Plan Thu\, Dec 17. No page limits.\n\nInternal
-  due date for the CNAP Phase S proposal.\nSmartsheet: https://app.smartsh
- eet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21\nYour guidance pa
- ge: https://mkdawills.github.io/CNAP_Phase_S_Preparation/HeatherBailey.ht
- ml
+DESCRIPTION:Equipment Mon\, Dec 14 · Facilities & Other Resources Wed\, De
+ c 16 · Resource Sharing Plan Thu\, Dec 17. No page limits.\n\nInternal du
+ e date for the CNAP Phase S proposal.\nSmartsheet: https://app.smartsheet.
+ com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21\nYour guidance page: h
+ ttps://mkdawills.github.io/CNAP_Phase_S_Preparation/HeatherBailey.html
 URL:https://mkdawills.github.io/CNAP_Phase_S_Preparation/HeatherBailey.html
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:cnap-phase-s-heatherbailey-your-biosketch-review-draft-the-same-one-as-in-you-20261217@cnap-hub
+UID:cnap-phase-s-heatherbailey-your-biosketch-review-draft-the-same-one-as-
+ in-you-20261217@cnap-hub
 DTSTAMP:20261016T151957Z
 DTSTART;VALUE=DATE:20261217
 DTEND;VALUE=DATE:20261218
-SUMMARY:CNAP Phase S: Your biosketch: review draft (the same one as in yo
- ur Center Director packet)
-DESCRIPTION:Your one biosketch covers both your Center Director (PD/PI) r
- ole and this CN Core role. Upload it once\, in the Center (Overall).\n\nI
- nternal due date for the CNAP Phase S proposal.\nSmartsheet: https://app.
- smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21\nYour guid
- ance page: https://mkdawills.github.io/CNAP_Phase_S_Preparation/HeatherBa
- iley.html
+SUMMARY:CNAP Phase S: Your biosketch: review draft (the same one as in your
+  Center Director packet)
+DESCRIPTION:Your one biosketch covers both your Center Director (PD/PI) rol
+ e and this CN Core role. Upload it once\, in the Center (Overall).\n\nInte
+ rnal due date for the CNAP Phase S proposal.\nSmartsheet: https://app.smar
+ tsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21\nYour guidance 
+ page: https://mkdawills.github.io/CNAP_Phase_S_Preparation/HeatherBailey.h
+ tml
 URL:https://mkdawills.github.io/CNAP_Phase_S_Preparation/HeatherBailey.html
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:cnap-phase-s-heatherbailey-bibliography-references-cited-center-admin-core-sr-20270106@cnap-hub
+UID:cnap-phase-s-heatherbailey-bibliography-references-cited-center-admin-c
+ ore-sr-20270106@cnap-hub
 DTSTAMP:20261016T151957Z
 DTSTART;VALUE=DATE:20270106
 DTEND;VALUE=DATE:20270107
-SUMMARY:CNAP Phase S: Bibliography & References Cited (Center\, Admin Cor
- e\, SRP Core)
-DESCRIPTION:The list of references cited in the component's Specific Aims
-  and Research Strategy. Save in each component's WORKING DRAFTS folder.\n
- \nInternal due date for the CNAP Phase S proposal.\nSmartsheet: https://a
- pp.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21\nYour g
- uidance page: https://mkdawills.github.io/CNAP_Phase_S_Preparation/Heathe
- rBailey.html
+SUMMARY:CNAP Phase S: Bibliography & References Cited (Center\, Admin Core)
+DESCRIPTION:The list of references cited in the component's Specific Aims a
+ nd Research Strategy. Save in each component's WORKING DRAFTS folder.\n\nI
+ nternal due date for the CNAP Phase S proposal.\nSmartsheet: https://app.s
+ martsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21\nYour guidan
+ ce page: https://mkdawills.github.io/CNAP_Phase_S_Preparation/HeatherBaile
+ y.html
 URL:https://mkdawills.github.io/CNAP_Phase_S_Preparation/HeatherBailey.html
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:cnap-phase-s-heatherbailey-cn-core-bibliography-references-cited-20270106@cnap-hub
+UID:cnap-phase-s-heatherbailey-cn-core-bibliography-references-cited-202701
+ 06@cnap-hub
 DTSTAMP:20261016T151957Z
 DTSTART;VALUE=DATE:20270106
 DTEND;VALUE=DATE:20270107
 SUMMARY:CNAP Phase S: CN Core Bibliography & References Cited
-DESCRIPTION:Internal due date for the CNAP Phase S proposal.\nSmartsheet:
-  https://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx
- 21\nYour guidance page: https://mkdawills.github.io/CNAP_Phase_S_Preparat
- ion/HeatherBailey.html
+DESCRIPTION:Internal due date for the CNAP Phase S proposal.\nSmartsheet: h
+ ttps://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21\
+ nYour guidance page: https://mkdawills.github.io/CNAP_Phase_S_Preparation/
+ HeatherBailey.html
 URL:https://mkdawills.github.io/CNAP_Phase_S_Preparation/HeatherBailey.html
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:cnap-phase-s-heatherbailey-revise-specific-aims-research-strategy-must-fix-it-20270111@cnap-hub
+UID:cnap-phase-s-heatherbailey-revise-specific-aims-research-strategy-must-
+ fix-it-20270111@cnap-hub
 DTSTAMP:20261016T151957Z
 DTSTART;VALUE=DATE:20270111
 DTEND;VALUE=DATE:20270112
-SUMMARY:CNAP Phase S: Revise Specific Aims + Research Strategy\, must-fix
-  items only (Center\, Admin Core\, SRP Core)
-DESCRIPTION:Changes to the Specific Aims and Research Strategy in respons
- e to the external scientific review\; must-fix items only.\n\nInternal du
- e date for the CNAP Phase S proposal.\nSmartsheet: https://app.smartsheet
- .com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21\nYour guidance page:
-  https://mkdawills.github.io/CNAP_Phase_S_Preparation/HeatherBailey.html
+SUMMARY:CNAP Phase S: Revise Specific Aims + Research Strategy\, must-fix i
+ tems only (Center\, Admin Core)
+DESCRIPTION:Changes to the Specific Aims and Research Strategy in response 
+ to the external scientific review\; must-fix items only.\n\nInternal due d
+ ate for the CNAP Phase S proposal.\nSmartsheet: https://app.smartsheet.com
+ /sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21\nYour guidance page: http
+ s://mkdawills.github.io/CNAP_Phase_S_Preparation/HeatherBailey.html
 URL:https://mkdawills.github.io/CNAP_Phase_S_Preparation/HeatherBailey.html
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:cnap-phase-s-heatherbailey-cn-core-revise-specific-aims-research-strategy-mus-20270111@cnap-hub
+UID:cnap-phase-s-heatherbailey-cn-core-revise-specific-aims-research-strate
+ gy-mus-20270111@cnap-hub
 DTSTAMP:20261016T151957Z
 DTSTART;VALUE=DATE:20270111
 DTEND;VALUE=DATE:20270112
-SUMMARY:CNAP Phase S: CN Core: revise Specific Aims + Research Strategy\,
-  must-fix items only
-DESCRIPTION:Internal due date for the CNAP Phase S proposal.\nSmartsheet:
-  https://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx
- 21\nYour guidance page: https://mkdawills.github.io/CNAP_Phase_S_Preparat
- ion/HeatherBailey.html
+SUMMARY:CNAP Phase S: CN Core: revise Specific Aims + Research Strategy\, m
+ ust-fix items only
+DESCRIPTION:Internal due date for the CNAP Phase S proposal.\nSmartsheet: h
+ ttps://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21\
+ nYour guidance page: https://mkdawills.github.io/CNAP_Phase_S_Preparation/
+ HeatherBailey.html
 URL:https://mkdawills.github.io/CNAP_Phase_S_Preparation/HeatherBailey.html
 TRANSP:TRANSPARENT
 END:VEVENT
@@ -468,149 +441,126 @@ DTSTAMP:20261016T151957Z
 DTSTART;VALUE=DATE:20270112
 DTEND;VALUE=DATE:20270113
 SUMMARY:CNAP Phase S: Center Project Narrative
-DESCRIPTION:A 30-line summary of the Center\, Admin Core\, and SRP Core\,
-  plus the Center's three-sentence Project Narrative.\n\nInternal due date
-  for the CNAP Phase S proposal.\nSmartsheet: https://app.smartsheet.com/s
- heets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21\nYour guidance page: https
- ://mkdawills.github.io/CNAP_Phase_S_Preparation/HeatherBailey.html
+DESCRIPTION:A 30-line summary of the Center\, Admin Core\, and SRP Core\, p
+ lus the Center's three-sentence Project Narrative.\n\nInternal due date fo
+ r the CNAP Phase S proposal.\nSmartsheet: https://app.smartsheet.com/sheet
+ s/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21\nYour guidance page: https://mk
+ dawills.github.io/CNAP_Phase_S_Preparation/HeatherBailey.html
 URL:https://mkdawills.github.io/CNAP_Phase_S_Preparation/HeatherBailey.html
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:cnap-phase-s-heatherbailey-project-summary-abstract-center-admin-core-srp-cor-20270112@cnap-hub
+UID:cnap-phase-s-heatherbailey-project-summary-abstract-center-admin-core-s
+ rp-cor-20270112@cnap-hub
 DTSTAMP:20261016T151957Z
 DTSTART;VALUE=DATE:20270112
 DTEND;VALUE=DATE:20270113
-SUMMARY:CNAP Phase S: Project Summary/Abstract (Center\, Admin Core\, SRP
-  Core)
-DESCRIPTION:A 30-line summary of the Center\, Admin Core\, and SRP Core\,
-  plus the Center's three-sentence Project Narrative.\n\nInternal due date
-  for the CNAP Phase S proposal.\nSmartsheet: https://app.smartsheet.com/s
- heets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21\nYour guidance page: https
- ://mkdawills.github.io/CNAP_Phase_S_Preparation/HeatherBailey.html
+SUMMARY:CNAP Phase S: Project Summary/Abstract (Center\, Admin Core)
+DESCRIPTION:A 30-line summary of the Center\, Admin Core\, and SRP Core\, p
+ lus the Center's three-sentence Project Narrative.\n\nInternal due date fo
+ r the CNAP Phase S proposal.\nSmartsheet: https://app.smartsheet.com/sheet
+ s/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21\nYour guidance page: https://mk
+ dawills.github.io/CNAP_Phase_S_Preparation/HeatherBailey.html
 URL:https://mkdawills.github.io/CNAP_Phase_S_Preparation/HeatherBailey.html
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:cnap-phase-s-heatherbailey-cn-core-project-summary-abstract-20270112@cnap-hub
+UID:cnap-phase-s-heatherbailey-cn-core-project-summary-abstract-20270112@cn
+ ap-hub
 DTSTAMP:20261016T151957Z
 DTSTART;VALUE=DATE:20270112
 DTEND;VALUE=DATE:20270113
 SUMMARY:CNAP Phase S: CN Core Project Summary/Abstract
-DESCRIPTION:Internal due date for the CNAP Phase S proposal.\nSmartsheet:
-  https://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx
- 21\nYour guidance page: https://mkdawills.github.io/CNAP_Phase_S_Preparat
- ion/HeatherBailey.html
+DESCRIPTION:Internal due date for the CNAP Phase S proposal.\nSmartsheet: h
+ ttps://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21\
+ nYour guidance page: https://mkdawills.github.io/CNAP_Phase_S_Preparation/
+ HeatherBailey.html
 URL:https://mkdawills.github.io/CNAP_Phase_S_Preparation/HeatherBailey.html
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:cnap-phase-s-heatherbailey-your-biosketch-current-pending-support-final-20270113@cnap-hub
+UID:cnap-phase-s-heatherbailey-your-biosketch-current-pending-support-final
+ -20270113@cnap-hub
 DTSTAMP:20261016T151957Z
 DTSTART;VALUE=DATE:20270113
 DTEND;VALUE=DATE:20270114
 SUMMARY:CNAP Phase S: Your biosketch + Current & Pending Support: final
-DESCRIPTION:Your one biosketch (covering both your Center Director (PD/PI
- ) and CN Core Director roles) and your Current and Pending (Other) Suppor
- t. Review draft Thu\, Dec 17\; final Wed\, Jan 13. Save: WORKING DRAFTS 
- › Center.\n\nInternal due date for the CNAP Phase S proposal.\nSmartshe
- et: https://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7G
- Rwx21\nYour guidance page: https://mkdawills.github.io/CNAP_Phase_S_Prepa
- ration/HeatherBailey.html
+DESCRIPTION:Your one biosketch (covering both your Center Director (PD/PI) 
+ and CN Core Director roles) and your Current and Pending (Other) Support. 
+ Review draft Thu\, Dec 17\; final Wed\, Jan 13. Save: WORKING DRAFTS › C
+ enter.\n\nInternal due date for the CNAP Phase S proposal.\nSmartsheet: ht
+ tps://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21\n
+ Your guidance page: https://mkdawills.github.io/CNAP_Phase_S_Preparation/H
+ eatherBailey.html
 URL:https://mkdawills.github.io/CNAP_Phase_S_Preparation/HeatherBailey.html
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:cnap-phase-s-heatherbailey-srp-investigator-pool-biosketches-finals-20270113@cnap-hub
+UID:cnap-phase-s-heatherbailey-other-admin-core-senior-key-biosketches-if-a
+ ny-fin-20270113@cnap-hub
 DTSTAMP:20261016T151957Z
 DTSTART;VALUE=DATE:20270113
 DTEND;VALUE=DATE:20270114
-SUMMARY:CNAP Phase S: SRP Investigator Pool biosketches: finals
-DESCRIPTION:The SRP Investigator Pool biosketches\, the SRP Core Director
- 's biosketch\, and any other Admin Core Senior/Key biosketches. Review dr
- afts Thu\, Dec 17\; finals Wed\, Jan 13.\n\nInternal due date for the CNA
- P Phase S proposal.\nSmartsheet: https://app.smartsheet.com/sheets/R9cphx
- w5McqvH7RWRVJG6rGwWh8RR265M7GRwx21\nYour guidance page: https://mkdawills
- .github.io/CNAP_Phase_S_Preparation/HeatherBailey.html
+SUMMARY:CNAP Phase S: Other Admin Core Senior/Key biosketches\, if any: fin
+ als
+DESCRIPTION:The SRP Investigator Pool biosketches\, the SRP Core Director's
+  biosketch\, and any other Admin Core Senior/Key biosketches. Review draft
+ s Thu\, Dec 17\; finals Wed\, Jan 13.\n\nInternal due date for the CNAP Ph
+ ase S proposal.\nSmartsheet: https://app.smartsheet.com/sheets/R9cphxw5Mcq
+ vH7RWRVJG6rGwWh8RR265M7GRwx21\nYour guidance page: https://mkdawills.githu
+ b.io/CNAP_Phase_S_Preparation/HeatherBailey.html
 URL:https://mkdawills.github.io/CNAP_Phase_S_Preparation/HeatherBailey.html
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:cnap-phase-s-heatherbailey-other-admin-core-senior-key-biosketches-if-any-fin-20270113@cnap-hub
+UID:cnap-phase-s-heatherbailey-your-biosketch-final-the-same-one-as-in-your
+ -cente-20270113@cnap-hub
 DTSTAMP:20261016T151957Z
 DTSTART;VALUE=DATE:20270113
 DTEND;VALUE=DATE:20270114
-SUMMARY:CNAP Phase S: Other Admin Core Senior/Key biosketches\, if any: f
- inals
-DESCRIPTION:The SRP Investigator Pool biosketches\, the SRP Core Director
- 's biosketch\, and any other Admin Core Senior/Key biosketches. Review dr
- afts Thu\, Dec 17\; finals Wed\, Jan 13.\n\nInternal due date for the CNA
- P Phase S proposal.\nSmartsheet: https://app.smartsheet.com/sheets/R9cphx
- w5McqvH7RWRVJG6rGwWh8RR265M7GRwx21\nYour guidance page: https://mkdawills
- .github.io/CNAP_Phase_S_Preparation/HeatherBailey.html
+SUMMARY:CNAP Phase S: Your biosketch: final (the same one as in your Center
+  Director packet)
+DESCRIPTION:Your one biosketch covers both your Center Director (PD/PI) rol
+ e and this CN Core role. Upload it once\, in the Center (Overall).\n\nInte
+ rnal due date for the CNAP Phase S proposal.\nSmartsheet: https://app.smar
+ tsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21\nYour guidance 
+ page: https://mkdawills.github.io/CNAP_Phase_S_Preparation/HeatherBailey.h
+ tml
 URL:https://mkdawills.github.io/CNAP_Phase_S_Preparation/HeatherBailey.html
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:cnap-phase-s-heatherbailey-srp-core-director-biosketch-final-20270113@cnap-hub
-DTSTAMP:20261016T151957Z
-DTSTART;VALUE=DATE:20270113
-DTEND;VALUE=DATE:20270114
-SUMMARY:CNAP Phase S: SRP Core Director biosketch: final
-DESCRIPTION:The SRP Investigator Pool biosketches\, the SRP Core Director
- 's biosketch\, and any other Admin Core Senior/Key biosketches. Review dr
- afts Thu\, Dec 17\; finals Wed\, Jan 13.\n\nInternal due date for the CNA
- P Phase S proposal.\nSmartsheet: https://app.smartsheet.com/sheets/R9cphx
- w5McqvH7RWRVJG6rGwWh8RR265M7GRwx21\nYour guidance page: https://mkdawills
- .github.io/CNAP_Phase_S_Preparation/HeatherBailey.html
-URL:https://mkdawills.github.io/CNAP_Phase_S_Preparation/HeatherBailey.html
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:cnap-phase-s-heatherbailey-your-biosketch-final-the-same-one-as-in-your-cente-20270113@cnap-hub
-DTSTAMP:20261016T151957Z
-DTSTART;VALUE=DATE:20270113
-DTEND;VALUE=DATE:20270114
-SUMMARY:CNAP Phase S: Your biosketch: final (the same one as in your Cent
- er Director packet)
-DESCRIPTION:Your one biosketch covers both your Center Director (PD/PI) r
- ole and this CN Core role. Upload it once\, in the Center (Overall).\n\nI
- nternal due date for the CNAP Phase S proposal.\nSmartsheet: https://app.
- smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21\nYour guid
- ance page: https://mkdawills.github.io/CNAP_Phase_S_Preparation/HeatherBa
- iley.html
-URL:https://mkdawills.github.io/CNAP_Phase_S_Preparation/HeatherBailey.html
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:cnap-phase-s-heatherbailey-revised-final-budget-budget-justification-admin-co-20270115@cnap-hub
+UID:cnap-phase-s-heatherbailey-revised-final-budget-budget-justification-ad
+ min-co-20270115@cnap-hub
 DTSTAMP:20261016T151957Z
 DTSTART;VALUE=DATE:20270115
 DTEND;VALUE=DATE:20270116
-SUMMARY:CNAP Phase S: Revised (final) Budget + Budget Justification (Admi
- n Core\, SRP Core)
-DESCRIPTION:The Admin Core's five-year budget (entered as forms) and the 
- written justification for each cost. Revised (final) version Fri\, Jan 15
- . Save: WORKING DRAFTS › Admin Core.\n\nInternal due date for the CNAP 
- Phase S proposal.\nSmartsheet: https://app.smartsheet.com/sheets/R9cphxw5
- McqvH7RWRVJG6rGwWh8RR265M7GRwx21\nYour guidance page: https://mkdawills.g
- ithub.io/CNAP_Phase_S_Preparation/HeatherBailey.html
+SUMMARY:CNAP Phase S: Revised (final) Budget + Budget Justification (Admin 
+ Core)
+DESCRIPTION:The Admin Core's five-year budget (entered as forms) and the wr
+ itten justification for each cost. Revised (final) version Fri\, Jan 15. S
+ ave: WORKING DRAFTS › Admin Core.\n\nInternal due date for the CNAP Phas
+ e S proposal.\nSmartsheet: https://app.smartsheet.com/sheets/R9cphxw5McqvH
+ 7RWRVJG6rGwWh8RR265M7GRwx21\nYour guidance page: https://mkdawills.github.
+ io/CNAP_Phase_S_Preparation/HeatherBailey.html
 URL:https://mkdawills.github.io/CNAP_Phase_S_Preparation/HeatherBailey.html
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:cnap-phase-s-heatherbailey-cn-core-revised-final-budget-budget-justification-20270115@cnap-hub
+UID:cnap-phase-s-heatherbailey-cn-core-revised-final-budget-budget-justific
+ ation-20270115@cnap-hub
 DTSTAMP:20261016T151957Z
 DTSTART;VALUE=DATE:20270115
 DTEND;VALUE=DATE:20270116
-SUMMARY:CNAP Phase S: CN Core: revised (final) Budget + Budget Justificat
- ion
-DESCRIPTION:Morning. Roxana checks it and sends the final budgets to Tim 
- the same day.\n\nInternal due date for the CNAP Phase S proposal.\nSmarts
- heet: https://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M
- 7GRwx21\nYour guidance page: https://mkdawills.github.io/CNAP_Phase_S_Pre
- paration/HeatherBailey.html
+SUMMARY:CNAP Phase S: CN Core: revised (final) Budget + Budget Justificatio
+ n
+DESCRIPTION:Morning. Roxana checks it and sends the final budgets to Tim th
+ e same day.\n\nInternal due date for the CNAP Phase S proposal.\nSmartshee
+ t: https://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRw
+ x21\nYour guidance page: https://mkdawills.github.io/CNAP_Phase_S_Preparat
+ ion/HeatherBailey.html
 URL:https://mkdawills.github.io/CNAP_Phase_S_Preparation/HeatherBailey.html
 TRANSP:TRANSPARENT
 END:VEVENT
+
 END:VCALENDAR

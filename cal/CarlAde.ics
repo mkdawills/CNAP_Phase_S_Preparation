@@ -5,6 +5,79 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:CNAP Phase S due dates
 BEGIN:VEVENT
+UID:cnap-phase-s-carlade-srp-core-specific-aims-20261113@cnap-hub
+DTSTAMP:20261105T220748Z
+DTSTART;VALUE=DATE:20261113
+DTEND;VALUE=DATE:20261114
+SUMMARY:CNAP Phase S: SRP Core Specific Aims
+DESCRIPTION:One page of aims for the SRP Core. Save: WORKING DRAFTS › SRP
+  Core.\n\nInternal due date for the CNAP Phase S proposal.\nSmartsheet: ht
+ tps://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21\n
+ Your guidance page: https://mkdawills.github.io/CNAP_Phase_S_Preparation/C
+ arlAde.html
+URL:https://mkdawills.github.io/CNAP_Phase_S_Preparation/CarlAde.html
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:cnap-phase-s-carlade-srp-core-research-strategy-20261130@cnap-hub
+DTSTAMP:20261105T220748Z
+DTSTART;VALUE=DATE:20261130
+DTEND;VALUE=DATE:20261201
+SUMMARY:CNAP Phase S: SRP Core Research Strategy
+DESCRIPTION:How the SRP Core will select\, support\, and develop SRP Invest
+ igators (SIs). Save: WORKING DRAFTS › SRP Core.\n\nInternal due date for
+  the CNAP Phase S proposal.\nSmartsheet: https://app.smartsheet.com/sheets
+ /R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21\nYour guidance page: https://mkd
+ awills.github.io/CNAP_Phase_S_Preparation/CarlAde.html
+URL:https://mkdawills.github.io/CNAP_Phase_S_Preparation/CarlAde.html
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:cnap-phase-s-carlade-srp-core-budget-budget-justification-20261204@cnap
+ -hub
+DTSTAMP:20261105T220748Z
+DTSTART;VALUE=DATE:20261204
+DTEND;VALUE=DATE:20261205
+SUMMARY:CNAP Phase S: SRP Core Budget + Budget Justification
+DESCRIPTION:The SRP Core's five-year budget (entered as forms)\, including 
+ the SI awards\, and the written justification for each cost. Revised (fina
+ l) version Fri\, Jan 15. Save: WORKING DRAFTS › SRP Core.\n\nInternal du
+ e date for the CNAP Phase S proposal.\nSmartsheet: https://app.smartsheet.
+ com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21\nYour guidance page: h
+ ttps://mkdawills.github.io/CNAP_Phase_S_Preparation/CarlAde.html
+URL:https://mkdawills.github.io/CNAP_Phase_S_Preparation/CarlAde.html
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:cnap-phase-s-carlade-srp-core-equipment-20261214@cnap-hub
+DTSTAMP:20261105T220748Z
+DTSTART;VALUE=DATE:20261214
+DTEND;VALUE=DATE:20261215
+SUMMARY:CNAP Phase S: SRP Core Equipment
+DESCRIPTION:A list of the major equipment already available for this work. 
+ Save: WORKING DRAFTS › SRP Core.\n\nInternal due date for the CNAP Phase
+  S proposal.\nSmartsheet: https://app.smartsheet.com/sheets/R9cphxw5McqvH7
+ RWRVJG6rGwWh8RR265M7GRwx21\nYour guidance page: https://mkdawills.github.i
+ o/CNAP_Phase_S_Preparation/CarlAde.html
+URL:https://mkdawills.github.io/CNAP_Phase_S_Preparation/CarlAde.html
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:cnap-phase-s-carlade-srp-core-facilities-other-resources-20261216@cnap-
+ hub
+DTSTAMP:20261105T220748Z
+DTSTART;VALUE=DATE:20261216
+DTEND;VALUE=DATE:20261217
+SUMMARY:CNAP Phase S: SRP Core Facilities & Other Resources
+DESCRIPTION:A description of the space\, resources\, and institutional supp
+ ort behind this work. Save: WORKING DRAFTS › SRP Core.\n\nInternal due d
+ ate for the CNAP Phase S proposal.\nSmartsheet: https://app.smartsheet.com
+ /sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21\nYour guidance page: http
+ s://mkdawills.github.io/CNAP_Phase_S_Preparation/CarlAde.html
+URL:https://mkdawills.github.io/CNAP_Phase_S_Preparation/CarlAde.html
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:cnap-phase-s-carlade-your-biosketch-review-draft-20261217@cnap-hub
 DTSTAMP:20261016T151957Z
 DTSTART;VALUE=DATE:20261217
@@ -20,6 +93,98 @@ URL:https://mkdawills.github.io/CNAP_Phase_S_Preparation/CarlAde.html
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:cnap-phase-s-carlade-srp-investigator-pool-biosketches-review-drafts-20
+ 261217@cnap-hub
+DTSTAMP:20261105T220748Z
+DTSTART;VALUE=DATE:20261217
+DTEND;VALUE=DATE:20261218
+SUMMARY:CNAP Phase S: SRP Investigator Pool biosketches: review drafts
+DESCRIPTION:The SRP Investigator Pool biosketches\, the SRP Core Director's
+  biosketch\, and any other Admin Core Senior/Key biosketches. Review draft
+ s Thu\, Dec 17\; finals Wed\, Jan 13.\n\nInternal due date for the CNAP Ph
+ ase S proposal.\nSmartsheet: https://app.smartsheet.com/sheets/R9cphxw5Mcq
+ vH7RWRVJG6rGwWh8RR265M7GRwx21\nYour guidance page: https://mkdawills.githu
+ b.io/CNAP_Phase_S_Preparation/CarlAde.html
+URL:https://mkdawills.github.io/CNAP_Phase_S_Preparation/CarlAde.html
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:cnap-phase-s-carlade-srp-core-resource-sharing-plan-20261217@cnap-hub
+DTSTAMP:20261105T220748Z
+DTSTART;VALUE=DATE:20261217
+DTEND;VALUE=DATE:20261218
+SUMMARY:CNAP Phase S: SRP Core Resource Sharing Plan
+DESCRIPTION:A short plan for sharing research resources produced by the SRP
+  Core\, or the reason for not sharing them. Save: WORKING DRAFTS › SRP C
+ ore.\n\nInternal due date for the CNAP Phase S proposal.\nSmartsheet: http
+ s://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21\nYo
+ ur guidance page: https://mkdawills.github.io/CNAP_Phase_S_Preparation/Car
+ lAde.html
+URL:https://mkdawills.github.io/CNAP_Phase_S_Preparation/CarlAde.html
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:cnap-phase-s-carlade-srp-core-director-biosketch-review-draft-20261217@
+ cnap-hub
+DTSTAMP:20261105T220748Z
+DTSTART;VALUE=DATE:20261217
+DTEND;VALUE=DATE:20261218
+SUMMARY:CNAP Phase S: SRP Core Director biosketch: review draft
+DESCRIPTION:The SRP Investigator Pool biosketches\, the SRP Core Director's
+  biosketch\, and any other Admin Core Senior/Key biosketches. Review draft
+ s Thu\, Dec 17\; finals Wed\, Jan 13.\n\nInternal due date for the CNAP Ph
+ ase S proposal.\nSmartsheet: https://app.smartsheet.com/sheets/R9cphxw5Mcq
+ vH7RWRVJG6rGwWh8RR265M7GRwx21\nYour guidance page: https://mkdawills.githu
+ b.io/CNAP_Phase_S_Preparation/CarlAde.html
+URL:https://mkdawills.github.io/CNAP_Phase_S_Preparation/CarlAde.html
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:cnap-phase-s-carlade-srp-core-bibliography-references-cited-20270106@cn
+ ap-hub
+DTSTAMP:20261105T220748Z
+DTSTART;VALUE=DATE:20270106
+DTEND;VALUE=DATE:20270107
+SUMMARY:CNAP Phase S: SRP Core Bibliography & References Cited
+DESCRIPTION:The list of references cited in the SRP Core's Specific Aims an
+ d Research Strategy. Save: WORKING DRAFTS › SRP Core.\n\nInternal due da
+ te for the CNAP Phase S proposal.\nSmartsheet: https://app.smartsheet.com/
+ sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21\nYour guidance page: https
+ ://mkdawills.github.io/CNAP_Phase_S_Preparation/CarlAde.html
+URL:https://mkdawills.github.io/CNAP_Phase_S_Preparation/CarlAde.html
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:cnap-phase-s-carlade-srp-core-revise-specific-aims-research-strategy-mu
+ st-fix-items-only-20270111@cnap-hub
+DTSTAMP:20261105T220748Z
+DTSTART;VALUE=DATE:20270111
+DTEND;VALUE=DATE:20270112
+SUMMARY:CNAP Phase S: SRP Core: revise Specific Aims + Research Strategy\, 
+ must-fix items only
+DESCRIPTION:Changes to the SRP Core Specific Aims and Research Strategy in 
+ response to the external scientific review\; must-fix items only.\n\nInter
+ nal due date for the CNAP Phase S proposal.\nSmartsheet: https://app.smart
+ sheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21\nYour guidance p
+ age: https://mkdawills.github.io/CNAP_Phase_S_Preparation/CarlAde.html
+URL:https://mkdawills.github.io/CNAP_Phase_S_Preparation/CarlAde.html
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:cnap-phase-s-carlade-srp-core-project-summary-abstract-20270112@cnap-hu
+ b
+DTSTAMP:20261105T220748Z
+DTSTART;VALUE=DATE:20270112
+DTEND;VALUE=DATE:20270113
+SUMMARY:CNAP Phase S: SRP Core Project Summary/Abstract
+DESCRIPTION:A 30-line summary of the SRP Core.\n\nInternal due date for the
+  CNAP Phase S proposal.\nSmartsheet: https://app.smartsheet.com/sheets/R9c
+ phxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21\nYour guidance page: https://mkdawil
+ ls.github.io/CNAP_Phase_S_Preparation/CarlAde.html
+URL:https://mkdawills.github.io/CNAP_Phase_S_Preparation/CarlAde.html
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:cnap-phase-s-carlade-your-biosketch-final-20270113@cnap-hub
 DTSTAMP:20261016T151957Z
 DTSTART;VALUE=DATE:20270113
@@ -30,6 +195,55 @@ DESCRIPTION:Final version with Kim's fixes plus anything new since Dec 17
  //app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21\nYou
  r guidance page: https://mkdawills.github.io/CNAP_Phase_S_Preparation/Car
  lAde.html
+URL:https://mkdawills.github.io/CNAP_Phase_S_Preparation/CarlAde.html
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:cnap-phase-s-carlade-srp-investigator-pool-biosketches-finals-20270113@
+ cnap-hub
+DTSTAMP:20261105T220748Z
+DTSTART;VALUE=DATE:20270113
+DTEND;VALUE=DATE:20270114
+SUMMARY:CNAP Phase S: SRP Investigator Pool biosketches: finals
+DESCRIPTION:The SRP Investigator Pool biosketches\, the SRP Core Director's
+  biosketch\, and any other Admin Core Senior/Key biosketches. Review draft
+ s Thu\, Dec 17\; finals Wed\, Jan 13.\n\nInternal due date for the CNAP Ph
+ ase S proposal.\nSmartsheet: https://app.smartsheet.com/sheets/R9cphxw5Mcq
+ vH7RWRVJG6rGwWh8RR265M7GRwx21\nYour guidance page: https://mkdawills.githu
+ b.io/CNAP_Phase_S_Preparation/CarlAde.html
+URL:https://mkdawills.github.io/CNAP_Phase_S_Preparation/CarlAde.html
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:cnap-phase-s-carlade-srp-core-director-biosketch-final-20270113@cnap-hu
+ b
+DTSTAMP:20261105T220748Z
+DTSTART;VALUE=DATE:20270113
+DTEND;VALUE=DATE:20270114
+SUMMARY:CNAP Phase S: SRP Core Director biosketch: final
+DESCRIPTION:The SRP Investigator Pool biosketches\, the SRP Core Director's
+  biosketch\, and any other Admin Core Senior/Key biosketches. Review draft
+ s Thu\, Dec 17\; finals Wed\, Jan 13.\n\nInternal due date for the CNAP Ph
+ ase S proposal.\nSmartsheet: https://app.smartsheet.com/sheets/R9cphxw5Mcq
+ vH7RWRVJG6rGwWh8RR265M7GRwx21\nYour guidance page: https://mkdawills.githu
+ b.io/CNAP_Phase_S_Preparation/CarlAde.html
+URL:https://mkdawills.github.io/CNAP_Phase_S_Preparation/CarlAde.html
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:cnap-phase-s-carlade-srp-core-revised-final-budget-budget-justification
+ -20270115@cnap-hub
+DTSTAMP:20261105T220748Z
+DTSTART;VALUE=DATE:20270115
+DTEND;VALUE=DATE:20270116
+SUMMARY:CNAP Phase S: SRP Core: revised (final) Budget + Budget Justificati
+ on
+DESCRIPTION:The SRP Core's five-year budget (entered as forms)\, including 
+ the SI awards\, and the written justification for each cost. Revised (fina
+ l) version Fri\, Jan 15. Save: WORKING DRAFTS › SRP Core.\n\nInternal du
+ e date for the CNAP Phase S proposal.\nSmartsheet: https://app.smartsheet.
+ com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21\nYour guidance page: h
+ ttps://mkdawills.github.io/CNAP_Phase_S_Preparation/CarlAde.html
 URL:https://mkdawills.github.io/CNAP_Phase_S_Preparation/CarlAde.html
 TRANSP:TRANSPARENT
 END:VEVENT
