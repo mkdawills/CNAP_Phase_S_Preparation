@@ -12,6 +12,7 @@
 (function () {
   const SHEET = 'https://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21';
   const PASSED = 'Passed to a contributor';
+  const REPASS = '__repass';   // dropdown-only value: pass an already-passed assignment to someone else
   const CSS = `
 .cnap-progress .up-sel,.st-ctl select,.st-pass select,.st-pass textarea{font:inherit;font-size:14.5px;padding:7px 9px;border:1.5px solid #C9C1D9;border-radius:5px;background:#fff;color:#1F1B2B}
 .cnap-progress .up-sel:focus,.st-ctl select:focus,.st-pass select:focus,.st-pass textarea:focus{outline:2px solid #512888;outline-offset:1px;border-color:#512888}
@@ -98,6 +99,10 @@
   const control = (r, label, lockFinal) => {
     const opts = ['<option value=""' + (r.progress ? '' : ' selected') + ' disabled>No status yet</option>'].concat((data.statuses || []).map((s) => {
       const locked = lockFinal && s === 'Finalized';
+      // The pass choice reads as an action ("Pass to…") until it's done, then as a state ("Passed to Carl").
+      if (s === PASSED) return r.progress === PASSED
+        ? '<option value="' + esc(s) + '" selected>Passed to ' + esc(first(r.passedTo) || 'a contributor') + '</option><option value="' + REPASS + '">Pass to someone else</option>'
+        : '<option value="' + esc(s) + '">Pass to a contributor</option>';
       return '<option value="' + esc(s) + '"' + (s === r.progress ? ' selected' : '') + (locked ? ' disabled' : '') + '>' +
         esc(s) + (locked ? ' (set by Morgan and Heather)' : '') + '</option>';
     })).join('');
@@ -136,7 +141,7 @@
   document.addEventListener('change', (e) => {
     const sel = e.target.closest && e.target.closest('.st-sel'); if (!sel || !data) return;
     const ctl = sel.closest('.st-ctl'), form = ctl.querySelector('.st-pass');
-    if (sel.value === PASSED) { form.hidden = false; ctl.querySelector('.st-who').focus(); return; }
+    if (sel.value === PASSED || sel.value === REPASS) { form.hidden = false; ctl.querySelector('.st-who').focus(); return; }
     form.hidden = true;
     save(ctl, sel.value);
   });
