@@ -41,12 +41,12 @@ UID:cnap-phase-s-heatherbailey-cn-core-specific-aims-20261113@cnap-hub
 DTSTAMP:20261016T151957Z
 DTSTART;VALUE=DATE:20261113
 DTEND;VALUE=DATE:20261114
-SUMMARY:CNAP Phase S: CN Core Specific Aims
-DESCRIPTION:One page stating what the CN Core will do over the five years.\
- n\nInternal due date for the CNAP Phase S proposal.\nSmartsheet: https://a
- pp.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21\nYour gu
- idance page: https://mkdawills.github.io/CNAP_Phase_S_Preparation/HeatherB
- ailey.html
+SUMMARY:CNAP Phase S: Neuroscience Core Specific Aims
+DESCRIPTION:One page stating what the Neuroscience Core will do over the fi
+ ve years.\n\nInternal due date for the CNAP Phase S proposal.\nSmartsheet:
+  https://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx2
+ 1\nYour guidance page: https://mkdawills.github.io/CNAP_Phase_S_Preparatio
+ n/HeatherBailey.html
 URL:https://mkdawills.github.io/CNAP_Phase_S_Preparation/HeatherBailey.html
 TRANSP:TRANSPARENT
 END:VEVENT
@@ -56,7 +56,7 @@ UID:cnap-phase-s-heatherbailey-cn-core-input-to-the-center-s-o-m-plan-20261
 DTSTAMP:20261016T151957Z
 DTSTART;VALUE=DATE:20261118
 DTEND;VALUE=DATE:20261119
-SUMMARY:CNAP Phase S: CN Core input to the Center's O&M Plan
+SUMMARY:CNAP Phase S: Neuroscience Core input to the Center's O&M Plan
 DESCRIPTION:A short write-up of how your core fits with K-State's existing 
  resources. You and Morgan fold it into the final Organization and Manageme
  nt (O&M) Plan\, Section B of the Center Research Strategy (final due Mon\,
@@ -122,12 +122,12 @@ UID:cnap-phase-s-heatherbailey-cn-core-research-strategy-20261130@cnap-hub
 DTSTAMP:20261016T151957Z
 DTSTART;VALUE=DATE:20261130
 DTEND;VALUE=DATE:20261201
-SUMMARY:CNAP Phase S: CN Core Research Strategy
-DESCRIPTION:The main description of the CN Core: what it provides\, who use
- s it\, and how it will be sustained.\n\nInternal due date for the CNAP Pha
- se S proposal.\nSmartsheet: https://app.smartsheet.com/sheets/R9cphxw5Mcqv
- H7RWRVJG6rGwWh8RR265M7GRwx21\nYour guidance page: https://mkdawills.github
- .io/CNAP_Phase_S_Preparation/HeatherBailey.html
+SUMMARY:CNAP Phase S: Neuroscience Core Research Strategy
+DESCRIPTION:The main description of the Neuroscience Core: what it provides
+ \, who uses it\, and how it will be sustained.\n\nInternal due date for th
+ e CNAP Phase S proposal.\nSmartsheet: https://app.smartsheet.com/sheets/R9
+ cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21\nYour guidance page: https://mkdawi
+ lls.github.io/CNAP_Phase_S_Preparation/HeatherBailey.html
 URL:https://mkdawills.github.io/CNAP_Phase_S_Preparation/HeatherBailey.html
 TRANSP:TRANSPARENT
 END:VEVENT
@@ -205,13 +205,13 @@ UID:cnap-phase-s-heatherbailey-cn-core-budget-budget-justification-20261204
 DTSTAMP:20261016T151957Z
 DTSTART;VALUE=DATE:20261204
 DTEND;VALUE=DATE:20261205
-SUMMARY:CNAP Phase S: CN Core Budget + Budget Justification
-DESCRIPTION:The CN Core's five-year budget (entered as forms) and the writt
- en justification for each cost. Revised (final) version Fri\, Jan 15.\n\nI
- nternal due date for the CNAP Phase S proposal.\nSmartsheet: https://app.s
- martsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21\nYour guidan
- ce page: https://mkdawills.github.io/CNAP_Phase_S_Preparation/HeatherBaile
- y.html
+SUMMARY:CNAP Phase S: Neuroscience Core Budget + Budget Justification
+DESCRIPTION:The Neuroscience Core's five-year budget (entered as forms) and
+  the written justification for each cost. Revised (final) version Fri\, Ja
+ n 15.\n\nInternal due date for the CNAP Phase S proposal.\nSmartsheet: htt
+ ps://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21\nY
+ our guidance page: https://mkdawills.github.io/CNAP_Phase_S_Preparation/He
+ atherBailey.html
 URL:https://mkdawills.github.io/CNAP_Phase_S_Preparation/HeatherBailey.html
 TRANSP:TRANSPARENT
 END:VEVENT
@@ -252,7 +252,7 @@ UID:cnap-phase-s-heatherbailey-cn-core-equipment-20261214@cnap-hub
 DTSTAMP:20261016T151957Z
 DTSTART;VALUE=DATE:20261214
 DTEND;VALUE=DATE:20261215
-SUMMARY:CNAP Phase S: CN Core Equipment
+SUMMARY:CNAP Phase S: Neuroscience Core Equipment
 DESCRIPTION:Equipment Mon\, Dec 14 · Facilities & Other Resources Wed\, De
  c 16 · Resource Sharing Plan Thu\, Dec 17. No page limits.\n\nInternal du
  e date for the CNAP Phase S proposal.\nSmartsheet: https://app.smartsheet.
@@ -283,7 +283,7 @@ UID:cnap-phase-s-heatherbailey-cn-core-facilities-other-resources-20261216@
 DTSTAMP:20261016T151957Z
 DTSTART;VALUE=DATE:20261216
 DTEND;VALUE=DATE:20261217
-SUMMARY:CNAP Phase S: CN Core Facilities & Other Resources
+SUMMARY:CNAP Phase S: Neuroscience Core Facilities & Other Resources
 DESCRIPTION:Equipment Mon\, Dec 14 · Facilities & Other Resources Wed\, De
  c 16 · Resource Sharing Plan Thu\, Dec 17. No page limits.\n\nInternal du
  e date for the CNAP Phase S proposal.\nSmartsheet: https://app.smartsheet.
@@ -301,12 +301,12 @@ DTEND;VALUE=DATE:20261218
 SUMMARY:CNAP Phase S: Your biosketch + Current & Pending Support: review dr
  aft
 DESCRIPTION:Your one biosketch (covering both your Center Director (PD/PI) 
- and CN Core Director roles) and your Current and Pending (Other) Support. 
- Review draft Thu\, Dec 17\; final Wed\, Jan 13. Save: WORKING DRAFTS › C
- enter.\n\nInternal due date for the CNAP Phase S proposal.\nSmartsheet: ht
- tps://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21\n
- Your guidance page: https://mkdawills.github.io/CNAP_Phase_S_Preparation/H
- eatherBailey.html
+ role and your Neuroscience Core role) and your Current and Pending (Other)
+  Support. Review draft Thu\, Dec 17\; final Wed\, Jan 13. Save: WORKING DR
+ AFTS › Center.\n\nInternal due date for the CNAP Phase S proposal.\nSmar
+ tsheet: https://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265
+ M7GRwx21\nYour guidance page: https://mkdawills.github.io/CNAP_Phase_S_Pre
+ paration/HeatherBailey.html
 URL:https://mkdawills.github.io/CNAP_Phase_S_Preparation/HeatherBailey.html
 TRANSP:TRANSPARENT
 END:VEVENT
@@ -349,7 +349,7 @@ UID:cnap-phase-s-heatherbailey-cn-core-resource-sharing-plan-20261217@cnap-
 DTSTAMP:20261016T151957Z
 DTSTART;VALUE=DATE:20261217
 DTEND;VALUE=DATE:20261218
-SUMMARY:CNAP Phase S: CN Core Resource Sharing Plan
+SUMMARY:CNAP Phase S: Neuroscience Core Resource Sharing Plan
 DESCRIPTION:Equipment Mon\, Dec 14 · Facilities & Other Resources Wed\, De
  c 16 · Resource Sharing Plan Thu\, Dec 17. No page limits.\n\nInternal du
  e date for the CNAP Phase S proposal.\nSmartsheet: https://app.smartsheet.
@@ -380,7 +380,7 @@ UID:cnap-phase-s-heatherbailey-cn-core-bibliography-references-cited-202701
 DTSTAMP:20261016T151957Z
 DTSTART;VALUE=DATE:20270106
 DTEND;VALUE=DATE:20270107
-SUMMARY:CNAP Phase S: CN Core Bibliography & References Cited
+SUMMARY:CNAP Phase S: Neuroscience Core Bibliography & References Cited
 DESCRIPTION:Internal due date for the CNAP Phase S proposal.\nSmartsheet: h
  ttps://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21\
  nYour guidance page: https://mkdawills.github.io/CNAP_Phase_S_Preparation/
@@ -410,8 +410,8 @@ UID:cnap-phase-s-heatherbailey-cn-core-revise-specific-aims-research-strate
 DTSTAMP:20261016T151957Z
 DTSTART;VALUE=DATE:20270111
 DTEND;VALUE=DATE:20270112
-SUMMARY:CNAP Phase S: CN Core: revise Specific Aims + Research Strategy\, m
- ust-fix items only
+SUMMARY:CNAP Phase S: Neuroscience Core: revise Specific Aims + Research St
+ rategy\, must-fix items only
 DESCRIPTION:Internal due date for the CNAP Phase S proposal.\nSmartsheet: h
  ttps://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21\
  nYour guidance page: https://mkdawills.github.io/CNAP_Phase_S_Preparation/
@@ -454,7 +454,7 @@ UID:cnap-phase-s-heatherbailey-cn-core-project-summary-abstract-20270112@cn
 DTSTAMP:20261016T151957Z
 DTSTART;VALUE=DATE:20270112
 DTEND;VALUE=DATE:20270113
-SUMMARY:CNAP Phase S: CN Core Project Summary/Abstract
+SUMMARY:CNAP Phase S: Neuroscience Core Project Summary/Abstract
 DESCRIPTION:Internal due date for the CNAP Phase S proposal.\nSmartsheet: h
  ttps://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21\
  nYour guidance page: https://mkdawills.github.io/CNAP_Phase_S_Preparation/
@@ -470,12 +470,12 @@ DTSTART;VALUE=DATE:20270113
 DTEND;VALUE=DATE:20270114
 SUMMARY:CNAP Phase S: Your biosketch + Current & Pending Support: final
 DESCRIPTION:Your one biosketch (covering both your Center Director (PD/PI) 
- and CN Core Director roles) and your Current and Pending (Other) Support. 
- Review draft Thu\, Dec 17\; final Wed\, Jan 13. Save: WORKING DRAFTS › C
- enter.\n\nInternal due date for the CNAP Phase S proposal.\nSmartsheet: ht
- tps://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21\n
- Your guidance page: https://mkdawills.github.io/CNAP_Phase_S_Preparation/H
- eatherBailey.html
+ role and your Neuroscience Core role) and your Current and Pending (Other)
+  Support. Review draft Thu\, Dec 17\; final Wed\, Jan 13. Save: WORKING DR
+ AFTS › Center.\n\nInternal due date for the CNAP Phase S proposal.\nSmar
+ tsheet: https://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265
+ M7GRwx21\nYour guidance page: https://mkdawills.github.io/CNAP_Phase_S_Pre
+ paration/HeatherBailey.html
 URL:https://mkdawills.github.io/CNAP_Phase_S_Preparation/HeatherBailey.html
 TRANSP:TRANSPARENT
 END:VEVENT
@@ -519,8 +519,8 @@ UID:cnap-phase-s-heatherbailey-cn-core-revised-final-budget-budget-justific
 DTSTAMP:20261016T151957Z
 DTSTART;VALUE=DATE:20270115
 DTEND;VALUE=DATE:20270116
-SUMMARY:CNAP Phase S: CN Core: revised (final) Budget + Budget Justificatio
- n
+SUMMARY:CNAP Phase S: Neuroscience Core: revised (final) Budget + Budget Ju
+ stification
 DESCRIPTION:Morning. Roxana checks it and sends the final budgets to Tim th
  e same day.\n\nInternal due date for the CNAP Phase S proposal.\nSmartshee
  t: https://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRw

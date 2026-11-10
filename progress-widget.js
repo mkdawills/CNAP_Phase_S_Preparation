@@ -225,7 +225,7 @@
   function enhanceAccordions() {
     const accs = Array.from(document.querySelectorAll('details.acc[data-rows]'));
     if (!accs.length || !API()) return;
-    const COMPONENT = (sec) => /OVERALL/i.test(sec) ? 'Center' : /ADMINISTRATIVE/i.test(sec) ? 'Admin Core' : /SRP/i.test(sec) ? 'SRP Core' : ((sec.match(/(BN|NI|CN) Core/) || [])[0] || sec);
+    const COMPONENT = (sec) => /OVERALL/i.test(sec) ? 'Center' : /ADMINISTRATIVE/i.test(sec) ? 'Admin Core' : /SRP/i.test(sec) ? 'SRP Core' : ((sec.match(/(Neuroscience|NI|BN|CN) Core/) || [])[0] || sec);
     const short = (a) => a.split(' — ')[0].split(' (')[0].trim();
     accs.forEach((acc) => {
       const m = acc.querySelector(':scope > summary .meta');
