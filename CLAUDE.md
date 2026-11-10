@@ -23,11 +23,11 @@ Morgan Wills (Proposal Coordinator, mkwills@ksu.edu) maintains it. Heather Baile
 - **Dashboard** (`index.html`) renders from a template and re-renders every second; `progress.json` is refreshed by a scheduled job.
 - **Calendar files** in `cal/*.ics` hold each person's due dates. Keep them in step with the pages: CRLF line endings, lines folded at 75 octets.
 - **Smartsheet automations:**
-  - 7-day, 2-day, and morning-after reminders per person;
+  - 7-day, 2-day, and past-due check-in reminders per person. None fall on a weekend: the 2-day ones use the hidden "2-Day Reminder Date" column (weekend → Friday before), and the check-ins and the past-due alert use the hidden "Check-in Date" column (next weekday after the due date);
   - "Ready for Review" and past-due alerts to Morgan and Heather;
   - "assignment passed to you", which fires on changes to Last passed.
 
-  Reminders only reach people the sheet is shared with. Doina still needs sharing before her reminders can be created.
+  Reminders only reach people the sheet is shared with; everyone on the team is shared as a Viewer.
 
 ## People and components
 
