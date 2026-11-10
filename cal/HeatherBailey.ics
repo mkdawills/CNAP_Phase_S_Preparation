@@ -218,9 +218,10 @@ END:VEVENT
 BEGIN:VEVENT
 UID:cnap-phase-s-heatherbailey-institutional-letter-of-support-20261207@cna
  p-hub
-DTSTAMP:20261016T151957Z
-DTSTART;VALUE=DATE:20261207
-DTEND;VALUE=DATE:20261208
+DTSTAMP:20261110T152204Z
+SEQUENCE:1
+DTSTART;VALUE=DATE:20261218
+DTEND;VALUE=DATE:20261219
 SUMMARY:CNAP Phase S: Institutional Letter of Support
 DESCRIPTION:The single letter from a senior K-State official. It is the onl
  y letter of support allowed anywhere in the application. Save: WORKING DRA
