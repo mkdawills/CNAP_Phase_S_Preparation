@@ -5,7 +5,8 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:CNAP Phase S due dates
 BEGIN:VEVENT
-UID:cnap-phase-s-kim-receive-biosketch-review-drafts-and-heather-bailey-20261218@cnap-hub
+UID:cnap-phase-s-kim-receive-biosketch-review-drafts-and-heather-bailey-202
+ 61218@cnap-hub
 DTSTAMP:20261016T151957Z
 DTSTART;VALUE=DATE:20261218
 DTEND;VALUE=DATE:20261219
@@ -32,7 +33,8 @@ URL:https://mkdawills.github.io/CNAP_Phase_S_Preparation/Kim.html
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:cnap-phase-s-kim-receive-final-biosketches-and-current-pending-from-20270115@cnap-hub
+UID:cnap-phase-s-kim-receive-final-biosketches-and-current-pending-from-202
+ 70115@cnap-hub
 DTSTAMP:20261016T151957Z
 DTSTART;VALUE=DATE:20270115
 DTEND;VALUE=DATE:20270116
@@ -46,7 +48,8 @@ URL:https://mkdawills.github.io/CNAP_Phase_S_Preparation/Kim.html
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:cnap-phase-s-kim-final-look-at-biosketches-and-current-pending-in-t-20270120@cnap-hub
+UID:cnap-phase-s-kim-final-look-at-biosketches-and-current-pending-in-t-202
+ 70120@cnap-hub
 DTSTAMP:20261016T151957Z
 DTSTART;VALUE=DATE:20270120
 DTEND;VALUE=DATE:20270121
@@ -60,7 +63,8 @@ URL:https://mkdawills.github.io/CNAP_Phase_S_Preparation/Kim.html
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:cnap-phase-s-kim-central-office-submits-to-nih-by-5-00-pm-20270125@cnap-hub
+UID:cnap-phase-s-kim-central-office-submits-to-nih-by-5-00-pm-20270125@cnap
+ -hub
 DTSTAMP:20261016T151957Z
 DTSTART;VALUE=DATE:20270125
 DTEND;VALUE=DATE:20270126

@@ -21,17 +21,19 @@ END:VEVENT
 BEGIN:VEVENT
 UID:cnap-phase-s-chip-bn-core-input-to-the-center-s-o-m-plan-20261118@cnap-
  hub
-DTSTAMP:20261016T151957Z
+DTSTAMP:20261112T150000Z
+SEQUENCE:1
 DTSTART;VALUE=DATE:20261118
 DTEND;VALUE=DATE:20261119
-SUMMARY:CNAP Phase S: Neuroscience Core input to the Center's O&M Plan
-DESCRIPTION:A short write-up of how your core fits with K-State's existing 
- resources. Heather and Morgan fold it into the final Organization and Mana
- gement (O&M) Plan\, Section B of the Center Research Strategy (final due M
- on\, Nov 30).\n\nInternal due date for the CNAP Phase S proposal.\nSmartsh
- eet: https://app.smartsheet.com/sheets/R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7G
- Rwx21\nYour guidance page: https://mkdawills.github.io/CNAP_Phase_S_Prepar
- ation/Chip.html
+SUMMARY:CNAP Phase S: Review Heather's draft of the Neuroscience Core part 
+ of the O&M Plan
+DESCRIPTION:Heather has written your core's part of the Center's Organizati
+ on and Management (O&M) Plan for you. Please read it and edit as you like.
+  Heather and Morgan then fold it into the final plan\, Section B of the Ce
+ nter Research Strategy (final due Mon\, Nov 30).\n\nInternal due date for 
+ the CNAP Phase S proposal.\nSmartsheet: https://app.smartsheet.com/sheets/
+ R9cphxw5McqvH7RWRVJG6rGwWh8RR265M7GRwx21\nYour guidance page: https://mkda
+ wills.github.io/CNAP_Phase_S_Preparation/Chip.html
 URL:https://mkdawills.github.io/CNAP_Phase_S_Preparation/Chip.html
 TRANSP:TRANSPARENT
 END:VEVENT

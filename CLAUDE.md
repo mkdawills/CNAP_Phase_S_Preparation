@@ -43,6 +43,8 @@ Morgan Wills (Proposal Coordinator, mkwills@ksu.edu) maintains it. Heather Baile
 
 That makes four cores plus the Center: five components. Tim and Kim review through the formal Central Office process and are not in the "Pass to" list.
 
+O&M Plan (Center Research Strategy B): Heather drafted the Research Cores' parts herself (Nov 12, 2026). Chip and Doina review her drafts and edit as they like by Wed, Nov 18; they no longer write their own input. The Smartsheet rows are named "Core lead review of Heather's draft".
+
 Old BN Core and CN Core Dropbox WORKING DRAFTS folders stay linked as "earlier drafts"; new work goes in the Neuroscience Core folders.
 
 ## Working conventions
