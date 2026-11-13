@@ -35,9 +35,10 @@ END:VEVENT
 BEGIN:VEVENT
 UID:cnap-phase-s-carlade-srp-core-budget-budget-justification-20261204@cnap
  -hub
-DTSTAMP:20261105T220748Z
-DTSTART;VALUE=DATE:20261204
-DTEND;VALUE=DATE:20261205
+DTSTAMP:20261112T180000Z
+SEQUENCE:1
+DTSTART;VALUE=DATE:20261202
+DTEND;VALUE=DATE:20261203
 SUMMARY:CNAP Phase S: SRP Core Budget + Budget Justification
 DESCRIPTION:The SRP Core's five-year budget (entered as forms)\, including 
  the SI awards\, and the written justification for each cost. Revised (fina

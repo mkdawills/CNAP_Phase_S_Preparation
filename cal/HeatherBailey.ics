@@ -191,9 +191,10 @@ END:VEVENT
 BEGIN:VEVENT
 UID:cnap-phase-s-heatherbailey-budget-budget-justification-admin-core-srp-c
  ore--20261204@cnap-hub
-DTSTAMP:20261016T151957Z
-DTSTART;VALUE=DATE:20261204
-DTEND;VALUE=DATE:20261205
+DTSTAMP:20261112T180000Z
+SEQUENCE:1
+DTSTART;VALUE=DATE:20261202
+DTEND;VALUE=DATE:20261203
 SUMMARY:CNAP Phase S: Budget + Budget Justification (Admin Core)
 DESCRIPTION:The Admin Core's five-year budget (entered as forms) and the wr
  itten justification for each cost. Revised (final) version Fri\, Jan 15. S
@@ -207,9 +208,10 @@ END:VEVENT
 BEGIN:VEVENT
 UID:cnap-phase-s-heatherbailey-cn-core-budget-budget-justification-20261204
  @cnap-hub
-DTSTAMP:20261016T151957Z
-DTSTART;VALUE=DATE:20261204
-DTEND;VALUE=DATE:20261205
+DTSTAMP:20261112T180000Z
+SEQUENCE:1
+DTSTART;VALUE=DATE:20261202
+DTEND;VALUE=DATE:20261203
 SUMMARY:CNAP Phase S: Neuroscience Core Budget + Budget Justification
 DESCRIPTION:The Neuroscience Core's five-year budget (entered as forms) and
   the written justification for each cost. Revised (final) version Fri\, Ja

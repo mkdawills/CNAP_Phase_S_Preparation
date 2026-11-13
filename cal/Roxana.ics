@@ -7,9 +7,10 @@ X-WR-CALNAME:CNAP Phase S due dates
 BEGIN:VEVENT
 UID:cnap-phase-s-roxana-receive-budget-budget-justification-from-all-five--
  20261204@cnap-hub
-DTSTAMP:20261016T151957Z
-DTSTART;VALUE=DATE:20261204
-DTEND;VALUE=DATE:20261205
+DTSTAMP:20261112T180000Z
+SEQUENCE:1
+DTSTART;VALUE=DATE:20261202
+DTEND;VALUE=DATE:20261203
 SUMMARY:CNAP Phase S: Receive Budget + Budget Justification from all four c
  omponents
 DESCRIPTION:Admin Core\, Neuroscience Core\, NI Core\, and the Scientific R

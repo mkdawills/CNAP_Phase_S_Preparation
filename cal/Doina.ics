@@ -57,9 +57,10 @@ END:VEVENT
 BEGIN:VEVENT
 UID:cnap-phase-s-doina-ni-core-budget-budget-justification-20261204@cnap-hu
  b
-DTSTAMP:20261016T151957Z
-DTSTART;VALUE=DATE:20261204
-DTEND;VALUE=DATE:20261205
+DTSTAMP:20261112T180000Z
+SEQUENCE:1
+DTSTART;VALUE=DATE:20261202
+DTEND;VALUE=DATE:20261203
 SUMMARY:CNAP Phase S: NI Core Budget + Budget Justification
 DESCRIPTION:The NI Core's five-year budget (entered as forms) and the wri
  tten justification for each cost.\n\nInternal due date for the CNAP Phase
