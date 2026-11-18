@@ -1,14 +1,14 @@
 {
-  "updated": "2026-11-17T15:22:48-06:00",
-  "updatedLabel": "Tue, Nov 17, 2026, 3:22 PM CT",
+  "updated": "2026-11-18T14:55:36-06:00",
+  "updatedLabel": "Wed, Nov 18, 2026, 2:55 PM CT",
   "total": 76,
   "counts": {
-    "Not Started": 5,
-    "In Progress": 8,
+    "Not Started": 4,
+    "In Progress": 9,
     "Passed to a contributor": 3,
-    "Ready for Review": 12,
+    "Ready for Review": 13,
     "Applying Reviewer Feedback": 0,
     "Finalized": 0,
-    "No status yet": 48
+    "No status yet": 47
   }
 }
