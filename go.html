@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Opening your assignment — CNAP Phase S Proposal Hub</title>
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="site.css?v=20261102a">
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&amp;family=Archivo:wght@500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+  body { margin: 0; background: #F7F6FA; color: #1F1B2B; font-family: 'Source Sans 3', 'Segoe UI', system-ui, sans-serif; }
+  .go { max-width: 640px; margin: 60px auto; padding: 0 16px; }
+  .go .card { background: #fff; border: 1px solid #E2E0E8; border-radius: 6px; padding: 22px 24px; }
+  .go h1 { font-family: Archivo, 'Source Sans 3', sans-serif; font-size: 22px; margin: 0 0 8px; }
+  .go p { margin: 0 0 12px; line-height: 1.5; }
+  .go .asg { font-weight: 700; }
+  .go .pick { display: flex; flex-wrap: wrap; gap: 10px; margin: 14px 0 4px; }
+  .go .muted { color: #6B6579; font-size: 14px; }
+</style>
+</head>
+<body>
+<!--
+  Link target for the "Hub link" column in Smartsheet: go.html?row=<rowId>.
+  It looks the row up through the hub's Smartsheet relay (hub-config.js), then opens the
+  Responsible person's guidance page at that assignment (Name.html#row-<rowId>).
+  An assignment shared by several people shows a short choice of pages.
+-->
+<main class="go">
+  <div class="card" id="box">
+    <h1>Opening your assignment…</h1>
+    <p class="muted">One moment while we find it in the CNAP Phase S Proposal Hub.</p>
+  </div>
+</main>
+<script src="hub-config.js"></script>
+<script>
+(function () {
+  const PAGES = [
+    ['Heather', 'HeatherBailey.html', 'Heather Bailey'],
+    ['Morgan', 'Morgan.html', 'Morgan Wills'],
+    ['Chip', 'Chip.html', 'Chip Pickens'],
+    ['Doina', 'Doina.html', 'Doina Caragea'],
+    ['Carl', 'CarlAde.html', 'Carl Ade'],
+    ['Roxana', 'Roxana.html', 'Roxana Ortiz']
+  ];
+  const box = document.getElementById('box');
+  const esc = (s) => String(s == null ? '' : s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  const row = (new URLSearchParams(location.search).get('row') || '').trim();
+  const allPages = () => '<div class="pick">' + PAGES.map((p) => '<a class="btn sm" href="' + p[1] + (row ? '#row-' + row : '') + '">' + esc(p[2]) + '</a>').join('') + '</div>';
+  const fallback = (why) => {
+    box.innerHTML = '<h1>Choose your guidance page</h1><p>' + why + '</p>' + allPages() +
+      '<p class="muted" style="margin-top: 12px;">Or start from the <a href="Guidance.html">Individualized Guidance</a> list.</p>';
+  };
+  if (!/^\d+$/.test(row)) { fallback('This link didn’t include an assignment, so here are everyone’s guidance pages.'); return; }
+  const api = (window.CNAP_API || '').replace(/\/+$/, '');
+  if (!api) { fallback('The hub couldn’t look up this assignment right now.'); return; }
+  fetch(api, { method: 'POST', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify({ action: 'tasks' }) })
+    .then((r) => r.json())
+    .then((j) => {
+      if (j.error) throw new Error(j.error);
+      const r = (j.rows || []).find((x) => String(x.id) === row);
+      if (!r) { fallback('We couldn’t find this assignment in the hub. It may have been changed or removed.'); return; }
+      const resp = String(r.responsible || '');
+      const pages = PAGES.filter((p) => resp.toLowerCase().includes(p[0].toLowerCase()));
+      if (pages.length === 1) { location.replace(pages[0][1] + '#row-' + row); return; }
+      if (!pages.length) { fallback('<span class="asg">' + esc(r.assignment) + '</span>'); return; }
+      box.innerHTML = '<h1>Which guidance page?</h1><p><span class="asg">' + esc(r.assignment) + '</span> is shared by ' + esc(pages.map((p) => p[2]).join(' and ')) +
+        '. Open it on your page:</p><div class="pick">' + pages.map((p) => '<a class="btn" href="' + p[1] + '#row-' + row + '">' + esc(p[2]) + '</a>').join('') + '</div>';
+    })
+    .catch(() => fallback('The hub couldn’t look up this assignment right now.'));
+})();
+</script>
+</body>
+</html>

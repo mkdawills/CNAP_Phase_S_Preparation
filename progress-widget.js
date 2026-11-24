@@ -14,6 +14,8 @@
   const PASSED = 'Passed to a contributor';
   const REPASS = '__repass';   // dropdown-only value: pass an already-passed assignment to someone else
   const CSS = `
+.deep-hit{outline:3px solid #512888;outline-offset:3px;transition:outline-color 1s}
+details.acc.deep-hit,.up-item.deep-hit{scroll-margin-top:90px}
 .cnap-progress .up-sel,.st-ctl select,.st-pass select,.st-pass textarea{font:inherit;font-size:14.5px;padding:7px 9px;border:1.5px solid #C9C1D9;border-radius:5px;background:#fff;color:#1F1B2B}
 .cnap-progress .up-sel:focus,.st-ctl select:focus,.st-pass select:focus,.st-pass textarea:focus{outline:2px solid #512888;outline-offset:1px;border-color:#512888}
 .cnap-progress .up-err,.st-err{color:#A1262C;font-size:14px;margin:0}
@@ -177,7 +179,7 @@
       rows = rows.filter((r) => (!person || names(r.responsible).includes(person)) && !(hide.checked && r.progress === 'Finalized'));
       if (restSec) restSec.hidden = !rows.length;
       if (!rows.length) { list.innerHTML = '<p class="muted">No assignments match.</p>'; return; }
-      const item = (r, m) => '<div class="up-item' + (r.progress === 'Finalized' ? ' done' : '') + '"><div class="up-t">' + esc(r.assignment) +
+      const item = (r, m) => '<div class="up-item' + (r.progress === 'Finalized' ? ' done' : '') + '" data-row="' + esc(r.id) + '"><div class="up-t">' + esc(r.assignment) +
         '<span class="up-meta">' + m + '</span></div>' + control(r, '', !!fixed) + '</div>';
       if (fixed) {
         rows = rows.slice().sort((a, b) => (a.due || '9999').localeCompare(b.due || '9999'));
@@ -197,7 +199,7 @@
         who.addEventListener('change', () => { store.set('cnapWho', who.value); draw(); });
       }
       hide.addEventListener('change', draw);
-      views.push(draw); draw();
+      views.push(draw); draw(); jump();
     }).catch((e) => {
       if (restSec) return;
       list.innerHTML = '<p class="up-err">Couldn’t load assignments: ' + esc(e.message) + '. Refresh to try again.</p>';
@@ -214,11 +216,11 @@
       const rows = data.rows.filter((r) => r.progress === PASSED && r.passedTo && (name === '*' || r.passedTo === name))
         .sort((a, b) => (a.due || '9999').localeCompare(b.due || '9999'));
       if (sec) sec.hidden = !rows.length;
-      root.innerHTML = rows.length ? '<div class="up-list-card">' + rows.map((r) => '<div class="up-item"><div class="up-t">' + esc(r.assignment) +
+      root.innerHTML = rows.length ? '<div class="up-list-card">' + rows.map((r) => '<div class="up-item" data-row="' + esc(r.id) + '"><div class="up-t">' + esc(r.assignment) +
         '<span class="up-meta">' + meta([name === '*' && 'To: ' + r.passedTo, r.responsible && 'From: ' + r.responsible, r.due && 'Due ' + fmtDate(r.due), r.section, folderLink(r)]) + '</span>' +
         (r.note ? '<span class="passed-note">' + esc(r.note) + '</span>' : '') + '</div>' + control(r, '', name !== '*') + '</div>').join('') + '</div>' : '';
     };
-    getTasks().then(() => { views.push(draw); draw(); }).catch(() => {});
+    getTasks().then(() => { views.push(draw); draw(); jump(); }).catch(() => {});
   }
 
   // A status label on each assignment's row, and its dropdown(s) at the top of the assignment.
@@ -257,6 +259,26 @@
     });
   }
 
+  // Deep links: page.html#row-<rowId> (from the "Hub link" in the Smartsheet reminder emails, via go.html)
+  // opens that assignment, scrolls to it, and outlines it for a moment. Fixed assignments are found at
+  // once; rows that appear only in a status list are found once the list has loaded.
+  const target = (location.hash.match(/^#row-(\d+)$/) || [])[1] || '';
+  let jumped = !target;
+  const reveal = (el) => {
+    jumped = true;
+    for (let a = el; a; a = a.parentElement) { if (a.tagName === 'DETAILS') a.open = true; if (a.hidden) a.hidden = false; }
+    el.classList.add('deep-hit');
+    setTimeout(() => el.scrollIntoView({ behavior: 'smooth', block: 'start' }), 80);
+    setTimeout(() => el.classList.remove('deep-hit'), 6000);
+  };
+  function jump() {
+    if (jumped) return;
+    const acc = Array.from(document.querySelectorAll('details.acc[data-rows]')).find((d) => d.dataset.rows.split(',').includes(target));
+    if (acc) { reveal(acc); return; }
+    const item = document.querySelector('.up-item[data-row="' + target + '"]');
+    if (item) reveal(item);
+  }
+
   const start = () => {
     if (!document.getElementById('cnap-progress-css')) {
       const s = document.createElement('style'); s.id = 'cnap-progress-css'; s.textContent = CSS; document.head.appendChild(s);
@@ -264,6 +286,7 @@
     enhanceAccordions();
     document.querySelectorAll('.cnap-passed').forEach(mountPassed);
     document.querySelectorAll('.cnap-progress').forEach(mountList);
+    jump();
   };
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start); else start();
 })();
